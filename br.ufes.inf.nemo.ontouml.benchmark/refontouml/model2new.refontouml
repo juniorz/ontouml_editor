@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="ASCII"?>
+<RefOntoUML:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:RefOntoUML="RefOntoUML">
+  <packagedElement xsi:type="RefOntoUML:Kind" name="Heart"/>
+  <packagedElement xsi:type="RefOntoUML:Kind" name="Brain"/>
+  <packagedElement xsi:type="RefOntoUML:SubKind" name="Man">
+    <generalization general="//@packagedElement.11" generalizationSet="//@packagedElement.27"/>
+  </packagedElement>
+  <packagedElement xsi:type="RefOntoUML:SubKind" name="Woman">
+    <generalization general="//@packagedElement.11" generalizationSet="//@packagedElement.27"/>
+  </packagedElement>
+  <packagedElement xsi:type="RefOntoUML:Phase" name="Child">
+    <generalization general="//@packagedElement.11" generalizationSet="//@packagedElement.28"/>
+  </packagedElement>
+  <packagedElement xsi:type="RefOntoUML:Phase" name="Teenager">
+    <generalization general="//@packagedElement.11" generalizationSet="//@packagedElement.28"/>
+  </packagedElement>
+  <packagedElement xsi:type="RefOntoUML:Phase" name="Adult">
+    <generalization general="//@packagedElement.11" generalizationSet="//@packagedElement.28"/>
+  </packagedElement>
+  <packagedElement xsi:type="RefOntoUML:Role" name="Student">
+    <generalization general="//@packagedElement.11"/>
+  </packagedElement>
+  <packagedElement xsi:type="RefOntoUML:Role" name="Employee">
+    <generalization general="//@packagedElement.11"/>
+  </packagedElement>
+  <packagedElement xsi:type="RefOntoUML:Relator" name="Enrollment"/>
+  <packagedElement xsi:type="RefOntoUML:Relator" name="Payroll"/>
+  <packagedElement xsi:type="RefOntoUML:Kind" name="Person"/>
+  <packagedElement xsi:type="RefOntoUML:Role" name="School">
+    <generalization general="//@packagedElement.14"/>
+  </packagedElement>
+  <packagedElement xsi:type="RefOntoUML:Role" name="HiringOrganization">
+    <generalization general="//@packagedElement.14"/>
+  </packagedElement>
+  <packagedElement xsi:type="RefOntoUML:Kind" name="Organization"/>
+  <packagedElement xsi:type="RefOntoUML:DataType" name="NaturalNumber"/>
+  <packagedElement xsi:type="RefOntoUML:DataType" name="Birthday"/>
+  <packagedElement xsi:type="RefOntoUML:MaterialAssociation" name="works" memberEnd="//@packagedElement.17/@ownedEnd.0 //@packagedElement.17/@ownedEnd.1" isDerived="true" navigableOwnedEnd="//@packagedElement.17/@ownedEnd.0 //@packagedElement.17/@ownedEnd.1">
+    <ownedEnd type="//@packagedElement.8" isDerived="true" association="//@packagedElement.17">
+      <name xsi:nil="true"/>
+      <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+      <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+    </ownedEnd>
+    <ownedEnd type="//@packagedElement.13" isDerived="true" association="//@packagedElement.17">
+      <name xsi:nil="true"/>
+      <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+      <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xsi:type="RefOntoUML:MaterialAssociation" name="study" memberEnd="//@packagedElement.18/@ownedEnd.0 //@packagedElement.18/@ownedEnd.1" isDerived="true" navigableOwnedEnd="//@packagedElement.18/@ownedEnd.0 //@packagedElement.18/@ownedEnd.1">
+    <ownedEnd type="//@packagedElement.7" isDerived="true" association="//@packagedElement.18">
+      <name xsi:nil="true"/>
+      <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+      <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+    </ownedEnd>
+    <ownedEnd type="//@packagedElement.12" isDerived="true" association="//@packagedElement.18">
+      <name xsi:nil="true"/>
+      <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+      <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xsi:type="RefOntoUML:Derivation" name="D2" memberEnd="//@packagedElement.19/@ownedEnd.0 //@packagedElement.19/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.19/@ownedEnd.0 //@packagedElement.19/@ownedEnd.1">
+    <ownedEnd type="//@packagedElement.17" association="//@packagedElement.19">
+      <name xsi:nil="true"/>
+      <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+      <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+    </ownedEnd>
+    <ownedEnd type="//@packagedElement.10" isReadOnly="true" association="//@packagedElement.19">
+      <name xsi:nil="true"/>
+      <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+      <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xsi:type="RefOntoUML:Derivation" name="D1" memberEnd="//@packagedElement.20/@ownedEnd.0 //@packagedElement.20/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.20/@ownedEnd.0 //@packagedElement.20/@ownedEnd.1">
+    <ownedEnd type="//@packagedElement.18" association="//@packagedElement.20">
+      <name xsi:nil="true"/>
+      <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+      <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+    </ownedEnd>
+    <ownedEnd type="//@packagedElement.9" isReadOnly="true" association="//@packagedElement.20">
+      <name xsi:nil="true"/>
+      <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+      <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xsi:type="RefOntoUML:Mediation" name="M4" memberEnd="//@packagedElement.21/@ownedEnd.0 //@packagedElement.21/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.21/@ownedEnd.0 //@packagedElement.21/@ownedEnd.1">
+    <ownedEnd type="//@packagedElement.10" association="//@packagedElement.21">
+      <name xsi:nil="true"/>
+      <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+      <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+    </ownedEnd>
+    <ownedEnd type="//@packagedElement.13" isReadOnly="true" association="//@packagedElement.21">
+      <name xsi:nil="true"/>
+      <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+      <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xsi:type="RefOntoUML:Mediation" name="M3" memberEnd="//@packagedElement.22/@ownedEnd.0 //@packagedElement.22/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.22/@ownedEnd.0 //@packagedElement.22/@ownedEnd.1">
+    <ownedEnd type="//@packagedElement.10" association="//@packagedElement.22">
+      <name xsi:nil="true"/>
+      <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+      <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+    </ownedEnd>
+    <ownedEnd type="//@packagedElement.8" isReadOnly="true" association="//@packagedElement.22">
+      <name xsi:nil="true"/>
+      <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+      <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xsi:type="RefOntoUML:Mediation" name="M2" memberEnd="//@packagedElement.23/@ownedEnd.0 //@packagedElement.23/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.23/@ownedEnd.0 //@packagedElement.23/@ownedEnd.1">
+    <ownedEnd type="//@packagedElement.9" association="//@packagedElement.23">
+      <name xsi:nil="true"/>
+      <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+      <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+    </ownedEnd>
+    <ownedEnd type="//@packagedElement.12" isReadOnly="true" association="//@packagedElement.23">
+      <name xsi:nil="true"/>
+      <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+      <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xsi:type="RefOntoUML:Mediation" name="M1" memberEnd="//@packagedElement.24/@ownedEnd.0 //@packagedElement.24/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.24/@ownedEnd.0 //@packagedElement.24/@ownedEnd.1">
+    <ownedEnd type="//@packagedElement.9" association="//@packagedElement.24">
+      <name xsi:nil="true"/>
+      <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="-1"/>
+      <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+    </ownedEnd>
+    <ownedEnd type="//@packagedElement.7" isReadOnly="true" association="//@packagedElement.24">
+      <name xsi:nil="true"/>
+      <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+      <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xsi:type="RefOntoUML:componentOf" name="C2" memberEnd="//@packagedElement.25/@ownedEnd.0 //@packagedElement.25/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.25/@ownedEnd.0 //@packagedElement.25/@ownedEnd.1" isShareable="false">
+    <ownedEnd type="//@packagedElement.11" association="//@packagedElement.25">
+      <name xsi:nil="true"/>
+      <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+      <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+    </ownedEnd>
+    <ownedEnd type="//@packagedElement.0" association="//@packagedElement.25">
+      <name xsi:nil="true"/>
+      <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+      <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xsi:type="RefOntoUML:componentOf" name="C1" memberEnd="//@packagedElement.26/@ownedEnd.0 //@packagedElement.26/@ownedEnd.1" navigableOwnedEnd="//@packagedElement.26/@ownedEnd.0 //@packagedElement.26/@ownedEnd.1" isShareable="false" isEssential="true" isImmutable="true">
+    <ownedEnd type="//@packagedElement.11" association="//@packagedElement.26">
+      <name xsi:nil="true"/>
+      <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+      <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+    </ownedEnd>
+    <ownedEnd type="//@packagedElement.1" isReadOnly="true" association="//@packagedElement.26">
+      <name xsi:nil="true"/>
+      <upperValue xsi:type="RefOntoUML:LiteralUnlimitedNatural" value="1"/>
+      <lowerValue xsi:type="RefOntoUML:LiteralInteger" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xsi:type="RefOntoUML:GeneralizationSet" name="G1" isCovering="true" isDisjoint="true" generalization="//@packagedElement.2/@generalization.0 //@packagedElement.3/@generalization.0"/>
+  <packagedElement xsi:type="RefOntoUML:GeneralizationSet" name="G2" isCovering="true" isDisjoint="true" generalization="//@packagedElement.4/@generalization.0 //@packagedElement.5/@generalization.0 //@packagedElement.6/@generalization.0"/>
+</RefOntoUML:Model>

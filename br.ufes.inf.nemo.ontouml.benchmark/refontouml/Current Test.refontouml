@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ASCII"?>
+<RefOntoUML:Package xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:RefOntoUML="RefOntoUML" name="Current Test" visibility="public">
+  <packagedElement xsi:type="RefOntoUML:SubKind" name="Person" visibility="public"/>
+  <packagedElement xsi:type="RefOntoUML:SubKind" name="Male" visibility="public">
+    <generalization general="//@packagedElement.0" generalizationSet="//@packagedElement.3"/>
+  </packagedElement>
+  <packagedElement xsi:type="RefOntoUML:SubKind" name="Female" visibility="public">
+    <generalization general="//@packagedElement.0" generalizationSet="//@packagedElement.3"/>
+  </packagedElement>
+  <packagedElement xsi:type="RefOntoUML:GeneralizationSet" visibility="public" isCovering="true" isDisjoint="true" generalization="//@packagedElement.1/@generalization.0 //@packagedElement.2/@generalization.0">
+    <name xsi:nil="true"/>
+  </packagedElement>
+</RefOntoUML:Package>

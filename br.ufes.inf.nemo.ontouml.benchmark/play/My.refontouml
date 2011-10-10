@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RefOntoUML:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:RefOntoUML="RefOntoUML" name="Eu">
+  <packagedElement xsi:type="RefOntoUML:GeneralizationSet" name="Reinaldo" generalization="//@packagedElement.1/@generalization.0"/>
+  <packagedElement xsi:type="RefOntoUML:Phase" name="Vivo">
+    <generalization general="//@packagedElement.2" generalizationSet="//@packagedElement.0"/>
+  </packagedElement>
+  <packagedElement xsi:type="RefOntoUML:Kind" name="Pessoa"/>
+</RefOntoUML:Model>

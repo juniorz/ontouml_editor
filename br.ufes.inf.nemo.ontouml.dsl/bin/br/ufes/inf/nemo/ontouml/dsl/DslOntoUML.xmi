@@ -1,0 +1,2010 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:xtext="http://www.eclipse.org/2008/Xtext">
+  <xtext:Grammar name="br.ufes.inf.nemo.ontouml.dsl.DslOntoUML" usedGrammars="/1" definesHiddenTokens="true" hiddenTokens="/0/@rules.49 /0/@rules.48 /0/@rules.50 /1/@rules.4 /1/@rules.3">
+    <metamodelDeclarations xsi:type="xtext:ReferencedMetamodel" alias="ecore">
+      <ePackage href="http://www.eclipse.org/emf/2002/Ecore#/"/>
+    </metamodelDeclarations>
+    <metamodelDeclarations xsi:type="xtext:ReferencedMetamodel">
+      <ePackage href="RefOntoUML#/"/>
+    </metamodelDeclarations>
+    <rules xsi:type="xtext:ParserRule" name="Model">
+      <type metamodel="/0/@metamodelDeclarations.1">
+        <classifier xsi:type="ecore:EClass" href="RefOntoUML#//Model"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Action">
+          <type metamodel="/0/@metamodelDeclarations.1">
+            <classifier xsi:type="ecore:EClass" href="RefOntoUML#//Model"/>
+          </type>
+        </elements>
+        <elements xsi:type="xtext:Assignment" cardinality="?" feature="visibility" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.52"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="model"/>
+        <elements xsi:type="xtext:Assignment" feature="name" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+        </elements>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" value="viewpoint"/>
+          <elements xsi:type="xtext:Assignment" feature="viewpoint" operator="=">
+            <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.2"/>
+          </elements>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="{"/>
+        <elements xsi:type="xtext:Assignment" cardinality="*" feature="packagedElement" operator="+=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.1"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="}"/>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="PackageableElement">
+      <type metamodel="/0/@metamodelDeclarations.1">
+        <classifier xsi:type="ecore:EClass" href="RefOntoUML#//PackageableElement"/>
+      </type>
+      <alternatives xsi:type="xtext:Alternatives">
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.6"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.9"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.11"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.14"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.4"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.26"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.36"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.37"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.40"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.41"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.43"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.44"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.45"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.46"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.47"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.20"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.21"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.23"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.22"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.42"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.39"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.38"/>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="NonExpressionValue">
+      <type metamodel="/0/@metamodelDeclarations.1">
+        <classifier xsi:type="ecore:EClass" href="RefOntoUML#//ValueSpecification"/>
+      </type>
+      <alternatives xsi:type="xtext:Alternatives">
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.29"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.30"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.35"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.31"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.28"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.17"/>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="ValueSpecification">
+      <type metamodel="/0/@metamodelDeclarations.1">
+        <classifier xsi:type="ecore:EClass" href="RefOntoUML#//ValueSpecification"/>
+      </type>
+      <alternatives xsi:type="xtext:Alternatives">
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.2"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.16"/>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="DataType_Impl">
+      <type metamodel="/0/@metamodelDeclarations.1">
+        <classifier xsi:type="ecore:EClass" href="RefOntoUML#//DataType"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Assignment" cardinality="?" feature="visibility" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.52"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="datatype"/>
+        <elements xsi:type="xtext:Assignment" feature="name" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+        </elements>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" value="{"/>
+          <elements xsi:type="xtext:Group" cardinality="?">
+            <elements xsi:type="xtext:Keyword" value="attributes:"/>
+            <elements xsi:type="xtext:Keyword" value="{"/>
+            <elements xsi:type="xtext:Assignment" cardinality="*" feature="ownedAttribute" operator="+=">
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.19"/>
+            </elements>
+          </elements>
+          <elements xsi:type="xtext:Keyword" value="}"/>
+        </elements>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="PrimitiveType">
+      <type metamodel="/0/@metamodelDeclarations.1">
+        <classifier xsi:type="ecore:EClass" href="RefOntoUML#//PrimitiveType"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Assignment" cardinality="?" feature="visibility" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.52"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="type"/>
+        <elements xsi:type="xtext:Assignment" feature="name" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+        </elements>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" value="{"/>
+          <elements xsi:type="xtext:Group" cardinality="?">
+            <elements xsi:type="xtext:Keyword" value="attributes:"/>
+            <elements xsi:type="xtext:Keyword" value="{"/>
+            <elements xsi:type="xtext:Assignment" cardinality="*" feature="ownedAttribute" operator="+=">
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.19"/>
+            </elements>
+          </elements>
+          <elements xsi:type="xtext:Keyword" value="}"/>
+        </elements>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="Dependency">
+      <type metamodel="/0/@metamodelDeclarations.1">
+        <classifier xsi:type="ecore:EClass" href="RefOntoUML#//Dependency"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Action">
+          <type metamodel="/0/@metamodelDeclarations.1">
+            <classifier xsi:type="ecore:EClass" href="RefOntoUML#//Dependency"/>
+          </type>
+        </elements>
+        <elements xsi:type="xtext:Assignment" cardinality="?" feature="visibility" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.52"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="Dependency"/>
+        <elements xsi:type="xtext:Assignment" cardinality="?" feature="name" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="{"/>
+        <elements xsi:type="xtext:Assignment" feature="client" operator="+=">
+          <terminal xsi:type="xtext:CrossReference">
+            <type metamodel="/0/@metamodelDeclarations.1">
+              <classifier xsi:type="ecore:EClass" href="RefOntoUML#//NamedElement"/>
+            </type>
+            <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+          </terminal>
+        </elements>
+        <elements xsi:type="xtext:Group" cardinality="*">
+          <elements xsi:type="xtext:Keyword" value=","/>
+          <elements xsi:type="xtext:Assignment" feature="client" operator="+=">
+            <terminal xsi:type="xtext:CrossReference">
+              <type metamodel="/0/@metamodelDeclarations.1">
+                <classifier xsi:type="ecore:EClass" href="RefOntoUML#//NamedElement"/>
+              </type>
+              <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+            </terminal>
+          </elements>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="depends on"/>
+        <elements xsi:type="xtext:Keyword" value="("/>
+        <elements xsi:type="xtext:Assignment" feature="supplier" operator="+=">
+          <terminal xsi:type="xtext:CrossReference">
+            <type metamodel="/0/@metamodelDeclarations.1">
+              <classifier xsi:type="ecore:EClass" href="RefOntoUML#//NamedElement"/>
+            </type>
+            <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+          </terminal>
+        </elements>
+        <elements xsi:type="xtext:Group" cardinality="*">
+          <elements xsi:type="xtext:Keyword" value=","/>
+          <elements xsi:type="xtext:Assignment" feature="supplier" operator="+=">
+            <terminal xsi:type="xtext:CrossReference">
+              <type metamodel="/0/@metamodelDeclarations.1">
+                <classifier xsi:type="ecore:EClass" href="RefOntoUML#//NamedElement"/>
+              </type>
+              <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+            </terminal>
+          </elements>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value=")"/>
+        <elements xsi:type="xtext:Keyword" value="}"/>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="ElementImport">
+      <type metamodel="/0/@metamodelDeclarations.1">
+        <classifier xsi:type="ecore:EClass" href="RefOntoUML#//ElementImport"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Assignment" cardinality="?" feature="visibility" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.52"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="import"/>
+        <elements xsi:type="xtext:Assignment" feature="importedElement" operator="=">
+          <terminal xsi:type="xtext:CrossReference">
+            <type metamodel="/0/@metamodelDeclarations.1">
+              <classifier xsi:type="ecore:EClass" href="RefOntoUML#//PackageableElement"/>
+            </type>
+            <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.2"/>
+          </terminal>
+        </elements>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" value="as"/>
+          <elements xsi:type="xtext:Assignment" feature="alias" operator="=">
+            <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+          </elements>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value=";"/>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="PackageImport">
+      <type metamodel="/0/@metamodelDeclarations.1">
+        <classifier xsi:type="ecore:EClass" href="RefOntoUML#//PackageImport"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Assignment" feature="visibility" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.52"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="import"/>
+        <elements xsi:type="xtext:Assignment" feature="importedPackage" operator="=">
+          <terminal xsi:type="xtext:CrossReference">
+            <type metamodel="/0/@metamodelDeclarations.1">
+              <classifier xsi:type="ecore:EClass" href="RefOntoUML#//Package"/>
+            </type>
+            <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.2"/>
+          </terminal>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value=";"/>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="Constraintx">
+      <type metamodel="/0/@metamodelDeclarations.1">
+        <classifier xsi:type="ecore:EClass" href="RefOntoUML#//Constraintx"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Assignment" cardinality="?" feature="visibility" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.52"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="constraint"/>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" value="("/>
+          <elements xsi:type="xtext:Assignment" feature="constrainedElement" operator="+=">
+            <terminal xsi:type="xtext:CrossReference">
+              <type metamodel="/0/@metamodelDeclarations.1">
+                <classifier xsi:type="ecore:EClass" href="RefOntoUML#//Element"/>
+              </type>
+              <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+            </terminal>
+          </elements>
+          <elements xsi:type="xtext:Group" cardinality="*">
+            <elements xsi:type="xtext:Keyword" value=","/>
+            <elements xsi:type="xtext:Assignment" feature="constrainedElement" operator="+=">
+              <terminal xsi:type="xtext:CrossReference">
+                <type metamodel="/0/@metamodelDeclarations.1">
+                  <classifier xsi:type="ecore:EClass" href="RefOntoUML#//Element"/>
+                </type>
+                <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+              </terminal>
+            </elements>
+          </elements>
+          <elements xsi:type="xtext:Keyword" value=")"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="{"/>
+        <elements xsi:type="xtext:Assignment" feature="specification" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.3"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="}"/>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="PackageMerge">
+      <type metamodel="/0/@metamodelDeclarations.1">
+        <classifier xsi:type="ecore:EClass" href="RefOntoUML#//PackageMerge"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Action">
+          <type metamodel="/0/@metamodelDeclarations.1">
+            <classifier xsi:type="ecore:EClass" href="RefOntoUML#//PackageMerge"/>
+          </type>
+        </elements>
+        <elements xsi:type="xtext:Assignment" feature="mergedPackage" operator="=">
+          <terminal xsi:type="xtext:CrossReference">
+            <type metamodel="/0/@metamodelDeclarations.1">
+              <classifier xsi:type="ecore:EClass" href="RefOntoUML#//Package"/>
+            </type>
+            <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.2"/>
+          </terminal>
+        </elements>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="Package_Impl">
+      <type metamodel="/0/@metamodelDeclarations.1">
+        <classifier xsi:type="ecore:EClass" href="RefOntoUML#//Package"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Action">
+          <type metamodel="/0/@metamodelDeclarations.1">
+            <classifier xsi:type="ecore:EClass" href="RefOntoUML#//Package"/>
+          </type>
+        </elements>
+        <elements xsi:type="xtext:Assignment" cardinality="?" feature="visibility" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.52"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="package"/>
+        <elements xsi:type="xtext:Assignment" feature="name" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="{"/>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" value="merge"/>
+          <elements xsi:type="xtext:Keyword" value=":"/>
+          <elements xsi:type="xtext:Assignment" feature="packageMerge" operator="+=">
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.10"/>
+          </elements>
+          <elements xsi:type="xtext:Group" cardinality="*">
+            <elements xsi:type="xtext:Keyword" value=","/>
+            <elements xsi:type="xtext:Assignment" feature="packageMerge" operator="+=">
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.10"/>
+            </elements>
+          </elements>
+        </elements>
+        <elements xsi:type="xtext:Assignment" cardinality="*" feature="packagedElement" operator="+=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.1"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="}"/>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="InlineGeneralization">
+      <type metamodel="/0/@metamodelDeclarations.1">
+        <classifier xsi:type="ecore:EClass" href="RefOntoUML#//Generalization"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Assignment" cardinality="?" feature="isSubstitutable" operator="?=">
+          <terminal xsi:type="xtext:Keyword" value="substitutable"/>
+        </elements>
+        <elements xsi:type="xtext:Assignment" feature="general" operator="=">
+          <terminal xsi:type="xtext:CrossReference">
+            <type metamodel="/0/@metamodelDeclarations.1">
+              <classifier xsi:type="ecore:EClass" href="RefOntoUML#//Classifier"/>
+            </type>
+            <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+          </terminal>
+        </elements>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" value="("/>
+          <elements xsi:type="xtext:Assignment" feature="generalizationSet" operator="+=">
+            <terminal xsi:type="xtext:CrossReference">
+              <type metamodel="/0/@metamodelDeclarations.1">
+                <classifier xsi:type="ecore:EClass" href="RefOntoUML#//GeneralizationSet"/>
+              </type>
+              <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+            </terminal>
+          </elements>
+          <elements xsi:type="xtext:Keyword" value=")"/>
+        </elements>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="Generalization">
+      <type metamodel="/0/@metamodelDeclarations.1">
+        <classifier xsi:type="ecore:EClass" href="RefOntoUML#//Generalization"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Keyword" value="generalization"/>
+        <elements xsi:type="xtext:Keyword" value="of"/>
+        <elements xsi:type="xtext:Assignment" feature="general" operator="=">
+          <terminal xsi:type="xtext:CrossReference">
+            <type metamodel="/0/@metamodelDeclarations.1">
+              <classifier xsi:type="ecore:EClass" href="RefOntoUML#//Classifier"/>
+            </type>
+            <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+          </terminal>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="as"/>
+        <elements xsi:type="xtext:Assignment" feature="owner" operator="=">
+          <terminal xsi:type="xtext:CrossReference">
+            <type metamodel="/0/@metamodelDeclarations.1">
+              <classifier xsi:type="ecore:EClass" href="RefOntoUML#//Classifier"/>
+            </type>
+            <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+          </terminal>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value=";"/>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="GeneralizationSet">
+      <type metamodel="/0/@metamodelDeclarations.1">
+        <classifier xsi:type="ecore:EClass" href="RefOntoUML#//GeneralizationSet"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Assignment" cardinality="?" feature="visibility" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.52"/>
+        </elements>
+        <elements xsi:type="xtext:UnorderedGroup">
+          <elements xsi:type="xtext:Assignment" cardinality="?" feature="isCovering" operator="?=">
+            <terminal xsi:type="xtext:Keyword" value="complete"/>
+          </elements>
+          <elements xsi:type="xtext:Assignment" cardinality="?" feature="isDisjoint" operator="?=">
+            <terminal xsi:type="xtext:Keyword" value="disjoint"/>
+          </elements>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="generalizationSet"/>
+        <elements xsi:type="xtext:Assignment" feature="name" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="{"/>
+        <elements xsi:type="xtext:Keyword" value="}"/>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="ExpressionSymbol">
+      <type metamodel="/0/@metamodelDeclarations.0">
+        <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </type>
+      <alternatives xsi:type="xtext:Alternatives">
+        <elements xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+        <elements xsi:type="xtext:RuleCall" cardinality="+" rule="/1/@rules.6"/>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="ExpressionValue">
+      <type metamodel="/0/@metamodelDeclarations.1">
+        <classifier xsi:type="ecore:EClass" href="RefOntoUML#//Expression"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Action">
+          <type metamodel="/0/@metamodelDeclarations.1">
+            <classifier xsi:type="ecore:EClass" href="RefOntoUML#//Expression"/>
+          </type>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="("/>
+        <elements xsi:type="xtext:Alternatives">
+          <elements xsi:type="xtext:Group">
+            <elements xsi:type="xtext:Assignment" feature="operand" operator="+=">
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.3"/>
+            </elements>
+            <elements xsi:type="xtext:Assignment" feature="symbol" operator="=">
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.15"/>
+            </elements>
+            <elements xsi:type="xtext:Assignment" feature="operand" operator="+=">
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.3"/>
+            </elements>
+          </elements>
+          <elements xsi:type="xtext:Group">
+            <elements xsi:type="xtext:Assignment" feature="symbol" operator="=">
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.15"/>
+            </elements>
+            <elements xsi:type="xtext:Assignment" feature="operand" operator="+=">
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.3"/>
+            </elements>
+          </elements>
+          <elements xsi:type="xtext:Group">
+            <elements xsi:type="xtext:Assignment" feature="symbol" operator="=">
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.15"/>
+            </elements>
+            <elements xsi:type="xtext:Keyword" value="{"/>
+            <elements xsi:type="xtext:Assignment" feature="operand" operator="+=">
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.3"/>
+            </elements>
+            <elements xsi:type="xtext:Group" cardinality="+">
+              <elements xsi:type="xtext:Keyword" value=","/>
+              <elements xsi:type="xtext:Assignment" feature="operand" operator="+=">
+                <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.3"/>
+              </elements>
+            </elements>
+            <elements xsi:type="xtext:Keyword" value="}"/>
+          </elements>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value=")"/>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="OpaqueExpression">
+      <type metamodel="/0/@metamodelDeclarations.1">
+        <classifier xsi:type="ecore:EClass" href="RefOntoUML#//OpaqueExpression"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Action">
+          <type metamodel="/0/@metamodelDeclarations.1">
+            <classifier xsi:type="ecore:EClass" href="RefOntoUML#//OpaqueExpression"/>
+          </type>
+        </elements>
+        <elements xsi:type="xtext:Assignment" cardinality="?" feature="visibility" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.52"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="OpaqueExpression"/>
+        <elements xsi:type="xtext:Assignment" cardinality="?" feature="name" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+        </elements>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" value="("/>
+          <elements xsi:type="xtext:Assignment" feature="type" operator="=">
+            <terminal xsi:type="xtext:CrossReference">
+              <type metamodel="/0/@metamodelDeclarations.1">
+                <classifier xsi:type="ecore:EClass" href="RefOntoUML#//Type"/>
+              </type>
+              <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+            </terminal>
+          </elements>
+          <elements xsi:type="xtext:Keyword" value=")"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value=":"/>
+        <elements xsi:type="xtext:Assignment" feature="language" operator="+=">
+          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.2"/>
+        </elements>
+        <elements xsi:type="xtext:Group" cardinality="*">
+          <elements xsi:type="xtext:Keyword" value=","/>
+          <elements xsi:type="xtext:Assignment" feature="language" operator="+=">
+            <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.2"/>
+          </elements>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="begin"/>
+        <elements xsi:type="xtext:Group" cardinality="*">
+          <elements xsi:type="xtext:Keyword" value="#"/>
+          <elements xsi:type="xtext:Assignment" feature="body" operator="+=">
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.18"/>
+          </elements>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="end"/>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="LINE">
+      <type metamodel="/0/@metamodelDeclarations.0">
+        <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </type>
+      <alternatives xsi:type="xtext:Alternatives" cardinality="+">
+        <elements xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+        <elements xsi:type="xtext:RuleCall" rule="/1/@rules.1"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.48"/>
+        <elements xsi:type="xtext:RuleCall" rule="/1/@rules.6"/>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="InlinePropertyDefinition">
+      <type metamodel="/0/@metamodelDeclarations.1">
+        <classifier xsi:type="ecore:EClass" href="RefOntoUML#//Property"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Action">
+          <type metamodel="/0/@metamodelDeclarations.1">
+            <classifier xsi:type="ecore:EClass" href="RefOntoUML#//Property"/>
+          </type>
+        </elements>
+        <elements xsi:type="xtext:Assignment" cardinality="?" feature="visibility" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.52"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="property"/>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" value="&lt;"/>
+          <elements xsi:type="xtext:UnorderedGroup">
+            <elements xsi:type="xtext:Assignment" cardinality="?" feature="isStatic" operator="?=">
+              <terminal xsi:type="xtext:Keyword" value="static"/>
+            </elements>
+            <elements xsi:type="xtext:Assignment" cardinality="?" feature="isOrdered" operator="?=">
+              <terminal xsi:type="xtext:Keyword" value="ordered"/>
+            </elements>
+            <elements xsi:type="xtext:Assignment" cardinality="?" feature="isUnique" operator="?=">
+              <terminal xsi:type="xtext:Keyword" value="unique"/>
+            </elements>
+            <elements xsi:type="xtext:Assignment" cardinality="?" feature="isReadOnly" operator="?=">
+              <terminal xsi:type="xtext:Keyword" value="read-only"/>
+            </elements>
+            <elements xsi:type="xtext:Assignment" cardinality="?" feature="isDerivedUnion" operator="?=">
+              <terminal xsi:type="xtext:Keyword" value="derived-union"/>
+            </elements>
+          </elements>
+          <elements xsi:type="xtext:Keyword" value=">"/>
+        </elements>
+        <elements xsi:type="xtext:Assignment" cardinality="?" feature="name" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+        </elements>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" value="["/>
+          <elements xsi:type="xtext:Assignment" feature="lowerValue" operator="=">
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.29"/>
+          </elements>
+          <elements xsi:type="xtext:Keyword" value=","/>
+          <elements xsi:type="xtext:Assignment" feature="upperValue" operator="=">
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.33"/>
+          </elements>
+          <elements xsi:type="xtext:Keyword" value="]"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="("/>
+        <elements xsi:type="xtext:Assignment" feature="type" operator="=">
+          <terminal xsi:type="xtext:CrossReference">
+            <type metamodel="/0/@metamodelDeclarations.1">
+              <classifier xsi:type="ecore:EClass" href="RefOntoUML#//Type"/>
+            </type>
+            <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+          </terminal>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value=")"/>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" value="{"/>
+          <elements xsi:type="xtext:Group" cardinality="?">
+            <elements xsi:type="xtext:Keyword" value="defaults to"/>
+            <elements xsi:type="xtext:Assignment" feature="defaultValue" operator="=">
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.3"/>
+            </elements>
+          </elements>
+          <elements xsi:type="xtext:Group" cardinality="?">
+            <elements xsi:type="xtext:Keyword" value="aggregation"/>
+            <elements xsi:type="xtext:Assignment" feature="aggregation" operator="=">
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.51"/>
+            </elements>
+          </elements>
+          <elements xsi:type="xtext:Group" cardinality="?">
+            <elements xsi:type="xtext:Keyword" value="subset of"/>
+            <elements xsi:type="xtext:Keyword" value="("/>
+            <elements xsi:type="xtext:Assignment" feature="subsettedProperty" operator="+=">
+              <terminal xsi:type="xtext:CrossReference">
+                <type metamodel="/0/@metamodelDeclarations.1">
+                  <classifier xsi:type="ecore:EClass" href="RefOntoUML#//Property"/>
+                </type>
+                <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+              </terminal>
+            </elements>
+            <elements xsi:type="xtext:Group" cardinality="*">
+              <elements xsi:type="xtext:Keyword" value=","/>
+              <elements xsi:type="xtext:Assignment" feature="subsettedProperty" operator="+=">
+                <terminal xsi:type="xtext:CrossReference">
+                  <type metamodel="/0/@metamodelDeclarations.1">
+                    <classifier xsi:type="ecore:EClass" href="RefOntoUML#//Property"/>
+                  </type>
+                  <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+                </terminal>
+              </elements>
+            </elements>
+            <elements xsi:type="xtext:Keyword" value=")"/>
+          </elements>
+          <elements xsi:type="xtext:Group" cardinality="?">
+            <elements xsi:type="xtext:Keyword" value="redefines"/>
+            <elements xsi:type="xtext:Keyword" value="("/>
+            <elements xsi:type="xtext:Assignment" feature="redefinedProperty" operator="+=">
+              <terminal xsi:type="xtext:CrossReference">
+                <type metamodel="/0/@metamodelDeclarations.1">
+                  <classifier xsi:type="ecore:EClass" href="RefOntoUML#//Property"/>
+                </type>
+                <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+              </terminal>
+            </elements>
+            <elements xsi:type="xtext:Group" cardinality="*">
+              <elements xsi:type="xtext:Keyword" value=","/>
+              <elements xsi:type="xtext:Assignment" feature="redefinedProperty" operator="+=">
+                <terminal xsi:type="xtext:CrossReference">
+                  <type metamodel="/0/@metamodelDeclarations.1">
+                    <classifier xsi:type="ecore:EClass" href="RefOntoUML#//Property"/>
+                  </type>
+                  <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+                </terminal>
+              </elements>
+            </elements>
+            <elements xsi:type="xtext:Keyword" value=")"/>
+          </elements>
+          <elements xsi:type="xtext:Keyword" value="}"/>
+        </elements>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="Mediation">
+      <type metamodel="/0/@metamodelDeclarations.1">
+        <classifier xsi:type="ecore:EClass" href="RefOntoUML#//Mediation"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Action">
+          <type metamodel="/0/@metamodelDeclarations.1">
+            <classifier xsi:type="ecore:EClass" href="RefOntoUML#//Mediation"/>
+          </type>
+        </elements>
+        <elements xsi:type="xtext:Assignment" cardinality="?" feature="visibility" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.52"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="mediation"/>
+        <elements xsi:type="xtext:Assignment" cardinality="?" feature="name" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+        </elements>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" value=":"/>
+          <elements xsi:type="xtext:Assignment" feature="generalization" operator="+=">
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.12"/>
+          </elements>
+          <elements xsi:type="xtext:Group" cardinality="*">
+            <elements xsi:type="xtext:Keyword" value=","/>
+            <elements xsi:type="xtext:Assignment" feature="generalization" operator="+=">
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.12"/>
+            </elements>
+          </elements>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="{"/>
+        <elements xsi:type="xtext:UnorderedGroup">
+          <elements xsi:type="xtext:Group" cardinality="+">
+            <elements xsi:type="xtext:Assignment" feature="ownedEnd" operator="+=">
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.19"/>
+            </elements>
+            <elements xsi:type="xtext:Keyword" value=";"/>
+          </elements>
+          <elements xsi:type="xtext:Group" cardinality="?">
+            <elements xsi:type="xtext:Keyword" value="memberEnd"/>
+            <elements xsi:type="xtext:Keyword" value=":"/>
+            <elements xsi:type="xtext:Assignment" feature="memberEnd" operator="+=">
+              <terminal xsi:type="xtext:CrossReference">
+                <type metamodel="/0/@metamodelDeclarations.1">
+                  <classifier xsi:type="ecore:EClass" href="RefOntoUML#//Property"/>
+                </type>
+                <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+              </terminal>
+            </elements>
+            <elements xsi:type="xtext:Group" cardinality="*">
+              <elements xsi:type="xtext:Keyword" value=","/>
+              <elements xsi:type="xtext:Assignment" feature="memberEnd" operator="+=">
+                <terminal xsi:type="xtext:CrossReference">
+                  <type metamodel="/0/@metamodelDeclarations.1">
+                    <classifier xsi:type="ecore:EClass" href="RefOntoUML#//Property"/>
+                  </type>
+                  <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+                </terminal>
+              </elements>
+            </elements>
+            <elements xsi:type="xtext:Keyword" value=";"/>
+          </elements>
+          <elements xsi:type="xtext:Group" cardinality="?">
+            <elements xsi:type="xtext:Keyword" value="navigableOwnedEnd"/>
+            <elements xsi:type="xtext:Keyword" value=":"/>
+            <elements xsi:type="xtext:Assignment" feature="navigableOwnedEnd" operator="+=">
+              <terminal xsi:type="xtext:CrossReference">
+                <type metamodel="/0/@metamodelDeclarations.1">
+                  <classifier xsi:type="ecore:EClass" href="RefOntoUML#//Property"/>
+                </type>
+                <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+              </terminal>
+            </elements>
+            <elements xsi:type="xtext:Group" cardinality="*">
+              <elements xsi:type="xtext:Keyword" value=","/>
+              <elements xsi:type="xtext:Assignment" feature="navigableOwnedEnd" operator="+=">
+                <terminal xsi:type="xtext:CrossReference">
+                  <type metamodel="/0/@metamodelDeclarations.1">
+                    <classifier xsi:type="ecore:EClass" href="RefOntoUML#//Property"/>
+                  </type>
+                  <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+                </terminal>
+              </elements>
+            </elements>
+            <elements xsi:type="xtext:Keyword" value=";"/>
+          </elements>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="}"/>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="Derivation">
+      <type metamodel="/0/@metamodelDeclarations.1">
+        <classifier xsi:type="ecore:EClass" href="RefOntoUML#//Derivation"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Assignment" cardinality="?" feature="visibility" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.52"/>
+        </elements>
+        <elements xsi:type="xtext:UnorderedGroup">
+          <elements xsi:type="xtext:Assignment" cardinality="?" feature="isDerived" operator="?=">
+            <terminal xsi:type="xtext:Keyword" value="derived"/>
+          </elements>
+          <elements xsi:type="xtext:Assignment" cardinality="?" feature="isAbstract" operator="?=">
+            <terminal xsi:type="xtext:Keyword" value="abstract"/>
+          </elements>
+          <elements xsi:type="xtext:Assignment" cardinality="?" feature="isLeaf" operator="?=">
+            <terminal xsi:type="xtext:Keyword" value="leaf"/>
+          </elements>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="derivation"/>
+        <elements xsi:type="xtext:Assignment" cardinality="?" feature="name" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+        </elements>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" value=":"/>
+          <elements xsi:type="xtext:Assignment" feature="generalization" operator="+=">
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.12"/>
+          </elements>
+          <elements xsi:type="xtext:Group" cardinality="*">
+            <elements xsi:type="xtext:Keyword" value=","/>
+            <elements xsi:type="xtext:Assignment" feature="generalization" operator="+=">
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.12"/>
+            </elements>
+          </elements>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="{"/>
+        <elements xsi:type="xtext:Keyword" value="material:"/>
+        <elements xsi:type="xtext:Group">
+          <elements xsi:type="xtext:Assignment" feature="ownedEnd" operator="+=">
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.19"/>
+          </elements>
+          <elements xsi:type="xtext:Keyword" value=";"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="relator:"/>
+        <elements xsi:type="xtext:Group">
+          <elements xsi:type="xtext:Assignment" feature="ownedEnd" operator="+=">
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.19"/>
+          </elements>
+          <elements xsi:type="xtext:Keyword" value=";"/>
+        </elements>
+        <elements xsi:type="xtext:UnorderedGroup">
+          <elements xsi:type="xtext:Group" cardinality="?">
+            <elements xsi:type="xtext:Keyword" value="memberEnd"/>
+            <elements xsi:type="xtext:Keyword" value=":"/>
+            <elements xsi:type="xtext:Assignment" feature="memberEnd" operator="+=">
+              <terminal xsi:type="xtext:CrossReference">
+                <type metamodel="/0/@metamodelDeclarations.1">
+                  <classifier xsi:type="ecore:EClass" href="RefOntoUML#//Property"/>
+                </type>
+                <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+              </terminal>
+            </elements>
+            <elements xsi:type="xtext:Group" cardinality="*">
+              <elements xsi:type="xtext:Keyword" value=","/>
+              <elements xsi:type="xtext:Assignment" feature="memberEnd" operator="+=">
+                <terminal xsi:type="xtext:CrossReference">
+                  <type metamodel="/0/@metamodelDeclarations.1">
+                    <classifier xsi:type="ecore:EClass" href="RefOntoUML#//Property"/>
+                  </type>
+                  <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+                </terminal>
+              </elements>
+            </elements>
+            <elements xsi:type="xtext:Keyword" value=";"/>
+          </elements>
+          <elements xsi:type="xtext:Group" cardinality="?">
+            <elements xsi:type="xtext:Keyword" value="navigableOwnedEnd"/>
+            <elements xsi:type="xtext:Keyword" value=":"/>
+            <elements xsi:type="xtext:Assignment" feature="navigableOwnedEnd" operator="+=">
+              <terminal xsi:type="xtext:CrossReference">
+                <type metamodel="/0/@metamodelDeclarations.1">
+                  <classifier xsi:type="ecore:EClass" href="RefOntoUML#//Property"/>
+                </type>
+                <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+              </terminal>
+            </elements>
+            <elements xsi:type="xtext:Group" cardinality="*">
+              <elements xsi:type="xtext:Keyword" value=","/>
+              <elements xsi:type="xtext:Assignment" feature="navigableOwnedEnd" operator="+=">
+                <terminal xsi:type="xtext:CrossReference">
+                  <type metamodel="/0/@metamodelDeclarations.1">
+                    <classifier xsi:type="ecore:EClass" href="RefOntoUML#//Property"/>
+                  </type>
+                  <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+                </terminal>
+              </elements>
+            </elements>
+            <elements xsi:type="xtext:Keyword" value=";"/>
+          </elements>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="}"/>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="MaterialAssociation">
+      <type metamodel="/0/@metamodelDeclarations.1">
+        <classifier xsi:type="ecore:EClass" href="RefOntoUML#//MaterialAssociation"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Action">
+          <type metamodel="/0/@metamodelDeclarations.1">
+            <classifier xsi:type="ecore:EClass" href="RefOntoUML#//MaterialAssociation"/>
+          </type>
+        </elements>
+        <elements xsi:type="xtext:Assignment" cardinality="?" feature="visibility" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.52"/>
+        </elements>
+        <elements xsi:type="xtext:UnorderedGroup">
+          <elements xsi:type="xtext:Assignment" feature="isDerived" operator="?=">
+            <terminal xsi:type="xtext:Keyword" value="derived"/>
+          </elements>
+          <elements xsi:type="xtext:Assignment" cardinality="?" feature="isAbstract" operator="?=">
+            <terminal xsi:type="xtext:Keyword" value="abstract"/>
+          </elements>
+          <elements xsi:type="xtext:Assignment" cardinality="?" feature="isLeaf" operator="?=">
+            <terminal xsi:type="xtext:Keyword" value="leaf"/>
+          </elements>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="materialAssociation"/>
+        <elements xsi:type="xtext:Assignment" cardinality="?" feature="name" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+        </elements>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" value=":"/>
+          <elements xsi:type="xtext:Assignment" feature="generalization" operator="+=">
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.12"/>
+          </elements>
+          <elements xsi:type="xtext:Group" cardinality="*">
+            <elements xsi:type="xtext:Keyword" value=","/>
+            <elements xsi:type="xtext:Assignment" feature="generalization" operator="+=">
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.12"/>
+            </elements>
+          </elements>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="{"/>
+        <elements xsi:type="xtext:UnorderedGroup">
+          <elements xsi:type="xtext:Group" cardinality="+">
+            <elements xsi:type="xtext:Assignment" feature="ownedEnd" operator="+=">
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.19"/>
+            </elements>
+            <elements xsi:type="xtext:Keyword" value=";"/>
+          </elements>
+          <elements xsi:type="xtext:Group" cardinality="?">
+            <elements xsi:type="xtext:Keyword" value="memberEnd"/>
+            <elements xsi:type="xtext:Keyword" value=":"/>
+            <elements xsi:type="xtext:Assignment" feature="memberEnd" operator="+=">
+              <terminal xsi:type="xtext:CrossReference">
+                <type metamodel="/0/@metamodelDeclarations.1">
+                  <classifier xsi:type="ecore:EClass" href="RefOntoUML#//Property"/>
+                </type>
+                <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+              </terminal>
+            </elements>
+            <elements xsi:type="xtext:Group" cardinality="*">
+              <elements xsi:type="xtext:Keyword" value=","/>
+              <elements xsi:type="xtext:Assignment" feature="memberEnd" operator="+=">
+                <terminal xsi:type="xtext:CrossReference">
+                  <type metamodel="/0/@metamodelDeclarations.1">
+                    <classifier xsi:type="ecore:EClass" href="RefOntoUML#//Property"/>
+                  </type>
+                  <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+                </terminal>
+              </elements>
+            </elements>
+            <elements xsi:type="xtext:Keyword" value=";"/>
+          </elements>
+          <elements xsi:type="xtext:Group" cardinality="?">
+            <elements xsi:type="xtext:Keyword" value="navigableOwnedEnd"/>
+            <elements xsi:type="xtext:Keyword" value=":"/>
+            <elements xsi:type="xtext:Assignment" feature="navigableOwnedEnd" operator="+=">
+              <terminal xsi:type="xtext:CrossReference">
+                <type metamodel="/0/@metamodelDeclarations.1">
+                  <classifier xsi:type="ecore:EClass" href="RefOntoUML#//Property"/>
+                </type>
+                <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+              </terminal>
+            </elements>
+            <elements xsi:type="xtext:Group" cardinality="*">
+              <elements xsi:type="xtext:Keyword" value=","/>
+              <elements xsi:type="xtext:Assignment" feature="navigableOwnedEnd" operator="+=">
+                <terminal xsi:type="xtext:CrossReference">
+                  <type metamodel="/0/@metamodelDeclarations.1">
+                    <classifier xsi:type="ecore:EClass" href="RefOntoUML#//Property"/>
+                  </type>
+                  <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+                </terminal>
+              </elements>
+            </elements>
+            <elements xsi:type="xtext:Keyword" value=";"/>
+          </elements>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="}"/>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="FormalAssociation">
+      <type metamodel="/0/@metamodelDeclarations.1">
+        <classifier xsi:type="ecore:EClass" href="RefOntoUML#//FormalAssociation"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Action">
+          <type metamodel="/0/@metamodelDeclarations.1">
+            <classifier xsi:type="ecore:EClass" href="RefOntoUML#//FormalAssociation"/>
+          </type>
+        </elements>
+        <elements xsi:type="xtext:Assignment" cardinality="?" feature="visibility" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.52"/>
+        </elements>
+        <elements xsi:type="xtext:UnorderedGroup">
+          <elements xsi:type="xtext:Assignment" cardinality="?" feature="isAbstract" operator="?=">
+            <terminal xsi:type="xtext:Keyword" value="abstract"/>
+          </elements>
+          <elements xsi:type="xtext:Assignment" cardinality="?" feature="isDerived" operator="?=">
+            <terminal xsi:type="xtext:Keyword" value="derived"/>
+          </elements>
+          <elements xsi:type="xtext:Assignment" cardinality="?" feature="isLeaf" operator="?=">
+            <terminal xsi:type="xtext:Keyword" value="leaf"/>
+          </elements>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="formalAssociation"/>
+        <elements xsi:type="xtext:Assignment" cardinality="?" feature="name" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="{"/>
+        <elements xsi:type="xtext:UnorderedGroup">
+          <elements xsi:type="xtext:Group" cardinality="+">
+            <elements xsi:type="xtext:Assignment" feature="ownedEnd" operator="+=">
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.19"/>
+            </elements>
+            <elements xsi:type="xtext:Keyword" value=";"/>
+          </elements>
+          <elements xsi:type="xtext:Group" cardinality="?">
+            <elements xsi:type="xtext:Keyword" value="memberEnd"/>
+            <elements xsi:type="xtext:Keyword" value=":"/>
+            <elements xsi:type="xtext:Assignment" feature="memberEnd" operator="+=">
+              <terminal xsi:type="xtext:CrossReference">
+                <type metamodel="/0/@metamodelDeclarations.1">
+                  <classifier xsi:type="ecore:EClass" href="RefOntoUML#//Property"/>
+                </type>
+                <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+              </terminal>
+            </elements>
+            <elements xsi:type="xtext:Group" cardinality="*">
+              <elements xsi:type="xtext:Keyword" value=","/>
+              <elements xsi:type="xtext:Assignment" feature="memberEnd" operator="+=">
+                <terminal xsi:type="xtext:CrossReference">
+                  <type metamodel="/0/@metamodelDeclarations.1">
+                    <classifier xsi:type="ecore:EClass" href="RefOntoUML#//Property"/>
+                  </type>
+                  <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+                </terminal>
+              </elements>
+            </elements>
+            <elements xsi:type="xtext:Keyword" value=";"/>
+          </elements>
+          <elements xsi:type="xtext:Group" cardinality="?">
+            <elements xsi:type="xtext:Keyword" value="navigableOwnedEnd"/>
+            <elements xsi:type="xtext:Keyword" value=":"/>
+            <elements xsi:type="xtext:Assignment" feature="navigableOwnedEnd" operator="+=">
+              <terminal xsi:type="xtext:CrossReference">
+                <type metamodel="/0/@metamodelDeclarations.1">
+                  <classifier xsi:type="ecore:EClass" href="RefOntoUML#//Property"/>
+                </type>
+                <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+              </terminal>
+            </elements>
+            <elements xsi:type="xtext:Group" cardinality="*">
+              <elements xsi:type="xtext:Keyword" value=","/>
+              <elements xsi:type="xtext:Assignment" feature="navigableOwnedEnd" operator="+=">
+                <terminal xsi:type="xtext:CrossReference">
+                  <type metamodel="/0/@metamodelDeclarations.1">
+                    <classifier xsi:type="ecore:EClass" href="RefOntoUML#//Property"/>
+                  </type>
+                  <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+                </terminal>
+              </elements>
+            </elements>
+            <elements xsi:type="xtext:Keyword" value=";"/>
+          </elements>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="}"/>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="Enumeration">
+      <type metamodel="/0/@metamodelDeclarations.1">
+        <classifier xsi:type="ecore:EClass" href="RefOntoUML#//Enumeration"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Assignment" cardinality="?" feature="visibility" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.52"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="enum"/>
+        <elements xsi:type="xtext:Assignment" feature="name" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="{"/>
+        <elements xsi:type="xtext:Assignment" feature="ownedLiteral" operator="+=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.25"/>
+        </elements>
+        <elements xsi:type="xtext:Group" cardinality="*">
+          <elements xsi:type="xtext:Keyword" value=","/>
+          <elements xsi:type="xtext:Assignment" feature="ownedLiteral" operator="+=">
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.25"/>
+          </elements>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="}"/>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="EnumerationLiteral">
+      <type metamodel="/0/@metamodelDeclarations.1">
+        <classifier xsi:type="ecore:EClass" href="RefOntoUML#//EnumerationLiteral"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Action">
+          <type metamodel="/0/@metamodelDeclarations.1">
+            <classifier xsi:type="ecore:EClass" href="RefOntoUML#//EnumerationLiteral"/>
+          </type>
+        </elements>
+        <elements xsi:type="xtext:Assignment" feature="name" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="="/>
+        <elements xsi:type="xtext:Assignment" feature="specification" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.3"/>
+        </elements>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="InstanceSpecification_Impl">
+      <type metamodel="/0/@metamodelDeclarations.1">
+        <classifier xsi:type="ecore:EClass" href="RefOntoUML#//InstanceSpecification"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Action">
+          <type metamodel="/0/@metamodelDeclarations.1">
+            <classifier xsi:type="ecore:EClass" href="RefOntoUML#//InstanceSpecification"/>
+          </type>
+        </elements>
+        <elements xsi:type="xtext:Assignment" cardinality="?" feature="visibility" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.52"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="instance"/>
+        <elements xsi:type="xtext:Assignment" feature="name" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+        </elements>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" value=":"/>
+          <elements xsi:type="xtext:Assignment" feature="classifier" operator="+=">
+            <terminal xsi:type="xtext:CrossReference">
+              <type metamodel="/0/@metamodelDeclarations.1">
+                <classifier xsi:type="ecore:EClass" href="RefOntoUML#//Classifier"/>
+              </type>
+              <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+            </terminal>
+          </elements>
+          <elements xsi:type="xtext:Group" cardinality="*">
+            <elements xsi:type="xtext:Keyword" value=","/>
+            <elements xsi:type="xtext:Assignment" feature="classifier" operator="+=">
+              <terminal xsi:type="xtext:CrossReference">
+                <type metamodel="/0/@metamodelDeclarations.1">
+                  <classifier xsi:type="ecore:EClass" href="RefOntoUML#//Classifier"/>
+                </type>
+                <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+              </terminal>
+            </elements>
+          </elements>
+        </elements>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" value="specification"/>
+          <elements xsi:type="xtext:Assignment" feature="specification" operator="=">
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.3"/>
+          </elements>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="{"/>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Assignment" feature="slot" operator="+=">
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.27"/>
+          </elements>
+          <elements xsi:type="xtext:Group" cardinality="*">
+            <elements xsi:type="xtext:Keyword" value=","/>
+            <elements xsi:type="xtext:Assignment" feature="slot" operator="+=">
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.27"/>
+            </elements>
+          </elements>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="}"/>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="Slot">
+      <type metamodel="/0/@metamodelDeclarations.1">
+        <classifier xsi:type="ecore:EClass" href="RefOntoUML#//Slot"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Assignment" feature="definingFeature" operator="=">
+          <terminal xsi:type="xtext:CrossReference">
+            <type metamodel="/0/@metamodelDeclarations.1">
+              <classifier xsi:type="ecore:EClass" href="RefOntoUML#//StructuralFeature"/>
+            </type>
+            <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.2"/>
+          </terminal>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="=>"/>
+        <elements xsi:type="xtext:Alternatives">
+          <elements xsi:type="xtext:Assignment" feature="value" operator="+=">
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.3"/>
+          </elements>
+          <elements xsi:type="xtext:Group">
+            <elements xsi:type="xtext:Keyword" value="["/>
+            <elements xsi:type="xtext:Assignment" feature="value" operator="+=">
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.3"/>
+            </elements>
+            <elements xsi:type="xtext:Group" cardinality="*">
+              <elements xsi:type="xtext:Keyword" value=","/>
+              <elements xsi:type="xtext:Assignment" feature="value" operator="+=">
+                <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.3"/>
+              </elements>
+            </elements>
+            <elements xsi:type="xtext:Keyword" value="]"/>
+          </elements>
+        </elements>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="InstanceValue">
+      <type metamodel="/0/@metamodelDeclarations.1">
+        <classifier xsi:type="ecore:EClass" href="RefOntoUML#//InstanceValue"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Assignment" cardinality="?" feature="visibility" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.52"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="instance"/>
+        <elements xsi:type="xtext:Assignment" cardinality="?" feature="name" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+        </elements>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" value="("/>
+          <elements xsi:type="xtext:Assignment" feature="type" operator="=">
+            <terminal xsi:type="xtext:CrossReference">
+              <type metamodel="/0/@metamodelDeclarations.1">
+                <classifier xsi:type="ecore:EClass" href="RefOntoUML#//Type"/>
+              </type>
+              <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+            </terminal>
+          </elements>
+          <elements xsi:type="xtext:Keyword" value=")"/>
+        </elements>
+        <elements xsi:type="xtext:Assignment" feature="instance" operator="=">
+          <terminal xsi:type="xtext:CrossReference">
+            <type metamodel="/0/@metamodelDeclarations.1">
+              <classifier xsi:type="ecore:EClass" href="RefOntoUML#//InstanceSpecification"/>
+            </type>
+            <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+          </terminal>
+        </elements>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="LiteralInteger">
+      <type metamodel="/0/@metamodelDeclarations.1">
+        <classifier xsi:type="ecore:EClass" href="RefOntoUML#//LiteralInteger"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Action">
+          <type metamodel="/0/@metamodelDeclarations.1">
+            <classifier xsi:type="ecore:EClass" href="RefOntoUML#//LiteralInteger"/>
+          </type>
+        </elements>
+        <elements xsi:type="xtext:Assignment" feature="value" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.1"/>
+        </elements>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="LiteralString">
+      <type metamodel="/0/@metamodelDeclarations.1">
+        <classifier xsi:type="ecore:EClass" href="RefOntoUML#//LiteralString"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Action">
+          <type metamodel="/0/@metamodelDeclarations.1">
+            <classifier xsi:type="ecore:EClass" href="RefOntoUML#//LiteralString"/>
+          </type>
+        </elements>
+        <elements xsi:type="xtext:Assignment" feature="value" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.2"/>
+        </elements>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="LiteralBoolean">
+      <type metamodel="/0/@metamodelDeclarations.1">
+        <classifier xsi:type="ecore:EClass" href="RefOntoUML#//LiteralBoolean"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Action">
+          <type metamodel="/0/@metamodelDeclarations.1">
+            <classifier xsi:type="ecore:EClass" href="RefOntoUML#//LiteralBoolean"/>
+          </type>
+        </elements>
+        <elements xsi:type="xtext:Assignment" feature="value" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.32"/>
+        </elements>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="Boolean">
+      <type metamodel="/0/@metamodelDeclarations.0">
+        <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </type>
+      <alternatives xsi:type="xtext:Alternatives">
+        <elements xsi:type="xtext:Keyword" value="true"/>
+        <elements xsi:type="xtext:Keyword" value="false"/>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="LiteralUnlimitedNatural">
+      <type metamodel="/0/@metamodelDeclarations.1">
+        <classifier xsi:type="ecore:EClass" href="RefOntoUML#//LiteralUnlimitedNatural"/>
+      </type>
+      <alternatives xsi:type="xtext:Alternatives">
+        <elements xsi:type="xtext:Assignment" feature="value" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.34"/>
+        </elements>
+        <elements xsi:type="xtext:Assignment" feature="value" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.1"/>
+        </elements>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="UnlimitedNaturalValue">
+      <type metamodel="/0/@metamodelDeclarations.0">
+        <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
+      </type>
+      <alternatives xsi:type="xtext:Keyword" value="*"/>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="LiteralNull">
+      <type metamodel="/0/@metamodelDeclarations.1">
+        <classifier xsi:type="ecore:EClass" href="RefOntoUML#//LiteralNull"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Action">
+          <type metamodel="/0/@metamodelDeclarations.1">
+            <classifier xsi:type="ecore:EClass" href="RefOntoUML#//LiteralNull"/>
+          </type>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="NULL"/>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="SubKind">
+      <type metamodel="/0/@metamodelDeclarations.1">
+        <classifier xsi:type="ecore:EClass" href="RefOntoUML#//SubKind"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Assignment" cardinality="?" feature="visibility" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.52"/>
+        </elements>
+        <elements xsi:type="xtext:Assignment" cardinality="?" feature="isActive" operator="?=">
+          <terminal xsi:type="xtext:Keyword" value="active"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="subkind"/>
+        <elements xsi:type="xtext:Assignment" feature="name" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+        </elements>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" value=":"/>
+          <elements xsi:type="xtext:Assignment" feature="generalization" operator="+=">
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.12"/>
+          </elements>
+          <elements xsi:type="xtext:Group" cardinality="*">
+            <elements xsi:type="xtext:Keyword" value=","/>
+            <elements xsi:type="xtext:Assignment" feature="generalization" operator="+=">
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.12"/>
+            </elements>
+          </elements>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="{"/>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" value="attributes:"/>
+          <elements xsi:type="xtext:Keyword" value="{"/>
+          <elements xsi:type="xtext:Assignment" cardinality="*" feature="ownedAttribute" operator="+=">
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.19"/>
+          </elements>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="}"/>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="Kind">
+      <type metamodel="/0/@metamodelDeclarations.1">
+        <classifier xsi:type="ecore:EClass" href="RefOntoUML#//Kind"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Assignment" cardinality="?" feature="visibility" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.52"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="kind"/>
+        <elements xsi:type="xtext:Assignment" feature="name" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+        </elements>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" value=":"/>
+          <elements xsi:type="xtext:Assignment" feature="generalization" operator="+=">
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.12"/>
+          </elements>
+          <elements xsi:type="xtext:Group" cardinality="*">
+            <elements xsi:type="xtext:Keyword" value=","/>
+            <elements xsi:type="xtext:Assignment" feature="generalization" operator="+=">
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.12"/>
+            </elements>
+          </elements>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="{"/>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" value="attributes:"/>
+          <elements xsi:type="xtext:Keyword" value="{"/>
+          <elements xsi:type="xtext:Assignment" cardinality="*" feature="ownedAttribute" operator="+=">
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.19"/>
+          </elements>
+          <elements xsi:type="xtext:Keyword" value="}"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="}"/>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="Quantity">
+      <type metamodel="/0/@metamodelDeclarations.1">
+        <classifier xsi:type="ecore:EClass" href="RefOntoUML#//Quantity"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Assignment" cardinality="?" feature="visibility" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.52"/>
+        </elements>
+        <elements xsi:type="xtext:Assignment" cardinality="?" feature="isActive" operator="?=">
+          <terminal xsi:type="xtext:Keyword" value="active"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="quantity"/>
+        <elements xsi:type="xtext:Assignment" feature="name" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+        </elements>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" value=":"/>
+          <elements xsi:type="xtext:Assignment" feature="generalization" operator="+=">
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.12"/>
+          </elements>
+          <elements xsi:type="xtext:Group" cardinality="*">
+            <elements xsi:type="xtext:Keyword" value=","/>
+            <elements xsi:type="xtext:Assignment" feature="generalization" operator="+=">
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.12"/>
+            </elements>
+          </elements>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="{"/>
+        <elements xsi:type="xtext:Keyword" value="}"/>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="Collective">
+      <type metamodel="/0/@metamodelDeclarations.1">
+        <classifier xsi:type="ecore:EClass" href="RefOntoUML#//Collective"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Assignment" cardinality="?" feature="visibility" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.52"/>
+        </elements>
+        <elements xsi:type="xtext:Assignment" cardinality="?" feature="isExtensional" operator="?=">
+          <terminal xsi:type="xtext:Keyword" value="extensional"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="collective"/>
+        <elements xsi:type="xtext:Assignment" feature="name" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+        </elements>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" value=":"/>
+          <elements xsi:type="xtext:Assignment" feature="generalization" operator="+=">
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.12"/>
+          </elements>
+          <elements xsi:type="xtext:Group" cardinality="*">
+            <elements xsi:type="xtext:Keyword" value=","/>
+            <elements xsi:type="xtext:Assignment" feature="generalization" operator="+=">
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.12"/>
+            </elements>
+          </elements>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="{"/>
+        <elements xsi:type="xtext:Keyword" value="}"/>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="Phase">
+      <type metamodel="/0/@metamodelDeclarations.1">
+        <classifier xsi:type="ecore:EClass" href="RefOntoUML#//Phase"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Assignment" cardinality="?" feature="visibility" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.52"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="phase"/>
+        <elements xsi:type="xtext:Assignment" feature="name" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+        </elements>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" value=":"/>
+          <elements xsi:type="xtext:Assignment" feature="generalization" operator="+=">
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.12"/>
+          </elements>
+          <elements xsi:type="xtext:Group" cardinality="*">
+            <elements xsi:type="xtext:Keyword" value=","/>
+            <elements xsi:type="xtext:Assignment" feature="generalization" operator="+=">
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.12"/>
+            </elements>
+          </elements>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="{"/>
+        <elements xsi:type="xtext:Keyword" value="}"/>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="Role">
+      <type metamodel="/0/@metamodelDeclarations.1">
+        <classifier xsi:type="ecore:EClass" href="RefOntoUML#//Role"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Assignment" cardinality="?" feature="visibility" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.52"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="role"/>
+        <elements xsi:type="xtext:Assignment" feature="name" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+        </elements>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" value=":"/>
+          <elements xsi:type="xtext:Assignment" feature="generalization" operator="+=">
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.12"/>
+          </elements>
+          <elements xsi:type="xtext:Group" cardinality="*">
+            <elements xsi:type="xtext:Keyword" value=","/>
+            <elements xsi:type="xtext:Assignment" feature="generalization" operator="+=">
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.12"/>
+            </elements>
+          </elements>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="{"/>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" value="attributes:"/>
+          <elements xsi:type="xtext:Keyword" value="{"/>
+          <elements xsi:type="xtext:Assignment" cardinality="*" feature="ownedAttribute" operator="+=">
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.19"/>
+          </elements>
+          <elements xsi:type="xtext:Keyword" value="}"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="}"/>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="Category">
+      <type metamodel="/0/@metamodelDeclarations.1">
+        <classifier xsi:type="ecore:EClass" href="RefOntoUML#//Category"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Assignment" cardinality="?" feature="visibility" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.52"/>
+        </elements>
+        <elements xsi:type="xtext:Assignment" feature="isAbstract" operator="?=">
+          <terminal xsi:type="xtext:Keyword" value="abstract"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="category"/>
+        <elements xsi:type="xtext:Assignment" feature="name" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+        </elements>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" value=":"/>
+          <elements xsi:type="xtext:Assignment" feature="generalization" operator="+=">
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.12"/>
+          </elements>
+          <elements xsi:type="xtext:Group" cardinality="*">
+            <elements xsi:type="xtext:Keyword" value=","/>
+            <elements xsi:type="xtext:Assignment" feature="generalization" operator="+=">
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.12"/>
+            </elements>
+          </elements>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="{"/>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" value="ownedAttribute"/>
+          <elements xsi:type="xtext:Keyword" value="{"/>
+          <elements xsi:type="xtext:Assignment" feature="ownedAttribute" operator="+=">
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.19"/>
+          </elements>
+          <elements xsi:type="xtext:Group" cardinality="*">
+            <elements xsi:type="xtext:Keyword" value=","/>
+            <elements xsi:type="xtext:Assignment" feature="ownedAttribute" operator="+=">
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.19"/>
+            </elements>
+          </elements>
+          <elements xsi:type="xtext:Keyword" value="}"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="}"/>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="RoleMixin">
+      <type metamodel="/0/@metamodelDeclarations.1">
+        <classifier xsi:type="ecore:EClass" href="RefOntoUML#//RoleMixin"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Assignment" cardinality="?" feature="visibility" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.52"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="roleMixin"/>
+        <elements xsi:type="xtext:Assignment" feature="name" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+        </elements>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" value=":"/>
+          <elements xsi:type="xtext:Assignment" feature="generalization" operator="+=">
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.12"/>
+          </elements>
+          <elements xsi:type="xtext:Group" cardinality="*">
+            <elements xsi:type="xtext:Keyword" value=","/>
+            <elements xsi:type="xtext:Assignment" feature="generalization" operator="+=">
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.12"/>
+            </elements>
+          </elements>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="{"/>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" value="attributes:"/>
+          <elements xsi:type="xtext:Keyword" value="{"/>
+          <elements xsi:type="xtext:Assignment" cardinality="*" feature="ownedAttribute" operator="+=">
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.19"/>
+          </elements>
+          <elements xsi:type="xtext:Keyword" value="}"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="}"/>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="Mixin">
+      <type metamodel="/0/@metamodelDeclarations.1">
+        <classifier xsi:type="ecore:EClass" href="RefOntoUML#//Mixin"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Assignment" cardinality="?" feature="visibility" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.52"/>
+        </elements>
+        <elements xsi:type="xtext:Assignment" feature="isAbstract" operator="?=">
+          <terminal xsi:type="xtext:Keyword" value="abstract"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="mixin"/>
+        <elements xsi:type="xtext:Assignment" feature="name" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+        </elements>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" value=":"/>
+          <elements xsi:type="xtext:Assignment" feature="generalization" operator="+=">
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.12"/>
+          </elements>
+          <elements xsi:type="xtext:Group" cardinality="*">
+            <elements xsi:type="xtext:Keyword" value=","/>
+            <elements xsi:type="xtext:Assignment" feature="generalization" operator="+=">
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.12"/>
+            </elements>
+          </elements>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="{"/>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" value="attributes:"/>
+          <elements xsi:type="xtext:Keyword" value="{"/>
+          <elements xsi:type="xtext:Assignment" cardinality="*" feature="ownedAttribute" operator="+=">
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.19"/>
+          </elements>
+          <elements xsi:type="xtext:Keyword" value="}"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="}"/>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="Mode">
+      <type metamodel="/0/@metamodelDeclarations.1">
+        <classifier xsi:type="ecore:EClass" href="RefOntoUML#//Mode"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Assignment" cardinality="?" feature="visibility" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.52"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="mode"/>
+        <elements xsi:type="xtext:Assignment" feature="name" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+        </elements>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" value=":"/>
+          <elements xsi:type="xtext:Assignment" feature="generalization" operator="+=">
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.12"/>
+          </elements>
+          <elements xsi:type="xtext:Group" cardinality="*">
+            <elements xsi:type="xtext:Keyword" value=","/>
+            <elements xsi:type="xtext:Assignment" feature="generalization" operator="+=">
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.12"/>
+            </elements>
+          </elements>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="{"/>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" value="attributes:"/>
+          <elements xsi:type="xtext:Keyword" value="{"/>
+          <elements xsi:type="xtext:Assignment" cardinality="*" feature="ownedAttribute" operator="+=">
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.19"/>
+          </elements>
+          <elements xsi:type="xtext:Keyword" value="}"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="}"/>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="Relator">
+      <type metamodel="/0/@metamodelDeclarations.1">
+        <classifier xsi:type="ecore:EClass" href="RefOntoUML#//Relator"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Assignment" cardinality="?" feature="visibility" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.52"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="relator"/>
+        <elements xsi:type="xtext:Assignment" feature="name" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+        </elements>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" value=":"/>
+          <elements xsi:type="xtext:Assignment" feature="generalization" operator="+=">
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.12"/>
+          </elements>
+          <elements xsi:type="xtext:Group" cardinality="*">
+            <elements xsi:type="xtext:Keyword" value=","/>
+            <elements xsi:type="xtext:Assignment" feature="generalization" operator="+=">
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.12"/>
+            </elements>
+          </elements>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="{"/>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" value="attributes:"/>
+          <elements xsi:type="xtext:Keyword" value="{"/>
+          <elements xsi:type="xtext:Assignment" cardinality="*" feature="ownedAttribute" operator="+=">
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.19"/>
+          </elements>
+          <elements xsi:type="xtext:Keyword" value="}"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="}"/>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="Characterization">
+      <type metamodel="/0/@metamodelDeclarations.1">
+        <classifier xsi:type="ecore:EClass" href="RefOntoUML#//Characterization"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Assignment" cardinality="?" feature="visibility" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.52"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="Characterization"/>
+        <elements xsi:type="xtext:Assignment" feature="name" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+        </elements>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" value=":"/>
+          <elements xsi:type="xtext:Assignment" feature="generalization" operator="+=">
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.12"/>
+          </elements>
+          <elements xsi:type="xtext:Group" cardinality="*">
+            <elements xsi:type="xtext:Keyword" value=","/>
+            <elements xsi:type="xtext:Assignment" feature="generalization" operator="+=">
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.12"/>
+            </elements>
+          </elements>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="{"/>
+        <elements xsi:type="xtext:Keyword" value="memberEnd"/>
+        <elements xsi:type="xtext:Keyword" value="("/>
+        <elements xsi:type="xtext:Assignment" feature="memberEnd" operator="+=">
+          <terminal xsi:type="xtext:CrossReference">
+            <type metamodel="/0/@metamodelDeclarations.1">
+              <classifier xsi:type="ecore:EClass" href="RefOntoUML#//Property"/>
+            </type>
+            <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+          </terminal>
+        </elements>
+        <elements xsi:type="xtext:Group" cardinality="*">
+          <elements xsi:type="xtext:Keyword" value=","/>
+          <elements xsi:type="xtext:Assignment" feature="memberEnd" operator="+=">
+            <terminal xsi:type="xtext:CrossReference">
+              <type metamodel="/0/@metamodelDeclarations.1">
+                <classifier xsi:type="ecore:EClass" href="RefOntoUML#//Property"/>
+              </type>
+              <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+            </terminal>
+          </elements>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value=")"/>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" value="navigableOwnedEnd"/>
+          <elements xsi:type="xtext:Keyword" value="("/>
+          <elements xsi:type="xtext:Assignment" feature="navigableOwnedEnd" operator="+=">
+            <terminal xsi:type="xtext:CrossReference">
+              <type metamodel="/0/@metamodelDeclarations.1">
+                <classifier xsi:type="ecore:EClass" href="RefOntoUML#//Property"/>
+              </type>
+              <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+            </terminal>
+          </elements>
+          <elements xsi:type="xtext:Group" cardinality="*">
+            <elements xsi:type="xtext:Keyword" value=","/>
+            <elements xsi:type="xtext:Assignment" feature="navigableOwnedEnd" operator="+=">
+              <terminal xsi:type="xtext:CrossReference">
+                <type metamodel="/0/@metamodelDeclarations.1">
+                  <classifier xsi:type="ecore:EClass" href="RefOntoUML#//Property"/>
+                </type>
+                <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+              </terminal>
+            </elements>
+          </elements>
+          <elements xsi:type="xtext:Keyword" value=")"/>
+        </elements>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" value="ownedEnd"/>
+          <elements xsi:type="xtext:Keyword" value="{"/>
+          <elements xsi:type="xtext:Assignment" feature="ownedEnd" operator="+=">
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.19"/>
+          </elements>
+          <elements xsi:type="xtext:Group" cardinality="*">
+            <elements xsi:type="xtext:Keyword" value=","/>
+            <elements xsi:type="xtext:Assignment" feature="ownedEnd" operator="+=">
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.19"/>
+            </elements>
+          </elements>
+          <elements xsi:type="xtext:Keyword" value="}"/>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="}"/>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:TerminalRule" name="RWS">
+      <type metamodel="/0/@metamodelDeclarations.0">
+        <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </type>
+      <alternatives xsi:type="xtext:Alternatives" cardinality="+">
+        <elements xsi:type="xtext:Keyword" value=" "/>
+        <elements xsi:type="xtext:Keyword" value="&#x9;"/>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:TerminalRule" name="NL">
+      <type metamodel="/0/@metamodelDeclarations.0">
+        <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </type>
+      <alternatives xsi:type="xtext:Alternatives" cardinality="+">
+        <elements xsi:type="xtext:Keyword" value="&#xD;"/>
+        <elements xsi:type="xtext:Keyword" value="&#xA;"/>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:TerminalRule" name="WS">
+      <type metamodel="/0/@metamodelDeclarations.0">
+        <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </type>
+      <alternatives xsi:type="xtext:Alternatives" cardinality="+">
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.48"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.49"/>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:EnumRule" name="AggregationKind">
+      <type metamodel="/0/@metamodelDeclarations.1">
+        <classifier xsi:type="ecore:EEnum" href="RefOntoUML#//AggregationKind"/>
+      </type>
+      <alternatives xsi:type="xtext:Alternatives">
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="RefOntoUML#//AggregationKind/none"/>
+          <literal value="none"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="RefOntoUML#//AggregationKind/shared"/>
+          <literal value="shared"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="RefOntoUML#//AggregationKind/composite"/>
+          <literal value="composite"/>
+        </elements>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:EnumRule" name="VisibilityKind">
+      <type metamodel="/0/@metamodelDeclarations.1">
+        <classifier xsi:type="ecore:EEnum" href="RefOntoUML#//VisibilityKind"/>
+      </type>
+      <alternatives xsi:type="xtext:Alternatives">
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="RefOntoUML#//VisibilityKind/public"/>
+          <literal value="public"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="RefOntoUML#//VisibilityKind/private"/>
+          <literal value="private"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="RefOntoUML#//VisibilityKind/protected"/>
+          <literal value="protected"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="RefOntoUML#//VisibilityKind/package"/>
+          <literal value="package"/>
+        </elements>
+      </alternatives>
+    </rules>
+  </xtext:Grammar>
+  <xtext:Grammar name="org.eclipse.xtext.common.Terminals" definesHiddenTokens="true" hiddenTokens="/0/@rules.50 /1/@rules.3 /1/@rules.4">
+    <metamodelDeclarations xsi:type="xtext:ReferencedMetamodel" alias="ecore">
+      <ePackage href="http://www.eclipse.org/emf/2002/Ecore#/"/>
+    </metamodelDeclarations>
+    <rules xsi:type="xtext:TerminalRule" name="ID">
+      <type metamodel="/1/@metamodelDeclarations.0">
+        <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Keyword" cardinality="?" value="^"/>
+        <elements xsi:type="xtext:Alternatives">
+          <elements xsi:type="xtext:CharacterRange">
+            <left value="a"/>
+            <right value="z"/>
+          </elements>
+          <elements xsi:type="xtext:CharacterRange">
+            <left value="A"/>
+            <right value="Z"/>
+          </elements>
+          <elements xsi:type="xtext:Keyword" value="_"/>
+        </elements>
+        <elements xsi:type="xtext:Alternatives" cardinality="*">
+          <elements xsi:type="xtext:CharacterRange">
+            <left value="a"/>
+            <right value="z"/>
+          </elements>
+          <elements xsi:type="xtext:CharacterRange">
+            <left value="A"/>
+            <right value="Z"/>
+          </elements>
+          <elements xsi:type="xtext:Keyword" value="_"/>
+          <elements xsi:type="xtext:CharacterRange">
+            <left value="0"/>
+            <right value="9"/>
+          </elements>
+        </elements>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:TerminalRule" name="INT">
+      <type metamodel="/1/@metamodelDeclarations.0">
+        <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </type>
+      <alternatives xsi:type="xtext:CharacterRange" cardinality="+">
+        <left value="0"/>
+        <right value="9"/>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:TerminalRule" name="STRING">
+      <type metamodel="/1/@metamodelDeclarations.0">
+        <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </type>
+      <alternatives xsi:type="xtext:Alternatives">
+        <elements xsi:type="xtext:Group">
+          <elements xsi:type="xtext:Keyword" value="&quot;"/>
+          <elements xsi:type="xtext:Alternatives" cardinality="*">
+            <elements xsi:type="xtext:Group">
+              <elements xsi:type="xtext:Keyword" value="\"/>
+              <elements xsi:type="xtext:Alternatives">
+                <elements xsi:type="xtext:Keyword" value="b"/>
+                <elements xsi:type="xtext:Keyword" value="t"/>
+                <elements xsi:type="xtext:Keyword" value="n"/>
+                <elements xsi:type="xtext:Keyword" value="f"/>
+                <elements xsi:type="xtext:Keyword" value="r"/>
+                <elements xsi:type="xtext:Keyword" value="&quot;"/>
+                <elements xsi:type="xtext:Keyword" value="'"/>
+                <elements xsi:type="xtext:Keyword" value="\"/>
+              </elements>
+            </elements>
+            <elements xsi:type="xtext:NegatedToken">
+              <terminal xsi:type="xtext:Alternatives">
+                <elements xsi:type="xtext:Keyword" value="\"/>
+                <elements xsi:type="xtext:Keyword" value="&quot;"/>
+              </terminal>
+            </elements>
+          </elements>
+          <elements xsi:type="xtext:Keyword" value="&quot;"/>
+        </elements>
+        <elements xsi:type="xtext:Group">
+          <elements xsi:type="xtext:Keyword" value="'"/>
+          <elements xsi:type="xtext:Alternatives" cardinality="*">
+            <elements xsi:type="xtext:Group">
+              <elements xsi:type="xtext:Keyword" value="\"/>
+              <elements xsi:type="xtext:Alternatives">
+                <elements xsi:type="xtext:Keyword" value="b"/>
+                <elements xsi:type="xtext:Keyword" value="t"/>
+                <elements xsi:type="xtext:Keyword" value="n"/>
+                <elements xsi:type="xtext:Keyword" value="f"/>
+                <elements xsi:type="xtext:Keyword" value="r"/>
+                <elements xsi:type="xtext:Keyword" value="&quot;"/>
+                <elements xsi:type="xtext:Keyword" value="'"/>
+                <elements xsi:type="xtext:Keyword" value="\"/>
+              </elements>
+            </elements>
+            <elements xsi:type="xtext:NegatedToken">
+              <terminal xsi:type="xtext:Alternatives">
+                <elements xsi:type="xtext:Keyword" value="\"/>
+                <elements xsi:type="xtext:Keyword" value="'"/>
+              </terminal>
+            </elements>
+          </elements>
+          <elements xsi:type="xtext:Keyword" value="'"/>
+        </elements>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:TerminalRule" name="ML_COMMENT">
+      <type metamodel="/1/@metamodelDeclarations.0">
+        <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Keyword" value="/*"/>
+        <elements xsi:type="xtext:UntilToken">
+          <terminal xsi:type="xtext:Keyword" value="*/"/>
+        </elements>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:TerminalRule" name="SL_COMMENT">
+      <type metamodel="/1/@metamodelDeclarations.0">
+        <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Keyword" value="//"/>
+        <elements xsi:type="xtext:NegatedToken" cardinality="*">
+          <terminal xsi:type="xtext:Alternatives">
+            <elements xsi:type="xtext:Keyword" value="&#xA;"/>
+            <elements xsi:type="xtext:Keyword" value="&#xD;"/>
+          </terminal>
+        </elements>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" cardinality="?" value="&#xD;"/>
+          <elements xsi:type="xtext:Keyword" value="&#xA;"/>
+        </elements>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:TerminalRule" name="WS">
+      <type metamodel="/1/@metamodelDeclarations.0">
+        <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </type>
+      <alternatives xsi:type="xtext:Alternatives" cardinality="+">
+        <elements xsi:type="xtext:Keyword" value=" "/>
+        <elements xsi:type="xtext:Keyword" value="&#x9;"/>
+        <elements xsi:type="xtext:Keyword" value="&#xD;"/>
+        <elements xsi:type="xtext:Keyword" value="&#xA;"/>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:TerminalRule" name="ANY_OTHER">
+      <type metamodel="/1/@metamodelDeclarations.0">
+        <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </type>
+      <alternatives xsi:type="xtext:Wildcard"/>
+    </rules>
+  </xtext:Grammar>
+</xmi:XMI>

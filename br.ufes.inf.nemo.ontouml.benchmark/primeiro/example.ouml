@@ -1,0 +1,150 @@
+model Example {
+	abstract category SpatialThing { }
+	abstract category GeographicalSpace : SpatialThing { }
+	
+	abstract category MaterialEntity { }
+
+	disjoint generalizationSet InanimatedOrBiological { }
+	abstract category InanimatedEntity : MaterialEntity (InanimatedOrBiological) { }
+	abstract category BiologicalEntity : MaterialEntity (InanimatedOrBiological) { }
+
+	abstract category HumanOrgan : BiologicalEntity { }
+
+	abstract category Agent { }
+	
+	abstract mixin ActiveAgent { }
+	abstract mixin PerformerArtist { }
+	
+	kind Person : Agent { }
+
+	kind SurgeryRoom : GeographicalSpace { }
+	kind Gallery : GeographicalSpace { }
+	kind Museum : GeographicalSpace { }
+	
+	kind Statue : InanimatedEntity { }
+	kind HumanHeart : HumanOrgan { }
+	kind Organization : Agent { }
+	
+	kind  Track { }
+	kind Album {}
+	
+	extensional collective Group { }
+	
+	quantity PhysicalObject { }
+
+	subkind MalePerson : Person { }
+	subkind FemalePerson : Person { }
+	subkind Band : Organization, PerformerArtist { }
+	
+	
+/*
+	//Parece que n‹o t‡ setando o GeneralizationSet::generalization dele ao setar o Generalization::generalizationSet
+	//Isso Ž porque Generalization::generalizationSet Ž uma collection? Na verdade ele tem opposite, mas nao t‡ funcionando.
+	covering disjoint generalizationSet PersonLifeStatus {
+		//Opposite n‹o est‡ funcionando e n‹o sei como referenciar sem uma propriedade unica
+		//DeceasedPerson : Person
+		//LivingPerson : Person
+	}
+
+	phase DeceasedPerson : Person (PersonLifeStatus) { }
+	phase LivingPerson : Person(PersonLifeStatus), ActiveAgent { }
+	
+	covering disjoint generalizationSet OrganizationLifeStatus { } 
+	phase ExtinctOrganization : Organization(OrganizationLifeStatus) { }
+	phase ActiveOrganization : Organization(OrganizationLifeStatus), ActiveAgent { }
+*/
+
+	//covering disjoint generalizationSet PersonLifeStatus { }
+	phase DeceasedPerson /*: Person (PersonLifeStatus)*/ { }
+	phase LivingPerson : /*Person (PersonLifeStatus),*/ ActiveAgent { }
+
+	covering disjoint generalizationSet OrganizationLifeStatus { } 
+	phase ExtinctOrganization : Organization(OrganizationLifeStatus) { }
+	phase ActiveOrganization : Organization(OrganizationLifeStatus), ActiveAgent { }
+
+	role Parent : Person { }
+	
+	generalizationSet FatherOrMother { }
+	role Father : MalePerson, Parent(FatherOrMother) { }
+	role Mother : FemalePerson, Parent(FatherOrMother) { }
+	
+	role Offspring : Person { }
+	
+//------------------------------------------------------------v
+	//OCL: precisa de ter 2 ou mais mediations
+	relator Registration { }
+
+	// Porque memberEnd NÌO ƒ DERIVADO de ownedEnd?
+	// R) Porque pode haver propriedades que n‹o s‹o owned pela association
+	// Ent‹o porque as que SÌO owned n‹o j‡ v‹o direto pra memberEnd? Digo, memberEnd devia ser derived
+	// e uma UNION de ownedEnd e notOwnedEnd(?)
+	// Isso vai restringir a linguagem textual.
+	mediation M1 {
+		property <unique> m11 (Registration);
+		property <read-only unique> m12 (Offspring);
+		memberEnd : m11, m12;
+	}
+
+	mediation M2 {
+		property <unique> m21 (Registration);
+		property <read-only unique> m22[1,2] (Parent);
+		memberEnd : m21, m22;
+	}
+//------------------------------------------------------------^
+
+
+//------------------------------------------------------------v 
+	derived materialAssociation isParentOf {
+		property <unique> pA[1, 2] (Parent);
+		property <unique> pB (Offspring);
+		memberEnd : pA, pB;	
+	}
+
+	derivation D1{
+		material: property <unique> d1_1 [1,2] (isParentOf);
+		relator: property <read-only unique> d1_2 (Registration);
+		memberEnd : d1_1, d1_2;
+	}
+//------------------------------------------------------------^
+
+
+//------------------------------------------------------------v
+	//OCL: precisa de ter 2 ou mais mediations
+	relator Recording { }
+
+	mediation M3 {
+		property <unique> m31 (Recording);
+		property <read-only unique> m32 (PerformerArtist);
+		memberEnd : m31, m32;
+	}
+
+	mediation M4 {
+		property <unique> m41 (Recording);
+		property <read-only unique> m42[1,2] (Track);
+		memberEnd : m41, m42;
+	}
+//------------------------------------------------------------^
+
+
+//------------------------------------------------------------v
+	derived materialAssociation records {
+		property <unique> r1[1, 99] (PerformerArtist);
+		property <unique> r2[1, 99] (Track);
+		memberEnd : r1, r2;	
+	}
+
+	derivation D2{
+		material: property <unique> d2_1 [1, 99] (records);
+		relator: property <read-only unique> d2_2 (Recording);
+		memberEnd : d2_1, d2_2;
+	}
+//------------------------------------------------------------^
+
+
+	formalAssociation isLocatedIn {
+		property <unique> isLocatedInA[0, 99] (PhysicalObject);
+		property <unique> isLocatedInB[1, 99] (SpatialThing);
+		memberEnd : isLocatedInA, isLocatedInB;	
+	}
+
+}

@@ -1,0 +1,28 @@
+public model FirstModel {
+
+	datatype UmNome
+	{
+		
+	}
+	
+	public kind Person {
+		attributes: {
+			property name (UmNome)
+			property amigos [3, *] (Person)
+		}
+	}
+	
+	//Aqui eu defini uma inst‰ncia
+	instance reinaldinho : Person {
+		"name" => "Reinaldo", //StringLiteral
+		"name" => true, //BooleanLiteral
+		"name" => *, //Literal Unlimited Natural
+		"name" => 1000, //Literal Integer
+		"name" =>  private OpaqueExpression opaqExp1 (Person) : "Python", "Ruby"
+		begin
+			# Reinaldo de souza junior
+			# Reinaldo2
+		end//,
+//		"amigos" => [instance reinaldinho, instance reinaldinho ]
+	}
+}
