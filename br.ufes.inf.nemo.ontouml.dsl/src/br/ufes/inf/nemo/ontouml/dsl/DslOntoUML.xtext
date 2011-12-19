@@ -3,8 +3,16 @@
 grammar br.ufes.inf.nemo.ontouml.dsl.DslOntoUML with org.eclipse.xtext.common.Terminals hidden(NL, RWS, WS, SL_COMMENT, ML_COMMENT) //Para adicionar um em hidden tem que redefinir Todos
 
 import "http://www.eclipse.org/emf/2002/Ecore" as ecore
-//import "http://nemo.inf.ufes.br/ontouml/refontouml"
-import  "RefOntoUML"
+import "http://nemo.inf.ufes.br/ontouml/refontouml"
+//import  "RefOntoUML"
+
+/*
+ * NOTAS
+ *
+ * Para rodar esse generator:
+ * Right-click .mwe2 file, Run As, Run Configurations, Arguments, VM Arguments
+ * -Xms756m -Xmx1g
+ */
 
 /*
  DECISÕES
@@ -14,38 +22,353 @@ import  "RefOntoUML"
    Isso é uma restrição do xText que pra facilitar as coisas, ignora os tokens de comentários, NL e espaços
  */
 
-//Elemento Raiz (Regra S? - inicial)
+
+/*
+ * Seria interessante trabalhar nas Constraints
+ *
+ */
+// #Model
 Model returns Model:
 	{Model}
 	(visibility=VisibilityKind)?
 	'model' name=ID
 	('viewpoint' viewpoint=STRING)?
 	'{'
-		//('clientDependency' '(' clientDependency+=[Dependency|EString] ( "," clientDependency+=[Dependency|EString])* ')' )?
-		//('eAnnotations' '{' eAnnotations+=EAnnotation ( "," eAnnotations+=EAnnotation)* '}' )?
-		//('ownedComment' '{' ownedComment+=Comment ( "," ownedComment+=Comment)* '}' )?
-		//
 		//('elementImport' '{' elementImport+=ElementImport ( "," elementImport+=ElementImport)* '}' )?
 		//('packageImport' '{' packageImport+=PackageImport ( "," packageImport+=PackageImport)* '}' )?
 		//('ownedRule' '{' ownedRule+=Constraintx ( "," ownedRule+=Constraintx)* '}' )?
-		//('packageMerge' '{' packageMerge+=PackageMerge ( "," packageMerge+=PackageMerge)* '}' )?
 		(packagedElement+=PackageableElement)*
 	'}'
 ;
 
 
-//Regras de Herança para tipos que (deveriam ser) abstratos
-//Talvez elas sejam inúteis, uma vez que o metamodelo Ecore não será gerado a partir dessa gramática
 PackageableElement returns PackageableElement:
+	Class | Association | GeneralizationSet
+
+
 //	Association_Impl | GeneralizationSet
 //	Class_Impl | Model | Enumeration | EnumerationLiteral | PrimitiveType
 //	| StringExpression | Expression_Impl | OpaqueExpression | LiteralInteger | LiteralString | LiteralBoolean | LiteralNull | InstanceValue | LiteralUnlimitedNatural //(ACHO que não precisa, só se forem named)
-	Dependency | Constraintx |
-	Package_Impl | GeneralizationSet | DataType_Impl | InstanceSpecification_Impl |
-	SubKind | Kind | Phase | Role | RoleMixin | Mixin | Mode | Relator | Characterization | Mediation | Derivation | FormalAssociation | MaterialAssociation
-	| Category | Collective | Quantity
-//	| Quantity | Collective | Category | subQuantityOf | subCollectionOf | memberOf | componentOf | Characterization
+
+//	| Dependency | Constraintx |
+//	Package_Impl | GeneralizationSet | DataType_Impl | InstanceSpecification_Impl
 ;
+
+Class:
+	Kind | 
+	Quantity |
+	Collective |
+	SubKind |
+	Category |
+	Phase |
+	Role |
+	Mixin |
+	RoleMixin |
+	Mode |
+	Relator
+;
+
+Association:
+	Characterization |
+	Mediation |
+	Derivation |
+
+//	memberOf |
+//	componentOf |
+//	subQuantityOf |
+//	subCollectionOf |
+
+	FormalAssociation |
+	MaterialAssociation 
+;
+
+
+/*
+ * ONTOUML
+ */
+
+// #Kind (SubstanceSortal)
+Kind returns Kind:
+	(visibility=VisibilityKind)?
+	(isActive?='active'? & isAbstract?='abstract'?)
+	'kind' name=ID
+	(':' generalization+=InlineGeneralization ( ',' generalization+=InlineGeneralization)* )?
+	'{'
+		('attributes' '{' (ownedAttribute+=ClassProperty ';')+ '}' )?
+//		nestedClassifier+=Classifier*
+    '}';
+
+
+// #Quantity (SubstanceSortal)
+Quantity returns Quantity:
+	(visibility=VisibilityKind)?
+	(isActive?='active'? & isAbstract?='abstract'?)
+	'quantity' name=ID
+	(':' generalization+=InlineGeneralization ( ',' generalization+=InlineGeneralization)* )?
+	'{'
+		('attributes' '{' (ownedAttribute+=ClassProperty ';')+ '}' )?
+    '}';
+
+
+// #Collective (SubstanceSortal)
+Collective returns Collective:
+	(visibility=VisibilityKind)?
+	(isActive?='active'? & isExtensional?='extensional'? & isAbstract?='abstract'?)
+	'collective' name=ID
+	(':' generalization+=InlineGeneralization ( ',' generalization+=InlineGeneralization)* )?
+	'{'
+		('attributes' '{' (ownedAttribute+=ClassProperty ';')+ '}' )?
+    '}';
+
+
+// #SubKind (RigidSortal)
+SubKind returns SubKind:
+	(visibility=VisibilityKind)?
+	(isActive?='active'? & isAbstract?='abstract'?)
+	'subKind' name=ID
+	(':' generalization+=InlineGeneralization ( ',' generalization+=InlineGeneralization)* )?
+	'{'
+		('attributes' '{' (ownedAttribute+=ClassProperty ';')+ '}' )?
+    '}';
+
+// #Category (RigidMixin)
+Category returns Category:
+	visibility=VisibilityKind?
+	(isActive?='active'? & isAbstract?='abstract') // abstract: required (poderia colocar abstract+='{' ...)
+	'category' name=ID
+	(':' generalization+=InlineGeneralization ( ',' generalization+=InlineGeneralization)* )?
+	'{'
+		('attributes' '{' (ownedAttribute+=ClassProperty ';')+ '}' )?
+    '}';
+
+// #Phase (AntiRigidSortal)
+Phase returns Phase:
+	(visibility=VisibilityKind)?
+	(isActive?='active'? & isAbstract?='abstract'?)
+	'phase'	name=ID
+	(':' generalization+=InlineGeneralization ( ',' generalization+=InlineGeneralization)* )?
+	'{'
+		('attributes' '{' (ownedAttribute+=ClassProperty ';')+ '}' )?
+    '}';
+
+// #Role (AntiRigidSortal)
+Role returns Role:
+	(visibility=VisibilityKind)?
+	(isActive?='active'? & isAbstract?='abstract'?)
+	'role' name=ID
+	(':' generalization+=InlineGeneralization ( ',' generalization+=InlineGeneralization)* )?
+	'{'
+		('attributes' '{' (ownedAttribute+=ClassProperty ';')+ '}' )?
+    '}';
+
+// #Mixin (SemiRigidMixin)
+Mixin returns Mixin:
+	visibility=VisibilityKind?
+	(isActive?='active'? & isAbstract?='abstract') // abstract: required
+	'mixin' name=ID
+	(':' generalization+=InlineGeneralization ( ',' generalization+=InlineGeneralization)* )?
+	'{'
+		('attributes' '{' (ownedAttribute+=ClassProperty ';')+ '}' )?
+    '}';
+
+// #RoleMixin (AntiRigidMixin)
+RoleMixin returns RoleMixin:
+	(visibility=VisibilityKind)?
+	(isActive?='active'? & isAbstract?='abstract'?)
+	'roleMixin' name=ID
+	(':' generalization+=InlineGeneralization ( ',' generalization+=InlineGeneralization)* )?
+	'{'
+		('attributes' '{' (ownedAttribute+=ClassProperty ';')+ '}' )?
+    '}';
+
+// #Mode (Moment)
+Mode returns Mode:
+	(visibility=VisibilityKind)?
+	(isActive?='active'? & isAbstract?='abstract'?)
+	'mode' name=ID
+	(':' generalization+=InlineGeneralization ( ',' generalization+=InlineGeneralization)* )?
+	'{'
+		('attributes' '{' (ownedAttribute+=ClassProperty ';')+ '}' )?
+    '}';
+
+// #Relator (Moment)
+Relator returns Relator:
+	(visibility=VisibilityKind)?
+	(isActive?='active'? & isAbstract?='abstract'?)
+	'relator' name=ID
+	(':' generalization+=InlineGeneralization ( ',' generalization+=InlineGeneralization)* )?
+	'{'
+		('attributes' '{' (ownedAttribute+=ClassProperty ';')+ '}' )?
+    '}';
+
+
+/*
+ * Associations
+ *
+ * 2) (Carraretto, 2010, p.70).
+ * - memberEnd:
+ * Todas as Classes (na verdade, Properties) que estão sendo relacionadas em uma Association ficam em 'memberEnd'.
+ * 
+ * - ownedEnd:
+ * Algumas dessas Classes (na verdade, Properties) ficam sob posse da Association, essas Classes são referenciadas por 'ownedEnd'. Tradicionalmente, todas as Classes (na verdade, Properties) ficam sob posse da Association. Mas é possível em UML fazer a Class ser dona da Property, ao invés da Association. A sintaxe concreta é um "ponto" entre a linha da association e a classe. 99% das vezes owned possui as mesmas Properties que memberEnd.
+ * 
+ * - navigableOwnedEnd:
+ * Algumas dessas Classes (na verdade, Properties) que a Association tem posse são navegáveis. Tradicionalmente, uma Association é navegável em todos os sentidos, até que você fale o contrário. A sintaxe concreta é uma "seta" entre a linha da Association e a Class. 70% das vezes navigableOwnedEnd possui as mesmas Properties de ownedEnd.
+ * 
+ * - endType:
+ * Igual memberEnd, mas ao invés de retornar Properties retorna Classes. É uma relação derived.
+ * self.memberEnd->collect(e | e.type)
+ */
+
+// #Characterization (DependencyRelationship)
+Characterization returns Characterization:
+	(visibility=VisibilityKind)?
+	( isDerived?='derived'? & isAbstract?='abstract'? & isLeaf?='leaf'? )
+	'characterization' name=ID?
+	(':' generalization+=InlineGeneralization ( ',' generalization+=InlineGeneralization)* )?
+	'{'
+		'mode:' ( ownedEnd+=InlinePropertyDefinition ';' )
+		'characterized:' ( ownedEnd+=InlinePropertyDefinition ';' )
+	(
+		('memberEnd' ':' memberEnd+=[Property] (',' memberEnd+=[Property])* ';' )?
+		& ('navigableOwnedEnd' ':' navigableOwnedEnd+=[Property] ( ',' navigableOwnedEnd+=[Property])* ';' )?
+	)
+    '}'
+;
+
+// #Mediation (DependencyRelationship)
+Mediation returns Mediation:
+	(visibility=VisibilityKind)?
+	( isDerived?='derived'? & isAbstract?='abstract'? & isLeaf?='leaf'? )
+	'mediation' name=ID?
+	(':' generalization+=InlineGeneralization ( ',' generalization+=InlineGeneralization)* )?
+	'{'
+	(
+		('relator' ':' ownedEnd+=InlinePropertyDefinition ';' )			// relator
+		('mediated' ':' ownedEnd+=InlinePropertyDefinition ';' )		// mediated
+													// TODO: Tem que ser [>1, ?]
+		(
+			('memberEnd' ':' memberEnd+=[Property] (',' memberEnd+=[Property])* ';' )?
+			& ('navigableOwnedEnd' ':' navigableOwnedEnd+=[Property] ( ',' navigableOwnedEnd+=[Property])* ';' )?
+		)
+	)
+    '}'
+;
+
+// #Derivation (DependencyRelationship)
+Derivation returns Derivation:
+	visibility=VisibilityKind?
+	( isDerived?='derived'? & isAbstract?='abstract'? & isLeaf?='leaf'? )
+	'derivation' name=ID?
+	(':' generalization+=InlineGeneralization ( ',' generalization+=InlineGeneralization)* )?
+	'{'
+		'material:' ( ownedEnd+=InlinePropertyDefinition ';' )
+		'relator:' ( ownedEnd+=InlinePropertyDefinition ';' )
+	(
+		('memberEnd' ':' memberEnd+=[Property] (',' memberEnd+=[Property])* ';' )?
+		& ('navigableOwnedEnd' ':' navigableOwnedEnd+=[Property] ( ',' navigableOwnedEnd+=[Property])* ';' )?
+	)
+    '}'
+;
+
+// #memberOf (Meronymic)
+memberOf returns memberOf:
+	{memberOf}
+	visibility=VisibilityKind?
+	(
+	  isDerived?='derived'? & isAbstract?='abstract'? & isLeaf?='leaf'? &
+	  isEssential?='essential'? & isImmutablePart?='imutablePart'? & isImmutableWhole?='imutableWhole'? & isInseparable?='inseparable'? & isShareable?='shareable'?
+	)
+	'memberOf' name=ID
+	'{'
+	(
+		('memberEnd' ':' memberEnd+=[Property] (',' memberEnd+=[Property])* ';' )?
+		& ('navigableOwnedEnd' ':' navigableOwnedEnd+=[Property] ( ',' navigableOwnedEnd+=[Property])* ';' )?
+	)?
+    '}';
+
+// #componentOf (Meronymic)
+componentOf returns componentOf:
+	{componentOf}
+	visibility=VisibilityKind?
+	(
+	  isDerived?='derived'? & isAbstract?='abstract'? & isLeaf?='leaf'? &
+	  isEssential?='essential'? & isImmutablePart?='imutablePart'? & isImmutableWhole?='imutableWhole'? & isInseparable?='inseparable'? & isShareable?='shareable'?
+	)
+	'componentOf' name=ID
+	'{'
+	(
+		('memberEnd' ':' memberEnd+=[Property] (',' memberEnd+=[Property])* ';' )?
+		& ('navigableOwnedEnd' ':' navigableOwnedEnd+=[Property] ( ',' navigableOwnedEnd+=[Property])* ';' )?
+	)?
+    '}';
+
+// #subQuantityOf (Meronymic)
+subQuantityOf returns subQuantityOf:
+	{subQuantityOf}
+	visibility=VisibilityKind?
+	//( isDerived?='derived'? & isAbstract?='abstract'? & isLeaf?='leaf'? )
+	//( isEssential?='essential'? & isImmutablePart?='imutable-part'? & isImmutableWhole?='imutable-whole'? & isInseparable?='inseparable'? & isShareable?='shareable'? )
+	'subQuantityOf' name=ID
+	'{'
+	(
+		('memberEnd' ':' memberEnd+=[Property] (',' memberEnd+=[Property])* ';' )?
+		& ('navigableOwnedEnd' ':' navigableOwnedEnd+=[Property] ( ',' navigableOwnedEnd+=[Property])* ';' )?
+	)?
+    '}';
+
+// #subCollectionOf (Meronymic)
+subCollectionOf returns subCollectionOf:
+	{subCollectionOf}
+	visibility=VisibilityKind?
+	//( isDerived?='derived'? & isAbstract?='abstract'? & isLeaf?='leaf'? )
+	//( isEssential?='essential'? & isImmutablePart?='imutable-part'? & isImmutableWhole?='imutable-whole'? & isInseparable?='inseparable'? & isShareable?='shareable'? )
+	'subCollectionOf' name=ID
+	'{'
+	(
+		('memberEnd' ':' memberEnd+=[Property] (',' memberEnd+=[Property])* ';' )?
+		& ('navigableOwnedEnd' ':' navigableOwnedEnd+=[Property] ( ',' navigableOwnedEnd+=[Property])* ';' )?
+	)?
+    '}';
+
+
+/*
+ *
+ * public property casadoCom (Pessoa) throught contratoDeCasamento //MaterialAssociation
+ * OCL: Precisa de um Derivation cujo memberEnd[1] = MaterialAssociation
+ */
+MaterialAssociation returns MaterialAssociation:
+	{MaterialAssociation}
+	visibility=VisibilityKind?
+	( isDerived?='derived' & isAbstract?='abstract'? & isLeaf?='leaf'? ) // derived: required
+	'materialAssociation' name=ID?
+	(':' generalization+=InlineGeneralization ( ',' generalization+=InlineGeneralization)* )?
+	'{'
+		( ownedEnd+=InlinePropertyDefinition ';' )+
+	(	
+		('memberEnd' ':' memberEnd+=[Property] (',' memberEnd+=[Property])* ';' )?
+		& ('navigableOwnedEnd' ':' navigableOwnedEnd+=[Property] ( ',' navigableOwnedEnd+=[Property])* ';' )?
+	)
+    '}'
+;
+
+
+//public property maisVelhoQue (Pessoa) //FormalAssociation entre Pessoa e Pessoa
+FormalAssociation returns FormalAssociation:
+	{FormalAssociation}
+	visibility=VisibilityKind?
+	( isAbstract?='abstract'? & isDerived?='derived'? & isLeaf?='leaf'? )
+	'formalAssociation' name=ID?
+	'{'
+		( ownedEnd+=InlinePropertyDefinition ';' )+
+	(	
+		('memberEnd' ':' memberEnd+=[Property] (',' memberEnd+=[Property])* ';' )?
+		& ('navigableOwnedEnd' ':' navigableOwnedEnd+=[Property] ( ',' navigableOwnedEnd+=[Property])* ';' )?
+	)
+    '}'
+	;
+
+
 
 
 NonExpressionValue returns ValueSpecification:
@@ -57,46 +380,12 @@ ValueSpecification returns ValueSpecification:
 	NonExpressionValue |  ExpressionValue
 ;
 
-//Inútil -> Gerado automaticamente pelo Wizard do xText
-//EObject returns ecore::EObject:
-//	EObject_Impl | EAttribute | EAnnotation | EClass | EDataType_Impl | EEnum | EEnumLiteral | EFactory | EOperation | EPackage | EParameter | EReference | EGenericType | ETypeParameter;
-
-
-/*
-Element returns Element:
-	Comment | Package_Impl | Dependency | ElementImport | PackageImport | Constraintx | Association_Impl | Generalization | GeneralizationSet | OpaqueExpression | Property | Class_Impl | Model | DataType_Impl | StringExpression | Expression_Impl | PackageMerge | Enumeration | EnumerationLiteral | InstanceSpecification_Impl | Slot | PrimitiveType | LiteralInteger | LiteralString | LiteralBoolean | LiteralNull | InstanceValue | LiteralUnlimitedNatural | SubKind | Kind | Quantity | Collective | Phase | Role | Category | RoleMixin | Mixin | Mode | Relator | subQuantityOf | subCollectionOf | memberOf | componentOf | Characterization | Mediation | Derivation | FormalAssociation | MaterialAssociation;
-
-NamedElement returns NamedElement:
-	Package_Impl | Dependency | Constraintx | Association_Impl | GeneralizationSet | OpaqueExpression | Property | Class_Impl | Model | DataType_Impl | StringExpression | Expression_Impl | Enumeration | EnumerationLiteral | InstanceSpecification_Impl | PrimitiveType | LiteralInteger | LiteralString | LiteralBoolean | LiteralNull | InstanceValue | LiteralUnlimitedNatural | SubKind | Kind | Quantity | Collective | Phase | Role | Category | RoleMixin | Mixin | Mode | Relator | subQuantityOf | subCollectionOf | memberOf | componentOf | Characterization | Mediation | Derivation | FormalAssociation | MaterialAssociation;
-
-Type returns Type:
-	Association_Impl | Class_Impl | DataType_Impl | Enumeration | PrimitiveType | SubKind | Kind | Quantity | Collective | Phase | Role | Category | RoleMixin | Mixin | Mode | Relator | subQuantityOf | subCollectionOf | memberOf | componentOf | Characterization | Mediation | Derivation | FormalAssociation | MaterialAssociation;
-
-Package returns Package:
-	Package_Impl | Model;
-
-
-
-Classifier returns Classifier:
-	Association_Impl | Class_Impl | DataType_Impl | Enumeration | PrimitiveType | SubKind | Kind | Quantity | Collective | Phase | Role | Category | RoleMixin | Mixin | Mode | Relator | subQuantityOf | subCollectionOf | memberOf | componentOf | Characterization | Mediation | Derivation | FormalAssociation | MaterialAssociation;
-
-Association returns Association:
-	Association_Impl | subQuantityOf | subCollectionOf | memberOf | componentOf | Characterization | Mediation | Derivation | FormalAssociation | MaterialAssociation;
-
-StructuralFeature returns StructuralFeature:
-	Property;
-
-InstanceSpecification returns InstanceSpecification:
-	InstanceSpecification_Impl | EnumerationLiteral;
-
-*/
-
 DataType_Impl returns DataType:
 	(visibility=VisibilityKind)?
 	'datatype'
 	name=ID
 	('{'
-		('attributes:' '{' (ownedAttribute+=InlinePropertyDefinition)* )?
+		('attributes' '{' (ownedAttribute+=ClassProperty ';')+ '}' )?
 //		('clientDependency' '(' clientDependency+=[Dependency|EString] ( "," clientDependency+=[Dependency|EString])* ')' )?
 //		('powertypeExtent' '(' powertypeExtent+=[GeneralizationSet|EString] ( "," powertypeExtent+=[GeneralizationSet|EString])* ')' )?
 //		('redefinedClassifier' '(' redefinedClassifier+=[Classifier|EString] ( "," redefinedClassifier+=[Classifier|EString])* ')' )?
@@ -116,7 +405,7 @@ PrimitiveType returns PrimitiveType:
 	'type'
 	name=ID
 	('{'
-		('attributes:' '{' (ownedAttribute+=InlinePropertyDefinition)* )?
+		('attributes' '{' (ownedAttribute+=ClassProperty ';')+ '}' )?
 //		('clientDependency' '(' clientDependency+=[Dependency|EString] ( "," clientDependency+=[Dependency|EString])* ')' )?
 //		('powertypeExtent' '(' powertypeExtent+=[GeneralizationSet|EString] ( "," powertypeExtent+=[GeneralizationSet|EString])* ')' )?
 //		('redefinedClassifier' '(' redefinedClassifier+=[Classifier|EString] ( "," redefinedClassifier+=[Classifier|EString])* ')' )?
@@ -339,43 +628,52 @@ StringExpression returns StringExpression:
  * property nome (TipoNome)
  * property amigos [2, 3] (TipoNome)
  *****************************************************************************
- * Problemas:
- * Property::association é opposite, mas não está sendo definida automaticamente
+  * FIXME: Property::association é opposite, mas não está sendo definida automaticamente
  *****************************************************************************/
 //ATENTION: Ao mudar, mude também o de baixo
 InlinePropertyDefinition returns Property:
 	{Property}
-	(visibility=VisibilityKind)?
-	'property'
-	(
-	  '<'
-	   ( isStatic?='static'? & isOrdered?='ordered'? & isUnique?='unique'? & isReadOnly?='read-only'? & isDerivedUnion?='derived-union'? )
-	   '>'
-	)?
+//	'property'
 	name=ID?
-	//Cardinalidade tá dando problema porque o Roberto usa umas convenções malucas...
-	//EM Multiplicity Element
-	//upper (derived)-> upperBound (derived)-> upperValue
-	//lower (derived)-> lowerBound (derived)-> lowerValue
-	//Quando eu insiro tô recebendo um problema com uma restrição:
-	//The 'ClassAttributeConstraint1' constraint is violated on 'RefOntoUML.impl.KindImpl@564389b7{platform:/resource/primeiro/agora.ouml#//@packagedElement.1}'
-	//Class::ClassAttributeConstraint1 é:
-	//ownedAttribute->forAll( x | x.lower >= 1 )
-	//Com ('cardinality' '[' lowerValue=ValueSpecification ',' upperValue=ValueSpecification ']')?	//Original era esse
-	//lower tá ficando vazio...
-	//Mudei para
+	(
+	  '('
+	   ( visibility=VisibilityKind? & isStatic?='static'? & isOrdered?='ordered'? & isUnique?='unique'? & isReadOnly?='read-only'? & isDerivedUnion?='derived-union'? )
+	   ')'
+	)?
+	type=[Type]
 	( '[' lowerValue=LiteralInteger ',' upperValue=LiteralUnlimitedNatural ']')?
-
-	//E alterei o valor do UnlimitedNatural=* para 0 (era -1). Com isso o erro mudou para
-	//The 'LowerAndUpperBound' constraint is violated on 'RefOntoUML.impl.PropertyImpl@1412504b{platform:/resource/primeiro/agora.ouml#//@packagedElement.1/@ownedAttribute.1}'
-	'(' type=[Type] ')'
 	('{'
 		('defaults to' defaultValue=ValueSpecification)?
 		('aggregation' aggregation=AggregationKind)?
 		('subset of' '(' subsettedProperty+=[Property] ( "," subsettedProperty+=[Property])* ')' )?
 		('redefines' '(' redefinedProperty+=[Property] ( "," redefinedProperty+=[Property])* ')' )?
     '}')?
-    ;
+;
+
+/*
+ Sintaxe para criar properties em Classes
+ - public Person father[1, 2] (unique)
+ - public father[1,2] (Person) <unique>
+ - public (unique) father[1,2] : Person
+*/
+ClassProperty returns Property:
+	{Property}
+	visibility=VisibilityKind?
+	(
+	  '('
+	   ( isStatic?='static'? & isOrdered?='ordered'? & isUnique?='unique'? & isReadOnly?='read-only'? & isDerivedUnion?='derived-union'? )
+	   ')'
+	)?
+	name=ID
+	( '[' lowerValue=LiteralInteger ',' upperValue=LiteralUnlimitedNatural ']')?
+	':' type=[Type]
+	('{'
+		('defaults to' defaultValue=ValueSpecification)?
+		('aggregation' aggregation=AggregationKind)?
+		('subset of' '(' subsettedProperty+=[Property] ( "," subsettedProperty+=[Property])* ')' )?
+		('redefines' '(' redefinedProperty+=[Property] ( "," redefinedProperty+=[Property])* ')' )?
+    '}')?
+;
 
 
 /*
@@ -415,103 +713,45 @@ Relation returns Property:
 ;
 */
 
-/*
 
-*** Associations ***
+//CharacterizationMode returns Property:
+//	{Property}
+//	name=ID?
+//	(
+//	  '('
+//	   ( visibility=VisibilityKind? & isStatic?='static'? & isOrdered?='ordered'? & isUnique?='unique'? & isReadOnly?='read-only'? & isDerivedUnion?='derived-union'? )
+//	   ')'
+//	)?
+//	type=[Mode]
+//	( '[' lowerValue=LiteralInteger ',' upperValue=LiteralUnlimitedNatural ']')?
+//	('{'
+//		('defaults to' defaultValue=ValueSpecification)?
+//		('aggregation' aggregation=AggregationKind)?
+//		('subset of' '(' subsettedProperty+=[Property] ( "," subsettedProperty+=[Property])* ')' )?
+//		('redefines' '(' redefinedProperty+=[Property] ( "," redefinedProperty+=[Property])* ')' )?
+//    '}')?
+//;
 
-2) (Carraretto, 2010, p.70).
-
-- memberEnd:
-Todas as Classes (na verdade, Properties) que estão sendo relacionadas em uma Association ficam em 'memberEnd'.
-
-- ownedEnd:
-Algumas dessas Classes (na verdade, Properties) ficam sob posse da Association, essas Classes são referenciadas por 'ownedEnd'. Tradicionalmente, todas as Classes (na verdade, Properties) ficam sob posse da Association. Mas é possível em UML fazer a Class ser dona da Property, ao invés da Association. A sintaxe concreta é um "ponto" entre a linha da association e a classe. 99% das vezes owned possui as mesmas Properties que memberEnd.
-
-- navigableOwnedEnd:
-Algumas dessas Classes (na verdade, Properties) que a Association tem posse são navegáveis. Tradicionalmente, uma Association é navegável em todos os sentidos, até que você fale o contrário. A sintaxe concreta é uma "seta" entre a linha da Association e a Class. 70% das vezes navigableOwnedEnd possui as mesmas Properties de ownedEnd.
-
-- endType:
-Igual memberEnd, mas ao invés de retornar Properties retorna Classes. É uma relação derived.
-self.memberEnd->collect(e | e.type)
-*/
-
-
-
-/*
- *
- * ownedMember vs ownedElement (derivada)
- * endType (derivada)
-
-mediation M1 {
-	Person : property <unique> p1[1,1] (Person)
-	Animal : property <read-only> p2[1,1] (Animal)
-}
-*/
-Mediation returns Mediation:
-	{Mediation}
-	(visibility=VisibilityKind)?
-	'mediation' name=ID?
-	(':' generalization+=InlineGeneralization ( ',' generalization+=InlineGeneralization)* )?
-	'{'
-	(	
-		( ownedEnd+=InlinePropertyDefinition ';' )+
-		& ('memberEnd' ':' memberEnd+=[Property] (',' memberEnd+=[Property])* ';' )?
-		& ('navigableOwnedEnd' ':' navigableOwnedEnd+=[Property] ( ',' navigableOwnedEnd+=[Property])* ';' )?
-	)
-    '}'
-;
-
-Derivation returns Derivation:
-	visibility=VisibilityKind?
-	( isDerived?='derived'? & isAbstract?='abstract'? & isLeaf?='leaf'? )
-	'derivation' name=ID?
-	(':' generalization+=InlineGeneralization ( ',' generalization+=InlineGeneralization)* )?
-	'{'
-		'material:' ( ownedEnd+=InlinePropertyDefinition ';' )
-		'relator:' ( ownedEnd+=InlinePropertyDefinition ';' )
-	(
-		('memberEnd' ':' memberEnd+=[Property] (',' memberEnd+=[Property])* ';' )?
-		& ('navigableOwnedEnd' ':' navigableOwnedEnd+=[Property] ( ',' navigableOwnedEnd+=[Property])* ';' )?
-	)
-    '}'
-;
-
-/*
- *
- * public property casadoCom (Pessoa) throught contratoDeCasamento //MaterialAssociation
- * OCL: Precisa de um Derivation cujo memberEnd[1] = MaterialAssociation
- */
-MaterialAssociation returns MaterialAssociation:
-	{MaterialAssociation}
-	visibility=VisibilityKind?
-	//Derived é OBRIGATORIO
-	( isDerived?='derived' & isAbstract?='abstract'? & isLeaf?='leaf'? )
-	'materialAssociation' name=ID?
-	(':' generalization+=InlineGeneralization ( ',' generalization+=InlineGeneralization)* )?
-	'{'
-	(	
-		( ownedEnd+=InlinePropertyDefinition ';' )+
-		& ('memberEnd' ':' memberEnd+=[Property] (',' memberEnd+=[Property])* ';' )?
-		& ('navigableOwnedEnd' ':' navigableOwnedEnd+=[Property] ( ',' navigableOwnedEnd+=[Property])* ';' )?
-	)
-    '}'
-;
+//CharacterizationCharacterized returns Property:
+//	{Property}
+//	name=ID?
+//	(
+//	  '('
+//	   ( visibility=VisibilityKind? & isStatic?='static'? & isOrdered?='ordered'? & isUnique?='unique'? & isReadOnly?='read-only'? & isDerivedUnion?='derived-union'? )
+//	   ')'
+//	)?
+//	type=[Type]
+//	// CharacterizationConstraint2
+//	//( '[' lowerValue=LiteralInteger ',' upperValue=LiteralUnlimitedNatural ']')?
+//	('{'
+//		('defaults to' defaultValue=ValueSpecification)?
+//		('aggregation' aggregation=AggregationKind)?
+//		('subset of' '(' subsettedProperty+=[Property] ( "," subsettedProperty+=[Property])* ')' )?
+//		('redefines' '(' redefinedProperty+=[Property] ( "," redefinedProperty+=[Property])* ')' )?
+//    '}')?
+//;
 
 
-//public property maisVelhoQue (Pessoa) //FormalAssociation entre Pessoa e Pessoa
-FormalAssociation returns FormalAssociation:
-	{FormalAssociation}
-	visibility=VisibilityKind?
-	( isAbstract?='abstract'? & isDerived?='derived'? & isLeaf?='leaf'? )
-	'formalAssociation' name=ID?
-	'{'
-	(	
-		( ownedEnd+=InlinePropertyDefinition ';' )+
-		& ('memberEnd' ':' memberEnd+=[Property] (',' memberEnd+=[Property])* ';' )?
-		& ('navigableOwnedEnd' ':' navigableOwnedEnd+=[Property] ( ',' navigableOwnedEnd+=[Property])* ';' )?
-	)
-    '}'
-	;
 	
 /* 
 Association_Impl returns Association:
@@ -670,332 +910,7 @@ LiteralNull returns LiteralNull:
 	'NULL'
 ;
 
-/*
- * ONTOUML
- */
 
-
-SubKind returns SubKind:
-	(visibility=VisibilityKind)?
-	isActive?='active'?
-	'subkind' name=ID
-	(':' generalization+=InlineGeneralization ( ',' generalization+=InlineGeneralization)* )?
-	'{'
-//		('clientDependency' '(' clientDependency+=[Dependency|EString] ( "," clientDependency+=[Dependency|EString])* ')' )?
-//		('powertypeExtent' '(' powertypeExtent+=[GeneralizationSet|EString] ( "," powertypeExtent+=[GeneralizationSet|EString])* ')' )?
-//		('redefinedClassifier' '(' redefinedClassifier+=[Classifier|EString] ( "," redefinedClassifier+=[Classifier|EString])* ')' )?
-		//('eAnnotations' '{' eAnnotations+=EAnnotation ( "," eAnnotations+=EAnnotation)* '}' )?
-//		('ownedComment' '{' ownedComment+=Comment ( "," ownedComment+=Comment)* '}' )?
-//		
-//		('elementImport' '{' elementImport+=ElementImport ( "," elementImport+=ElementImport)* '}' )?
-//		('packageImport' '{' packageImport+=PackageImport ( "," packageImport+=PackageImport)* '}' )?
-//		('ownedRule' '{' ownedRule+=Constraintx ( "," ownedRule+=Constraintx)* '}' )?
-//		('nestedClassifier' '{' nestedClassifier+=Classifier ( "," nestedClassifier+=Classifier)* '}' )?
-		('attributes:' '{' (ownedAttribute+=InlinePropertyDefinition)* )?
-    '}';
-
-Kind returns Kind:
-	(visibility=VisibilityKind)?
-	'kind' name=ID
-	(':' generalization+=InlineGeneralization ( ',' generalization+=InlineGeneralization)* )?
-	'{'
-		('attributes:' '{' (ownedAttribute+=InlinePropertyDefinition)* '}' )?
-//
-//		
-//		'isActive' isActive=Boolean
-//		('clientDependency' '(' clientDependency+=[Dependency|EString] ( "," clientDependency+=[Dependency|EString])* ')' )?
-//		('powertypeExtent' '(' powertypeExtent+=[GeneralizationSet|EString] ( "," powertypeExtent+=[GeneralizationSet|EString])* ')' )?
-//		('redefinedClassifier' '(' redefinedClassifier+=[Classifier|EString] ( "," redefinedClassifier+=[Classifier|EString])* ')' )?
-		//('eAnnotations' '{' eAnnotations+=EAnnotation ( "," eAnnotations+=EAnnotation)* '}' )?
-//		('ownedComment' '{' ownedComment+=Comment ( "," ownedComment+=Comment)* '}' )?
-//		
-//		('elementImport' '{' elementImport+=ElementImport ( "," elementImport+=ElementImport)* '}' )?
-//		('packageImport' '{' packageImport+=PackageImport ( "," packageImport+=PackageImport)* '}' )?
-//		('ownedRule' '{' ownedRule+=Constraintx ( "," ownedRule+=Constraintx)* '}' )?
-//		('generalization' '{' generalization+=Generalization ( "," generalization+=Generalization)* '}' )?
-//		('nestedClassifier' '{' nestedClassifier+=Classifier ( "," nestedClassifier+=Classifier)* '}' )?
-    '}';
-
-Quantity returns Quantity:
-	(visibility=VisibilityKind)?
-	isActive?='active'?
-	'quantity' name=ID
-	(':' generalization+=InlineGeneralization ( ',' generalization+=InlineGeneralization)* )?
-	'{'
-/*
-		('clientDependency' '(' clientDependency+=[Dependency|EString] ( "," clientDependency+=[Dependency|EString])* ')' )?
-		('powertypeExtent' '(' powertypeExtent+=[GeneralizationSet|EString] ( "," powertypeExtent+=[GeneralizationSet|EString])* ')' )?
-		('redefinedClassifier' '(' redefinedClassifier+=[Classifier|EString] ( "," redefinedClassifier+=[Classifier|EString])* ')' )?
-		//('eAnnotations' '{' eAnnotations+=EAnnotation ( "," eAnnotations+=EAnnotation)* '}' )?
-		('ownedComment' '{' ownedComment+=Comment ( "," ownedComment+=Comment)* '}' )?
-		
-		('elementImport' '{' elementImport+=ElementImport ( "," elementImport+=ElementImport)* '}' )?
-		('packageImport' '{' packageImport+=PackageImport ( "," packageImport+=PackageImport)* '}' )?
-		('ownedRule' '{' ownedRule+=Constraintx ( "," ownedRule+=Constraintx)* '}' )?
-		('generalization' '{' generalization+=Generalization ( "," generalization+=Generalization)* '}' )?
-		('nestedClassifier' '{' nestedClassifier+=Classifier ( "," nestedClassifier+=Classifier)* '}' )?
-		('ownedAttribute' '{' ownedAttribute+=Property ( "," ownedAttribute+=Property)* '}' )?
-*/
-    '}';
-
-Collective returns Collective:
-	(visibility=VisibilityKind)?
-	isExtensional?='extensional'?
-	'collective' name=ID
-	(':' generalization+=InlineGeneralization ( ',' generalization+=InlineGeneralization)* )?
-	'{'
-/*
-		('clientDependency' '(' clientDependency+=[Dependency|EString] ( "," clientDependency+=[Dependency|EString])* ')' )?
-		('powertypeExtent' '(' powertypeExtent+=[GeneralizationSet|EString] ( "," powertypeExtent+=[GeneralizationSet|EString])* ')' )?
-		('redefinedClassifier' '(' redefinedClassifier+=[Classifier|EString] ( "," redefinedClassifier+=[Classifier|EString])* ')' )?
-		//('eAnnotations' '{' eAnnotations+=EAnnotation ( "," eAnnotations+=EAnnotation)* '}' )?
-		('ownedComment' '{' ownedComment+=Comment ( "," ownedComment+=Comment)* '}' )?
-		
-		('elementImport' '{' elementImport+=ElementImport ( "," elementImport+=ElementImport)* '}' )?
-		('packageImport' '{' packageImport+=PackageImport ( "," packageImport+=PackageImport)* '}' )?
-		('ownedRule' '{' ownedRule+=Constraintx ( "," ownedRule+=Constraintx)* '}' )?
-		('generalization' '{' generalization+=Generalization ( "," generalization+=Generalization)* '}' )?
-		('nestedClassifier' '{' nestedClassifier+=Classifier ( "," nestedClassifier+=Classifier)* '}' )?
-		('ownedAttribute' '{' ownedAttribute+=Property ( "," ownedAttribute+=Property)* '}' )?
-*/
-    '}';
-
-Phase returns Phase:
-	(visibility=VisibilityKind)?
-	'phase'	name=ID
-	(':' generalization+=InlineGeneralization ( ',' generalization+=InlineGeneralization)* )?
-	'{'
-//		('clientDependency' '(' clientDependency+=[Dependency|EString] ( "," clientDependency+=[Dependency|EString])* ')' )?
-//		('powertypeExtent' '(' powertypeExtent+=[GeneralizationSet|EString] ( "," powertypeExtent+=[GeneralizationSet|EString])* ')' )?
-//		('redefinedClassifier' '(' redefinedClassifier+=[Classifier|EString] ( "," redefinedClassifier+=[Classifier|EString])* ')' )?
-		//('eAnnotations' '{' eAnnotations+=EAnnotation ( "," eAnnotations+=EAnnotation)* '}' )?
-//		('ownedComment' '{' ownedComment+=Comment ( "," ownedComment+=Comment)* '}' )?
-//		
-//		('elementImport' '{' elementImport+=ElementImport ( "," elementImport+=ElementImport)* '}' )?
-//		('packageImport' '{' packageImport+=PackageImport ( "," packageImport+=PackageImport)* '}' )?
-//		('ownedRule' '{' ownedRule+=Constraintx ( "," ownedRule+=Constraintx)* '}' )?
-//		('nestedClassifier' '{' nestedClassifier+=Classifier ( "," nestedClassifier+=Classifier)* '}' )?
-//		('ownedAttribute' '{' ownedAttribute+=Property ( "," ownedAttribute+=Property)* '}' )?
-    '}';
-
-Role returns Role:
-	(visibility=VisibilityKind)?
-	'role' name=ID
-	(':' generalization+=InlineGeneralization ( ',' generalization+=InlineGeneralization)* )?
-	'{'
-		('attributes:' '{' (ownedAttribute+=InlinePropertyDefinition)* '}' )?
-//		('clientDependency' '(' clientDependency+=[Dependency|EString] ( "," clientDependency+=[Dependency|EString])* ')' )?
-//		('powertypeExtent' '(' powertypeExtent+=[GeneralizationSet|EString] ( "," powertypeExtent+=[GeneralizationSet|EString])* ')' )?
-//		('redefinedClassifier' '(' redefinedClassifier+=[Classifier|EString] ( "," redefinedClassifier+=[Classifier|EString])* ')' )?
-		//('eAnnotations' '{' eAnnotations+=EAnnotation ( "," eAnnotations+=EAnnotation)* '}' )?
-//		('ownedComment' '{' ownedComment+=Comment ( "," ownedComment+=Comment)* '}' )?
-//		
-//		('elementImport' '{' elementImport+=ElementImport ( "," elementImport+=ElementImport)* '}' )?
-//		('packageImport' '{' packageImport+=PackageImport ( "," packageImport+=PackageImport)* '}' )?
-//		('ownedRule' '{' ownedRule+=Constraintx ( "," ownedRule+=Constraintx)* '}' )?
-//		('generalization' '{' generalization+=Generalization ( "," generalization+=Generalization)* '}' )?
-//		('nestedClassifier' '{' nestedClassifier+=Classifier ( "," nestedClassifier+=Classifier)* '}' )?
-    '}';
-
-//superClass
-//generalization
-Category returns Category:
-	visibility=VisibilityKind?
-	isAbstract?='abstract' //Precisa sempre ser abstract: MixinClassConstraint2. Essa constraint, não poderia ser isABstract != false? (pois assim, abstract null seria válida)
-	'category' name=ID
-	(':' generalization+=InlineGeneralization ( ',' generalization+=InlineGeneralization)* )?
-	'{'
-//		('clientDependency' '(' clientDependency+=[Dependency|EString] ( "," clientDependency+=[Dependency|EString])* ')' )?
-//		('powertypeExtent' '(' powertypeExtent+=[GeneralizationSet|EString] ( "," powertypeExtent+=[GeneralizationSet|EString])* ')' )?
-//		('redefinedClassifier' '(' redefinedClassifier+=[Classifier|EString] ( "," redefinedClassifier+=[Classifier|EString])* ')' )?
-		//('eAnnotations' '{' eAnnotations+=EAnnotation ( "," eAnnotations+=EAnnotation)* '}' )?
-//		('ownedComment' '{' ownedComment+=Comment ( "," ownedComment+=Comment)* '}' )?
-		
-//		('elementImport' '{' elementImport+=ElementImport ( "," elementImport+=ElementImport)* '}' )?
-//		('packageImport' '{' packageImport+=PackageImport ( "," packageImport+=PackageImport)* '}' )?
-//		('ownedRule' '{' ownedRule+=Constraintx ( "," ownedRule+=Constraintx)* '}' )?
-//		('nestedClassifier' '{' nestedClassifier+=Classifier ( "," nestedClassifier+=Classifier)* '}' )?
-		('ownedAttribute' '{' ownedAttribute+=InlinePropertyDefinition ( "," ownedAttribute+=InlinePropertyDefinition)* '}' )?
-    '}';
-
-RoleMixin returns RoleMixin:
-	(visibility=VisibilityKind)?
-	'roleMixin' name=ID
-	(':' generalization+=InlineGeneralization ( ',' generalization+=InlineGeneralization)* )?
-	'{'
-		('attributes:' '{' (ownedAttribute+=InlinePropertyDefinition)* '}' )?
-//		('clientDependency' '(' clientDependency+=[Dependency|EString] ( "," clientDependency+=[Dependency|EString])* ')' )?
-//		('powertypeExtent' '(' powertypeExtent+=[GeneralizationSet|EString] ( "," powertypeExtent+=[GeneralizationSet|EString])* ')' )?
-//		('redefinedClassifier' '(' redefinedClassifier+=[Classifier|EString] ( "," redefinedClassifier+=[Classifier|EString])* ')' )?
-		//('eAnnotations' '{' eAnnotations+=EAnnotation ( "," eAnnotations+=EAnnotation)* '}' )?
-//		('ownedComment' '{' ownedComment+=Comment ( "," ownedComment+=Comment)* '}' )?
-//		
-//		('elementImport' '{' elementImport+=ElementImport ( "," elementImport+=ElementImport)* '}' )?
-//		('packageImport' '{' packageImport+=PackageImport ( "," packageImport+=PackageImport)* '}' )?
-//		('ownedRule' '{' ownedRule+=Constraintx ( "," ownedRule+=Constraintx)* '}' )?
-//		('generalization' '{' generalization+=Generalization ( "," generalization+=Generalization)* '}' )?
-//		('nestedClassifier' '{' nestedClassifier+=Classifier ( "," nestedClassifier+=Classifier)* '}' )?
-    '}';
-
-Mixin returns Mixin:
-	visibility=VisibilityKind?
-	isAbstract?='abstract' //Precisa sempre ser abstract: MixinClassConstraint2. Essa constraint, não poderia ser isABstract != false? (pois assim, abstract null seria válida)
-	'mixin' name=ID
-	(':' generalization+=InlineGeneralization ( ',' generalization+=InlineGeneralization)* )?
-	'{'
-		('attributes:' '{' (ownedAttribute+=InlinePropertyDefinition)* '}' )?
-//		('clientDependency' '(' clientDependency+=[Dependency|EString] ( "," clientDependency+=[Dependency|EString])* ')' )?
-//		('powertypeExtent' '(' powertypeExtent+=[GeneralizationSet|EString] ( "," powertypeExtent+=[GeneralizationSet|EString])* ')' )?
-//		('redefinedClassifier' '(' redefinedClassifier+=[Classifier|EString] ( "," redefinedClassifier+=[Classifier|EString])* ')' )?
-		//('eAnnotations' '{' eAnnotations+=EAnnotation ( "," eAnnotations+=EAnnotation)* '}' )?
-//		('ownedComment' '{' ownedComment+=Comment ( "," ownedComment+=Comment)* '}' )?
-//		
-//		('elementImport' '{' elementImport+=ElementImport ( "," elementImport+=ElementImport)* '}' )?
-//		('packageImport' '{' packageImport+=PackageImport ( "," packageImport+=PackageImport)* '}' )?
-//		('ownedRule' '{' ownedRule+=Constraintx ( "," ownedRule+=Constraintx)* '}' )?
-//		('generalization' '{' generalization+=Generalization ( "," generalization+=Generalization)* '}' )?
-//		('nestedClassifier' '{' nestedClassifier+=Classifier ( "," nestedClassifier+=Classifier)* '}' )?
-    '}';
-
-Mode returns Mode:
-	(visibility=VisibilityKind)?
-	'mode' name=ID
-	(':' generalization+=InlineGeneralization ( ',' generalization+=InlineGeneralization)* )?
-	'{'
-		('attributes:' '{' (ownedAttribute+=InlinePropertyDefinition)* '}' )?
-//		('clientDependency' '(' clientDependency+=[Dependency|EString] ( "," clientDependency+=[Dependency|EString])* ')' )?
-//		('powertypeExtent' '(' powertypeExtent+=[GeneralizationSet|EString] ( "," powertypeExtent+=[GeneralizationSet|EString])* ')' )?
-//		('redefinedClassifier' '(' redefinedClassifier+=[Classifier|EString] ( "," redefinedClassifier+=[Classifier|EString])* ')' )?
-		//('eAnnotations' '{' eAnnotations+=EAnnotation ( "," eAnnotations+=EAnnotation)* '}' )?
-//		('ownedComment' '{' ownedComment+=Comment ( "," ownedComment+=Comment)* '}' )?
-//		
-//		('elementImport' '{' elementImport+=ElementImport ( "," elementImport+=ElementImport)* '}' )?
-//		('packageImport' '{' packageImport+=PackageImport ( "," packageImport+=PackageImport)* '}' )?
-//		('ownedRule' '{' ownedRule+=Constraintx ( "," ownedRule+=Constraintx)* '}' )?
-//		('generalization' '{' generalization+=Generalization ( "," generalization+=Generalization)* '}' )?
-//		('nestedClassifier' '{' nestedClassifier+=Classifier ( "," nestedClassifier+=Classifier)* '}' )?
-    '}';
-
-Relator returns Relator:
-	(visibility=VisibilityKind)?
-	'relator' name=ID
-	(':' generalization+=InlineGeneralization ( ',' generalization+=InlineGeneralization)* )?
-	'{'
-		('attributes:' '{' (ownedAttribute+=InlinePropertyDefinition)* '}' )?
-//		('clientDependency' '(' clientDependency+=[Dependency|EString] ( "," clientDependency+=[Dependency|EString])* ')' )?
-//		('powertypeExtent' '(' powertypeExtent+=[GeneralizationSet|EString] ( "," powertypeExtent+=[GeneralizationSet|EString])* ')' )?
-//		('redefinedClassifier' '(' redefinedClassifier+=[Classifier|EString] ( "," redefinedClassifier+=[Classifier|EString])* ')' )?
-		//('eAnnotations' '{' eAnnotations+=EAnnotation ( "," eAnnotations+=EAnnotation)* '}' )?
-//		('ownedComment' '{' ownedComment+=Comment ( "," ownedComment+=Comment)* '}' )?
-//		
-//		('elementImport' '{' elementImport+=ElementImport ( "," elementImport+=ElementImport)* '}' )?
-//		('packageImport' '{' packageImport+=PackageImport ( "," packageImport+=PackageImport)* '}' )?
-//		('ownedRule' '{' ownedRule+=Constraintx ( "," ownedRule+=Constraintx)* '}' )?
-//		('generalization' '{' generalization+=Generalization ( "," generalization+=Generalization)* '}' )?
-//		('nestedClassifier' '{' nestedClassifier+=Classifier ( "," nestedClassifier+=Classifier)* '}' )?
-    '}';
-
-/*
-
-subQuantityOf returns subQuantityOf:
-	'subQuantityOf' name=ID
-	'{'
-		('visibility' visibility=VisibilityKind)?
-		('clientDependency' '(' clientDependency+=[Dependency|EString] ( "," clientDependency+=[Dependency|EString])* ')' )?
-		('powertypeExtent' '(' powertypeExtent+=[GeneralizationSet|EString] ( "," powertypeExtent+=[GeneralizationSet|EString])* ')' )?
-		('redefinedClassifier' '(' redefinedClassifier+=[Classifier|EString] ( "," redefinedClassifier+=[Classifier|EString])* ')' )?
-		'memberEnd' '(' memberEnd+=[Property|EString] ( "," memberEnd+=[Property|EString])* ')' 
-		('navigableOwnedEnd' '(' navigableOwnedEnd+=[Property|EString] ( "," navigableOwnedEnd+=[Property|EString])* ')' )?
-		//('eAnnotations' '{' eAnnotations+=EAnnotation ( "," eAnnotations+=EAnnotation)* '}' )?
-		('ownedComment' '{' ownedComment+=Comment ( "," ownedComment+=Comment)* '}' )?
-		
-		('elementImport' '{' elementImport+=ElementImport ( "," elementImport+=ElementImport)* '}' )?
-		('packageImport' '{' packageImport+=PackageImport ( "," packageImport+=PackageImport)* '}' )?
-		('ownedRule' '{' ownedRule+=Constraintx ( "," ownedRule+=Constraintx)* '}' )?
-		('generalization' '{' generalization+=Generalization ( "," generalization+=Generalization)* '}' )?
-		('ownedEnd' '{' ownedEnd+=Property ( "," ownedEnd+=Property)* '}' )?
-    '}';
-
-subCollectionOf returns subCollectionOf:
-	'subCollectionOf' name=ID
-	'{'
-		('visibility' visibility=VisibilityKind)?
-		('clientDependency' '(' clientDependency+=[Dependency|EString] ( "," clientDependency+=[Dependency|EString])* ')' )?
-		('powertypeExtent' '(' powertypeExtent+=[GeneralizationSet|EString] ( "," powertypeExtent+=[GeneralizationSet|EString])* ')' )?
-		('redefinedClassifier' '(' redefinedClassifier+=[Classifier|EString] ( "," redefinedClassifier+=[Classifier|EString])* ')' )?
-		'memberEnd' '(' memberEnd+=[Property|EString] ( "," memberEnd+=[Property|EString])* ')' 
-		('navigableOwnedEnd' '(' navigableOwnedEnd+=[Property|EString] ( "," navigableOwnedEnd+=[Property|EString])* ')' )?
-		//('eAnnotations' '{' eAnnotations+=EAnnotation ( "," eAnnotations+=EAnnotation)* '}' )?
-		('ownedComment' '{' ownedComment+=Comment ( "," ownedComment+=Comment)* '}' )?
-		
-		('elementImport' '{' elementImport+=ElementImport ( "," elementImport+=ElementImport)* '}' )?
-		('packageImport' '{' packageImport+=PackageImport ( "," packageImport+=PackageImport)* '}' )?
-		('ownedRule' '{' ownedRule+=Constraintx ( "," ownedRule+=Constraintx)* '}' )?
-		('generalization' '{' generalization+=Generalization ( "," generalization+=Generalization)* '}' )?
-		('ownedEnd' '{' ownedEnd+=Property ( "," ownedEnd+=Property)* '}' )?
-    '}';
-
-memberOf returns memberOf:
-	'memberOf'
-	'{'
-		('name' name=ID)?
-		('visibility' visibility=VisibilityKind)?
-		('clientDependency' '(' clientDependency+=[Dependency|EString] ( "," clientDependency+=[Dependency|EString])* ')' )?
-		('powertypeExtent' '(' powertypeExtent+=[GeneralizationSet|EString] ( "," powertypeExtent+=[GeneralizationSet|EString])* ')' )?
-		('redefinedClassifier' '(' redefinedClassifier+=[Classifier|EString] ( "," redefinedClassifier+=[Classifier|EString])* ')' )?
-		'memberEnd' '(' memberEnd+=[Property|EString] ( "," memberEnd+=[Property|EString])* ')' 
-		('navigableOwnedEnd' '(' navigableOwnedEnd+=[Property|EString] ( "," navigableOwnedEnd+=[Property|EString])* ')' )?
-		//('eAnnotations' '{' eAnnotations+=EAnnotation ( "," eAnnotations+=EAnnotation)* '}' )?
-		('ownedComment' '{' ownedComment+=Comment ( "," ownedComment+=Comment)* '}' )?
-		
-		('elementImport' '{' elementImport+=ElementImport ( "," elementImport+=ElementImport)* '}' )?
-		('packageImport' '{' packageImport+=PackageImport ( "," packageImport+=PackageImport)* '}' )?
-		('ownedRule' '{' ownedRule+=Constraintx ( "," ownedRule+=Constraintx)* '}' )?
-		('generalization' '{' generalization+=Generalization ( "," generalization+=Generalization)* '}' )?
-		('ownedEnd' '{' ownedEnd+=Property ( "," ownedEnd+=Property)* '}' )?
-    '}';
-
-componentOf returns componentOf:
-	'componentOf'
-	'{'
-		('name' name=ID)?
-		('visibility' visibility=VisibilityKind)?
-		('clientDependency' '(' clientDependency+=[Dependency|EString] ( "," clientDependency+=[Dependency|EString])* ')' )?
-		('powertypeExtent' '(' powertypeExtent+=[GeneralizationSet|EString] ( "," powertypeExtent+=[GeneralizationSet|EString])* ')' )?
-		('redefinedClassifier' '(' redefinedClassifier+=[Classifier|EString] ( "," redefinedClassifier+=[Classifier|EString])* ')' )?
-		'memberEnd' '(' memberEnd+=[Property|EString] ( "," memberEnd+=[Property|EString])* ')' 
-		('navigableOwnedEnd' '(' navigableOwnedEnd+=[Property|EString] ( "," navigableOwnedEnd+=[Property|EString])* ')' )?
-		//('eAnnotations' '{' eAnnotations+=EAnnotation ( "," eAnnotations+=EAnnotation)* '}' )?
-		('ownedComment' '{' ownedComment+=Comment ( "," ownedComment+=Comment)* '}' )?
-		
-		('elementImport' '{' elementImport+=ElementImport ( "," elementImport+=ElementImport)* '}' )?
-		('packageImport' '{' packageImport+=PackageImport ( "," packageImport+=PackageImport)* '}' )?
-		('ownedRule' '{' ownedRule+=Constraintx ( "," ownedRule+=Constraintx)* '}' )?
-		('generalization' '{' generalization+=Generalization ( "," generalization+=Generalization)* '}' )?
-		('ownedEnd' '{' ownedEnd+=Property ( "," ownedEnd+=Property)* '}' )?
-    '}';
-
-*/
-
-Characterization returns Characterization:
-	(visibility=VisibilityKind)?
-	'Characterization'
-	name=ID
-	(':' generalization+=InlineGeneralization ( ',' generalization+=InlineGeneralization)* )?
-	'{'
-//		('clientDependency' '(' clientDependency+=[Dependency|EString] ( "," clientDependency+=[Dependency|EString])* ')' )?
-//		('powertypeExtent' '(' powertypeExtent+=[GeneralizationSet|EString] ( "," powertypeExtent+=[GeneralizationSet|EString])* ')' )?
-//		('redefinedClassifier' '(' redefinedClassifier+=[Classifier|EString] ( "," redefinedClassifier+=[Classifier|EString])* ')' )?
-		'memberEnd' '(' memberEnd+=[Property] ( "," memberEnd+=[Property])* ')' 
-		('navigableOwnedEnd' '(' navigableOwnedEnd+=[Property] ( "," navigableOwnedEnd+=[Property])* ')' )?
-		//('eAnnotations' '{' eAnnotations+=EAnnotation ( "," eAnnotations+=EAnnotation)* '}' )?
-//		('ownedComment' '{' ownedComment+=Comment ( "," ownedComment+=Comment)* '}' )?
-//		
-//		('elementImport' '{' elementImport+=ElementImport ( "," elementImport+=ElementImport)* '}' )?
-//		('packageImport' '{' packageImport+=PackageImport ( "," packageImport+=PackageImport)* '}' )?
-//		('ownedRule' '{' ownedRule+=Constraintx ( "," ownedRule+=Constraintx)* '}' )?
-		('ownedEnd' '{' ownedEnd+=InlinePropertyDefinition ( "," ownedEnd+=InlinePropertyDefinition)* '}' )?
-    '}';
 
 
 //Terminals

@@ -3,7 +3,12 @@
  */
 package br.ufes.inf.nemo.ontouml.dsl.scoping;
 
+import org.eclipse.emf.ecore.EReference;
+import org.eclipse.xtext.scoping.IScope;
+import org.eclipse.xtext.scoping.Scopes;
 import org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider;
+
+import RefOntoUML.Mediation;
 
 /**
  * This class contains custom scoping description.
@@ -13,5 +18,14 @@ import org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider;
  *
  */
 public class DslOntoUMLScopeProvider extends AbstractDeclarativeScopeProvider {
+
+	/*
+	public IScope Mediation_ownedEnd(Mediation mediation, EReference ref){
+//		View containingView = ((View) lp.eContainer() );
+//		ViewCollection containingCollection = ((ViewCollection) containingView.eContainer() );
+//		return Scopes.scopeFor(containingCollection.getViews());
+		return Scopes.scopeFor(null);
+	}
+	*/
 
 }
