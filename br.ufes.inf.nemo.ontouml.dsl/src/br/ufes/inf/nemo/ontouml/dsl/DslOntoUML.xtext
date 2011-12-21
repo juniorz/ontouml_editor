@@ -4,6 +4,7 @@ grammar br.ufes.inf.nemo.ontouml.dsl.DslOntoUML with org.eclipse.xtext.common.Te
 
 import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 import "http://nemo.inf.ufes.br/ontouml/refontouml"
+//import "http://nemo.inf.ufes.br/ontouml/dsl"
 //import  "RefOntoUML"
 
 /*
@@ -30,7 +31,6 @@ import "http://nemo.inf.ufes.br/ontouml/refontouml"
 // #Model
 Model returns Model:
 	{Model}
-	(visibility=VisibilityKind)?
 	'model' name=ID
 	('viewpoint' viewpoint=STRING)?
 	'{'
@@ -43,15 +43,14 @@ Model returns Model:
 
 
 PackageableElement returns PackageableElement:
-	Class | Association | GeneralizationSet
-
+	Type | Instance | Class | Association | GeneralizationSet
 
 //	Association_Impl | GeneralizationSet
 //	Class_Impl | Model | Enumeration | EnumerationLiteral | PrimitiveType
 //	| StringExpression | Expression_Impl | OpaqueExpression | LiteralInteger | LiteralString | LiteralBoolean | LiteralNull | InstanceValue | LiteralUnlimitedNatural //(ACHO que não precisa, só se forem named)
 
 //	| Dependency | Constraintx |
-//	Package_Impl | GeneralizationSet | DataType_Impl | InstanceSpecification_Impl
+//	Package_Impl | GeneralizationSet | InstanceSpecification_Impl
 ;
 
 Class:
@@ -89,116 +88,105 @@ Association:
 
 // #Kind (SubstanceSortal)
 Kind returns Kind:
-	(visibility=VisibilityKind)?
 	(isActive?='active'? & isAbstract?='abstract'?)
 	'kind' name=ID
 	(':' generalization+=InlineGeneralization ( ',' generalization+=InlineGeneralization)* )?
 	'{'
-		('attributes' '{' (ownedAttribute+=ClassProperty ';')+ '}' )?
-//		nestedClassifier+=Classifier*
-    '}';
+		(ownedAttribute+=ClassProperty ';')*
+    '}'
+;
 
 
 // #Quantity (SubstanceSortal)
 Quantity returns Quantity:
-	(visibility=VisibilityKind)?
 	(isActive?='active'? & isAbstract?='abstract'?)
 	'quantity' name=ID
 	(':' generalization+=InlineGeneralization ( ',' generalization+=InlineGeneralization)* )?
 	'{'
-		('attributes' '{' (ownedAttribute+=ClassProperty ';')+ '}' )?
+		(ownedAttribute+=ClassProperty ';')*
     '}';
 
 
 // #Collective (SubstanceSortal)
 Collective returns Collective:
-	(visibility=VisibilityKind)?
 	(isActive?='active'? & isExtensional?='extensional'? & isAbstract?='abstract'?)
 	'collective' name=ID
 	(':' generalization+=InlineGeneralization ( ',' generalization+=InlineGeneralization)* )?
 	'{'
-		('attributes' '{' (ownedAttribute+=ClassProperty ';')+ '}' )?
+		(ownedAttribute+=ClassProperty ';')*
     '}';
 
 
 // #SubKind (RigidSortal)
 SubKind returns SubKind:
-	(visibility=VisibilityKind)?
 	(isActive?='active'? & isAbstract?='abstract'?)
 	'subKind' name=ID
 	(':' generalization+=InlineGeneralization ( ',' generalization+=InlineGeneralization)* )?
 	'{'
-		('attributes' '{' (ownedAttribute+=ClassProperty ';')+ '}' )?
+		(ownedAttribute+=ClassProperty ';')*
     '}';
 
 // #Category (RigidMixin)
 Category returns Category:
-	visibility=VisibilityKind?
 	(isActive?='active'? & isAbstract?='abstract') // abstract: required (poderia colocar abstract+='{' ...)
 	'category' name=ID
 	(':' generalization+=InlineGeneralization ( ',' generalization+=InlineGeneralization)* )?
 	'{'
-		('attributes' '{' (ownedAttribute+=ClassProperty ';')+ '}' )?
+		(ownedAttribute+=ClassProperty ';')*
     '}';
 
 // #Phase (AntiRigidSortal)
 Phase returns Phase:
-	(visibility=VisibilityKind)?
 	(isActive?='active'? & isAbstract?='abstract'?)
 	'phase'	name=ID
 	(':' generalization+=InlineGeneralization ( ',' generalization+=InlineGeneralization)* )?
 	'{'
-		('attributes' '{' (ownedAttribute+=ClassProperty ';')+ '}' )?
+		(ownedAttribute+=ClassProperty ';')*
     '}';
 
 // #Role (AntiRigidSortal)
 Role returns Role:
-	(visibility=VisibilityKind)?
 	(isActive?='active'? & isAbstract?='abstract'?)
 	'role' name=ID
 	(':' generalization+=InlineGeneralization ( ',' generalization+=InlineGeneralization)* )?
 	'{'
-		('attributes' '{' (ownedAttribute+=ClassProperty ';')+ '}' )?
+		(ownedAttribute+=ClassProperty ';')*
     '}';
 
 // #Mixin (SemiRigidMixin)
 Mixin returns Mixin:
-	visibility=VisibilityKind?
 	(isActive?='active'? & isAbstract?='abstract') // abstract: required
 	'mixin' name=ID
 	(':' generalization+=InlineGeneralization ( ',' generalization+=InlineGeneralization)* )?
 	'{'
-		('attributes' '{' (ownedAttribute+=ClassProperty ';')+ '}' )?
+		(ownedAttribute+=ClassProperty ';')*
     '}';
 
 // #RoleMixin (AntiRigidMixin)
 RoleMixin returns RoleMixin:
-	(visibility=VisibilityKind)?
 	(isActive?='active'? & isAbstract?='abstract'?)
 	'roleMixin' name=ID
 	(':' generalization+=InlineGeneralization ( ',' generalization+=InlineGeneralization)* )?
 	'{'
-		('attributes' '{' (ownedAttribute+=ClassProperty ';')+ '}' )?
+		(ownedAttribute+=ClassProperty ';')*
     '}';
 
 // #Mode (Moment)
 Mode returns Mode:
-	(visibility=VisibilityKind)?
 	(isActive?='active'? & isAbstract?='abstract'?)
 	'mode' name=ID
 	(':' generalization+=InlineGeneralization ( ',' generalization+=InlineGeneralization)* )?
 	'{'
-		('attributes' '{' (ownedAttribute+=ClassProperty ';')+ '}' )?
+		(ownedAttribute+=ClassProperty ';')*
     '}';
 
 // #Relator (Moment)
 Relator returns Relator:
-	(visibility=VisibilityKind)?
 	(isActive?='active'? & isAbstract?='abstract'?)
 	'relator' name=ID
 	(':' generalization+=InlineGeneralization ( ',' generalization+=InlineGeneralization)* )?
 	'{'
-		('attributes' '{' (ownedAttribute+=ClassProperty ';')+ '}' )?
+		(ownedAttribute+=ClassProperty ';')*
     '}';
 
 
@@ -222,7 +210,6 @@ Relator returns Relator:
 
 // #Characterization (DependencyRelationship)
 Characterization returns Characterization:
-	(visibility=VisibilityKind)?
 	( isDerived?='derived'? & isAbstract?='abstract'? & isLeaf?='leaf'? )
 	'characterization' name=ID?
 	(':' generalization+=InlineGeneralization ( ',' generalization+=InlineGeneralization)* )?
@@ -238,7 +225,6 @@ Characterization returns Characterization:
 
 // #Mediation (DependencyRelationship)
 Mediation returns Mediation:
-	(visibility=VisibilityKind)?
 	( isDerived?='derived'? & isAbstract?='abstract'? & isLeaf?='leaf'? )
 	'mediation' name=ID?
 	(':' generalization+=InlineGeneralization ( ',' generalization+=InlineGeneralization)* )?
@@ -257,7 +243,6 @@ Mediation returns Mediation:
 
 // #Derivation (DependencyRelationship)
 Derivation returns Derivation:
-	visibility=VisibilityKind?
 	( isDerived?='derived'? & isAbstract?='abstract'? & isLeaf?='leaf'? )
 	'derivation' name=ID?
 	(':' generalization+=InlineGeneralization ( ',' generalization+=InlineGeneralization)* )?
@@ -274,7 +259,6 @@ Derivation returns Derivation:
 // #memberOf (Meronymic)
 memberOf returns memberOf:
 	{memberOf}
-	visibility=VisibilityKind?
 	(
 	  isDerived?='derived'? & isAbstract?='abstract'? & isLeaf?='leaf'? &
 	  isEssential?='essential'? & isImmutablePart?='imutablePart'? & isImmutableWhole?='imutableWhole'? & isInseparable?='inseparable'? & isShareable?='shareable'?
@@ -290,7 +274,6 @@ memberOf returns memberOf:
 // #componentOf (Meronymic)
 componentOf returns componentOf:
 	{componentOf}
-	visibility=VisibilityKind?
 	(
 	  isDerived?='derived'? & isAbstract?='abstract'? & isLeaf?='leaf'? &
 	  isEssential?='essential'? & isImmutablePart?='imutablePart'? & isImmutableWhole?='imutableWhole'? & isInseparable?='inseparable'? & isShareable?='shareable'?
@@ -306,7 +289,6 @@ componentOf returns componentOf:
 // #subQuantityOf (Meronymic)
 subQuantityOf returns subQuantityOf:
 	{subQuantityOf}
-	visibility=VisibilityKind?
 	//( isDerived?='derived'? & isAbstract?='abstract'? & isLeaf?='leaf'? )
 	//( isEssential?='essential'? & isImmutablePart?='imutable-part'? & isImmutableWhole?='imutable-whole'? & isInseparable?='inseparable'? & isShareable?='shareable'? )
 	'subQuantityOf' name=ID
@@ -320,7 +302,6 @@ subQuantityOf returns subQuantityOf:
 // #subCollectionOf (Meronymic)
 subCollectionOf returns subCollectionOf:
 	{subCollectionOf}
-	visibility=VisibilityKind?
 	//( isDerived?='derived'? & isAbstract?='abstract'? & isLeaf?='leaf'? )
 	//( isEssential?='essential'? & isImmutablePart?='imutable-part'? & isImmutableWhole?='imutable-whole'? & isInseparable?='inseparable'? & isShareable?='shareable'? )
 	'subCollectionOf' name=ID
@@ -339,7 +320,6 @@ subCollectionOf returns subCollectionOf:
  */
 MaterialAssociation returns MaterialAssociation:
 	{MaterialAssociation}
-	visibility=VisibilityKind?
 	( isDerived?='derived' & isAbstract?='abstract'? & isLeaf?='leaf'? ) // derived: required
 	'materialAssociation' name=ID?
 	(':' generalization+=InlineGeneralization ( ',' generalization+=InlineGeneralization)* )?
@@ -356,7 +336,6 @@ MaterialAssociation returns MaterialAssociation:
 //public property maisVelhoQue (Pessoa) //FormalAssociation entre Pessoa e Pessoa
 FormalAssociation returns FormalAssociation:
 	{FormalAssociation}
-	visibility=VisibilityKind?
 	( isAbstract?='abstract'? & isDerived?='derived'? & isLeaf?='leaf'? )
 	'formalAssociation' name=ID?
 	'{'
@@ -380,63 +359,37 @@ ValueSpecification returns ValueSpecification:
 	NonExpressionValue |  ExpressionValue
 ;
 
-DataType_Impl returns DataType:
-	(visibility=VisibilityKind)?
+Type : DataType | PrimitiveType;
+
+DataType returns DataType:
 	'datatype'
 	name=ID
+	(':' generalization+=InlineGeneralization ( ',' generalization+=InlineGeneralization)* )?
 	('{'
-		('attributes' '{' (ownedAttribute+=ClassProperty ';')+ '}' )?
-//		('clientDependency' '(' clientDependency+=[Dependency|EString] ( "," clientDependency+=[Dependency|EString])* ')' )?
-//		('powertypeExtent' '(' powertypeExtent+=[GeneralizationSet|EString] ( "," powertypeExtent+=[GeneralizationSet|EString])* ')' )?
-//		('redefinedClassifier' '(' redefinedClassifier+=[Classifier|EString] ( "," redefinedClassifier+=[Classifier|EString])* ')' )?
-		//('eAnnotations' '{' eAnnotations+=EAnnotation ( "," eAnnotations+=EAnnotation)* '}' )?
-//		('ownedComment' '{' ownedComment+=Comment ( "," ownedComment+=Comment)* '}' )?
-//		
-//		('elementImport' '{' elementImport+=ElementImport ( "," elementImport+=ElementImport)* '}' )?
-//		('packageImport' '{' packageImport+=PackageImport ( "," packageImport+=PackageImport)* '}' )?
-//		('ownedRule' '{' ownedRule+=Constraintx ( "," ownedRule+=Constraintx)* '}' )?
-//		('generalization' '{' generalization+=Generalization ( "," generalization+=Generalization)* '}' )?
+		(ownedAttribute+=ClassProperty ';')+
     '}')?
 ;
 
-//Mesma coisa que DataType
+//???: Mesma coisa que DataType?
 PrimitiveType returns PrimitiveType:
-	(visibility=VisibilityKind)?
 	'type'
 	name=ID
-	('{'
-		('attributes' '{' (ownedAttribute+=ClassProperty ';')+ '}' )?
-//		('clientDependency' '(' clientDependency+=[Dependency|EString] ( "," clientDependency+=[Dependency|EString])* ')' )?
-//		('powertypeExtent' '(' powertypeExtent+=[GeneralizationSet|EString] ( "," powertypeExtent+=[GeneralizationSet|EString])* ')' )?
-//		('redefinedClassifier' '(' redefinedClassifier+=[Classifier|EString] ( "," redefinedClassifier+=[Classifier|EString])* ')' )?
-		//('eAnnotations' '{' eAnnotations+=EAnnotation ( "," eAnnotations+=EAnnotation)* '}' )?
-//		('ownedComment' '{' ownedComment+=Comment ( "," ownedComment+=Comment)* '}' )?
-//		
-//		('elementImport' '{' elementImport+=ElementImport ( "," elementImport+=ElementImport)* '}' )?
-//		('packageImport' '{' packageImport+=PackageImport ( "," packageImport+=PackageImport)* '}' )?
-//		('ownedRule' '{' ownedRule+=Constraintx ( "," ownedRule+=Constraintx)* '}' )?
-//		('generalization' '{' generalization+=Generalization ( "," generalization+=Generalization)* '}' )?
-    '}')?
+	(':' generalization+=InlineGeneralization ( ',' generalization+=InlineGeneralization)* )?
 ;
 
 Dependency returns Dependency:
 	{Dependency}
-	(visibility=VisibilityKind)?
 	'Dependency'
 	(name=ID)?
 	'{'
 		client+=[NamedElement] (',' client+=[NamedElement])*
 		'depends on' '(' supplier+=[NamedElement] ( ',' supplier+=[NamedElement])* ')'  
-//		('clientDependency' '(' clientDependency+=[Dependency|EString] ( "," clientDependency+=[Dependency|EString])* ')' )?
-		//('eAnnotations' '{' eAnnotations+=EAnnotation ( "," eAnnotations+=EAnnotation)* '}' )?
-//		('ownedComment' '{' ownedComment+=Comment ( "," ownedComment+=Comment)* '}' )?
     '}'
 ;
 
 
 
 ElementImport returns ElementImport:
-	(visibility=VisibilityKind)?
 	'import'
 	importedElement=[PackageableElement|STRING]
 	('as' alias=ID)?
@@ -444,13 +397,11 @@ ElementImport returns ElementImport:
 ;
 
 PackageImport returns PackageImport:
-	visibility=VisibilityKind
 	'import' importedPackage=[Package|STRING]
 	';'
 ;
 
 Constraintx returns Constraintx:
-	(visibility=VisibilityKind)?
 	'constraint'
 	('(' constrainedElement+=[Element] ( "," constrainedElement+=[Element])* ')' )?
 	'{'
@@ -466,7 +417,6 @@ PackageMerge returns PackageMerge:
 
 Package_Impl returns Package:
 	{Package}
-	(visibility=VisibilityKind)?
 	'package'
 	name=ID
 	'{'
@@ -512,7 +462,6 @@ Generalization returns Generalization:
  * Solução, mudar essas opposite que são assim, para transient="true" e resolveProxies="false"
  *****************************************************************************/
 GeneralizationSet returns GeneralizationSet:
-	visibility=VisibilityKind?
 	( isCovering?='complete'? & isDisjoint?='disjoint'? )
 	'generalizationSet' name=ID
 	'{'
@@ -560,7 +509,6 @@ private OpaqueExpression opaqExp1 (Person) : "Python", "Ruby"
 */
 OpaqueExpression returns OpaqueExpression:	//OK
 	{OpaqueExpression}
-	(visibility=VisibilityKind)?
 	'OpaqueExpression'
 	(name=ID)?
 	('(' type=[Type] ')')?
@@ -637,7 +585,7 @@ InlinePropertyDefinition returns Property:
 	name=ID?
 	(
 	  '('
-	   ( visibility=VisibilityKind? & isStatic?='static'? & isOrdered?='ordered'? & isUnique?='unique'? & isReadOnly?='read-only'? & isDerivedUnion?='derived-union'? )
+	   ( isStatic?='static'? & isOrdered?='ordered'? & isUnique?='unique'? & isReadOnly?='read-only'? & isDerivedUnion?='derived-union'? )
 	   ')'
 	)?
 	type=[Type]
@@ -658,7 +606,6 @@ InlinePropertyDefinition returns Property:
 */
 ClassProperty returns Property:
 	{Property}
-	visibility=VisibilityKind?
 	(
 	  '('
 	   ( isStatic?='static'? & isOrdered?='ordered'? & isUnique?='unique'? & isReadOnly?='read-only'? & isDerivedUnion?='derived-union'? )
@@ -801,7 +748,6 @@ Class_Impl returns Class:
 
 
 Enumeration returns Enumeration:
-	(visibility=VisibilityKind)?
 	'enum'
 	name=ID
 	'{'
@@ -840,9 +786,8 @@ EnumerationLiteral returns EnumerationLiteral:
 /*
  * Especifica uma instância
  */
-InstanceSpecification_Impl returns InstanceSpecification: //OK
+Instance returns InstanceSpecification:
 	{InstanceSpecification}
-	(visibility=VisibilityKind)?
 	'instance'
 	name=ID
 	(':' classifier+=[Classifier] ( "," classifier+=[Classifier])* )?
@@ -850,8 +795,8 @@ InstanceSpecification_Impl returns InstanceSpecification: //OK
 	'{' (slot+=Slot ( "," slot+=Slot)*)? '}'
 ;
 
-Slot returns Slot: //OK
-	definingFeature=[StructuralFeature|STRING]
+Slot returns Slot:
+	definingFeature=[StructuralFeature|ID]
 	'=>'
 	(value+=ValueSpecification | '[' value+=ValueSpecification ( "," value+=ValueSpecification)* ']' )
 ;
@@ -863,8 +808,7 @@ Slot returns Slot: //OK
  * private instance reinaldinho (Person)
 */
 InstanceValue returns InstanceValue: //OK
-	(visibility=VisibilityKind)?
-	'instance'
+//	'instance'
 	(name=ID)?
 	('(' type=[Type] ')')?
 	instance=[InstanceSpecification]
@@ -886,7 +830,7 @@ LiteralString returns LiteralString:
 LiteralBoolean returns LiteralBoolean:
 	{LiteralBoolean}
 	value=Boolean
-	;
+;
 
 Boolean returns ecore::EBoolean:
 	'true' | 'false'
@@ -924,9 +868,6 @@ terminal WS: (RWS|NL)+;
 //Lista de Enumerações
 enum AggregationKind returns AggregationKind:
 	none = 'none' | shared = 'shared' | composite = 'composite';
-
-enum VisibilityKind returns VisibilityKind:
-	public = 'public' | private = 'private' | protected = 'protected' | package = 'package';
 
 /*
 EClassifier returns ecore::EClassifier:

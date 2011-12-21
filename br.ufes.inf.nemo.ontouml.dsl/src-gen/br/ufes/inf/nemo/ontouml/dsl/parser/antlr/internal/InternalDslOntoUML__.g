@@ -16,94 +16,92 @@ T18 : 'abstract' ;
 T19 : 'kind' ;
 T20 : ':' ;
 T21 : ',' ;
-T22 : 'attributes' ;
-T23 : ';' ;
-T24 : 'quantity' ;
-T25 : 'extensional' ;
-T26 : 'collective' ;
-T27 : 'subKind' ;
-T28 : 'category' ;
-T29 : 'phase' ;
-T30 : 'role' ;
-T31 : 'mixin' ;
-T32 : 'roleMixin' ;
-T33 : 'mode' ;
-T34 : 'relator' ;
-T35 : 'derived' ;
-T36 : 'leaf' ;
-T37 : 'characterization' ;
-T38 : 'mode:' ;
-T39 : 'characterized:' ;
-T40 : 'memberEnd' ;
-T41 : 'navigableOwnedEnd' ;
-T42 : 'mediation' ;
-T43 : 'mediated' ;
-T44 : 'derivation' ;
-T45 : 'material:' ;
-T46 : 'relator:' ;
-T47 : 'materialAssociation' ;
-T48 : 'formalAssociation' ;
-T49 : 'substitutable' ;
-T50 : '(' ;
-T51 : ')' ;
-T52 : 'complete' ;
-T53 : 'disjoint' ;
-T54 : 'generalizationSet' ;
-T55 : 'OpaqueExpression' ;
-T56 : 'begin' ;
-T57 : '#' ;
-T58 : 'end' ;
-T59 : 'static' ;
-T60 : 'ordered' ;
-T61 : 'unique' ;
-T62 : 'read-only' ;
-T63 : 'derived-union' ;
-T64 : '[' ;
-T65 : ']' ;
-T66 : 'defaults to' ;
-T67 : 'aggregation' ;
-T68 : 'subset of' ;
-T69 : 'redefines' ;
-T70 : '=' ;
-T71 : '=>' ;
+T22 : ';' ;
+T23 : 'quantity' ;
+T24 : 'extensional' ;
+T25 : 'collective' ;
+T26 : 'subKind' ;
+T27 : 'category' ;
+T28 : 'phase' ;
+T29 : 'role' ;
+T30 : 'mixin' ;
+T31 : 'roleMixin' ;
+T32 : 'mode' ;
+T33 : 'relator' ;
+T34 : 'derived' ;
+T35 : 'leaf' ;
+T36 : 'characterization' ;
+T37 : 'mode:' ;
+T38 : 'characterized:' ;
+T39 : 'memberEnd' ;
+T40 : 'navigableOwnedEnd' ;
+T41 : 'mediation' ;
+T42 : 'mediated' ;
+T43 : 'derivation' ;
+T44 : 'material:' ;
+T45 : 'relator:' ;
+T46 : 'materialAssociation' ;
+T47 : 'formalAssociation' ;
+T48 : 'datatype' ;
+T49 : 'type' ;
+T50 : 'substitutable' ;
+T51 : '(' ;
+T52 : ')' ;
+T53 : 'complete' ;
+T54 : 'disjoint' ;
+T55 : 'generalizationSet' ;
+T56 : 'OpaqueExpression' ;
+T57 : 'begin' ;
+T58 : '#' ;
+T59 : 'end' ;
+T60 : 'static' ;
+T61 : 'ordered' ;
+T62 : 'unique' ;
+T63 : 'read-only' ;
+T64 : 'derived-union' ;
+T65 : '[' ;
+T66 : ']' ;
+T67 : 'defaults to' ;
+T68 : 'aggregation' ;
+T69 : 'subset of' ;
+T70 : 'redefines' ;
+T71 : '=' ;
 T72 : 'instance' ;
-T73 : 'true' ;
-T74 : 'false' ;
-T75 : '*' ;
-T76 : 'NULL' ;
-T77 : 'none' ;
-T78 : 'shared' ;
-T79 : 'composite' ;
-T80 : 'public' ;
-T81 : 'private' ;
-T82 : 'protected' ;
-T83 : 'package' ;
+T73 : 'specification' ;
+T74 : '=>' ;
+T75 : 'true' ;
+T76 : 'false' ;
+T77 : '*' ;
+T78 : 'NULL' ;
+T79 : 'none' ;
+T80 : 'shared' ;
+T81 : 'composite' ;
 
-// $ANTLR src "../br.ufes.inf.nemo.ontouml.dsl/src-gen/br/ufes/inf/nemo/ontouml/dsl/parser/antlr/internal/InternalDslOntoUML.g" 8263
+// $ANTLR src "../br.ufes.inf.nemo.ontouml.dsl/src-gen/br/ufes/inf/nemo/ontouml/dsl/parser/antlr/internal/InternalDslOntoUML.g" 8086
 RULE_RWS : (' '|'\t')+;
 
-// $ANTLR src "../br.ufes.inf.nemo.ontouml.dsl/src-gen/br/ufes/inf/nemo/ontouml/dsl/parser/antlr/internal/InternalDslOntoUML.g" 8265
+// $ANTLR src "../br.ufes.inf.nemo.ontouml.dsl/src-gen/br/ufes/inf/nemo/ontouml/dsl/parser/antlr/internal/InternalDslOntoUML.g" 8088
 RULE_NL : ('\r'|'\n')+;
 
-// $ANTLR src "../br.ufes.inf.nemo.ontouml.dsl/src-gen/br/ufes/inf/nemo/ontouml/dsl/parser/antlr/internal/InternalDslOntoUML.g" 8267
+// $ANTLR src "../br.ufes.inf.nemo.ontouml.dsl/src-gen/br/ufes/inf/nemo/ontouml/dsl/parser/antlr/internal/InternalDslOntoUML.g" 8090
 RULE_WS : (RULE_RWS|RULE_NL)+;
 
-// $ANTLR src "../br.ufes.inf.nemo.ontouml.dsl/src-gen/br/ufes/inf/nemo/ontouml/dsl/parser/antlr/internal/InternalDslOntoUML.g" 8269
+// $ANTLR src "../br.ufes.inf.nemo.ontouml.dsl/src-gen/br/ufes/inf/nemo/ontouml/dsl/parser/antlr/internal/InternalDslOntoUML.g" 8092
 RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 
-// $ANTLR src "../br.ufes.inf.nemo.ontouml.dsl/src-gen/br/ufes/inf/nemo/ontouml/dsl/parser/antlr/internal/InternalDslOntoUML.g" 8271
+// $ANTLR src "../br.ufes.inf.nemo.ontouml.dsl/src-gen/br/ufes/inf/nemo/ontouml/dsl/parser/antlr/internal/InternalDslOntoUML.g" 8094
 RULE_INT : ('0'..'9')+;
 
-// $ANTLR src "../br.ufes.inf.nemo.ontouml.dsl/src-gen/br/ufes/inf/nemo/ontouml/dsl/parser/antlr/internal/InternalDslOntoUML.g" 8273
+// $ANTLR src "../br.ufes.inf.nemo.ontouml.dsl/src-gen/br/ufes/inf/nemo/ontouml/dsl/parser/antlr/internal/InternalDslOntoUML.g" 8096
 RULE_STRING : ('"' ('\\' ('b'|'t'|'n'|'f'|'r'|'"'|'\''|'\\')|~(('\\'|'"')))* '"'|'\'' ('\\' ('b'|'t'|'n'|'f'|'r'|'"'|'\''|'\\')|~(('\\'|'\'')))* '\'');
 
-// $ANTLR src "../br.ufes.inf.nemo.ontouml.dsl/src-gen/br/ufes/inf/nemo/ontouml/dsl/parser/antlr/internal/InternalDslOntoUML.g" 8275
+// $ANTLR src "../br.ufes.inf.nemo.ontouml.dsl/src-gen/br/ufes/inf/nemo/ontouml/dsl/parser/antlr/internal/InternalDslOntoUML.g" 8098
 RULE_ML_COMMENT : '/*' ( options {greedy=false;} : . )*'*/';
 
-// $ANTLR src "../br.ufes.inf.nemo.ontouml.dsl/src-gen/br/ufes/inf/nemo/ontouml/dsl/parser/antlr/internal/InternalDslOntoUML.g" 8277
+// $ANTLR src "../br.ufes.inf.nemo.ontouml.dsl/src-gen/br/ufes/inf/nemo/ontouml/dsl/parser/antlr/internal/InternalDslOntoUML.g" 8100
 RULE_SL_COMMENT : '//' ~(('\n'|'\r'))* ('\r'? '\n')?;
 
-// $ANTLR src "../br.ufes.inf.nemo.ontouml.dsl/src-gen/br/ufes/inf/nemo/ontouml/dsl/parser/antlr/internal/InternalDslOntoUML.g" 8279
+// $ANTLR src "../br.ufes.inf.nemo.ontouml.dsl/src-gen/br/ufes/inf/nemo/ontouml/dsl/parser/antlr/internal/InternalDslOntoUML.g" 8102
 RULE_ANY_OTHER : .;
 
 

@@ -61,7 +61,7 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public static final int T49=49;
     public static final int T48=48;
     public static final int T43=43;
-    public static final int Tokens=84;
+    public static final int Tokens=82;
     public static final int RULE_SL_COMMENT=12;
     public static final int T42=42;
     public static final int T41=41;
@@ -83,10 +83,8 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public static final int T80=80;
     public static final int T51=51;
     public static final int T16=16;
-    public static final int T83=83;
     public static final int T54=54;
     public static final int T17=17;
-    public static final int T82=82;
     public static final int T53=53;
     public static final int T18=18;
     public static final int T56=56;
@@ -217,10 +215,10 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mT19() throws RecognitionException {
         try {
             int _type = T19;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:16:5: ( 'public' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:16:7: 'public'
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:16:5: ( 'model' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:16:7: 'model'
             {
-            match("public"); 
+            match("model"); 
 
 
             }
@@ -236,11 +234,10 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mT20() throws RecognitionException {
         try {
             int _type = T20;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:17:5: ( 'private' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:17:7: 'private'
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:17:5: ( '{' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:17:7: '{'
             {
-            match("private"); 
-
+            match('{'); 
 
             }
 
@@ -255,11 +252,10 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mT21() throws RecognitionException {
         try {
             int _type = T21;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:18:5: ( 'protected' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:18:7: 'protected'
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:18:5: ( '}' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:18:7: '}'
             {
-            match("protected"); 
-
+            match('}'); 
 
             }
 
@@ -274,10 +270,10 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mT22() throws RecognitionException {
         try {
             int _type = T22;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:19:5: ( 'package' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:19:7: 'package'
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:19:5: ( 'viewpoint' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:19:7: 'viewpoint'
             {
-            match("package"); 
+            match("viewpoint"); 
 
 
             }
@@ -293,10 +289,10 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mT23() throws RecognitionException {
         try {
             int _type = T23;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:20:5: ( 'model' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:20:7: 'model'
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:20:5: ( 'kind' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:20:7: 'kind'
             {
-            match("model"); 
+            match("kind"); 
 
 
             }
@@ -312,10 +308,10 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mT24() throws RecognitionException {
         try {
             int _type = T24;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:21:5: ( '{' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:21:7: '{'
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:21:5: ( ':' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:21:7: ':'
             {
-            match('{'); 
+            match(':'); 
 
             }
 
@@ -330,10 +326,10 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mT25() throws RecognitionException {
         try {
             int _type = T25;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:22:5: ( '}' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:22:7: '}'
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:22:5: ( ',' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:22:7: ','
             {
-            match('}'); 
+            match(','); 
 
             }
 
@@ -348,11 +344,10 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mT26() throws RecognitionException {
         try {
             int _type = T26;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:23:5: ( 'viewpoint' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:23:7: 'viewpoint'
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:23:5: ( ';' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:23:7: ';'
             {
-            match("viewpoint"); 
-
+            match(';'); 
 
             }
 
@@ -367,10 +362,10 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mT27() throws RecognitionException {
         try {
             int _type = T27;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:24:5: ( 'kind' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:24:7: 'kind'
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:24:5: ( 'quantity' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:24:7: 'quantity'
             {
-            match("kind"); 
+            match("quantity"); 
 
 
             }
@@ -386,10 +381,11 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mT28() throws RecognitionException {
         try {
             int _type = T28;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:25:5: ( ':' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:25:7: ':'
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:25:5: ( 'collective' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:25:7: 'collective'
             {
-            match(':'); 
+            match("collective"); 
+
 
             }
 
@@ -404,10 +400,11 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mT29() throws RecognitionException {
         try {
             int _type = T29;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:26:5: ( ',' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:26:7: ','
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:26:5: ( 'subKind' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:26:7: 'subKind'
             {
-            match(','); 
+            match("subKind"); 
+
 
             }
 
@@ -422,10 +419,10 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mT30() throws RecognitionException {
         try {
             int _type = T30;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:27:5: ( 'attributes' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:27:7: 'attributes'
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:27:5: ( 'category' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:27:7: 'category'
             {
-            match("attributes"); 
+            match("category"); 
 
 
             }
@@ -441,10 +438,11 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mT31() throws RecognitionException {
         try {
             int _type = T31;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:28:5: ( ';' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:28:7: ';'
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:28:5: ( 'phase' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:28:7: 'phase'
             {
-            match(';'); 
+            match("phase"); 
+
 
             }
 
@@ -459,10 +457,10 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mT32() throws RecognitionException {
         try {
             int _type = T32;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:29:5: ( 'quantity' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:29:7: 'quantity'
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:29:5: ( 'role' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:29:7: 'role'
             {
-            match("quantity"); 
+            match("role"); 
 
 
             }
@@ -478,10 +476,10 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mT33() throws RecognitionException {
         try {
             int _type = T33;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:30:5: ( 'collective' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:30:7: 'collective'
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:30:5: ( 'mixin' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:30:7: 'mixin'
             {
-            match("collective"); 
+            match("mixin"); 
 
 
             }
@@ -497,10 +495,10 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mT34() throws RecognitionException {
         try {
             int _type = T34;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:31:5: ( 'subKind' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:31:7: 'subKind'
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:31:5: ( 'roleMixin' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:31:7: 'roleMixin'
             {
-            match("subKind"); 
+            match("roleMixin"); 
 
 
             }
@@ -516,10 +514,10 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mT35() throws RecognitionException {
         try {
             int _type = T35;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:32:5: ( 'category' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:32:7: 'category'
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:32:5: ( 'mode' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:32:7: 'mode'
             {
-            match("category"); 
+            match("mode"); 
 
 
             }
@@ -535,10 +533,10 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mT36() throws RecognitionException {
         try {
             int _type = T36;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:33:5: ( 'phase' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:33:7: 'phase'
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:33:5: ( 'relator' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:33:7: 'relator'
             {
-            match("phase"); 
+            match("relator"); 
 
 
             }
@@ -554,10 +552,10 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mT37() throws RecognitionException {
         try {
             int _type = T37;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:34:5: ( 'role' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:34:7: 'role'
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:34:5: ( 'characterization' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:34:7: 'characterization'
             {
-            match("role"); 
+            match("characterization"); 
 
 
             }
@@ -573,10 +571,10 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mT38() throws RecognitionException {
         try {
             int _type = T38;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:35:5: ( 'mixin' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:35:7: 'mixin'
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:35:5: ( 'mode:' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:35:7: 'mode:'
             {
-            match("mixin"); 
+            match("mode:"); 
 
 
             }
@@ -592,10 +590,10 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mT39() throws RecognitionException {
         try {
             int _type = T39;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:36:5: ( 'roleMixin' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:36:7: 'roleMixin'
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:36:5: ( 'characterized:' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:36:7: 'characterized:'
             {
-            match("roleMixin"); 
+            match("characterized:"); 
 
 
             }
@@ -611,10 +609,10 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mT40() throws RecognitionException {
         try {
             int _type = T40;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:37:5: ( 'mode' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:37:7: 'mode'
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:37:5: ( 'memberEnd' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:37:7: 'memberEnd'
             {
-            match("mode"); 
+            match("memberEnd"); 
 
 
             }
@@ -630,10 +628,10 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mT41() throws RecognitionException {
         try {
             int _type = T41;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:38:5: ( 'relator' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:38:7: 'relator'
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:38:5: ( 'navigableOwnedEnd' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:38:7: 'navigableOwnedEnd'
             {
-            match("relator"); 
+            match("navigableOwnedEnd"); 
 
 
             }
@@ -649,10 +647,10 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mT42() throws RecognitionException {
         try {
             int _type = T42;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:39:5: ( 'characterization' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:39:7: 'characterization'
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:39:5: ( 'mediation' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:39:7: 'mediation'
             {
-            match("characterization"); 
+            match("mediation"); 
 
 
             }
@@ -668,10 +666,10 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mT43() throws RecognitionException {
         try {
             int _type = T43;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:40:5: ( 'mode:' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:40:7: 'mode:'
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:40:5: ( 'mediated' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:40:7: 'mediated'
             {
-            match("mode:"); 
+            match("mediated"); 
 
 
             }
@@ -687,10 +685,10 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mT44() throws RecognitionException {
         try {
             int _type = T44;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:41:5: ( 'characterized:' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:41:7: 'characterized:'
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:41:5: ( 'derivation' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:41:7: 'derivation'
             {
-            match("characterized:"); 
+            match("derivation"); 
 
 
             }
@@ -706,10 +704,10 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mT45() throws RecognitionException {
         try {
             int _type = T45;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:42:5: ( 'memberEnd' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:42:7: 'memberEnd'
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:42:5: ( 'material:' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:42:7: 'material:'
             {
-            match("memberEnd"); 
+            match("material:"); 
 
 
             }
@@ -725,10 +723,10 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mT46() throws RecognitionException {
         try {
             int _type = T46;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:43:5: ( 'navigableOwnedEnd' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:43:7: 'navigableOwnedEnd'
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:43:5: ( 'relator:' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:43:7: 'relator:'
             {
-            match("navigableOwnedEnd"); 
+            match("relator:"); 
 
 
             }
@@ -744,10 +742,10 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mT47() throws RecognitionException {
         try {
             int _type = T47;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:44:5: ( 'mediation' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:44:7: 'mediation'
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:44:5: ( 'materialAssociation' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:44:7: 'materialAssociation'
             {
-            match("mediation"); 
+            match("materialAssociation"); 
 
 
             }
@@ -763,10 +761,10 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mT48() throws RecognitionException {
         try {
             int _type = T48;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:45:5: ( 'mediated' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:45:7: 'mediated'
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:45:5: ( 'formalAssociation' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:45:7: 'formalAssociation'
             {
-            match("mediated"); 
+            match("formalAssociation"); 
 
 
             }
@@ -782,10 +780,10 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mT49() throws RecognitionException {
         try {
             int _type = T49;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:46:5: ( 'derivation' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:46:7: 'derivation'
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:46:5: ( 'datatype' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:46:7: 'datatype'
             {
-            match("derivation"); 
+            match("datatype"); 
 
 
             }
@@ -801,10 +799,10 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mT50() throws RecognitionException {
         try {
             int _type = T50;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:47:5: ( 'material:' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:47:7: 'material:'
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:47:5: ( 'type' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:47:7: 'type'
             {
-            match("material:"); 
+            match("type"); 
 
 
             }
@@ -820,11 +818,10 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mT51() throws RecognitionException {
         try {
             int _type = T51;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:48:5: ( 'relator:' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:48:7: 'relator:'
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:48:5: ( '(' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:48:7: '('
             {
-            match("relator:"); 
-
+            match('('); 
 
             }
 
@@ -839,11 +836,10 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mT52() throws RecognitionException {
         try {
             int _type = T52;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:49:5: ( 'materialAssociation' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:49:7: 'materialAssociation'
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:49:5: ( ')' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:49:7: ')'
             {
-            match("materialAssociation"); 
-
+            match(')'); 
 
             }
 
@@ -858,10 +854,10 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mT53() throws RecognitionException {
         try {
             int _type = T53;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:50:5: ( 'formalAssociation' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:50:7: 'formalAssociation'
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:50:5: ( 'generalizationSet' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:50:7: 'generalizationSet'
             {
-            match("formalAssociation"); 
+            match("generalizationSet"); 
 
 
             }
@@ -877,10 +873,11 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mT54() throws RecognitionException {
         try {
             int _type = T54;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:51:5: ( '(' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:51:7: '('
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:51:5: ( 'OpaqueExpression' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:51:7: 'OpaqueExpression'
             {
-            match('('); 
+            match("OpaqueExpression"); 
+
 
             }
 
@@ -895,10 +892,11 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mT55() throws RecognitionException {
         try {
             int _type = T55;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:52:5: ( ')' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:52:7: ')'
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:52:5: ( 'begin' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:52:7: 'begin'
             {
-            match(')'); 
+            match("begin"); 
+
 
             }
 
@@ -913,10 +911,10 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mT56() throws RecognitionException {
         try {
             int _type = T56;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:53:5: ( 'generalizationSet' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:53:7: 'generalizationSet'
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:53:5: ( 'end' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:53:7: 'end'
             {
-            match("generalizationSet"); 
+            match("end"); 
 
 
             }
@@ -932,11 +930,10 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mT57() throws RecognitionException {
         try {
             int _type = T57;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:54:5: ( 'OpaqueExpression' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:54:7: 'OpaqueExpression'
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:54:5: ( '#' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:54:7: '#'
             {
-            match("OpaqueExpression"); 
-
+            match('#'); 
 
             }
 
@@ -951,11 +948,10 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mT58() throws RecognitionException {
         try {
             int _type = T58;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:55:5: ( 'begin' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:55:7: 'begin'
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:55:5: ( '[' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:55:7: '['
             {
-            match("begin"); 
-
+            match('['); 
 
             }
 
@@ -970,11 +966,10 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mT59() throws RecognitionException {
         try {
             int _type = T59;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:56:5: ( 'end' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:56:7: 'end'
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:56:5: ( ']' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:56:7: ']'
             {
-            match("end"); 
-
+            match(']'); 
 
             }
 
@@ -989,10 +984,11 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mT60() throws RecognitionException {
         try {
             int _type = T60;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:57:5: ( '#' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:57:7: '#'
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:57:5: ( 'defaults to' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:57:7: 'defaults to'
             {
-            match('#'); 
+            match("defaults to"); 
+
 
             }
 
@@ -1007,10 +1003,11 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mT61() throws RecognitionException {
         try {
             int _type = T61;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:58:5: ( '[' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:58:7: '['
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:58:5: ( 'aggregation' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:58:7: 'aggregation'
             {
-            match('['); 
+            match("aggregation"); 
+
 
             }
 
@@ -1025,10 +1022,11 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mT62() throws RecognitionException {
         try {
             int _type = T62;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:59:5: ( ']' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:59:7: ']'
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:59:5: ( 'subset of' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:59:7: 'subset of'
             {
-            match(']'); 
+            match("subset of"); 
+
 
             }
 
@@ -1043,10 +1041,10 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mT63() throws RecognitionException {
         try {
             int _type = T63;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:60:5: ( 'defaults to' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:60:7: 'defaults to'
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:60:5: ( 'redefines' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:60:7: 'redefines'
             {
-            match("defaults to"); 
+            match("redefines"); 
 
 
             }
@@ -1062,11 +1060,10 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mT64() throws RecognitionException {
         try {
             int _type = T64;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:61:5: ( 'aggregation' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:61:7: 'aggregation'
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:61:5: ( '=' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:61:7: '='
             {
-            match("aggregation"); 
-
+            match('='); 
 
             }
 
@@ -1081,10 +1078,10 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mT65() throws RecognitionException {
         try {
             int _type = T65;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:62:5: ( 'subset of' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:62:7: 'subset of'
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:62:5: ( 'instance' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:62:7: 'instance'
             {
-            match("subset of"); 
+            match("instance"); 
 
 
             }
@@ -1100,10 +1097,10 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mT66() throws RecognitionException {
         try {
             int _type = T66;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:63:5: ( 'redefines' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:63:7: 'redefines'
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:63:5: ( 'specification' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:63:7: 'specification'
             {
-            match("redefines"); 
+            match("specification"); 
 
 
             }
@@ -1119,10 +1116,11 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mT67() throws RecognitionException {
         try {
             int _type = T67;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:64:5: ( '=' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:64:7: '='
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:64:5: ( '=>' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:64:7: '=>'
             {
-            match('='); 
+            match("=>"); 
+
 
             }
 
@@ -1137,10 +1135,10 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mT68() throws RecognitionException {
         try {
             int _type = T68;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:65:5: ( '=>' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:65:7: '=>'
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:65:5: ( 'NULL' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:65:7: 'NULL'
             {
-            match("=>"); 
+            match("NULL"); 
 
 
             }
@@ -1156,10 +1154,10 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mT69() throws RecognitionException {
         try {
             int _type = T69;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:66:5: ( 'instance' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:66:7: 'instance'
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:66:5: ( 'active' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:66:7: 'active'
             {
-            match("instance"); 
+            match("active"); 
 
 
             }
@@ -1175,10 +1173,10 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mT70() throws RecognitionException {
         try {
             int _type = T70;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:67:5: ( 'NULL' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:67:7: 'NULL'
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:67:5: ( 'abstract' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:67:7: 'abstract'
             {
-            match("NULL"); 
+            match("abstract"); 
 
 
             }
@@ -1194,10 +1192,10 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mT71() throws RecognitionException {
         try {
             int _type = T71;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:68:5: ( 'active' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:68:7: 'active'
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:68:5: ( 'extensional' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:68:7: 'extensional'
             {
-            match("active"); 
+            match("extensional"); 
 
 
             }
@@ -1213,10 +1211,10 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mT72() throws RecognitionException {
         try {
             int _type = T72;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:69:5: ( 'abstract' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:69:7: 'abstract'
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:69:5: ( 'derived' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:69:7: 'derived'
             {
-            match("abstract"); 
+            match("derived"); 
 
 
             }
@@ -1232,10 +1230,10 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mT73() throws RecognitionException {
         try {
             int _type = T73;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:70:5: ( 'extensional' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:70:7: 'extensional'
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:70:5: ( 'leaf' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:70:7: 'leaf'
             {
-            match("extensional"); 
+            match("leaf"); 
 
 
             }
@@ -1251,10 +1249,10 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mT74() throws RecognitionException {
         try {
             int _type = T74;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:71:5: ( 'derived' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:71:7: 'derived'
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:71:5: ( 'substitutable' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:71:7: 'substitutable'
             {
-            match("derived"); 
+            match("substitutable"); 
 
 
             }
@@ -1270,10 +1268,10 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mT75() throws RecognitionException {
         try {
             int _type = T75;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:72:5: ( 'leaf' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:72:7: 'leaf'
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:72:5: ( 'complete' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:72:7: 'complete'
             {
-            match("leaf"); 
+            match("complete"); 
 
 
             }
@@ -1289,10 +1287,10 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mT76() throws RecognitionException {
         try {
             int _type = T76;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:73:5: ( 'substitutable' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:73:7: 'substitutable'
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:73:5: ( 'disjoint' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:73:7: 'disjoint'
             {
-            match("substitutable"); 
+            match("disjoint"); 
 
 
             }
@@ -1308,10 +1306,10 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mT77() throws RecognitionException {
         try {
             int _type = T77;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:74:5: ( 'complete' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:74:7: 'complete'
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:74:5: ( 'static' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:74:7: 'static'
             {
-            match("complete"); 
+            match("static"); 
 
 
             }
@@ -1327,10 +1325,10 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mT78() throws RecognitionException {
         try {
             int _type = T78;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:75:5: ( 'disjoint' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:75:7: 'disjoint'
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:75:5: ( 'ordered' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:75:7: 'ordered'
             {
-            match("disjoint"); 
+            match("ordered"); 
 
 
             }
@@ -1346,10 +1344,10 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mT79() throws RecognitionException {
         try {
             int _type = T79;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:76:5: ( 'static' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:76:7: 'static'
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:76:5: ( 'unique' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:76:7: 'unique'
             {
-            match("static"); 
+            match("unique"); 
 
 
             }
@@ -1365,10 +1363,10 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mT80() throws RecognitionException {
         try {
             int _type = T80;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:77:5: ( 'ordered' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:77:7: 'ordered'
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:77:5: ( 'read-only' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:77:7: 'read-only'
             {
-            match("ordered"); 
+            match("read-only"); 
 
 
             }
@@ -1384,46 +1382,8 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mT81() throws RecognitionException {
         try {
             int _type = T81;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:78:5: ( 'unique' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:78:7: 'unique'
-            {
-            match("unique"); 
-
-
-            }
-
-            this.type = _type;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end T81
-
-    // $ANTLR start T82
-    public final void mT82() throws RecognitionException {
-        try {
-            int _type = T82;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:79:5: ( 'read-only' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:79:7: 'read-only'
-            {
-            match("read-only"); 
-
-
-            }
-
-            this.type = _type;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end T82
-
-    // $ANTLR start T83
-    public final void mT83() throws RecognitionException {
-        try {
-            int _type = T83;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:80:5: ( 'derived-union' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:80:7: 'derived-union'
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:78:5: ( 'derived-union' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:78:7: 'derived-union'
             {
             match("derived-union"); 
 
@@ -1435,16 +1395,16 @@ public class InternalDslOntoUMLLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end T83
+    // $ANTLR end T81
 
     // $ANTLR start RULE_RWS
     public final void mRULE_RWS() throws RecognitionException {
         try {
             int _type = RULE_RWS;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:25584:10: ( ( ' ' | '\\t' )+ )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:25584:12: ( ' ' | '\\t' )+
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:24834:10: ( ( ' ' | '\\t' )+ )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:24834:12: ( ' ' | '\\t' )+
             {
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:25584:12: ( ' ' | '\\t' )+
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:24834:12: ( ' ' | '\\t' )+
             int cnt1=0;
             loop1:
             do {
@@ -1497,10 +1457,10 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mRULE_NL() throws RecognitionException {
         try {
             int _type = RULE_NL;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:25586:9: ( ( '\\r' | '\\n' )+ )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:25586:11: ( '\\r' | '\\n' )+
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:24836:9: ( ( '\\r' | '\\n' )+ )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:24836:11: ( '\\r' | '\\n' )+
             {
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:25586:11: ( '\\r' | '\\n' )+
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:24836:11: ( '\\r' | '\\n' )+
             int cnt2=0;
             loop2:
             do {
@@ -1553,10 +1513,10 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mRULE_WS() throws RecognitionException {
         try {
             int _type = RULE_WS;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:25588:9: ( ( RULE_RWS | RULE_NL )+ )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:25588:11: ( RULE_RWS | RULE_NL )+
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:24838:9: ( ( RULE_RWS | RULE_NL )+ )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:24838:11: ( RULE_RWS | RULE_NL )+
             {
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:25588:11: ( RULE_RWS | RULE_NL )+
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:24838:11: ( RULE_RWS | RULE_NL )+
             int cnt3=0;
             loop3:
             do {
@@ -1573,14 +1533,14 @@ public class InternalDslOntoUMLLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:25588:12: RULE_RWS
+            	    // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:24838:12: RULE_RWS
             	    {
             	    mRULE_RWS(); 
 
             	    }
             	    break;
             	case 2 :
-            	    // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:25588:21: RULE_NL
+            	    // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:24838:21: RULE_NL
             	    {
             	    mRULE_NL(); 
 
@@ -1610,10 +1570,10 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mRULE_ID() throws RecognitionException {
         try {
             int _type = RULE_ID;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:25590:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:25590:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:24840:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:24840:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:25590:11: ( '^' )?
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:24840:11: ( '^' )?
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -1622,7 +1582,7 @@ public class InternalDslOntoUMLLexer extends Lexer {
             }
             switch (alt4) {
                 case 1 :
-                    // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:25590:11: '^'
+                    // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:24840:11: '^'
                     {
                     match('^'); 
 
@@ -1641,7 +1601,7 @@ public class InternalDslOntoUMLLexer extends Lexer {
                 recover(mse);    throw mse;
             }
 
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:25590:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:24840:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop5:
             do {
                 int alt5=2;
@@ -1689,10 +1649,10 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mRULE_INT() throws RecognitionException {
         try {
             int _type = RULE_INT;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:25592:10: ( ( '0' .. '9' )+ )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:25592:12: ( '0' .. '9' )+
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:24842:10: ( ( '0' .. '9' )+ )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:24842:12: ( '0' .. '9' )+
             {
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:25592:12: ( '0' .. '9' )+
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:24842:12: ( '0' .. '9' )+
             int cnt6=0;
             loop6:
             do {
@@ -1706,7 +1666,7 @@ public class InternalDslOntoUMLLexer extends Lexer {
 
                 switch (alt6) {
             	case 1 :
-            	    // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:25592:13: '0' .. '9'
+            	    // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:24842:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -1736,10 +1696,10 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mRULE_STRING() throws RecognitionException {
         try {
             int _type = RULE_STRING;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:25594:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:25594:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:24844:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:24844:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:25594:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:24844:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt9=2;
             int LA9_0 = input.LA(1);
 
@@ -1751,16 +1711,16 @@ public class InternalDslOntoUMLLexer extends Lexer {
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("25594:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )", 9, 0, input);
+                    new NoViableAltException("24844:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )", 9, 0, input);
 
                 throw nvae;
             }
             switch (alt9) {
                 case 1 :
-                    // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:25594:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:24844:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:25594:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:24844:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop7:
                     do {
                         int alt7=3;
@@ -1776,7 +1736,7 @@ public class InternalDslOntoUMLLexer extends Lexer {
 
                         switch (alt7) {
                     	case 1 :
-                    	    // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:25594:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' )
+                    	    // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:24844:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||input.LA(1)=='t' ) {
@@ -1793,7 +1753,7 @@ public class InternalDslOntoUMLLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:25594:62: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:24844:62: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFE') ) {
                     	        input.consume();
@@ -1819,10 +1779,10 @@ public class InternalDslOntoUMLLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:25594:82: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:24844:82: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:25594:87: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:24844:87: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop8:
                     do {
                         int alt8=3;
@@ -1838,7 +1798,7 @@ public class InternalDslOntoUMLLexer extends Lexer {
 
                         switch (alt8) {
                     	case 1 :
-                    	    // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:25594:88: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' )
+                    	    // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:24844:88: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||input.LA(1)=='t' ) {
@@ -1855,7 +1815,7 @@ public class InternalDslOntoUMLLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:25594:129: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:24844:129: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFE') ) {
                     	        input.consume();
@@ -1897,12 +1857,12 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mRULE_ML_COMMENT() throws RecognitionException {
         try {
             int _type = RULE_ML_COMMENT;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:25596:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:25596:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:24846:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:24846:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:25596:24: ( options {greedy=false; } : . )*
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:24846:24: ( options {greedy=false; } : . )*
             loop10:
             do {
                 int alt10=2;
@@ -1927,7 +1887,7 @@ public class InternalDslOntoUMLLexer extends Lexer {
 
                 switch (alt10) {
             	case 1 :
-            	    // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:25596:52: .
+            	    // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:24846:52: .
             	    {
             	    matchAny(); 
 
@@ -1955,12 +1915,12 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mRULE_SL_COMMENT() throws RecognitionException {
         try {
             int _type = RULE_SL_COMMENT;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:25598:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:25598:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:24848:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:24848:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:25598:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:24848:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop11:
             do {
                 int alt11=2;
@@ -1973,7 +1933,7 @@ public class InternalDslOntoUMLLexer extends Lexer {
 
                 switch (alt11) {
             	case 1 :
-            	    // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:25598:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:24848:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFE') ) {
             	        input.consume();
@@ -1994,7 +1954,7 @@ public class InternalDslOntoUMLLexer extends Lexer {
                 }
             } while (true);
 
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:25598:40: ( ( '\\r' )? '\\n' )?
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:24848:40: ( ( '\\r' )? '\\n' )?
             int alt13=2;
             int LA13_0 = input.LA(1);
 
@@ -2003,9 +1963,9 @@ public class InternalDslOntoUMLLexer extends Lexer {
             }
             switch (alt13) {
                 case 1 :
-                    // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:25598:41: ( '\\r' )? '\\n'
+                    // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:24848:41: ( '\\r' )? '\\n'
                     {
-                    // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:25598:41: ( '\\r' )?
+                    // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:24848:41: ( '\\r' )?
                     int alt12=2;
                     int LA12_0 = input.LA(1);
 
@@ -2014,7 +1974,7 @@ public class InternalDslOntoUMLLexer extends Lexer {
                     }
                     switch (alt12) {
                         case 1 :
-                            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:25598:41: '\\r'
+                            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:24848:41: '\\r'
                             {
                             match('\r'); 
 
@@ -2044,8 +2004,8 @@ public class InternalDslOntoUMLLexer extends Lexer {
     public final void mRULE_ANY_OTHER() throws RecognitionException {
         try {
             int _type = RULE_ANY_OTHER;
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:25600:16: ( . )
-            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:25600:18: .
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:24850:16: ( . )
+            // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:24850:18: .
             {
             matchAny(); 
 
@@ -2059,8 +2019,8 @@ public class InternalDslOntoUMLLexer extends Lexer {
     // $ANTLR end RULE_ANY_OTHER
 
     public void mTokens() throws RecognitionException {
-        // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:1:8: ( T13 | T14 | T15 | T16 | T17 | T18 | T19 | T20 | T21 | T22 | T23 | T24 | T25 | T26 | T27 | T28 | T29 | T30 | T31 | T32 | T33 | T34 | T35 | T36 | T37 | T38 | T39 | T40 | T41 | T42 | T43 | T44 | T45 | T46 | T47 | T48 | T49 | T50 | T51 | T52 | T53 | T54 | T55 | T56 | T57 | T58 | T59 | T60 | T61 | T62 | T63 | T64 | T65 | T66 | T67 | T68 | T69 | T70 | T71 | T72 | T73 | T74 | T75 | T76 | T77 | T78 | T79 | T80 | T81 | T82 | T83 | RULE_RWS | RULE_NL | RULE_WS | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_ANY_OTHER )
-        int alt14=80;
+        // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:1:8: ( T13 | T14 | T15 | T16 | T17 | T18 | T19 | T20 | T21 | T22 | T23 | T24 | T25 | T26 | T27 | T28 | T29 | T30 | T31 | T32 | T33 | T34 | T35 | T36 | T37 | T38 | T39 | T40 | T41 | T42 | T43 | T44 | T45 | T46 | T47 | T48 | T49 | T50 | T51 | T52 | T53 | T54 | T55 | T56 | T57 | T58 | T59 | T60 | T61 | T62 | T63 | T64 | T65 | T66 | T67 | T68 | T69 | T70 | T71 | T72 | T73 | T74 | T75 | T76 | T77 | T78 | T79 | T80 | T81 | RULE_RWS | RULE_NL | RULE_WS | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_ANY_OTHER )
+        int alt14=78;
         alt14 = dfa14.predict(input);
         switch (alt14) {
             case 1 :
@@ -2547,77 +2507,63 @@ public class InternalDslOntoUMLLexer extends Lexer {
                 }
                 break;
             case 70 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:1:286: T82
-                {
-                mT82(); 
-
-                }
-                break;
-            case 71 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:1:290: T83
-                {
-                mT83(); 
-
-                }
-                break;
-            case 72 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:1:294: RULE_RWS
+                // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:1:286: RULE_RWS
                 {
                 mRULE_RWS(); 
 
                 }
                 break;
-            case 73 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:1:303: RULE_NL
+            case 71 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:1:295: RULE_NL
                 {
                 mRULE_NL(); 
 
                 }
                 break;
-            case 74 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:1:311: RULE_WS
+            case 72 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:1:303: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
-            case 75 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:1:319: RULE_ID
+            case 73 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:1:311: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
-            case 76 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:1:327: RULE_INT
+            case 74 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:1:319: RULE_INT
                 {
                 mRULE_INT(); 
 
                 }
                 break;
-            case 77 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:1:336: RULE_STRING
+            case 75 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:1:328: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
-            case 78 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:1:348: RULE_ML_COMMENT
+            case 76 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:1:340: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
-            case 79 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:1:364: RULE_SL_COMMENT
+            case 77 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:1:356: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
-            case 80 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:1:380: RULE_ANY_OTHER
+            case 78 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.ui/src-gen/br/ufes/inf/nemo/ontouml/dsl/ui/contentassist/antlr/internal/InternalDslOntoUML.g:1:372: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 
@@ -2631,181 +2577,178 @@ public class InternalDslOntoUMLLexer extends Lexer {
 
     protected DFA14 dfa14 = new DFA14(this);
     static final String DFA14_eotS =
-        "\2\uffff\7\56\2\uffff\2\56\2\uffff\1\56\1\uffff\3\56\2\uffff\4\56"+
-        "\3\uffff\1\134\5\56\1\142\1\145\1\53\2\uffff\3\53\2\uffff\1\56\1"+
-        "\uffff\22\56\2\uffff\2\56\2\uffff\4\56\1\uffff\5\56\2\uffff\5\56"+
-        "\5\uffff\5\56\1\uffff\1\142\2\uffff\1\145\4\uffff\47\56\1\u00c1"+
-        "\6\56\1\u00c8\2\56\1\u00cb\17\56\1\u00df\4\56\1\u00e4\10\56\1\u00ee"+
-        "\6\56\1\uffff\2\56\1\u00f7\1\u00f8\2\56\1\uffff\1\u00fb\1\56\1\uffff"+
-        "\17\56\1\u010c\1\56\1\uffff\1\u010e\1\uffff\1\u010f\3\56\1\uffff"+
-        "\7\56\1\uffff\1\56\1\uffff\5\56\1\u0121\2\56\2\uffff\2\56\1\uffff"+
-        "\2\56\1\u0128\3\56\1\u012c\5\56\1\u0132\3\56\1\uffff\1\56\2\uffff"+
-        "\3\56\1\u013b\15\56\1\uffff\3\56\1\u014c\2\56\1\uffff\1\56\1\uffff"+
-        "\1\u0150\1\uffff\5\56\1\uffff\1\u0156\1\56\1\u0158\5\56\1\uffff"+
-        "\4\56\1\u0163\2\56\1\u0167\7\56\1\u016f\1\uffff\3\56\1\uffff\2\56"+
-        "\1\u0175\1\56\1\u0177\1\uffff\1\56\1\uffff\2\56\1\u017c\4\56\1\u0181"+
-        "\1\u0182\2\uffff\2\56\2\uffff\2\56\1\u0187\3\56\1\u018b\1\uffff"+
-        "\4\56\1\u0190\1\uffff\1\56\1\uffff\1\u0192\1\56\1\uffff\1\u0194"+
-        "\1\uffff\1\u0195\1\u0196\2\56\2\uffff\1\u0199\1\u019a\1\56\2\uffff"+
-        "\3\56\1\uffff\3\56\1\u01a2\1\uffff\1\56\1\uffff\1\56\3\uffff\1\u01a5"+
-        "\1\56\2\uffff\1\u01a7\6\56\1\uffff\2\56\1\uffff\1\u01b1\1\uffff"+
-        "\2\56\1\u01b4\6\56\1\uffff\2\56\1\uffff\2\56\1\u01bf\7\56\2\uffff"+
-        "\14\56\1\u01d3\2\56\1\u01d6\1\u01d7\1\u01d8\1\uffff\1\56\1\u01da"+
-        "\3\uffff\1\56\1\uffff\1\u01dc\1\uffff";
+        "\2\uffff\6\57\2\uffff\2\57\3\uffff\4\57\2\uffff\4\57\3\uffff\1\57"+
+        "\1\133\5\57\1\141\1\144\1\53\2\uffff\3\53\2\uffff\2\57\1\uffff\17"+
+        "\57\2\uffff\2\57\3\uffff\7\57\2\uffff\5\57\3\uffff\3\57\2\uffff"+
+        "\5\57\1\uffff\1\141\2\uffff\1\144\4\uffff\42\57\1\u00b9\11\57\1"+
+        "\u00c3\1\u00c4\2\57\1\u00c7\12\57\1\u00d6\5\57\1\u00dc\2\57\1\u00e0"+
+        "\12\57\1\uffff\5\57\1\u00f0\1\u00f1\2\57\2\uffff\1\u00f4\1\57\1"+
+        "\uffff\14\57\1\uffff\1\u0102\1\uffff\1\u0103\4\57\1\uffff\1\57\1"+
+        "\u0109\1\57\1\uffff\1\57\1\uffff\7\57\1\u0114\5\57\2\uffff\2\57"+
+        "\1\uffff\5\57\1\u0121\1\57\1\u0123\5\57\2\uffff\5\57\1\uffff\12"+
+        "\57\1\uffff\2\57\1\u013b\3\57\1\u013f\3\57\1\uffff\1\u0143\1\uffff"+
+        "\1\57\1\uffff\15\57\1\u0153\1\u0155\10\57\1\uffff\2\57\1\u0160\1"+
+        "\uffff\3\57\1\uffff\1\57\1\u0165\2\57\1\u0168\2\57\1\u016b\3\57"+
+        "\1\u0170\2\57\4\uffff\2\57\1\u0175\1\u0176\4\57\1\u017b\1\u017c"+
+        "\1\uffff\4\57\1\uffff\1\u0181\1\57\1\uffff\1\57\1\u0184\1\uffff"+
+        "\1\u0185\1\57\1\uffff\1\u0187\1\uffff\1\u0188\1\u0189\1\57\3\uffff"+
+        "\4\57\2\uffff\4\57\1\uffff\1\u0193\1\57\2\uffff\1\57\3\uffff\1\u0196"+
+        "\10\57\1\uffff\2\57\1\uffff\2\57\1\u01a4\1\u01a5\11\57\2\uffff\2"+
+        "\57\1\u01b1\1\u01b2\7\57\2\uffff\1\57\1\uffff\13\57\1\u01c6\2\57"+
+        "\1\u01c9\1\u01ca\1\u01cb\1\uffff\1\57\1\u01cd\3\uffff\1\57\1\uffff"+
+        "\1\u01cf\1\uffff";
     static final String DFA14_eofS =
-        "\u01dd\uffff";
+        "\u01d0\uffff";
     static final String DFA14_minS =
-        "\1\0\1\uffff\1\162\2\141\1\150\3\141\2\uffff\2\151\2\uffff\1\142"+
-        "\1\uffff\1\165\2\145\2\uffff\1\145\1\160\1\145\1\156\3\uffff\1\76"+
-        "\1\156\1\125\1\145\1\162\1\156\2\11\1\101\2\uffff\2\0\1\52\2\uffff"+
-        "\1\165\1\uffff\1\154\1\162\1\156\1\166\1\141\1\142\1\141\1\154\1"+
-        "\141\1\164\1\142\1\151\1\143\1\141\1\164\1\144\1\170\1\144\2\uffff"+
-        "\1\145\1\156\2\uffff\2\164\1\147\1\163\1\uffff\2\141\1\154\1\146"+
-        "\1\163\2\uffff\1\156\1\141\1\147\1\144\1\164\5\uffff\1\163\1\114"+
-        "\1\141\1\144\1\151\1\uffff\1\11\2\uffff\1\11\4\uffff\1\145\1\163"+
-        "\1\155\1\145\1\151\1\162\1\113\1\164\1\154\1\160\1\162\1\145\1\154"+
-        "\1\166\1\164\1\153\1\163\2\145\2\151\1\142\1\167\1\144\1\151\2\162"+
-        "\1\164\1\156\1\141\1\145\1\144\1\145\1\151\1\141\1\152\1\145\1\161"+
-        "\1\151\1\60\1\145\1\164\1\114\1\146\1\145\1\161\1\60\1\145\1\141"+
-        "\1\60\1\147\2\145\2\151\1\145\1\154\1\141\1\147\1\151\1\141\1\145"+
-        "\1\141\1\145\1\162\1\60\1\156\1\141\1\145\1\160\1\60\1\166\1\151"+
-        "\1\145\1\162\2\164\1\146\1\55\1\60\1\166\1\165\1\157\1\162\1\165"+
-        "\1\156\1\uffff\1\156\1\141\2\60\1\162\1\165\1\uffff\1\60\1\154\1"+
-        "\uffff\1\141\1\144\1\151\1\164\1\156\2\143\1\163\1\145\1\143\1\157"+
-        "\1\143\1\164\1\143\1\147\1\60\1\151\1\uffff\1\60\1\uffff\1\60\1"+
-        "\164\1\162\1\157\1\uffff\1\145\1\142\1\147\1\141\1\151\1\157\1\151"+
-        "\1\uffff\1\151\1\uffff\1\141\1\154\1\151\1\141\1\145\1\60\1\163"+
-        "\1\156\2\uffff\2\145\1\uffff\1\101\1\142\1\60\1\164\1\40\1\144\1"+
-        "\60\1\164\1\151\2\164\1\162\1\60\1\145\1\164\1\145\1\uffff\1\141"+
-        "\2\uffff\1\145\1\105\1\151\1\60\1\165\1\141\1\143\1\164\1\162\1"+
-        "\156\1\170\1\144\2\164\1\156\1\154\1\105\1\uffff\1\151\1\143\1\144"+
-        "\1\60\1\163\1\154\1\uffff\1\165\1\uffff\1\60\1\uffff\1\151\1\164"+
-        "\2\145\1\171\1\uffff\1\60\1\145\1\60\1\154\1\157\1\144\2\156\1\uffff"+
-        "\3\164\1\171\1\60\1\145\1\151\1\55\1\151\1\163\1\164\1\151\1\170"+
-        "\1\157\1\145\1\60\1\uffff\1\163\1\145\1\164\1\uffff\1\166\1\145"+
-        "\1\60\1\162\1\60\1\uffff\1\144\1\uffff\1\72\1\156\1\60\1\144\1\164"+
-        "\1\145\1\151\2\60\2\uffff\1\163\1\156\2\uffff\1\157\1\40\1\60\1"+
-        "\172\1\160\1\156\1\60\1\uffff\1\157\1\117\1\141\1\145\1\60\1\uffff"+
-        "\1\151\1\uffff\1\60\1\163\1\uffff\1\60\1\uffff\2\60\1\163\1\157"+
-        "\2\uffff\2\60\1\156\2\uffff\1\141\1\162\1\141\1\uffff\1\143\1\167"+
-        "\1\142\1\60\1\uffff\1\172\1\uffff\1\163\3\uffff\1\60\1\156\2\uffff"+
-        "\1\60\1\164\1\145\1\154\1\151\1\156\1\154\1\uffff\1\141\1\157\1"+
-        "\uffff\1\60\1\uffff\1\151\1\163\1\60\1\141\2\145\1\144\1\164\1\143"+
-        "\1\uffff\1\157\1\163\1\uffff\1\164\1\144\1\60\1\72\2\151\1\156\2"+
-        "\151\1\105\2\uffff\1\157\1\141\1\123\2\157\2\156\1\164\1\145\2\156"+
-        "\1\144\1\60\1\151\1\164\3\60\1\uffff\1\157\1\60\3\uffff\1\156\1"+
-        "\uffff\1\60\1\uffff";
+        "\1\0\1\uffff\1\162\2\141\1\150\2\141\2\uffff\2\151\3\uffff\1\165"+
+        "\1\150\1\145\1\141\2\uffff\1\145\1\160\1\145\1\156\3\uffff\1\142"+
+        "\1\76\1\156\1\125\1\145\1\162\1\156\2\11\1\101\2\uffff\2\0\1\52"+
+        "\2\uffff\1\165\1\160\1\uffff\1\154\1\162\1\156\1\166\1\142\1\141"+
+        "\1\145\1\141\1\154\1\164\1\141\1\144\1\170\1\144\1\164\2\uffff\1"+
+        "\145\1\156\3\uffff\2\141\1\154\1\141\1\146\1\163\1\164\2\uffff\1"+
+        "\156\1\141\1\147\1\144\1\164\3\uffff\1\147\1\164\1\163\2\uffff\1"+
+        "\163\1\114\1\141\1\144\1\151\1\uffff\1\11\2\uffff\1\11\4\uffff\2"+
+        "\145\1\163\1\155\1\145\1\151\1\113\1\162\1\143\1\164\1\160\1\154"+
+        "\1\145\1\162\1\145\2\151\1\142\1\145\1\167\1\144\1\156\1\163\2\145"+
+        "\1\144\1\141\1\151\1\141\1\152\1\141\1\145\1\161\1\151\1\60\1\145"+
+        "\1\162\1\151\2\164\1\114\1\146\1\145\1\161\2\60\1\145\1\141\1\60"+
+        "\1\147\1\145\1\151\1\145\2\151\1\154\1\145\1\147\1\141\1\60\1\156"+
+        "\1\141\1\145\1\162\1\160\1\60\1\164\1\145\1\60\1\146\1\55\1\164"+
+        "\1\166\1\165\1\157\1\164\1\162\1\165\1\156\1\uffff\1\156\1\145\1"+
+        "\166\1\162\1\141\2\60\1\162\1\165\2\uffff\1\60\1\154\1\uffff\1\141"+
+        "\1\151\1\164\1\156\1\144\1\146\1\143\1\145\1\163\1\143\1\157\1\143"+
+        "\1\uffff\1\60\1\uffff\1\60\1\164\1\162\1\151\1\157\1\uffff\1\151"+
+        "\1\60\1\151\1\uffff\1\151\1\uffff\1\157\1\141\1\154\1\151\1\171"+
+        "\1\141\1\145\1\60\1\163\1\147\1\145\1\141\1\156\2\uffff\2\145\1"+
+        "\uffff\1\101\1\142\1\164\1\40\1\144\1\60\1\151\1\60\1\164\1\151"+
+        "\1\164\1\162\1\164\2\uffff\1\145\1\105\1\141\1\151\1\164\1\uffff"+
+        "\1\170\1\156\1\162\1\144\2\164\1\156\1\160\1\154\1\105\1\uffff\1"+
+        "\151\1\141\1\60\2\143\1\144\1\60\1\163\1\154\1\165\1\uffff\1\60"+
+        "\1\uffff\1\143\1\uffff\1\145\1\164\1\151\1\171\1\145\1\157\1\144"+
+        "\1\156\1\154\1\156\1\171\1\151\1\145\1\60\1\55\1\151\1\163\1\164"+
+        "\1\145\1\151\1\170\1\157\1\164\1\uffff\1\164\1\145\1\60\1\uffff"+
+        "\1\163\1\145\1\164\1\uffff\1\141\1\60\1\145\1\166\1\60\1\162\1\156"+
+        "\1\60\1\144\1\72\1\164\1\60\1\156\1\163\4\uffff\1\157\1\40\2\60"+
+        "\1\172\1\160\1\156\1\151\2\60\1\uffff\1\157\1\117\1\141\1\164\1"+
+        "\uffff\1\60\1\145\1\uffff\1\151\1\60\1\uffff\1\60\1\163\1\uffff"+
+        "\1\60\1\uffff\2\60\1\156\3\uffff\1\141\1\162\1\141\1\157\2\uffff"+
+        "\1\143\1\167\1\142\1\151\1\uffff\1\60\1\172\2\uffff\1\163\3\uffff"+
+        "\1\60\1\164\1\145\1\154\1\156\1\151\1\156\1\154\1\157\1\uffff\1"+
+        "\141\1\157\1\uffff\1\151\1\163\2\60\1\141\2\145\1\156\1\164\1\144"+
+        "\1\143\1\157\1\163\2\uffff\1\164\1\144\2\60\1\151\1\72\1\151\1\156"+
+        "\2\151\1\105\2\uffff\1\157\1\uffff\1\141\1\123\2\157\2\156\1\164"+
+        "\1\145\2\156\1\144\1\60\1\151\1\164\3\60\1\uffff\1\157\1\60\3\uffff"+
+        "\1\156\1\uffff\1\60\1\uffff";
     static final String DFA14_maxS =
-        "\1\ufffe\1\uffff\1\162\2\157\1\165\1\157\1\165\1\157\2\uffff\2\151"+
-        "\2\uffff\1\164\1\uffff\1\165\1\157\1\151\2\uffff\1\145\1\160\1\145"+
-        "\1\170\3\uffff\1\76\1\156\1\125\1\145\1\162\1\156\2\40\1\172\2\uffff"+
-        "\2\ufffe\1\57\2\uffff\1\165\1\uffff\1\154\1\162\1\156\1\166\1\141"+
-        "\1\142\1\141\1\155\1\141\1\164\1\142\1\157\1\143\1\141\1\164\1\144"+
-        "\1\170\1\155\2\uffff\1\145\1\156\2\uffff\2\164\1\147\1\163\1\uffff"+
-        "\1\141\2\154\1\162\1\163\2\uffff\1\156\1\141\1\147\1\144\1\164\5"+
-        "\uffff\1\163\1\114\1\141\1\144\1\151\1\uffff\1\40\2\uffff\1\40\4"+
-        "\uffff\1\145\1\163\1\155\1\145\1\151\1\162\1\163\1\164\1\154\1\160"+
-        "\1\162\1\145\1\154\1\166\1\164\1\153\1\163\2\145\2\151\1\142\1\167"+
-        "\1\144\1\151\2\162\1\164\1\156\1\141\1\145\1\144\1\145\1\151\1\141"+
-        "\1\152\1\145\1\161\1\151\1\172\1\145\1\164\1\114\1\146\1\145\1\161"+
-        "\1\172\1\145\1\141\1\172\1\147\1\145\1\164\2\151\1\145\1\157\1\141"+
-        "\1\147\1\151\1\141\1\145\1\141\1\145\1\162\1\172\1\156\1\141\1\145"+
-        "\1\160\1\172\1\166\1\151\1\145\1\162\2\164\1\146\1\55\1\172\1\166"+
-        "\1\165\1\157\1\162\1\165\1\156\1\uffff\1\156\1\141\2\172\1\162\1"+
-        "\165\1\uffff\1\172\1\154\1\uffff\1\141\1\144\1\151\1\164\1\156\2"+
-        "\143\1\163\1\145\1\143\1\157\1\143\1\164\1\143\1\147\1\172\1\151"+
-        "\1\uffff\1\172\1\uffff\1\172\1\164\1\162\1\157\1\uffff\1\145\1\142"+
-        "\1\147\1\141\1\151\1\157\1\151\1\uffff\1\151\1\uffff\1\145\1\154"+
-        "\1\151\1\141\1\145\1\172\1\163\1\156\2\uffff\2\145\1\uffff\1\101"+
-        "\1\142\1\172\1\164\1\40\1\144\1\172\1\164\1\151\2\164\1\162\1\172"+
-        "\1\145\1\164\1\145\1\uffff\1\141\2\uffff\1\151\1\105\1\151\1\172"+
-        "\1\165\1\141\1\143\1\164\1\162\1\156\1\170\1\144\2\164\1\156\1\154"+
-        "\1\105\1\uffff\1\151\1\143\1\144\1\172\1\163\1\154\1\uffff\1\165"+
-        "\1\uffff\1\172\1\uffff\1\151\1\164\2\145\1\171\1\uffff\1\172\1\145"+
-        "\1\172\1\154\1\157\1\144\2\156\1\uffff\3\164\1\171\1\172\1\145\1"+
-        "\151\1\172\1\151\1\163\1\164\1\151\1\170\1\157\1\145\1\172\1\uffff"+
-        "\1\163\1\145\1\164\1\uffff\1\166\1\145\1\172\1\162\1\172\1\uffff"+
-        "\1\144\1\uffff\1\101\1\156\1\172\1\144\1\164\1\145\1\151\2\172\2"+
-        "\uffff\1\163\1\156\2\uffff\1\157\1\40\2\172\1\160\1\156\1\172\1"+
-        "\uffff\1\157\1\117\1\141\1\145\1\172\1\uffff\1\151\1\uffff\1\172"+
-        "\1\163\1\uffff\1\172\1\uffff\2\172\1\163\1\157\2\uffff\2\172\1\156"+
-        "\2\uffff\1\141\1\162\1\141\1\uffff\1\143\1\167\1\142\1\172\1\uffff"+
-        "\1\172\1\uffff\1\163\3\uffff\1\172\1\156\2\uffff\1\172\1\164\1\145"+
-        "\1\154\1\151\1\156\1\154\1\uffff\1\145\1\157\1\uffff\1\172\1\uffff"+
-        "\1\151\1\163\1\172\1\141\2\145\1\144\1\164\1\143\1\uffff\1\157\1"+
-        "\163\1\uffff\1\164\1\144\1\172\1\72\2\151\1\156\2\151\1\105\2\uffff"+
-        "\1\157\1\141\1\123\2\157\2\156\1\164\1\145\2\156\1\144\1\172\1\151"+
-        "\1\164\3\172\1\uffff\1\157\1\172\3\uffff\1\156\1\uffff\1\172\1\uffff";
+        "\1\ufffe\1\uffff\1\171\2\157\1\165\2\157\2\uffff\2\151\3\uffff\1"+
+        "\165\1\150\1\157\1\151\2\uffff\1\145\1\160\1\145\1\170\3\uffff\1"+
+        "\147\1\76\1\156\1\125\1\145\1\162\1\156\2\40\1\172\2\uffff\2\ufffe"+
+        "\1\57\2\uffff\1\165\1\160\1\uffff\1\154\1\162\1\156\1\166\1\142"+
+        "\1\141\1\145\1\141\1\155\1\164\1\141\1\144\1\170\1\155\1\164\2\uffff"+
+        "\1\145\1\156\3\uffff\2\141\2\154\1\162\1\163\1\164\2\uffff\1\156"+
+        "\1\141\1\147\1\144\1\164\3\uffff\1\147\1\164\1\163\2\uffff\1\163"+
+        "\1\114\1\141\1\144\1\151\1\uffff\1\40\2\uffff\1\40\4\uffff\2\145"+
+        "\1\163\1\155\1\145\1\151\1\163\1\162\1\143\1\164\1\160\1\154\1\145"+
+        "\1\162\1\145\2\151\1\142\1\145\1\167\1\144\1\156\1\163\2\145\1\144"+
+        "\1\141\1\151\1\141\1\152\1\141\1\145\1\161\1\151\1\172\1\145\1\162"+
+        "\1\151\2\164\1\114\1\146\1\145\1\161\2\172\1\145\1\141\1\172\1\147"+
+        "\1\164\1\151\1\145\2\151\1\157\1\145\1\147\1\141\1\172\1\156\1\141"+
+        "\1\145\1\162\1\160\1\172\1\164\1\145\1\172\1\146\1\55\1\164\1\166"+
+        "\1\165\1\157\1\164\1\162\1\165\1\156\1\uffff\1\156\1\145\1\166\1"+
+        "\162\1\141\2\172\1\162\1\165\2\uffff\1\172\1\154\1\uffff\1\141\1"+
+        "\151\1\164\1\156\1\144\1\146\1\143\1\145\1\163\1\143\1\157\1\143"+
+        "\1\uffff\1\172\1\uffff\1\172\1\164\1\162\1\151\1\157\1\uffff\1\151"+
+        "\1\172\1\151\1\uffff\1\151\1\uffff\1\157\1\145\1\154\1\151\1\171"+
+        "\1\141\1\145\1\172\1\163\1\147\1\145\1\141\1\156\2\uffff\2\145\1"+
+        "\uffff\1\101\1\142\1\164\1\40\1\144\1\172\1\151\1\172\1\164\1\151"+
+        "\1\164\1\162\1\164\2\uffff\1\151\1\105\1\141\1\151\1\164\1\uffff"+
+        "\1\170\1\156\1\162\1\144\2\164\1\156\1\160\1\154\1\105\1\uffff\1"+
+        "\151\1\141\1\172\2\143\1\144\1\172\1\163\1\154\1\165\1\uffff\1\172"+
+        "\1\uffff\1\143\1\uffff\1\145\1\164\1\151\1\171\1\145\1\157\1\144"+
+        "\1\156\1\154\1\156\1\171\1\151\1\145\2\172\1\151\1\163\1\164\1\145"+
+        "\1\151\1\170\1\157\1\164\1\uffff\1\164\1\145\1\172\1\uffff\1\163"+
+        "\1\145\1\164\1\uffff\1\141\1\172\1\145\1\166\1\172\1\162\1\156\1"+
+        "\172\1\144\1\101\1\164\1\172\1\156\1\163\4\uffff\1\157\1\40\3\172"+
+        "\1\160\1\156\1\151\2\172\1\uffff\1\157\1\117\1\141\1\164\1\uffff"+
+        "\1\172\1\145\1\uffff\1\151\1\172\1\uffff\1\172\1\163\1\uffff\1\172"+
+        "\1\uffff\2\172\1\156\3\uffff\1\141\1\162\1\141\1\157\2\uffff\1\143"+
+        "\1\167\1\142\1\151\1\uffff\2\172\2\uffff\1\163\3\uffff\1\172\1\164"+
+        "\1\145\1\154\1\156\1\151\1\156\1\154\1\157\1\uffff\1\145\1\157\1"+
+        "\uffff\1\151\1\163\2\172\1\141\2\145\1\156\1\164\1\144\1\143\1\157"+
+        "\1\163\2\uffff\1\164\1\144\2\172\1\151\1\72\1\151\1\156\2\151\1"+
+        "\105\2\uffff\1\157\1\uffff\1\141\1\123\2\157\2\156\1\164\1\145\2"+
+        "\156\1\144\1\172\1\151\1\164\3\172\1\uffff\1\157\1\172\3\uffff\1"+
+        "\156\1\uffff\1\172\1\uffff";
     static final String DFA14_acceptS =
-        "\1\uffff\1\1\7\uffff\1\14\1\15\2\uffff\1\20\1\21\1\uffff\1\23\3"+
-        "\uffff\1\52\1\53\4\uffff\1\60\1\61\1\62\11\uffff\1\113\1\114\3\uffff"+
-        "\1\120\1\1\1\uffff\1\113\22\uffff\1\14\1\15\2\uffff\1\20\1\21\4"+
-        "\uffff\1\23\5\uffff\1\52\1\53\5\uffff\1\60\1\61\1\62\1\70\1\67\5"+
-        "\uffff\1\110\1\uffff\1\112\1\111\1\uffff\1\114\1\115\1\116\1\117"+
-        "\126\uffff\1\57\6\uffff\1\2\2\uffff\1\4\21\uffff\1\37\1\uffff\1"+
-        "\34\4\uffff\1\17\7\uffff\1\106\1\uffff\1\31\10\uffff\1\72\1\77\2"+
-        "\uffff\1\3\20\uffff\1\30\1\uffff\1\13\1\32\21\uffff\1\56\6\uffff"+
-        "\1\5\1\uffff\1\65\1\uffff\1\103\5\uffff\1\7\10\uffff\1\73\20\uffff"+
-        "\1\105\3\uffff\1\26\5\uffff\1\10\1\uffff\1\12\11\uffff\1\47\1\35"+
-        "\2\uffff\1\107\1\76\7\uffff\1\104\5\uffff\1\101\1\uffff\1\27\2\uffff"+
-        "\1\46\1\uffff\1\44\4\uffff\1\74\1\24\3\uffff\1\63\1\102\3\uffff"+
-        "\1\71\4\uffff\1\6\1\uffff\1\11\1\uffff\1\43\1\41\1\16\2\uffff\1"+
-        "\66\1\33\7\uffff\1\25\2\uffff\1\22\1\uffff\1\45\11\uffff\1\64\2"+
-        "\uffff\1\75\12\uffff\1\100\1\40\22\uffff\1\36\2\uffff\1\55\1\51"+
-        "\1\42\1\uffff\1\54\1\uffff\1\50";
+        "\1\uffff\1\1\6\uffff\1\10\1\11\2\uffff\1\14\1\15\1\16\4\uffff\1"+
+        "\47\1\50\4\uffff\1\55\1\56\1\57\12\uffff\1\111\1\112\3\uffff\1\116"+
+        "\1\1\2\uffff\1\111\17\uffff\1\10\1\11\2\uffff\1\14\1\15\1\16\7\uffff"+
+        "\1\47\1\50\5\uffff\1\55\1\56\1\57\3\uffff\1\67\1\64\5\uffff\1\106"+
+        "\1\uffff\1\110\1\107\1\uffff\1\112\1\113\1\115\1\114\117\uffff\1"+
+        "\54\11\uffff\1\2\1\46\2\uffff\1\4\14\uffff\1\32\1\uffff\1\27\5\uffff"+
+        "\1\13\3\uffff\1\24\1\uffff\1\104\15\uffff\1\70\1\75\2\uffff\1\3"+
+        "\15\uffff\1\7\1\25\5\uffff\1\23\12\uffff\1\53\12\uffff\1\62\1\uffff"+
+        "\1\5\1\uffff\1\101\27\uffff\1\71\3\uffff\1\103\3\uffff\1\21\16\uffff"+
+        "\1\42\1\30\1\105\1\74\12\uffff\1\102\4\uffff\1\77\2\uffff\1\22\2"+
+        "\uffff\1\37\2\uffff\1\41\1\uffff\1\17\3\uffff\1\60\1\100\1\45\4"+
+        "\uffff\1\72\1\65\4\uffff\1\6\2\uffff\1\36\1\34\1\uffff\1\12\1\26"+
+        "\1\63\11\uffff\1\20\2\uffff\1\40\15\uffff\1\73\1\61\13\uffff\1\76"+
+        "\1\66\1\uffff\1\33\21\uffff\1\31\2\uffff\1\52\1\44\1\35\1\uffff"+
+        "\1\51\1\uffff\1\43";
     static final String DFA14_specialS =
-        "\u01dd\uffff}>";
+        "\u01d0\uffff}>";
     static final String[] DFA14_transitionS = {
-            "\11\53\1\43\1\44\2\53\1\44\22\53\1\43\1\53\1\50\1\32\3\53\1"+
-            "\51\1\24\1\25\1\1\1\53\1\16\2\53\1\52\12\47\1\15\1\20\1\53\1"+
-            "\35\3\53\15\46\1\37\1\27\13\46\1\33\1\53\1\34\1\45\1\46\1\53"+
-            "\1\17\1\30\1\6\1\23\1\31\1\3\1\26\1\46\1\36\1\46\1\14\1\40\1"+
-            "\10\1\4\1\41\1\7\1\21\1\22\1\5\1\2\1\42\1\13\4\46\1\11\1\53"+
-            "\1\12\uff81\53",
+            "\11\53\1\43\1\44\2\53\1\44\22\53\1\43\1\53\1\50\1\31\3\53\1"+
+            "\51\1\23\1\24\1\1\1\53\1\15\2\53\1\52\12\47\1\14\1\16\1\53\1"+
+            "\35\3\53\15\46\1\37\1\26\13\46\1\32\1\53\1\33\1\45\1\46\1\53"+
+            "\1\34\1\27\1\6\1\22\1\30\1\3\1\25\1\46\1\36\1\46\1\13\1\40\1"+
+            "\7\1\4\1\41\1\20\1\17\1\21\1\5\1\2\1\42\1\12\4\46\1\10\1\53"+
+            "\1\11\uff81\53",
             "",
-            "\1\55",
-            "\1\57\15\uffff\1\60",
-            "\1\62\15\uffff\1\61",
-            "\1\63\13\uffff\1\65\1\64",
-            "\1\70\6\uffff\1\67\6\uffff\1\66",
-            "\1\73\6\uffff\1\74\11\uffff\1\72\2\uffff\1\71",
-            "\1\75\3\uffff\1\100\3\uffff\1\77\5\uffff\1\76",
-            "",
-            "",
-            "\1\103",
-            "\1\104",
+            "\1\55\6\uffff\1\56",
+            "\1\60\15\uffff\1\61",
+            "\1\63\15\uffff\1\62",
+            "\1\65\7\uffff\1\66\3\uffff\1\67\1\64",
+            "\1\71\6\uffff\1\72\6\uffff\1\70",
+            "\1\76\3\uffff\1\75\3\uffff\1\74\5\uffff\1\73",
             "",
             "",
-            "\1\112\1\107\3\uffff\1\111\14\uffff\1\110",
-            "",
-            "\1\114",
-            "\1\115\11\uffff\1\116",
-            "\1\117\3\uffff\1\120",
-            "",
-            "",
-            "\1\123",
-            "\1\124",
-            "\1\125",
-            "\1\126\11\uffff\1\127",
+            "\1\101",
+            "\1\102",
             "",
             "",
             "",
-            "\1\133",
+            "\1\106",
+            "\1\107",
+            "\1\111\11\uffff\1\110",
+            "\1\114\3\uffff\1\112\3\uffff\1\113",
+            "",
+            "",
+            "\1\117",
+            "\1\120",
+            "\1\121",
+            "\1\122\11\uffff\1\123",
+            "",
+            "",
+            "",
+            "\1\131\1\130\3\uffff\1\127",
+            "\1\132",
+            "\1\134",
             "\1\135",
             "\1\136",
             "\1\137",
             "\1\140",
-            "\1\141",
-            "\1\143\1\144\2\uffff\1\144\22\uffff\1\143",
-            "\1\144\1\146\2\uffff\1\146\22\uffff\1\144",
-            "\32\56\4\uffff\1\56\1\uffff\32\56",
+            "\1\142\1\143\2\uffff\1\143\22\uffff\1\142",
+            "\1\143\1\145\2\uffff\1\145\22\uffff\1\143",
+            "\32\57\4\uffff\1\57\1\uffff\32\57",
             "",
             "",
-            "\uffff\150",
-            "\uffff\150",
-            "\1\151\4\uffff\1\152",
+            "\uffff\147",
+            "\uffff\147",
+            "\1\151\4\uffff\1\150",
             "",
             "",
+            "\1\152",
             "\1\153",
             "",
             "\1\154",
@@ -2815,66 +2758,67 @@ public class InternalDslOntoUMLLexer extends Lexer {
             "\1\160",
             "\1\161",
             "\1\162",
-            "\1\163\1\164",
-            "\1\165",
+            "\1\163",
+            "\1\165\1\164",
             "\1\166",
             "\1\167",
-            "\1\170\5\uffff\1\171",
-            "\1\172",
-            "\1\173",
+            "\1\170",
+            "\1\171",
+            "\1\172\10\uffff\1\173",
             "\1\174",
+            "",
+            "",
             "\1\175",
             "\1\176",
-            "\1\177\10\uffff\1\u0080",
             "",
             "",
+            "",
+            "\1\177",
+            "\1\u0080",
             "\1\u0081",
-            "\1\u0082",
-            "",
-            "",
-            "\1\u0083",
-            "\1\u0084",
-            "\1\u0085",
-            "\1\u0086",
-            "",
+            "\1\u0083\2\uffff\1\u0082\7\uffff\1\u0084",
+            "\1\u0086\13\uffff\1\u0085",
             "\1\u0087",
-            "\1\u008a\2\uffff\1\u0089\7\uffff\1\u0088",
+            "\1\u0088",
+            "",
+            "",
+            "\1\u0089",
+            "\1\u008a",
             "\1\u008b",
-            "\1\u008d\13\uffff\1\u008c",
+            "\1\u008c",
+            "\1\u008d",
+            "",
+            "",
+            "",
             "\1\u008e",
-            "",
-            "",
             "\1\u008f",
             "\1\u0090",
+            "",
+            "",
             "\1\u0091",
             "\1\u0092",
             "\1\u0093",
-            "",
-            "",
-            "",
-            "",
-            "",
             "\1\u0094",
             "\1\u0095",
+            "",
+            "\1\142\1\143\2\uffff\1\143\22\uffff\1\142",
+            "",
+            "",
+            "\1\143\1\145\2\uffff\1\145\22\uffff\1\143",
+            "",
+            "",
+            "",
+            "",
             "\1\u0096",
             "\1\u0097",
             "\1\u0098",
-            "",
-            "\1\143\1\144\2\uffff\1\144\22\uffff\1\143",
-            "",
-            "",
-            "\1\144\1\146\2\uffff\1\146\22\uffff\1\144",
-            "",
-            "",
-            "",
-            "",
             "\1\u0099",
             "\1\u009a",
             "\1\u009b",
-            "\1\u009c",
-            "\1\u009d",
+            "\1\u009d\47\uffff\1\u009c",
             "\1\u009e",
-            "\1\u00a0\47\uffff\1\u009f",
+            "\1\u009f",
+            "\1\u00a0",
             "\1\u00a1",
             "\1\u00a2",
             "\1\u00a3",
@@ -2899,7 +2843,7 @@ public class InternalDslOntoUMLLexer extends Lexer {
             "\1\u00b6",
             "\1\u00b7",
             "\1\u00b8",
-            "\1\u00b9",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "\1\u00ba",
             "\1\u00bb",
             "\1\u00bc",
@@ -2907,171 +2851,170 @@ public class InternalDslOntoUMLLexer extends Lexer {
             "\1\u00be",
             "\1\u00bf",
             "\1\u00c0",
-            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
+            "\1\u00c1",
             "\1\u00c2",
-            "\1\u00c3",
-            "\1\u00c4",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "\1\u00c5",
             "\1\u00c6",
-            "\1\u00c7",
-            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
-            "\1\u00c9",
-            "\1\u00ca",
-            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
+            "\1\u00c8",
+            "\1\u00ca\16\uffff\1\u00c9",
+            "\1\u00cb",
             "\1\u00cc",
             "\1\u00cd",
-            "\1\u00cf\16\uffff\1\u00ce",
-            "\1\u00d0",
+            "\1\u00ce",
+            "\1\u00cf\2\uffff\1\u00d0",
             "\1\u00d1",
             "\1\u00d2",
-            "\1\u00d4\2\uffff\1\u00d3",
-            "\1\u00d5",
-            "\1\u00d6",
+            "\1\u00d3",
+            "\12\57\1\u00d4\6\uffff\32\57\4\uffff\1\57\1\uffff\13\57\1\u00d5"+
+            "\16\57",
             "\1\u00d7",
             "\1\u00d8",
             "\1\u00d9",
             "\1\u00da",
             "\1\u00db",
-            "\1\u00dc",
-            "\12\56\1\u00dd\6\uffff\32\56\4\uffff\1\56\1\uffff\13\56\1\u00de"+
-            "\16\56",
-            "\1\u00e0",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
+            "\1\u00dd",
+            "\1\u00de",
+            "\12\57\7\uffff\14\57\1\u00df\15\57\4\uffff\1\57\1\uffff\32\57",
             "\1\u00e1",
             "\1\u00e2",
             "\1\u00e3",
-            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
+            "\1\u00e4",
             "\1\u00e5",
             "\1\u00e6",
             "\1\u00e7",
             "\1\u00e8",
             "\1\u00e9",
             "\1\u00ea",
+            "",
             "\1\u00eb",
             "\1\u00ec",
-            "\12\56\7\uffff\14\56\1\u00ed\15\56\4\uffff\1\56\1\uffff\32\56",
+            "\1\u00ed",
+            "\1\u00ee",
             "\1\u00ef",
-            "\1\u00f0",
-            "\1\u00f1",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "\1\u00f2",
             "\1\u00f3",
-            "\1\u00f4",
             "",
+            "",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "\1\u00f5",
+            "",
             "\1\u00f6",
-            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
-            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
+            "\1\u00f7",
+            "\1\u00f8",
             "\1\u00f9",
             "\1\u00fa",
-            "",
-            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
+            "\1\u00fb",
             "\1\u00fc",
-            "",
             "\1\u00fd",
             "\1\u00fe",
             "\1\u00ff",
             "\1\u0100",
             "\1\u0101",
-            "\1\u0102",
-            "\1\u0103",
+            "",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
+            "",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "\1\u0104",
             "\1\u0105",
             "\1\u0106",
             "\1\u0107",
+            "",
             "\1\u0108",
-            "\1\u0109",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "\1\u010a",
+            "",
             "\1\u010b",
-            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
-            "\1\u010d",
             "",
-            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
-            "",
-            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
+            "\1\u010c",
+            "\1\u010e\3\uffff\1\u010d",
+            "\1\u010f",
             "\1\u0110",
             "\1\u0111",
             "\1\u0112",
-            "",
             "\1\u0113",
-            "\1\u0114",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "\1\u0115",
             "\1\u0116",
             "\1\u0117",
             "\1\u0118",
             "\1\u0119",
             "",
-            "\1\u011a",
             "",
-            "\1\u011c\3\uffff\1\u011b",
+            "\1\u011a",
+            "\1\u011b",
+            "",
+            "\1\u011c",
             "\1\u011d",
             "\1\u011e",
             "\1\u011f",
             "\1\u0120",
-            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "\1\u0122",
-            "\1\u0123",
-            "",
-            "",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "\1\u0124",
             "\1\u0125",
-            "",
             "\1\u0126",
             "\1\u0127",
-            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
-            "\1\u0129",
-            "\1\u012a",
+            "\1\u0128",
+            "",
+            "",
+            "\1\u012a\3\uffff\1\u0129",
             "\1\u012b",
-            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
+            "\1\u012c",
             "\1\u012d",
             "\1\u012e",
+            "",
             "\1\u012f",
             "\1\u0130",
             "\1\u0131",
-            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
+            "\1\u0132",
             "\1\u0133",
             "\1\u0134",
             "\1\u0135",
-            "",
             "\1\u0136",
+            "\1\u0137",
+            "\1\u0138",
             "",
-            "",
-            "\1\u0138\3\uffff\1\u0137",
             "\1\u0139",
             "\1\u013a",
-            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "\1\u013c",
             "\1\u013d",
             "\1\u013e",
-            "\1\u013f",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "\1\u0140",
             "\1\u0141",
             "\1\u0142",
-            "\1\u0143",
+            "",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
+            "",
             "\1\u0144",
+            "",
             "\1\u0145",
             "\1\u0146",
             "\1\u0147",
             "\1\u0148",
-            "",
             "\1\u0149",
             "\1\u014a",
             "\1\u014b",
-            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
+            "\1\u014c",
             "\1\u014d",
             "\1\u014e",
-            "",
             "\1\u014f",
-            "",
-            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
-            "",
+            "\1\u0150",
             "\1\u0151",
-            "\1\u0152",
-            "\1\u0153",
-            "\1\u0154",
-            "\1\u0155",
-            "",
-            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
+            "\12\57\1\u0152\6\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
+            "\1\u0154\2\uffff\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32"+
+            "\57",
+            "\1\u0156",
             "\1\u0157",
-            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
+            "\1\u0158",
             "\1\u0159",
             "\1\u015a",
             "\1\u015b",
@@ -3080,165 +3023,151 @@ public class InternalDslOntoUMLLexer extends Lexer {
             "",
             "\1\u015e",
             "\1\u015f",
-            "\1\u0160",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
+            "",
             "\1\u0161",
-            "\12\56\1\u0162\6\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
+            "\1\u0162",
+            "\1\u0163",
+            "",
             "\1\u0164",
-            "\1\u0165",
-            "\1\u0166\2\uffff\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32"+
-            "\56",
-            "\1\u0168",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
+            "\1\u0166",
+            "\1\u0167",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "\1\u0169",
             "\1\u016a",
-            "\1\u016b",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "\1\u016c",
-            "\1\u016d",
-            "\1\u016e",
-            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
-            "",
-            "\1\u0170",
+            "\1\u016e\6\uffff\1\u016d",
+            "\1\u016f",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "\1\u0171",
             "\1\u0172",
             "",
+            "",
+            "",
+            "",
             "\1\u0173",
             "\1\u0174",
-            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
-            "\1\u0176",
-            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
-            "",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
+            "\1\u0177",
             "\1\u0178",
+            "\1\u0179",
+            "\1\u017a",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "",
-            "\1\u017a\6\uffff\1\u0179",
-            "\1\u017b",
-            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
             "\1\u017d",
             "\1\u017e",
             "\1\u017f",
             "\1\u0180",
-            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
-            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
             "",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
+            "\1\u0182",
             "",
             "\1\u0183",
-            "\1\u0184",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "",
-            "",
-            "\1\u0185",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "\1\u0186",
-            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
-            "\1\u0188",
-            "\1\u0189",
-            "\1\u018a",
-            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
             "",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
+            "",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
+            "\1\u018a",
+            "",
+            "",
+            "",
+            "\1\u018b",
             "\1\u018c",
             "\1\u018d",
             "\1\u018e",
+            "",
+            "",
             "\1\u018f",
-            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
-            "",
+            "\1\u0190",
             "\1\u0191",
+            "\1\u0192",
             "",
-            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
-            "\1\u0193",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
+            "\1\u0194",
             "",
-            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
             "",
-            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
-            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
+            "\1\u0195",
+            "",
+            "",
+            "",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "\1\u0197",
             "\1\u0198",
-            "",
-            "",
-            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
-            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
+            "\1\u0199",
+            "\1\u019a",
             "\1\u019b",
-            "",
-            "",
             "\1\u019c",
             "\1\u019d",
             "\1\u019e",
             "",
-            "\1\u019f",
-            "\1\u01a0",
+            "\1\u019f\3\uffff\1\u01a0",
             "\1\u01a1",
-            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
             "",
+            "\1\u01a2",
             "\1\u01a3",
-            "",
-            "\1\u01a4",
-            "",
-            "",
-            "",
-            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "\1\u01a6",
-            "",
-            "",
-            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
+            "\1\u01a7",
             "\1\u01a8",
             "\1\u01a9",
             "\1\u01aa",
             "\1\u01ab",
             "\1\u01ac",
             "\1\u01ad",
+            "\1\u01ae",
             "",
-            "\1\u01af\3\uffff\1\u01ae",
+            "",
+            "\1\u01af",
             "\1\u01b0",
-            "",
-            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
-            "",
-            "\1\u01b2",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "\1\u01b3",
-            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
+            "\1\u01b4",
             "\1\u01b5",
             "\1\u01b6",
             "\1\u01b7",
             "\1\u01b8",
             "\1\u01b9",
+            "",
+            "",
             "\1\u01ba",
             "",
             "\1\u01bb",
             "\1\u01bc",
-            "",
             "\1\u01bd",
             "\1\u01be",
-            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
+            "\1\u01bf",
             "\1\u01c0",
             "\1\u01c1",
             "\1\u01c2",
             "\1\u01c3",
             "\1\u01c4",
             "\1\u01c5",
-            "\1\u01c6",
-            "",
-            "",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "\1\u01c7",
             "\1\u01c8",
-            "\1\u01c9",
-            "\1\u01ca",
-            "\1\u01cb",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
+            "",
             "\1\u01cc",
-            "\1\u01cd",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
+            "",
+            "",
+            "",
             "\1\u01ce",
-            "\1\u01cf",
-            "\1\u01d0",
-            "\1\u01d1",
-            "\1\u01d2",
-            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
-            "\1\u01d4",
-            "\1\u01d5",
-            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
-            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
-            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
             "",
-            "\1\u01d9",
-            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
-            "",
-            "",
-            "",
-            "\1\u01db",
-            "",
-            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             ""
     };
 
@@ -3272,7 +3201,7 @@ public class InternalDslOntoUMLLexer extends Lexer {
             this.transition = DFA14_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T13 | T14 | T15 | T16 | T17 | T18 | T19 | T20 | T21 | T22 | T23 | T24 | T25 | T26 | T27 | T28 | T29 | T30 | T31 | T32 | T33 | T34 | T35 | T36 | T37 | T38 | T39 | T40 | T41 | T42 | T43 | T44 | T45 | T46 | T47 | T48 | T49 | T50 | T51 | T52 | T53 | T54 | T55 | T56 | T57 | T58 | T59 | T60 | T61 | T62 | T63 | T64 | T65 | T66 | T67 | T68 | T69 | T70 | T71 | T72 | T73 | T74 | T75 | T76 | T77 | T78 | T79 | T80 | T81 | T82 | T83 | RULE_RWS | RULE_NL | RULE_WS | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_ANY_OTHER );";
+            return "1:1: Tokens : ( T13 | T14 | T15 | T16 | T17 | T18 | T19 | T20 | T21 | T22 | T23 | T24 | T25 | T26 | T27 | T28 | T29 | T30 | T31 | T32 | T33 | T34 | T35 | T36 | T37 | T38 | T39 | T40 | T41 | T42 | T43 | T44 | T45 | T46 | T47 | T48 | T49 | T50 | T51 | T52 | T53 | T54 | T55 | T56 | T57 | T58 | T59 | T60 | T61 | T62 | T63 | T64 | T65 | T66 | T67 | T68 | T69 | T70 | T71 | T72 | T73 | T74 | T75 | T76 | T77 | T78 | T79 | T80 | T81 | RULE_RWS | RULE_NL | RULE_WS | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_ANY_OTHER );";
         }
     }
  
