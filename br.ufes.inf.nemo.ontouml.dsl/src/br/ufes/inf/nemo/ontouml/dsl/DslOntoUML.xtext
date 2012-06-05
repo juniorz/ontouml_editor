@@ -2,10 +2,13 @@
 //Talvez valha a pena criar meus próprios terminais
 grammar br.ufes.inf.nemo.ontouml.dsl.DslOntoUML with org.eclipse.xtext.common.Terminals hidden(NL, RWS, WS, SL_COMMENT, ML_COMMENT) //Para adicionar um em hidden tem que redefinir Todos
 
+// Não precisa desse with .... pois eu não vou mais usar o opaque expression
+
 import "http://www.eclipse.org/emf/2002/Ecore" as ecore
-import "http://nemo.inf.ufes.br/ontouml/refontouml"
-//import "http://nemo.inf.ufes.br/ontouml/dsl"
+//import "http://nemo.inf.ufes.br/ontouml/dsl" as dsl
+
 //import  "RefOntoUML"
+import "http://nemo.inf.ufes.br/ontouml/refontouml" as ontouml
 
 /*
  * NOTAS
@@ -29,8 +32,8 @@ import "http://nemo.inf.ufes.br/ontouml/refontouml"
  *
  */
 // #Model
-Model returns Model:
-	{Model}
+Model returns ontouml::Model:
+	{ontouml::Model}
 	'model' name=ID
 	('viewpoint' viewpoint=STRING)?
 	'{'
@@ -42,7 +45,7 @@ Model returns Model:
 ;
 
 
-PackageableElement returns PackageableElement:
+PackageableElement returns ontouml::PackageableElement:
 	Type | Instance | Class | Association | GeneralizationSet
 
 //	Association_Impl | GeneralizationSet
@@ -53,7 +56,7 @@ PackageableElement returns PackageableElement:
 //	Package_Impl | GeneralizationSet | InstanceSpecification_Impl
 ;
 
-Class:
+Class returns ontouml::Class:
 	Kind | 
 	Quantity |
 	Collective |
@@ -67,7 +70,7 @@ Class:
 	Relator
 ;
 
-Association:
+Association returns ontouml::Association:
 	Characterization |
 	Mediation |
 	Derivation |
@@ -87,7 +90,7 @@ Association:
  */
 
 // #Kind (SubstanceSortal)
-Kind returns Kind:
+Kind returns ontouml::Kind:
 	(isActive?='active'? & isAbstract?='abstract'?)
 	'kind' name=ID
 	(':' generalization+=InlineGeneralization ( ',' generalization+=InlineGeneralization)* )?
@@ -98,7 +101,7 @@ Kind returns Kind:
 
 
 // #Quantity (SubstanceSortal)
-Quantity returns Quantity:
+Quantity returns ontouml::Quantity:
 	(isActive?='active'? & isAbstract?='abstract'?)
 	'quantity' name=ID
 	(':' generalization+=InlineGeneralization ( ',' generalization+=InlineGeneralization)* )?
@@ -108,7 +111,7 @@ Quantity returns Quantity:
 
 
 // #Collective (SubstanceSortal)
-Collective returns Collective:
+Collective returns ontouml::Collective:
 	(isActive?='active'? & isExtensional?='extensional'? & isAbstract?='abstract'?)
 	'collective' name=ID
 	(':' generalization+=InlineGeneralization ( ',' generalization+=InlineGeneralization)* )?
@@ -118,7 +121,7 @@ Collective returns Collective:
 
 
 // #SubKind (RigidSortal)
-SubKind returns SubKind:
+SubKind returns ontouml::SubKind:
 	(isActive?='active'? & isAbstract?='abstract'?)
 	'subKind' name=ID
 	(':' generalization+=InlineGeneralization ( ',' generalization+=InlineGeneralization)* )?
@@ -127,7 +130,7 @@ SubKind returns SubKind:
     '}';
 
 // #Category (RigidMixin)
-Category returns Category:
+Category returns ontouml::Category:
 	(isActive?='active'? & isAbstract?='abstract') // abstract: required (poderia colocar abstract+='{' ...)
 	'category' name=ID
 	(':' generalization+=InlineGeneralization ( ',' generalization+=InlineGeneralization)* )?
@@ -136,7 +139,7 @@ Category returns Category:
     '}';
 
 // #Phase (AntiRigidSortal)
-Phase returns Phase:
+Phase returns ontouml::Phase:
 	(isActive?='active'? & isAbstract?='abstract'?)
 	'phase'	name=ID
 	(':' generalization+=InlineGeneralization ( ',' generalization+=InlineGeneralization)* )?
@@ -145,7 +148,7 @@ Phase returns Phase:
     '}';
 
 // #Role (AntiRigidSortal)
-Role returns Role:
+Role returns ontouml::Role:
 	(isActive?='active'? & isAbstract?='abstract'?)
 	'role' name=ID
 	(':' generalization+=InlineGeneralization ( ',' generalization+=InlineGeneralization)* )?
@@ -154,7 +157,7 @@ Role returns Role:
     '}';
 
 // #Mixin (SemiRigidMixin)
-Mixin returns Mixin:
+Mixin returns ontouml::Mixin:
 	(isActive?='active'? & isAbstract?='abstract') // abstract: required
 	'mixin' name=ID
 	(':' generalization+=InlineGeneralization ( ',' generalization+=InlineGeneralization)* )?
@@ -163,7 +166,7 @@ Mixin returns Mixin:
     '}';
 
 // #RoleMixin (AntiRigidMixin)
-RoleMixin returns RoleMixin:
+RoleMixin returns ontouml::RoleMixin:
 	(isActive?='active'? & isAbstract?='abstract'?)
 	'roleMixin' name=ID
 	(':' generalization+=InlineGeneralization ( ',' generalization+=InlineGeneralization)* )?
@@ -172,7 +175,7 @@ RoleMixin returns RoleMixin:
     '}';
 
 // #Mode (Moment)
-Mode returns Mode:
+Mode returns ontouml::Mode:
 	(isActive?='active'? & isAbstract?='abstract'?)
 	'mode' name=ID
 	(':' generalization+=InlineGeneralization ( ',' generalization+=InlineGeneralization)* )?
@@ -181,7 +184,7 @@ Mode returns Mode:
     '}';
 
 // #Relator (Moment)
-Relator returns Relator:
+Relator returns ontouml::Relator:
 	(isActive?='active'? & isAbstract?='abstract'?)
 	'relator' name=ID
 	(':' generalization+=InlineGeneralization ( ',' generalization+=InlineGeneralization)* )?
@@ -209,7 +212,7 @@ Relator returns Relator:
  */
 
 // #Characterization (DependencyRelationship)
-Characterization returns Characterization:
+Characterization returns ontouml::Characterization:
 	( isDerived?='derived'? & isAbstract?='abstract'? & isLeaf?='leaf'? )
 	'characterization' name=ID?
 	(':' generalization+=InlineGeneralization ( ',' generalization+=InlineGeneralization)* )?
@@ -217,14 +220,14 @@ Characterization returns Characterization:
 		'mode:' ( ownedEnd+=InlinePropertyDefinition ';' )
 		'characterized:' ( ownedEnd+=InlinePropertyDefinition ';' )
 	(
-		('memberEnd' ':' memberEnd+=[Property] (',' memberEnd+=[Property])* ';' )?
-		& ('navigableOwnedEnd' ':' navigableOwnedEnd+=[Property] ( ',' navigableOwnedEnd+=[Property])* ';' )?
+		('memberEnd' ':' memberEnd+=[ontouml::Property] (',' memberEnd+=[ontouml::Property])* ';' )?
+		& ('navigableOwnedEnd' ':' navigableOwnedEnd+=[ontouml::Property] ( ',' navigableOwnedEnd+=[ontouml::Property])* ';' )?
 	)
     '}'
 ;
 
 // #Mediation (DependencyRelationship)
-Mediation returns Mediation:
+Mediation returns ontouml::Mediation:
 	( isDerived?='derived'? & isAbstract?='abstract'? & isLeaf?='leaf'? )
 	'mediation' name=ID?
 	(':' generalization+=InlineGeneralization ( ',' generalization+=InlineGeneralization)* )?
@@ -234,15 +237,15 @@ Mediation returns Mediation:
 		('mediated' ':' ownedEnd+=InlinePropertyDefinition ';' )		// mediated
 													// TODO: Tem que ser [>1, ?]
 		(
-			('memberEnd' ':' memberEnd+=[Property] (',' memberEnd+=[Property])* ';' )?
-			& ('navigableOwnedEnd' ':' navigableOwnedEnd+=[Property] ( ',' navigableOwnedEnd+=[Property])* ';' )?
+			('memberEnd' ':' memberEnd+=[ontouml::Property] (',' memberEnd+=[ontouml::Property])* ';' )?
+			& ('navigableOwnedEnd' ':' navigableOwnedEnd+=[ontouml::Property] ( ',' navigableOwnedEnd+=[ontouml::Property])* ';' )?
 		)
 	)
     '}'
 ;
 
 // #Derivation (DependencyRelationship)
-Derivation returns Derivation:
+Derivation returns ontouml::Derivation:
 	( isDerived?='derived'? & isAbstract?='abstract'? & isLeaf?='leaf'? )
 	'derivation' name=ID?
 	(':' generalization+=InlineGeneralization ( ',' generalization+=InlineGeneralization)* )?
@@ -250,15 +253,15 @@ Derivation returns Derivation:
 		'material:' ( ownedEnd+=InlinePropertyDefinition ';' )
 		'relator:' ( ownedEnd+=InlinePropertyDefinition ';' )
 	(
-		('memberEnd' ':' memberEnd+=[Property] (',' memberEnd+=[Property])* ';' )?
-		& ('navigableOwnedEnd' ':' navigableOwnedEnd+=[Property] ( ',' navigableOwnedEnd+=[Property])* ';' )?
+		('memberEnd' ':' memberEnd+=[ontouml::Property] (',' memberEnd+=[ontouml::Property])* ';' )?
+		& ('navigableOwnedEnd' ':' navigableOwnedEnd+=[ontouml::Property] ( ',' navigableOwnedEnd+=[ontouml::Property])* ';' )?
 	)
     '}'
 ;
 
 // #memberOf (Meronymic)
-memberOf returns memberOf:
-	{memberOf}
+memberOf returns ontouml::memberOf:
+	{ontouml::memberOf}
 	(
 	  isDerived?='derived'? & isAbstract?='abstract'? & isLeaf?='leaf'? &
 	  isEssential?='essential'? & isImmutablePart?='imutablePart'? & isImmutableWhole?='imutableWhole'? & isInseparable?='inseparable'? & isShareable?='shareable'?
@@ -266,14 +269,14 @@ memberOf returns memberOf:
 	'memberOf' name=ID
 	'{'
 	(
-		('memberEnd' ':' memberEnd+=[Property] (',' memberEnd+=[Property])* ';' )?
-		& ('navigableOwnedEnd' ':' navigableOwnedEnd+=[Property] ( ',' navigableOwnedEnd+=[Property])* ';' )?
+		('memberEnd' ':' memberEnd+=[ontouml::Property] (',' memberEnd+=[ontouml::Property])* ';' )?
+		& ('navigableOwnedEnd' ':' navigableOwnedEnd+=[ontouml::Property] ( ',' navigableOwnedEnd+=[ontouml::Property])* ';' )?
 	)?
     '}';
 
 // #componentOf (Meronymic)
-componentOf returns componentOf:
-	{componentOf}
+componentOf returns ontouml::componentOf:
+	{ontouml::componentOf}
 	(
 	  isDerived?='derived'? & isAbstract?='abstract'? & isLeaf?='leaf'? &
 	  isEssential?='essential'? & isImmutablePart?='imutablePart'? & isImmutableWhole?='imutableWhole'? & isInseparable?='inseparable'? & isShareable?='shareable'?
@@ -281,34 +284,34 @@ componentOf returns componentOf:
 	'componentOf' name=ID
 	'{'
 	(
-		('memberEnd' ':' memberEnd+=[Property] (',' memberEnd+=[Property])* ';' )?
-		& ('navigableOwnedEnd' ':' navigableOwnedEnd+=[Property] ( ',' navigableOwnedEnd+=[Property])* ';' )?
+		('memberEnd' ':' memberEnd+=[ontouml::Property] (',' memberEnd+=[ontouml::Property])* ';' )?
+		& ('navigableOwnedEnd' ':' navigableOwnedEnd+=[ontouml::Property] ( ',' navigableOwnedEnd+=[ontouml::Property])* ';' )?
 	)?
     '}';
 
 // #subQuantityOf (Meronymic)
-subQuantityOf returns subQuantityOf:
-	{subQuantityOf}
+subQuantityOf returns ontouml::subQuantityOf:
+	{ontouml::subQuantityOf}
 	//( isDerived?='derived'? & isAbstract?='abstract'? & isLeaf?='leaf'? )
 	//( isEssential?='essential'? & isImmutablePart?='imutable-part'? & isImmutableWhole?='imutable-whole'? & isInseparable?='inseparable'? & isShareable?='shareable'? )
 	'subQuantityOf' name=ID
 	'{'
 	(
-		('memberEnd' ':' memberEnd+=[Property] (',' memberEnd+=[Property])* ';' )?
-		& ('navigableOwnedEnd' ':' navigableOwnedEnd+=[Property] ( ',' navigableOwnedEnd+=[Property])* ';' )?
+		('memberEnd' ':' memberEnd+=[ontouml::Property] (',' memberEnd+=[ontouml::Property])* ';' )?
+		& ('navigableOwnedEnd' ':' navigableOwnedEnd+=[ontouml::Property] ( ',' navigableOwnedEnd+=[ontouml::Property])* ';' )?
 	)?
     '}';
 
 // #subCollectionOf (Meronymic)
-subCollectionOf returns subCollectionOf:
-	{subCollectionOf}
+subCollectionOf returns ontouml::subCollectionOf:
+	{ontouml::subCollectionOf}
 	//( isDerived?='derived'? & isAbstract?='abstract'? & isLeaf?='leaf'? )
 	//( isEssential?='essential'? & isImmutablePart?='imutable-part'? & isImmutableWhole?='imutable-whole'? & isInseparable?='inseparable'? & isShareable?='shareable'? )
 	'subCollectionOf' name=ID
 	'{'
 	(
-		('memberEnd' ':' memberEnd+=[Property] (',' memberEnd+=[Property])* ';' )?
-		& ('navigableOwnedEnd' ':' navigableOwnedEnd+=[Property] ( ',' navigableOwnedEnd+=[Property])* ';' )?
+		('memberEnd' ':' memberEnd+=[ontouml::Property] (',' memberEnd+=[ontouml::Property])* ';' )?
+		& ('navigableOwnedEnd' ':' navigableOwnedEnd+=[ontouml::Property] ( ',' navigableOwnedEnd+=[ontouml::Property])* ';' )?
 	)?
     '}';
 
@@ -318,31 +321,31 @@ subCollectionOf returns subCollectionOf:
  * public property casadoCom (Pessoa) throught contratoDeCasamento //MaterialAssociation
  * OCL: Precisa de um Derivation cujo memberEnd[1] = MaterialAssociation
  */
-MaterialAssociation returns MaterialAssociation:
-	{MaterialAssociation}
+MaterialAssociation returns ontouml::MaterialAssociation:
+	{ontouml::MaterialAssociation}
 	( isDerived?='derived' & isAbstract?='abstract'? & isLeaf?='leaf'? ) // derived: required
 	'materialAssociation' name=ID?
 	(':' generalization+=InlineGeneralization ( ',' generalization+=InlineGeneralization)* )?
 	'{'
 		( ownedEnd+=InlinePropertyDefinition ';' )+
 	(	
-		('memberEnd' ':' memberEnd+=[Property] (',' memberEnd+=[Property])* ';' )?
-		& ('navigableOwnedEnd' ':' navigableOwnedEnd+=[Property] ( ',' navigableOwnedEnd+=[Property])* ';' )?
+		('memberEnd' ':' memberEnd+=[ontouml::Property] (',' memberEnd+=[ontouml::Property])* ';' )?
+		& ('navigableOwnedEnd' ':' navigableOwnedEnd+=[ontouml::Property] ( ',' navigableOwnedEnd+=[ontouml::Property])* ';' )?
 	)
     '}'
 ;
 
 
 //public property maisVelhoQue (Pessoa) //FormalAssociation entre Pessoa e Pessoa
-FormalAssociation returns FormalAssociation:
-	{FormalAssociation}
+FormalAssociation returns ontouml::FormalAssociation:
+	{ontouml::FormalAssociation}
 	( isAbstract?='abstract'? & isDerived?='derived'? & isLeaf?='leaf'? )
 	'formalAssociation' name=ID?
 	'{'
 		( ownedEnd+=InlinePropertyDefinition ';' )+
 	(	
-		('memberEnd' ':' memberEnd+=[Property] (',' memberEnd+=[Property])* ';' )?
-		& ('navigableOwnedEnd' ':' navigableOwnedEnd+=[Property] ( ',' navigableOwnedEnd+=[Property])* ';' )?
+		('memberEnd' ':' memberEnd+=[ontouml::Property] (',' memberEnd+=[ontouml::Property])* ';' )?
+		& ('navigableOwnedEnd' ':' navigableOwnedEnd+=[ontouml::Property] ( ',' navigableOwnedEnd+=[ontouml::Property])* ';' )?
 	)
     '}'
 	;
@@ -350,18 +353,18 @@ FormalAssociation returns FormalAssociation:
 
 
 
-NonExpressionValue returns ValueSpecification:
+NonExpressionValue returns ontouml::ValueSpecification:
 	LiteralInteger | LiteralString | LiteralNull | LiteralBoolean | InstanceValue | OpaqueExpression
 ;
 
-ValueSpecification returns ValueSpecification:
+ValueSpecification returns ontouml::ValueSpecification:
 	//StringExpression | //O que é iso???
 	NonExpressionValue |  ExpressionValue
 ;
 
-Type : DataType | PrimitiveType;
+Type returns ontouml::Type : DataType | PrimitiveType;
 
-DataType returns DataType:
+DataType returns ontouml::DataType:
 	'datatype'
 	name=ID
 	(':' generalization+=InlineGeneralization ( ',' generalization+=InlineGeneralization)* )?
@@ -371,52 +374,52 @@ DataType returns DataType:
 ;
 
 //???: Mesma coisa que DataType?
-PrimitiveType returns PrimitiveType:
+PrimitiveType returns ontouml::PrimitiveType:
 	'type'
 	name=ID
 	(':' generalization+=InlineGeneralization ( ',' generalization+=InlineGeneralization)* )?
 ;
 
-Dependency returns Dependency:
-	{Dependency}
+Dependency returns ontouml::Dependency:
+	{ontouml::Dependency}
 	'Dependency'
 	(name=ID)?
 	'{'
-		client+=[NamedElement] (',' client+=[NamedElement])*
-		'depends on' '(' supplier+=[NamedElement] ( ',' supplier+=[NamedElement])* ')'  
+		client+=[ontouml::NamedElement] (',' client+=[ontouml::NamedElement])*
+		'depends on' '(' supplier+=[ontouml::NamedElement] ( ',' supplier+=[ontouml::NamedElement])* ')'  
     '}'
 ;
 
 
 
-ElementImport returns ElementImport:
+ElementImport returns ontouml::ElementImport:
 	'import'
-	importedElement=[PackageableElement|STRING]
+	importedElement=[ontouml::PackageableElement|STRING]
 	('as' alias=ID)?
 	';'
 ;
 
-PackageImport returns PackageImport:
-	'import' importedPackage=[Package|STRING]
+PackageImport returns ontouml::PackageImport:
+	'import' importedPackage=[ontouml::Package|STRING]
 	';'
 ;
 
-Constraintx returns Constraintx:
+Constraintx returns ontouml::Constraintx:
 	'constraint'
-	('(' constrainedElement+=[Element] ( "," constrainedElement+=[Element])* ')' )?
+	('(' constrainedElement+=[ontouml::Element] ( "," constrainedElement+=[ontouml::Element])* ')' )?
 	'{'
 		specification=ValueSpecification
     '}'
 ;
 
-PackageMerge returns PackageMerge:
-	{PackageMerge}
+PackageMerge returns ontouml::PackageMerge:
+	{ontouml::PackageMerge}
 	//('PackageMerge')?
-	mergedPackage=[Package|STRING]
+	mergedPackage=[ontouml::Package|STRING]
 ;
 
-Package_Impl returns Package:
-	{Package}
+Package_Impl returns ontouml::Package:
+	{ontouml::Package}
 	'package'
 	name=ID
 	'{'
@@ -436,10 +439,10 @@ Package_Impl returns Package:
  * Duvida:
  * Generalization::generalizationSet é uma collection, por que?
  *****************************************************************************/
-InlineGeneralization returns Generalization:
+InlineGeneralization returns ontouml::Generalization:
 	isSubstitutable?='substitutable'?
-	general=[Classifier]
-	('(' generalizationSet+=[GeneralizationSet] (',' generalizationSet+=[GeneralizationSet])* ')' )?
+	general=[ontouml::Classifier]
+	('(' generalizationSet+=[ontouml::GeneralizationSet] (',' generalizationSet+=[ontouml::GeneralizationSet])* ')' )?
 	//('(' generalizationSet+=[GeneralizationSet] ')' )?
 ;
 
@@ -447,11 +450,11 @@ InlineGeneralization returns Generalization:
 /*
  * Problema: Não tem name, como referenciar?
  */
-Generalization returns Generalization:
+Generalization returns ontouml::Generalization:
 	//isSubstitutable?='substitutable'? //Default tá sendo TRUE?
 	'generalization'
-	'of' general=[Classifier]
-	'as' owner=[Classifier]
+	'of' general=[ontouml::Classifier]
+	'as' owner=[ontouml::Classifier]
 	';'
 ;
 
@@ -461,7 +464,7 @@ Generalization returns Generalization:
  * Motivo: http://www.eclipse.org/forums/index.php/t/245235/
  * Solução, mudar essas opposite que são assim, para transient="true" e resolveProxies="false"
  *****************************************************************************/
-GeneralizationSet returns GeneralizationSet:
+GeneralizationSet returns ontouml::GeneralizationSet:
 	( isCovering?='complete'? & isDisjoint?='disjoint'? )
 	'generalizationSet' name=ID
 	'{'
@@ -470,8 +473,14 @@ GeneralizationSet returns GeneralizationSet:
 
 
 //Um operador (+, -, >, <)
+//100 + 2
+//100 op[shif] 2
 ExpressionSymbol returns ecore::EString:
-	ID | ANY_OTHER+
+	DefaultOperator | ('op' '[' ID ']' )
+;
+
+DefaultOperator:
+	'+' | '-' | '*' | '/'
 ;
 
 /*
@@ -481,8 +490,8 @@ ExpressionSymbol returns ecore::EString:
  * not 100
  */
  //TODO: resolver o left-recursion
-ExpressionValue returns Expression:
-	{Expression}
+ExpressionValue returns ontouml::Expression:
+	{ontouml::Expression}
 	'('
 		(
 		 //Se eu tiro o parenteses dá left-recursion 
@@ -491,13 +500,6 @@ ExpressionValue returns Expression:
 		 (symbol=ExpressionSymbol '{' operand+=ValueSpecification (',' operand+=ValueSpecification)+ '}')
 		)
     ')'
-//	'Expression'
-//		('name' name=ID)?
-//		('visibility' visibility=VisibilityKind)?
-//		('clientDependency' '(' clientDependency+=[Dependency|EString] ( "," clientDependency+=[Dependency|EString])* ')' )?
-//		('type' type=[Type|EString])?
-		//('eAnnotations' '{' eAnnotations+=EAnnotation ( "," eAnnotations+=EAnnotation)* '}' )?
-//		('ownedComment' '{' ownedComment+=Comment ( "," ownedComment+=Comment)* '}' )?
 ;
 
 /*
@@ -507,11 +509,11 @@ private OpaqueExpression opaqExp1 (Person) : "Python", "Ruby"
 			# Reinaldo2
 		end
 */
-OpaqueExpression returns OpaqueExpression:	//OK
-	{OpaqueExpression}
+OpaqueExpression returns ontouml::OpaqueExpression:	//OK
+	{ontouml::OpaqueExpression}
 	'OpaqueExpression'
 	(name=ID)?
-	('(' type=[Type] ')')?
+	('(' type=[ontouml::Type] ')')?
 	':' language+=STRING ( ','  language+=STRING)*
 	//'begin' body+=OPAQUE_TEXT 'end'
 	'begin' ('#' body+=LINE)* 'end'
@@ -579,8 +581,8 @@ StringExpression returns StringExpression:
   * FIXME: Property::association é opposite, mas não está sendo definida automaticamente
  *****************************************************************************/
 //ATENTION: Ao mudar, mude também o de baixo
-InlinePropertyDefinition returns Property:
-	{Property}
+InlinePropertyDefinition returns ontouml::Property:
+	{ontouml::Property}
 //	'property'
 	name=ID?
 	(
@@ -588,15 +590,19 @@ InlinePropertyDefinition returns Property:
 	   ( isStatic?='static'? & isOrdered?='ordered'? & isUnique?='unique'? & isReadOnly?='read-only'? & isDerivedUnion?='derived-union'? )
 	   ')'
 	)?
-	type=[Type]
+	type=[ontouml::Type]
 	( '[' lowerValue=LiteralInteger ',' upperValue=LiteralUnlimitedNatural ']')?
 	('{'
 		('defaults to' defaultValue=ValueSpecification)?
 		('aggregation' aggregation=AggregationKind)?
-		('subset of' '(' subsettedProperty+=[Property] ( "," subsettedProperty+=[Property])* ')' )?
-		('redefines' '(' redefinedProperty+=[Property] ( "," redefinedProperty+=[Property])* ')' )?
+		('subset of' '(' subsettedProperty+=[ontouml::Property] ( "," subsettedProperty+=[ontouml::Property])* ')' )?
+		('redefines' '(' redefinedProperty+=[ontouml::Property] ( "," redefinedProperty+=[ontouml::Property])* ')' )?
     '}')?
 ;
+
+//Property returns ontouml::Property:
+//	{ontouml::Property}
+//;
 
 /*
  Sintaxe para criar properties em Classes
@@ -604,8 +610,8 @@ InlinePropertyDefinition returns Property:
  - public father[1,2] (Person) <unique>
  - public (unique) father[1,2] : Person
 */
-ClassProperty returns Property:
-	{Property}
+ClassProperty returns ontouml::Property:
+	{ontouml::Property}
 	(
 	  '('
 	   ( isStatic?='static'? & isOrdered?='ordered'? & isUnique?='unique'? & isReadOnly?='read-only'? & isDerivedUnion?='derived-union'? )
@@ -613,12 +619,12 @@ ClassProperty returns Property:
 	)?
 	name=ID
 	( '[' lowerValue=LiteralInteger ',' upperValue=LiteralUnlimitedNatural ']')?
-	':' type=[Type]
+	':' type=[ontouml::Type]
 	('{'
 		('defaults to' defaultValue=ValueSpecification)?
 		('aggregation' aggregation=AggregationKind)?
-		('subset of' '(' subsettedProperty+=[Property] ( "," subsettedProperty+=[Property])* ')' )?
-		('redefines' '(' redefinedProperty+=[Property] ( "," redefinedProperty+=[Property])* ')' )?
+		('subset of' '(' subsettedProperty+=[ontouml::Property] ( "," subsettedProperty+=[ontouml::Property])* ')' )?
+		('redefines' '(' redefinedProperty+=[ontouml::Property] ( "," redefinedProperty+=[ontouml::Property])* ')' )?
     '}')?
 ;
 
@@ -674,8 +680,8 @@ Relation returns Property:
 //	('{'
 //		('defaults to' defaultValue=ValueSpecification)?
 //		('aggregation' aggregation=AggregationKind)?
-//		('subset of' '(' subsettedProperty+=[Property] ( "," subsettedProperty+=[Property])* ')' )?
-//		('redefines' '(' redefinedProperty+=[Property] ( "," redefinedProperty+=[Property])* ')' )?
+//		('subset of' '(' subsettedProperty+=[ontouml::Property] ( "," subsettedProperty+=[ontouml::Property])* ')' )?
+//		('redefines' '(' redefinedProperty+=[ontouml::Property] ( "," redefinedProperty+=[ontouml::Property])* ')' )?
 //    '}')?
 //;
 
@@ -693,8 +699,8 @@ Relation returns Property:
 //	('{'
 //		('defaults to' defaultValue=ValueSpecification)?
 //		('aggregation' aggregation=AggregationKind)?
-//		('subset of' '(' subsettedProperty+=[Property] ( "," subsettedProperty+=[Property])* ')' )?
-//		('redefines' '(' redefinedProperty+=[Property] ( "," redefinedProperty+=[Property])* ')' )?
+//		('subset of' '(' subsettedProperty+=[ontouml::Property] ( "," subsettedProperty+=[ontouml::Property])* ')' )?
+//		('redefines' '(' redefinedProperty+=[ontouml::Property] ( "," redefinedProperty+=[ontouml::Property])* ')' )?
 //    '}')?
 //;
 
@@ -747,7 +753,7 @@ Class_Impl returns Class:
 */
 
 
-Enumeration returns Enumeration:
+Enumeration returns ontouml::Enumeration:
 	'enum'
 	name=ID
 	'{'
@@ -767,8 +773,8 @@ Enumeration returns Enumeration:
 	'}'
 ;
 
-EnumerationLiteral returns EnumerationLiteral:
-	{EnumerationLiteral}
+EnumerationLiteral returns ontouml::EnumerationLiteral:
+	{ontouml::EnumerationLiteral}
 //	'EnumerationLiteral'
 //	'{'
 		name=ID
@@ -786,17 +792,17 @@ EnumerationLiteral returns EnumerationLiteral:
 /*
  * Especifica uma instância
  */
-Instance returns InstanceSpecification:
-	{InstanceSpecification}
+Instance returns ontouml::InstanceSpecification:
+	{ontouml::InstanceSpecification}
 	'instance'
 	name=ID
-	(':' classifier+=[Classifier] ( "," classifier+=[Classifier])* )?
+	(':' classifier+=[ontouml::Classifier] ( "," classifier+=[ontouml::Classifier])* )?
 	('specification' specification=ValueSpecification)?
 	'{' (slot+=Slot ( "," slot+=Slot)*)? '}'
 ;
 
-Slot returns Slot:
-	definingFeature=[StructuralFeature|ID]
+Slot returns ontouml::Slot:
+	definingFeature=[ontouml::StructuralFeature|ID]
 	'=>'
 	(value+=ValueSpecification | '[' value+=ValueSpecification ( "," value+=ValueSpecification)* ']' )
 ;
@@ -807,28 +813,26 @@ Slot returns Slot:
  *
  * private instance reinaldinho (Person)
 */
-InstanceValue returns InstanceValue: //OK
-//	'instance'
-	(name=ID)?
-	('(' type=[Type] ')')?
-	instance=[InstanceSpecification]
+InstanceValue returns ontouml::InstanceValue: //OK
+	instance=[ontouml::InstanceSpecification]
+	('(' type=[ontouml::Type] ')')?
 ;
 
 
 //Um UnlimitedNatural pode ser reduzido a um INT assim como um LiteralInteger
 //Por isso tá dando ambiguidade na gramática??? Mas ainda assim está funcionando.
-LiteralInteger returns LiteralInteger:
-	{LiteralInteger}
+LiteralInteger returns ontouml::LiteralInteger:
+	{ontouml::LiteralInteger}
 	value=INT
 ;
 
-LiteralString returns LiteralString:
-	{LiteralString}
+LiteralString returns ontouml::LiteralString:
+	{ontouml::LiteralString}
 	value=STRING
 ;
 
-LiteralBoolean returns LiteralBoolean:
-	{LiteralBoolean}
+LiteralBoolean returns ontouml::LiteralBoolean:
+	{ontouml::LiteralBoolean}
 	value=Boolean
 ;
 
@@ -840,7 +844,7 @@ Boolean returns ecore::EBoolean:
 //EBoolean returns ecore::EBoolean:
 //	'true' | 'false';
 
-LiteralUnlimitedNatural:
+LiteralUnlimitedNatural returns ontouml::LiteralUnlimitedNatural:
 	value=UnlimitedNaturalValue | value=INT
 ;
 
@@ -849,8 +853,8 @@ UnlimitedNaturalValue returns /*ecore::EInt*/ ecore::EIntegerObject:
 ;
 
 //Tentar um ValueConverter??
-LiteralNull returns LiteralNull:
-	{LiteralNull}
+LiteralNull returns ontouml::LiteralNull:
+	{ontouml::LiteralNull}
 	'NULL'
 ;
 
@@ -866,7 +870,7 @@ terminal WS: (RWS|NL)+;
 
 
 //Lista de Enumerações
-enum AggregationKind returns AggregationKind:
+enum AggregationKind returns ontouml::AggregationKind:
 	none = 'none' | shared = 'shared' | composite = 'composite';
 
 /*

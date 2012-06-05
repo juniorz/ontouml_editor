@@ -33,8 +33,6 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cPackagedElementPackageableElementParserRuleCall_5_0 = (RuleCall)cPackagedElementAssignment_5.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
-		////import "http://nemo.inf.ufes.br/ontouml/dsl"
-		////import  "RefOntoUML"
 		/// *
 		// * NOTAS
 		// *
@@ -51,20 +49,20 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		// * Seria interessante trabalhar nas Constraints
 		// *
 		// * /// #Model
-		//Model:
-		//	{Model} "model" name=ID ("viewpoint" viewpoint=STRING)? "{" //('elementImport' '{' elementImport+=ElementImport ( "," elementImport+=ElementImport)* '}' )?
+		//Model returns ontouml::Model:
+		//	{ontouml::Model} "model" name=ID ("viewpoint" viewpoint=STRING)? "{" //('elementImport' '{' elementImport+=ElementImport ( "," elementImport+=ElementImport)* '}' )?
 		//	//('packageImport' '{' packageImport+=PackageImport ( "," packageImport+=PackageImport)* '}' )?
 		//	//('ownedRule' '{' ownedRule+=Constraintx ( "," ownedRule+=Constraintx)* '}' )?
 		//	packagedElement+=PackageableElement* "}";
 		public ParserRule getRule() { return rule; }
 
-		//{Model} "model" name=ID ("viewpoint" viewpoint=STRING)? "{" //('elementImport' '{' elementImport+=ElementImport ( "," elementImport+=ElementImport)* '}' )?
+		//{ontouml::Model} "model" name=ID ("viewpoint" viewpoint=STRING)? "{" //('elementImport' '{' elementImport+=ElementImport ( "," elementImport+=ElementImport)* '}' )?
 		////('packageImport' '{' packageImport+=PackageImport ( "," packageImport+=PackageImport)* '}' )?
 		////('ownedRule' '{' ownedRule+=Constraintx ( "," ownedRule+=Constraintx)* '}' )?
 		//packagedElement+=PackageableElement* "}"
 		public Group getGroup() { return cGroup; }
 
-		//{Model}
+		//{ontouml::Model}
 		public Action getModelAction_0() { return cModelAction_0; }
 
 		//"model"
@@ -115,7 +113,7 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		////	| StringExpression | Expression_Impl | OpaqueExpression | LiteralInteger | LiteralString | LiteralBoolean | LiteralNull | InstanceValue | LiteralUnlimitedNatural //(ACHO que n‹o precisa, s— se forem named)
 		////	| Dependency | Constraintx |
 		////	Package_Impl | GeneralizationSet | InstanceSpecification_Impl
-		//PackageableElement:
+		//PackageableElement returns ontouml::PackageableElement:
 		//	Type | Instance | Class | Association | GeneralizationSet;
 		public ParserRule getRule() { return rule; }
 
@@ -153,7 +151,7 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cModeParserRuleCall_9 = (RuleCall)cAlternatives.eContents().get(9);
 		private final RuleCall cRelatorParserRuleCall_10 = (RuleCall)cAlternatives.eContents().get(10);
 		
-		//Class:
+		//Class returns ontouml::Class:
 		//	Kind | Quantity | Collective | SubKind | Category | Phase | Role | Mixin | RoleMixin | Mode | Relator;
 		public ParserRule getRule() { return rule; }
 
@@ -203,7 +201,7 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cFormalAssociationParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
 		private final RuleCall cMaterialAssociationParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
 		
-		//Association:
+		//Association returns ontouml::Association:
 		//	Characterization | Mediation | Derivation | //	memberOf |
 		//	//	componentOf |
 		//	//	subQuantityOf |
@@ -267,7 +265,7 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		/// *
 		// * ONTOUML
 		// * /// #Kind (SubstanceSortal)
-		//Kind:
+		//Kind returns ontouml::Kind:
 		//	(isActive?="active"? & isAbstract?="abstract"?) "kind" name=ID (":" generalization+=InlineGeneralization (","
 		//	generalization+=InlineGeneralization)*)? "{" (ownedAttribute+=ClassProperty ";")* "}";
 		public ParserRule getRule() { return rule; }
@@ -370,7 +368,7 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//// #Quantity (SubstanceSortal)
-		//Quantity:
+		//Quantity returns ontouml::Quantity:
 		//	(isActive?="active"? & isAbstract?="abstract"?) "quantity" name=ID (":" generalization+=InlineGeneralization (","
 		//	generalization+=InlineGeneralization)*)? "{" (ownedAttribute+=ClassProperty ";")* "}";
 		public ParserRule getRule() { return rule; }
@@ -475,7 +473,7 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//// #Collective (SubstanceSortal)
-		//Collective:
+		//Collective returns ontouml::Collective:
 		//	(isActive?="active"? & isExtensional?="extensional"? & isAbstract?="abstract"?) "collective" name=ID (":"
 		//	generalization+=InlineGeneralization ("," generalization+=InlineGeneralization)*)? "{" (ownedAttribute+=ClassProperty
 		//	";")* "}";
@@ -586,7 +584,7 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//// #SubKind (RigidSortal)
-		//SubKind:
+		//SubKind returns ontouml::SubKind:
 		//	(isActive?="active"? & isAbstract?="abstract"?) "subKind" name=ID (":" generalization+=InlineGeneralization (","
 		//	generalization+=InlineGeneralization)*)? "{" (ownedAttribute+=ClassProperty ";")* "}";
 		public ParserRule getRule() { return rule; }
@@ -689,7 +687,7 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//// #Category (RigidMixin)
-		//Category:
+		//Category returns ontouml::Category:
 		//	(isActive?="active"? & isAbstract?="abstract") // abstract: required (poderia colocar abstract+='{' ...)
 		//	"category" name=ID (":" generalization+=InlineGeneralization ("," generalization+=InlineGeneralization)*)? "{"
 		//	(ownedAttribute+=ClassProperty ";")* "}";
@@ -794,7 +792,7 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//// #Phase (AntiRigidSortal)
-		//Phase:
+		//Phase returns ontouml::Phase:
 		//	(isActive?="active"? & isAbstract?="abstract"?) "phase" name=ID (":" generalization+=InlineGeneralization (","
 		//	generalization+=InlineGeneralization)*)? "{" (ownedAttribute+=ClassProperty ";")* "}";
 		public ParserRule getRule() { return rule; }
@@ -897,7 +895,7 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//// #Role (AntiRigidSortal)
-		//Role:
+		//Role returns ontouml::Role:
 		//	(isActive?="active"? & isAbstract?="abstract"?) "role" name=ID (":" generalization+=InlineGeneralization (","
 		//	generalization+=InlineGeneralization)*)? "{" (ownedAttribute+=ClassProperty ";")* "}";
 		public ParserRule getRule() { return rule; }
@@ -1000,7 +998,7 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//// #Mixin (SemiRigidMixin)
-		//Mixin:
+		//Mixin returns ontouml::Mixin:
 		//	(isActive?="active"? & isAbstract?="abstract") // abstract: required
 		//	"mixin" name=ID (":" generalization+=InlineGeneralization ("," generalization+=InlineGeneralization)*)? "{"
 		//	(ownedAttribute+=ClassProperty ";")* "}";
@@ -1105,7 +1103,7 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//// #RoleMixin (AntiRigidMixin)
-		//RoleMixin:
+		//RoleMixin returns ontouml::RoleMixin:
 		//	(isActive?="active"? & isAbstract?="abstract"?) "roleMixin" name=ID (":" generalization+=InlineGeneralization (","
 		//	generalization+=InlineGeneralization)*)? "{" (ownedAttribute+=ClassProperty ";")* "}";
 		public ParserRule getRule() { return rule; }
@@ -1208,7 +1206,7 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//// #Mode (Moment)
-		//Mode:
+		//Mode returns ontouml::Mode:
 		//	(isActive?="active"? & isAbstract?="abstract"?) "mode" name=ID (":" generalization+=InlineGeneralization (","
 		//	generalization+=InlineGeneralization)*)? "{" (ownedAttribute+=ClassProperty ";")* "}";
 		public ParserRule getRule() { return rule; }
@@ -1311,7 +1309,7 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//// #Relator (Moment)
-		//Relator:
+		//Relator returns ontouml::Relator:
 		//	(isActive?="active"? & isAbstract?="abstract"?) "relator" name=ID (":" generalization+=InlineGeneralization (","
 		//	generalization+=InlineGeneralization)*)? "{" (ownedAttribute+=ClassProperty ";")* "}";
 		public ParserRule getRule() { return rule; }
@@ -1463,19 +1461,19 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		// * Igual memberEnd, mas ao invŽs de retornar Properties retorna Classes. ƒ uma rela‹o derived.
 		// * self.memberEnd->collect(e | e.type)
 		// * /// #Characterization (DependencyRelationship)
-		//Characterization:
+		//Characterization returns ontouml::Characterization:
 		//	(isDerived?="derived"? & isAbstract?="abstract"? & isLeaf?="leaf"?) "characterization" name=ID? (":"
 		//	generalization+=InlineGeneralization ("," generalization+=InlineGeneralization)*)? "{" "mode:"
 		//	(ownedEnd+=InlinePropertyDefinition ";") "characterized:" (ownedEnd+=InlinePropertyDefinition ";") (("memberEnd" ":"
-		//	memberEnd+=[Property] ("," memberEnd+=[Property])* ";")? & ("navigableOwnedEnd" ":" navigableOwnedEnd+=[Property] (","
-		//	navigableOwnedEnd+=[Property])* ";")?) "}";
+		//	memberEnd+=[ontouml::Property] ("," memberEnd+=[ontouml::Property])* ";")? & ("navigableOwnedEnd" ":"
+		//	navigableOwnedEnd+=[ontouml::Property] ("," navigableOwnedEnd+=[ontouml::Property])* ";")?) "}";
 		public ParserRule getRule() { return rule; }
 
 		//(isDerived?="derived"? & isAbstract?="abstract"? & isLeaf?="leaf"?) "characterization" name=ID? (":"
 		//generalization+=InlineGeneralization ("," generalization+=InlineGeneralization)*)? "{" "mode:"
 		//(ownedEnd+=InlinePropertyDefinition ";") "characterized:" (ownedEnd+=InlinePropertyDefinition ";") (("memberEnd" ":"
-		//memberEnd+=[Property] ("," memberEnd+=[Property])* ";")? & ("navigableOwnedEnd" ":" navigableOwnedEnd+=[Property] (","
-		//navigableOwnedEnd+=[Property])* ";")?) "}"
+		//memberEnd+=[ontouml::Property] ("," memberEnd+=[ontouml::Property])* ";")? & ("navigableOwnedEnd" ":"
+		//navigableOwnedEnd+=[ontouml::Property] ("," navigableOwnedEnd+=[ontouml::Property])* ";")?) "}"
 		public Group getGroup() { return cGroup; }
 
 		//isDerived?="derived"? & isAbstract?="abstract"? & isLeaf?="leaf"?
@@ -1565,11 +1563,11 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		//";"
 		public Keyword getSemicolonKeyword_8_1() { return cSemicolonKeyword_8_1; }
 
-		//("memberEnd" ":" memberEnd+=[Property] ("," memberEnd+=[Property])* ";")? & ("navigableOwnedEnd" ":"
-		//navigableOwnedEnd+=[Property] ("," navigableOwnedEnd+=[Property])* ";")?
+		//("memberEnd" ":" memberEnd+=[ontouml::Property] ("," memberEnd+=[ontouml::Property])* ";")? & ("navigableOwnedEnd" ":"
+		//navigableOwnedEnd+=[ontouml::Property] ("," navigableOwnedEnd+=[ontouml::Property])* ";")?
 		public UnorderedGroup getUnorderedGroup_9() { return cUnorderedGroup_9; }
 
-		//("memberEnd" ":" memberEnd+=[Property] ("," memberEnd+=[Property])* ";")?
+		//("memberEnd" ":" memberEnd+=[ontouml::Property] ("," memberEnd+=[ontouml::Property])* ";")?
 		public Group getGroup_9_0() { return cGroup_9_0; }
 
 		//"memberEnd"
@@ -1578,25 +1576,25 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		//":"
 		public Keyword getColonKeyword_9_0_1() { return cColonKeyword_9_0_1; }
 
-		//memberEnd+=[Property]
+		//memberEnd+=[ontouml::Property]
 		public Assignment getMemberEndAssignment_9_0_2() { return cMemberEndAssignment_9_0_2; }
 
-		//[Property]
+		//[ontouml::Property]
 		public CrossReference getMemberEndPropertyCrossReference_9_0_2_0() { return cMemberEndPropertyCrossReference_9_0_2_0; }
 
 		//ID
 		public RuleCall getMemberEndPropertyIDTerminalRuleCall_9_0_2_0_1() { return cMemberEndPropertyIDTerminalRuleCall_9_0_2_0_1; }
 
-		//("," memberEnd+=[Property])*
+		//("," memberEnd+=[ontouml::Property])*
 		public Group getGroup_9_0_3() { return cGroup_9_0_3; }
 
 		//","
 		public Keyword getCommaKeyword_9_0_3_0() { return cCommaKeyword_9_0_3_0; }
 
-		//memberEnd+=[Property]
+		//memberEnd+=[ontouml::Property]
 		public Assignment getMemberEndAssignment_9_0_3_1() { return cMemberEndAssignment_9_0_3_1; }
 
-		//[Property]
+		//[ontouml::Property]
 		public CrossReference getMemberEndPropertyCrossReference_9_0_3_1_0() { return cMemberEndPropertyCrossReference_9_0_3_1_0; }
 
 		//ID
@@ -1605,7 +1603,7 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		//";"
 		public Keyword getSemicolonKeyword_9_0_4() { return cSemicolonKeyword_9_0_4; }
 
-		//("navigableOwnedEnd" ":" navigableOwnedEnd+=[Property] ("," navigableOwnedEnd+=[Property])* ";")?
+		//("navigableOwnedEnd" ":" navigableOwnedEnd+=[ontouml::Property] ("," navigableOwnedEnd+=[ontouml::Property])* ";")?
 		public Group getGroup_9_1() { return cGroup_9_1; }
 
 		//"navigableOwnedEnd"
@@ -1614,25 +1612,25 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		//":"
 		public Keyword getColonKeyword_9_1_1() { return cColonKeyword_9_1_1; }
 
-		//navigableOwnedEnd+=[Property]
+		//navigableOwnedEnd+=[ontouml::Property]
 		public Assignment getNavigableOwnedEndAssignment_9_1_2() { return cNavigableOwnedEndAssignment_9_1_2; }
 
-		//[Property]
+		//[ontouml::Property]
 		public CrossReference getNavigableOwnedEndPropertyCrossReference_9_1_2_0() { return cNavigableOwnedEndPropertyCrossReference_9_1_2_0; }
 
 		//ID
 		public RuleCall getNavigableOwnedEndPropertyIDTerminalRuleCall_9_1_2_0_1() { return cNavigableOwnedEndPropertyIDTerminalRuleCall_9_1_2_0_1; }
 
-		//("," navigableOwnedEnd+=[Property])*
+		//("," navigableOwnedEnd+=[ontouml::Property])*
 		public Group getGroup_9_1_3() { return cGroup_9_1_3; }
 
 		//","
 		public Keyword getCommaKeyword_9_1_3_0() { return cCommaKeyword_9_1_3_0; }
 
-		//navigableOwnedEnd+=[Property]
+		//navigableOwnedEnd+=[ontouml::Property]
 		public Assignment getNavigableOwnedEndAssignment_9_1_3_1() { return cNavigableOwnedEndAssignment_9_1_3_1; }
 
-		//[Property]
+		//[ontouml::Property]
 		public CrossReference getNavigableOwnedEndPropertyCrossReference_9_1_3_1_0() { return cNavigableOwnedEndPropertyCrossReference_9_1_3_1_0; }
 
 		//ID
@@ -1708,14 +1706,14 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//// #Mediation (DependencyRelationship)
-		//Mediation:
+		//Mediation returns ontouml::Mediation:
 		//	(isDerived?="derived"? & isAbstract?="abstract"? & isLeaf?="leaf"?) "mediation" name=ID? (":"
 		//	generalization+=InlineGeneralization ("," generalization+=InlineGeneralization)*)? "{" (("relator" ":"
 		//	ownedEnd+=InlinePropertyDefinition ";") // relator
 		//	("mediated" ":" ownedEnd+=InlinePropertyDefinition ";") // mediated
 		//	// TODO: Tem que ser [>1, ?]
-		//	(("memberEnd" ":" memberEnd+=[Property] ("," memberEnd+=[Property])* ";")? & ("navigableOwnedEnd" ":"
-		//	navigableOwnedEnd+=[Property] ("," navigableOwnedEnd+=[Property])* ";")?)) "}";
+		//	(("memberEnd" ":" memberEnd+=[ontouml::Property] ("," memberEnd+=[ontouml::Property])* ";")? & ("navigableOwnedEnd" ":"
+		//	navigableOwnedEnd+=[ontouml::Property] ("," navigableOwnedEnd+=[ontouml::Property])* ";")?)) "}";
 		public ParserRule getRule() { return rule; }
 
 		//(isDerived?="derived"? & isAbstract?="abstract"? & isLeaf?="leaf"?) "mediation" name=ID? (":"
@@ -1723,8 +1721,8 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		//ownedEnd+=InlinePropertyDefinition ";") // relator
 		//("mediated" ":" ownedEnd+=InlinePropertyDefinition ";") // mediated
 		//// TODO: Tem que ser [>1, ?]
-		//(("memberEnd" ":" memberEnd+=[Property] ("," memberEnd+=[Property])* ";")? & ("navigableOwnedEnd" ":"
-		//navigableOwnedEnd+=[Property] ("," navigableOwnedEnd+=[Property])* ";")?)) "}"
+		//(("memberEnd" ":" memberEnd+=[ontouml::Property] ("," memberEnd+=[ontouml::Property])* ";")? & ("navigableOwnedEnd" ":"
+		//navigableOwnedEnd+=[ontouml::Property] ("," navigableOwnedEnd+=[ontouml::Property])* ";")?)) "}"
 		public Group getGroup() { return cGroup; }
 
 		//isDerived?="derived"? & isAbstract?="abstract"? & isLeaf?="leaf"?
@@ -1787,8 +1785,8 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		//("relator" ":" ownedEnd+=InlinePropertyDefinition ";") // relator
 		//("mediated" ":" ownedEnd+=InlinePropertyDefinition ";") // mediated
 		//// TODO: Tem que ser [>1, ?]
-		//(("memberEnd" ":" memberEnd+=[Property] ("," memberEnd+=[Property])* ";")? & ("navigableOwnedEnd" ":"
-		//navigableOwnedEnd+=[Property] ("," navigableOwnedEnd+=[Property])* ";")?)
+		//(("memberEnd" ":" memberEnd+=[ontouml::Property] ("," memberEnd+=[ontouml::Property])* ";")? & ("navigableOwnedEnd" ":"
+		//navigableOwnedEnd+=[ontouml::Property] ("," navigableOwnedEnd+=[ontouml::Property])* ";")?)
 		public Group getGroup_5() { return cGroup_5; }
 
 		//"relator" ":" ownedEnd+=InlinePropertyDefinition ";"
@@ -1827,11 +1825,11 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		//";"
 		public Keyword getSemicolonKeyword_5_1_3() { return cSemicolonKeyword_5_1_3; }
 
-		//("memberEnd" ":" memberEnd+=[Property] ("," memberEnd+=[Property])* ";")? & ("navigableOwnedEnd" ":"
-		//navigableOwnedEnd+=[Property] ("," navigableOwnedEnd+=[Property])* ";")?
+		//("memberEnd" ":" memberEnd+=[ontouml::Property] ("," memberEnd+=[ontouml::Property])* ";")? & ("navigableOwnedEnd" ":"
+		//navigableOwnedEnd+=[ontouml::Property] ("," navigableOwnedEnd+=[ontouml::Property])* ";")?
 		public UnorderedGroup getUnorderedGroup_5_2() { return cUnorderedGroup_5_2; }
 
-		//("memberEnd" ":" memberEnd+=[Property] ("," memberEnd+=[Property])* ";")?
+		//("memberEnd" ":" memberEnd+=[ontouml::Property] ("," memberEnd+=[ontouml::Property])* ";")?
 		public Group getGroup_5_2_0() { return cGroup_5_2_0; }
 
 		//"memberEnd"
@@ -1840,25 +1838,25 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		//":"
 		public Keyword getColonKeyword_5_2_0_1() { return cColonKeyword_5_2_0_1; }
 
-		//memberEnd+=[Property]
+		//memberEnd+=[ontouml::Property]
 		public Assignment getMemberEndAssignment_5_2_0_2() { return cMemberEndAssignment_5_2_0_2; }
 
-		//[Property]
+		//[ontouml::Property]
 		public CrossReference getMemberEndPropertyCrossReference_5_2_0_2_0() { return cMemberEndPropertyCrossReference_5_2_0_2_0; }
 
 		//ID
 		public RuleCall getMemberEndPropertyIDTerminalRuleCall_5_2_0_2_0_1() { return cMemberEndPropertyIDTerminalRuleCall_5_2_0_2_0_1; }
 
-		//("," memberEnd+=[Property])*
+		//("," memberEnd+=[ontouml::Property])*
 		public Group getGroup_5_2_0_3() { return cGroup_5_2_0_3; }
 
 		//","
 		public Keyword getCommaKeyword_5_2_0_3_0() { return cCommaKeyword_5_2_0_3_0; }
 
-		//memberEnd+=[Property]
+		//memberEnd+=[ontouml::Property]
 		public Assignment getMemberEndAssignment_5_2_0_3_1() { return cMemberEndAssignment_5_2_0_3_1; }
 
-		//[Property]
+		//[ontouml::Property]
 		public CrossReference getMemberEndPropertyCrossReference_5_2_0_3_1_0() { return cMemberEndPropertyCrossReference_5_2_0_3_1_0; }
 
 		//ID
@@ -1867,7 +1865,7 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		//";"
 		public Keyword getSemicolonKeyword_5_2_0_4() { return cSemicolonKeyword_5_2_0_4; }
 
-		//("navigableOwnedEnd" ":" navigableOwnedEnd+=[Property] ("," navigableOwnedEnd+=[Property])* ";")?
+		//("navigableOwnedEnd" ":" navigableOwnedEnd+=[ontouml::Property] ("," navigableOwnedEnd+=[ontouml::Property])* ";")?
 		public Group getGroup_5_2_1() { return cGroup_5_2_1; }
 
 		//"navigableOwnedEnd"
@@ -1876,25 +1874,25 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		//":"
 		public Keyword getColonKeyword_5_2_1_1() { return cColonKeyword_5_2_1_1; }
 
-		//navigableOwnedEnd+=[Property]
+		//navigableOwnedEnd+=[ontouml::Property]
 		public Assignment getNavigableOwnedEndAssignment_5_2_1_2() { return cNavigableOwnedEndAssignment_5_2_1_2; }
 
-		//[Property]
+		//[ontouml::Property]
 		public CrossReference getNavigableOwnedEndPropertyCrossReference_5_2_1_2_0() { return cNavigableOwnedEndPropertyCrossReference_5_2_1_2_0; }
 
 		//ID
 		public RuleCall getNavigableOwnedEndPropertyIDTerminalRuleCall_5_2_1_2_0_1() { return cNavigableOwnedEndPropertyIDTerminalRuleCall_5_2_1_2_0_1; }
 
-		//("," navigableOwnedEnd+=[Property])*
+		//("," navigableOwnedEnd+=[ontouml::Property])*
 		public Group getGroup_5_2_1_3() { return cGroup_5_2_1_3; }
 
 		//","
 		public Keyword getCommaKeyword_5_2_1_3_0() { return cCommaKeyword_5_2_1_3_0; }
 
-		//navigableOwnedEnd+=[Property]
+		//navigableOwnedEnd+=[ontouml::Property]
 		public Assignment getNavigableOwnedEndAssignment_5_2_1_3_1() { return cNavigableOwnedEndAssignment_5_2_1_3_1; }
 
-		//[Property]
+		//[ontouml::Property]
 		public CrossReference getNavigableOwnedEndPropertyCrossReference_5_2_1_3_1_0() { return cNavigableOwnedEndPropertyCrossReference_5_2_1_3_1_0; }
 
 		//ID
@@ -1967,19 +1965,19 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_10 = (Keyword)cGroup.eContents().get(10);
 		
 		//// #Derivation (DependencyRelationship)
-		//Derivation:
+		//Derivation returns ontouml::Derivation:
 		//	(isDerived?="derived"? & isAbstract?="abstract"? & isLeaf?="leaf"?) "derivation" name=ID? (":"
 		//	generalization+=InlineGeneralization ("," generalization+=InlineGeneralization)*)? "{" "material:"
 		//	(ownedEnd+=InlinePropertyDefinition ";") "relator:" (ownedEnd+=InlinePropertyDefinition ";") (("memberEnd" ":"
-		//	memberEnd+=[Property] ("," memberEnd+=[Property])* ";")? & ("navigableOwnedEnd" ":" navigableOwnedEnd+=[Property] (","
-		//	navigableOwnedEnd+=[Property])* ";")?) "}";
+		//	memberEnd+=[ontouml::Property] ("," memberEnd+=[ontouml::Property])* ";")? & ("navigableOwnedEnd" ":"
+		//	navigableOwnedEnd+=[ontouml::Property] ("," navigableOwnedEnd+=[ontouml::Property])* ";")?) "}";
 		public ParserRule getRule() { return rule; }
 
 		//(isDerived?="derived"? & isAbstract?="abstract"? & isLeaf?="leaf"?) "derivation" name=ID? (":"
 		//generalization+=InlineGeneralization ("," generalization+=InlineGeneralization)*)? "{" "material:"
 		//(ownedEnd+=InlinePropertyDefinition ";") "relator:" (ownedEnd+=InlinePropertyDefinition ";") (("memberEnd" ":"
-		//memberEnd+=[Property] ("," memberEnd+=[Property])* ";")? & ("navigableOwnedEnd" ":" navigableOwnedEnd+=[Property] (","
-		//navigableOwnedEnd+=[Property])* ";")?) "}"
+		//memberEnd+=[ontouml::Property] ("," memberEnd+=[ontouml::Property])* ";")? & ("navigableOwnedEnd" ":"
+		//navigableOwnedEnd+=[ontouml::Property] ("," navigableOwnedEnd+=[ontouml::Property])* ";")?) "}"
 		public Group getGroup() { return cGroup; }
 
 		//isDerived?="derived"? & isAbstract?="abstract"? & isLeaf?="leaf"?
@@ -2069,11 +2067,11 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		//";"
 		public Keyword getSemicolonKeyword_8_1() { return cSemicolonKeyword_8_1; }
 
-		//("memberEnd" ":" memberEnd+=[Property] ("," memberEnd+=[Property])* ";")? & ("navigableOwnedEnd" ":"
-		//navigableOwnedEnd+=[Property] ("," navigableOwnedEnd+=[Property])* ";")?
+		//("memberEnd" ":" memberEnd+=[ontouml::Property] ("," memberEnd+=[ontouml::Property])* ";")? & ("navigableOwnedEnd" ":"
+		//navigableOwnedEnd+=[ontouml::Property] ("," navigableOwnedEnd+=[ontouml::Property])* ";")?
 		public UnorderedGroup getUnorderedGroup_9() { return cUnorderedGroup_9; }
 
-		//("memberEnd" ":" memberEnd+=[Property] ("," memberEnd+=[Property])* ";")?
+		//("memberEnd" ":" memberEnd+=[ontouml::Property] ("," memberEnd+=[ontouml::Property])* ";")?
 		public Group getGroup_9_0() { return cGroup_9_0; }
 
 		//"memberEnd"
@@ -2082,25 +2080,25 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		//":"
 		public Keyword getColonKeyword_9_0_1() { return cColonKeyword_9_0_1; }
 
-		//memberEnd+=[Property]
+		//memberEnd+=[ontouml::Property]
 		public Assignment getMemberEndAssignment_9_0_2() { return cMemberEndAssignment_9_0_2; }
 
-		//[Property]
+		//[ontouml::Property]
 		public CrossReference getMemberEndPropertyCrossReference_9_0_2_0() { return cMemberEndPropertyCrossReference_9_0_2_0; }
 
 		//ID
 		public RuleCall getMemberEndPropertyIDTerminalRuleCall_9_0_2_0_1() { return cMemberEndPropertyIDTerminalRuleCall_9_0_2_0_1; }
 
-		//("," memberEnd+=[Property])*
+		//("," memberEnd+=[ontouml::Property])*
 		public Group getGroup_9_0_3() { return cGroup_9_0_3; }
 
 		//","
 		public Keyword getCommaKeyword_9_0_3_0() { return cCommaKeyword_9_0_3_0; }
 
-		//memberEnd+=[Property]
+		//memberEnd+=[ontouml::Property]
 		public Assignment getMemberEndAssignment_9_0_3_1() { return cMemberEndAssignment_9_0_3_1; }
 
-		//[Property]
+		//[ontouml::Property]
 		public CrossReference getMemberEndPropertyCrossReference_9_0_3_1_0() { return cMemberEndPropertyCrossReference_9_0_3_1_0; }
 
 		//ID
@@ -2109,7 +2107,7 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		//";"
 		public Keyword getSemicolonKeyword_9_0_4() { return cSemicolonKeyword_9_0_4; }
 
-		//("navigableOwnedEnd" ":" navigableOwnedEnd+=[Property] ("," navigableOwnedEnd+=[Property])* ";")?
+		//("navigableOwnedEnd" ":" navigableOwnedEnd+=[ontouml::Property] ("," navigableOwnedEnd+=[ontouml::Property])* ";")?
 		public Group getGroup_9_1() { return cGroup_9_1; }
 
 		//"navigableOwnedEnd"
@@ -2118,25 +2116,25 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		//":"
 		public Keyword getColonKeyword_9_1_1() { return cColonKeyword_9_1_1; }
 
-		//navigableOwnedEnd+=[Property]
+		//navigableOwnedEnd+=[ontouml::Property]
 		public Assignment getNavigableOwnedEndAssignment_9_1_2() { return cNavigableOwnedEndAssignment_9_1_2; }
 
-		//[Property]
+		//[ontouml::Property]
 		public CrossReference getNavigableOwnedEndPropertyCrossReference_9_1_2_0() { return cNavigableOwnedEndPropertyCrossReference_9_1_2_0; }
 
 		//ID
 		public RuleCall getNavigableOwnedEndPropertyIDTerminalRuleCall_9_1_2_0_1() { return cNavigableOwnedEndPropertyIDTerminalRuleCall_9_1_2_0_1; }
 
-		//("," navigableOwnedEnd+=[Property])*
+		//("," navigableOwnedEnd+=[ontouml::Property])*
 		public Group getGroup_9_1_3() { return cGroup_9_1_3; }
 
 		//","
 		public Keyword getCommaKeyword_9_1_3_0() { return cCommaKeyword_9_1_3_0; }
 
-		//navigableOwnedEnd+=[Property]
+		//navigableOwnedEnd+=[ontouml::Property]
 		public Assignment getNavigableOwnedEndAssignment_9_1_3_1() { return cNavigableOwnedEndAssignment_9_1_3_1; }
 
-		//[Property]
+		//[ontouml::Property]
 		public CrossReference getNavigableOwnedEndPropertyCrossReference_9_1_3_1_0() { return cNavigableOwnedEndPropertyCrossReference_9_1_3_1_0; }
 
 		//ID
@@ -2202,20 +2200,22 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//// #memberOf (Meronymic)
-		//memberOf:
-		//	{memberOf} (isDerived?="derived"? & isAbstract?="abstract"? & isLeaf?="leaf"? & isEssential?="essential"? &
+		//memberOf returns ontouml::memberOf:
+		//	{ontouml::memberOf} (isDerived?="derived"? & isAbstract?="abstract"? & isLeaf?="leaf"? & isEssential?="essential"? &
 		//	isImmutablePart?="imutablePart"? & isImmutableWhole?="imutableWhole"? & isInseparable?="inseparable"? &
-		//	isShareable?="shareable"?) "memberOf" name=ID "{" (("memberEnd" ":" memberEnd+=[Property] ("," memberEnd+=[Property])*
-		//	";")? & ("navigableOwnedEnd" ":" navigableOwnedEnd+=[Property] ("," navigableOwnedEnd+=[Property])* ";")?)? "}";
+		//	isShareable?="shareable"?) "memberOf" name=ID "{" (("memberEnd" ":" memberEnd+=[ontouml::Property] (","
+		//	memberEnd+=[ontouml::Property])* ";")? & ("navigableOwnedEnd" ":" navigableOwnedEnd+=[ontouml::Property] (","
+		//	navigableOwnedEnd+=[ontouml::Property])* ";")?)? "}";
 		public ParserRule getRule() { return rule; }
 
-		//{memberOf} (isDerived?="derived"? & isAbstract?="abstract"? & isLeaf?="leaf"? & isEssential?="essential"? &
+		//{ontouml::memberOf} (isDerived?="derived"? & isAbstract?="abstract"? & isLeaf?="leaf"? & isEssential?="essential"? &
 		//isImmutablePart?="imutablePart"? & isImmutableWhole?="imutableWhole"? & isInseparable?="inseparable"? &
-		//isShareable?="shareable"?) "memberOf" name=ID "{" (("memberEnd" ":" memberEnd+=[Property] ("," memberEnd+=[Property])*
-		//";")? & ("navigableOwnedEnd" ":" navigableOwnedEnd+=[Property] ("," navigableOwnedEnd+=[Property])* ";")?)? "}"
+		//isShareable?="shareable"?) "memberOf" name=ID "{" (("memberEnd" ":" memberEnd+=[ontouml::Property] (","
+		//memberEnd+=[ontouml::Property])* ";")? & ("navigableOwnedEnd" ":" navigableOwnedEnd+=[ontouml::Property] (","
+		//navigableOwnedEnd+=[ontouml::Property])* ";")?)? "}"
 		public Group getGroup() { return cGroup; }
 
-		//{memberOf}
+		//{ontouml::memberOf}
 		public Action getMemberOfAction_0() { return cMemberOfAction_0; }
 
 		//isDerived?="derived"? & isAbstract?="abstract"? & isLeaf?="leaf"? & isEssential?="essential"? &
@@ -2283,11 +2283,11 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_4() { return cLeftCurlyBracketKeyword_4; }
 
-		//(("memberEnd" ":" memberEnd+=[Property] ("," memberEnd+=[Property])* ";")? & ("navigableOwnedEnd" ":"
-		//navigableOwnedEnd+=[Property] ("," navigableOwnedEnd+=[Property])* ";")?)?
+		//(("memberEnd" ":" memberEnd+=[ontouml::Property] ("," memberEnd+=[ontouml::Property])* ";")? & ("navigableOwnedEnd" ":"
+		//navigableOwnedEnd+=[ontouml::Property] ("," navigableOwnedEnd+=[ontouml::Property])* ";")?)?
 		public UnorderedGroup getUnorderedGroup_5() { return cUnorderedGroup_5; }
 
-		//("memberEnd" ":" memberEnd+=[Property] ("," memberEnd+=[Property])* ";")?
+		//("memberEnd" ":" memberEnd+=[ontouml::Property] ("," memberEnd+=[ontouml::Property])* ";")?
 		public Group getGroup_5_0() { return cGroup_5_0; }
 
 		//"memberEnd"
@@ -2296,25 +2296,25 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		//":"
 		public Keyword getColonKeyword_5_0_1() { return cColonKeyword_5_0_1; }
 
-		//memberEnd+=[Property]
+		//memberEnd+=[ontouml::Property]
 		public Assignment getMemberEndAssignment_5_0_2() { return cMemberEndAssignment_5_0_2; }
 
-		//[Property]
+		//[ontouml::Property]
 		public CrossReference getMemberEndPropertyCrossReference_5_0_2_0() { return cMemberEndPropertyCrossReference_5_0_2_0; }
 
 		//ID
 		public RuleCall getMemberEndPropertyIDTerminalRuleCall_5_0_2_0_1() { return cMemberEndPropertyIDTerminalRuleCall_5_0_2_0_1; }
 
-		//("," memberEnd+=[Property])*
+		//("," memberEnd+=[ontouml::Property])*
 		public Group getGroup_5_0_3() { return cGroup_5_0_3; }
 
 		//","
 		public Keyword getCommaKeyword_5_0_3_0() { return cCommaKeyword_5_0_3_0; }
 
-		//memberEnd+=[Property]
+		//memberEnd+=[ontouml::Property]
 		public Assignment getMemberEndAssignment_5_0_3_1() { return cMemberEndAssignment_5_0_3_1; }
 
-		//[Property]
+		//[ontouml::Property]
 		public CrossReference getMemberEndPropertyCrossReference_5_0_3_1_0() { return cMemberEndPropertyCrossReference_5_0_3_1_0; }
 
 		//ID
@@ -2323,7 +2323,7 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		//";"
 		public Keyword getSemicolonKeyword_5_0_4() { return cSemicolonKeyword_5_0_4; }
 
-		//("navigableOwnedEnd" ":" navigableOwnedEnd+=[Property] ("," navigableOwnedEnd+=[Property])* ";")?
+		//("navigableOwnedEnd" ":" navigableOwnedEnd+=[ontouml::Property] ("," navigableOwnedEnd+=[ontouml::Property])* ";")?
 		public Group getGroup_5_1() { return cGroup_5_1; }
 
 		//"navigableOwnedEnd"
@@ -2332,25 +2332,25 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		//":"
 		public Keyword getColonKeyword_5_1_1() { return cColonKeyword_5_1_1; }
 
-		//navigableOwnedEnd+=[Property]
+		//navigableOwnedEnd+=[ontouml::Property]
 		public Assignment getNavigableOwnedEndAssignment_5_1_2() { return cNavigableOwnedEndAssignment_5_1_2; }
 
-		//[Property]
+		//[ontouml::Property]
 		public CrossReference getNavigableOwnedEndPropertyCrossReference_5_1_2_0() { return cNavigableOwnedEndPropertyCrossReference_5_1_2_0; }
 
 		//ID
 		public RuleCall getNavigableOwnedEndPropertyIDTerminalRuleCall_5_1_2_0_1() { return cNavigableOwnedEndPropertyIDTerminalRuleCall_5_1_2_0_1; }
 
-		//("," navigableOwnedEnd+=[Property])*
+		//("," navigableOwnedEnd+=[ontouml::Property])*
 		public Group getGroup_5_1_3() { return cGroup_5_1_3; }
 
 		//","
 		public Keyword getCommaKeyword_5_1_3_0() { return cCommaKeyword_5_1_3_0; }
 
-		//navigableOwnedEnd+=[Property]
+		//navigableOwnedEnd+=[ontouml::Property]
 		public Assignment getNavigableOwnedEndAssignment_5_1_3_1() { return cNavigableOwnedEndAssignment_5_1_3_1; }
 
-		//[Property]
+		//[ontouml::Property]
 		public CrossReference getNavigableOwnedEndPropertyCrossReference_5_1_3_1_0() { return cNavigableOwnedEndPropertyCrossReference_5_1_3_1_0; }
 
 		//ID
@@ -2416,22 +2416,22 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//// #componentOf (Meronymic)
-		//componentOf:
-		//	{componentOf} (isDerived?="derived"? & isAbstract?="abstract"? & isLeaf?="leaf"? & isEssential?="essential"? &
-		//	isImmutablePart?="imutablePart"? & isImmutableWhole?="imutableWhole"? & isInseparable?="inseparable"? &
-		//	isShareable?="shareable"?) "componentOf" name=ID "{" (("memberEnd" ":" memberEnd+=[Property] (","
-		//	memberEnd+=[Property])* ";")? & ("navigableOwnedEnd" ":" navigableOwnedEnd+=[Property] (","
-		//	navigableOwnedEnd+=[Property])* ";")?)? "}";
+		//componentOf returns ontouml::componentOf:
+		//	{ontouml::componentOf} (isDerived?="derived"? & isAbstract?="abstract"? & isLeaf?="leaf"? & isEssential?="essential"?
+		//	& isImmutablePart?="imutablePart"? & isImmutableWhole?="imutableWhole"? & isInseparable?="inseparable"? &
+		//	isShareable?="shareable"?) "componentOf" name=ID "{" (("memberEnd" ":" memberEnd+=[ontouml::Property] (","
+		//	memberEnd+=[ontouml::Property])* ";")? & ("navigableOwnedEnd" ":" navigableOwnedEnd+=[ontouml::Property] (","
+		//	navigableOwnedEnd+=[ontouml::Property])* ";")?)? "}";
 		public ParserRule getRule() { return rule; }
 
-		//{componentOf} (isDerived?="derived"? & isAbstract?="abstract"? & isLeaf?="leaf"? & isEssential?="essential"? &
+		//{ontouml::componentOf} (isDerived?="derived"? & isAbstract?="abstract"? & isLeaf?="leaf"? & isEssential?="essential"? &
 		//isImmutablePart?="imutablePart"? & isImmutableWhole?="imutableWhole"? & isInseparable?="inseparable"? &
-		//isShareable?="shareable"?) "componentOf" name=ID "{" (("memberEnd" ":" memberEnd+=[Property] (","
-		//memberEnd+=[Property])* ";")? & ("navigableOwnedEnd" ":" navigableOwnedEnd+=[Property] (","
-		//navigableOwnedEnd+=[Property])* ";")?)? "}"
+		//isShareable?="shareable"?) "componentOf" name=ID "{" (("memberEnd" ":" memberEnd+=[ontouml::Property] (","
+		//memberEnd+=[ontouml::Property])* ";")? & ("navigableOwnedEnd" ":" navigableOwnedEnd+=[ontouml::Property] (","
+		//navigableOwnedEnd+=[ontouml::Property])* ";")?)? "}"
 		public Group getGroup() { return cGroup; }
 
-		//{componentOf}
+		//{ontouml::componentOf}
 		public Action getComponentOfAction_0() { return cComponentOfAction_0; }
 
 		//isDerived?="derived"? & isAbstract?="abstract"? & isLeaf?="leaf"? & isEssential?="essential"? &
@@ -2499,11 +2499,11 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_4() { return cLeftCurlyBracketKeyword_4; }
 
-		//(("memberEnd" ":" memberEnd+=[Property] ("," memberEnd+=[Property])* ";")? & ("navigableOwnedEnd" ":"
-		//navigableOwnedEnd+=[Property] ("," navigableOwnedEnd+=[Property])* ";")?)?
+		//(("memberEnd" ":" memberEnd+=[ontouml::Property] ("," memberEnd+=[ontouml::Property])* ";")? & ("navigableOwnedEnd" ":"
+		//navigableOwnedEnd+=[ontouml::Property] ("," navigableOwnedEnd+=[ontouml::Property])* ";")?)?
 		public UnorderedGroup getUnorderedGroup_5() { return cUnorderedGroup_5; }
 
-		//("memberEnd" ":" memberEnd+=[Property] ("," memberEnd+=[Property])* ";")?
+		//("memberEnd" ":" memberEnd+=[ontouml::Property] ("," memberEnd+=[ontouml::Property])* ";")?
 		public Group getGroup_5_0() { return cGroup_5_0; }
 
 		//"memberEnd"
@@ -2512,25 +2512,25 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		//":"
 		public Keyword getColonKeyword_5_0_1() { return cColonKeyword_5_0_1; }
 
-		//memberEnd+=[Property]
+		//memberEnd+=[ontouml::Property]
 		public Assignment getMemberEndAssignment_5_0_2() { return cMemberEndAssignment_5_0_2; }
 
-		//[Property]
+		//[ontouml::Property]
 		public CrossReference getMemberEndPropertyCrossReference_5_0_2_0() { return cMemberEndPropertyCrossReference_5_0_2_0; }
 
 		//ID
 		public RuleCall getMemberEndPropertyIDTerminalRuleCall_5_0_2_0_1() { return cMemberEndPropertyIDTerminalRuleCall_5_0_2_0_1; }
 
-		//("," memberEnd+=[Property])*
+		//("," memberEnd+=[ontouml::Property])*
 		public Group getGroup_5_0_3() { return cGroup_5_0_3; }
 
 		//","
 		public Keyword getCommaKeyword_5_0_3_0() { return cCommaKeyword_5_0_3_0; }
 
-		//memberEnd+=[Property]
+		//memberEnd+=[ontouml::Property]
 		public Assignment getMemberEndAssignment_5_0_3_1() { return cMemberEndAssignment_5_0_3_1; }
 
-		//[Property]
+		//[ontouml::Property]
 		public CrossReference getMemberEndPropertyCrossReference_5_0_3_1_0() { return cMemberEndPropertyCrossReference_5_0_3_1_0; }
 
 		//ID
@@ -2539,7 +2539,7 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		//";"
 		public Keyword getSemicolonKeyword_5_0_4() { return cSemicolonKeyword_5_0_4; }
 
-		//("navigableOwnedEnd" ":" navigableOwnedEnd+=[Property] ("," navigableOwnedEnd+=[Property])* ";")?
+		//("navigableOwnedEnd" ":" navigableOwnedEnd+=[ontouml::Property] ("," navigableOwnedEnd+=[ontouml::Property])* ";")?
 		public Group getGroup_5_1() { return cGroup_5_1; }
 
 		//"navigableOwnedEnd"
@@ -2548,25 +2548,25 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		//":"
 		public Keyword getColonKeyword_5_1_1() { return cColonKeyword_5_1_1; }
 
-		//navigableOwnedEnd+=[Property]
+		//navigableOwnedEnd+=[ontouml::Property]
 		public Assignment getNavigableOwnedEndAssignment_5_1_2() { return cNavigableOwnedEndAssignment_5_1_2; }
 
-		//[Property]
+		//[ontouml::Property]
 		public CrossReference getNavigableOwnedEndPropertyCrossReference_5_1_2_0() { return cNavigableOwnedEndPropertyCrossReference_5_1_2_0; }
 
 		//ID
 		public RuleCall getNavigableOwnedEndPropertyIDTerminalRuleCall_5_1_2_0_1() { return cNavigableOwnedEndPropertyIDTerminalRuleCall_5_1_2_0_1; }
 
-		//("," navigableOwnedEnd+=[Property])*
+		//("," navigableOwnedEnd+=[ontouml::Property])*
 		public Group getGroup_5_1_3() { return cGroup_5_1_3; }
 
 		//","
 		public Keyword getCommaKeyword_5_1_3_0() { return cCommaKeyword_5_1_3_0; }
 
-		//navigableOwnedEnd+=[Property]
+		//navigableOwnedEnd+=[ontouml::Property]
 		public Assignment getNavigableOwnedEndAssignment_5_1_3_1() { return cNavigableOwnedEndAssignment_5_1_3_1; }
 
-		//[Property]
+		//[ontouml::Property]
 		public CrossReference getNavigableOwnedEndPropertyCrossReference_5_1_3_1_0() { return cNavigableOwnedEndPropertyCrossReference_5_1_3_1_0; }
 
 		//ID
@@ -2615,20 +2615,22 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//// #subQuantityOf (Meronymic)
-		//subQuantityOf:
-		//	{subQuantityOf} //( isDerived?='derived'? & isAbstract?='abstract'? & isLeaf?='leaf'? )
+		//subQuantityOf returns ontouml::subQuantityOf:
+		//	{ontouml::subQuantityOf} //( isDerived?='derived'? & isAbstract?='abstract'? & isLeaf?='leaf'? )
 		//	//( isEssential?='essential'? & isImmutablePart?='imutable-part'? & isImmutableWhole?='imutable-whole'? & isInseparable?='inseparable'? & isShareable?='shareable'? )
-		//	"subQuantityOf" name=ID "{" (("memberEnd" ":" memberEnd+=[Property] ("," memberEnd+=[Property])* ";")? &
-		//	("navigableOwnedEnd" ":" navigableOwnedEnd+=[Property] ("," navigableOwnedEnd+=[Property])* ";")?)? "}";
+		//	"subQuantityOf" name=ID "{" (("memberEnd" ":" memberEnd+=[ontouml::Property] ("," memberEnd+=[ontouml::Property])*
+		//	";")? & ("navigableOwnedEnd" ":" navigableOwnedEnd+=[ontouml::Property] ("," navigableOwnedEnd+=[ontouml::Property])*
+		//	";")?)? "}";
 		public ParserRule getRule() { return rule; }
 
-		//{subQuantityOf} //( isDerived?='derived'? & isAbstract?='abstract'? & isLeaf?='leaf'? )
+		//{ontouml::subQuantityOf} //( isDerived?='derived'? & isAbstract?='abstract'? & isLeaf?='leaf'? )
 		////( isEssential?='essential'? & isImmutablePart?='imutable-part'? & isImmutableWhole?='imutable-whole'? & isInseparable?='inseparable'? & isShareable?='shareable'? )
-		//"subQuantityOf" name=ID "{" (("memberEnd" ":" memberEnd+=[Property] ("," memberEnd+=[Property])* ";")? &
-		//("navigableOwnedEnd" ":" navigableOwnedEnd+=[Property] ("," navigableOwnedEnd+=[Property])* ";")?)? "}"
+		//"subQuantityOf" name=ID "{" (("memberEnd" ":" memberEnd+=[ontouml::Property] ("," memberEnd+=[ontouml::Property])* ";")?
+		//& ("navigableOwnedEnd" ":" navigableOwnedEnd+=[ontouml::Property] ("," navigableOwnedEnd+=[ontouml::Property])* ";")?)?
+		//"}"
 		public Group getGroup() { return cGroup; }
 
-		//{subQuantityOf}
+		//{ontouml::subQuantityOf}
 		public Action getSubQuantityOfAction_0() { return cSubQuantityOfAction_0; }
 
 		////( isDerived?='derived'? & isAbstract?='abstract'? & isLeaf?='leaf'? )
@@ -2645,11 +2647,11 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
 
-		//(("memberEnd" ":" memberEnd+=[Property] ("," memberEnd+=[Property])* ";")? & ("navigableOwnedEnd" ":"
-		//navigableOwnedEnd+=[Property] ("," navigableOwnedEnd+=[Property])* ";")?)?
+		//(("memberEnd" ":" memberEnd+=[ontouml::Property] ("," memberEnd+=[ontouml::Property])* ";")? & ("navigableOwnedEnd" ":"
+		//navigableOwnedEnd+=[ontouml::Property] ("," navigableOwnedEnd+=[ontouml::Property])* ";")?)?
 		public UnorderedGroup getUnorderedGroup_4() { return cUnorderedGroup_4; }
 
-		//("memberEnd" ":" memberEnd+=[Property] ("," memberEnd+=[Property])* ";")?
+		//("memberEnd" ":" memberEnd+=[ontouml::Property] ("," memberEnd+=[ontouml::Property])* ";")?
 		public Group getGroup_4_0() { return cGroup_4_0; }
 
 		//"memberEnd"
@@ -2658,25 +2660,25 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		//":"
 		public Keyword getColonKeyword_4_0_1() { return cColonKeyword_4_0_1; }
 
-		//memberEnd+=[Property]
+		//memberEnd+=[ontouml::Property]
 		public Assignment getMemberEndAssignment_4_0_2() { return cMemberEndAssignment_4_0_2; }
 
-		//[Property]
+		//[ontouml::Property]
 		public CrossReference getMemberEndPropertyCrossReference_4_0_2_0() { return cMemberEndPropertyCrossReference_4_0_2_0; }
 
 		//ID
 		public RuleCall getMemberEndPropertyIDTerminalRuleCall_4_0_2_0_1() { return cMemberEndPropertyIDTerminalRuleCall_4_0_2_0_1; }
 
-		//("," memberEnd+=[Property])*
+		//("," memberEnd+=[ontouml::Property])*
 		public Group getGroup_4_0_3() { return cGroup_4_0_3; }
 
 		//","
 		public Keyword getCommaKeyword_4_0_3_0() { return cCommaKeyword_4_0_3_0; }
 
-		//memberEnd+=[Property]
+		//memberEnd+=[ontouml::Property]
 		public Assignment getMemberEndAssignment_4_0_3_1() { return cMemberEndAssignment_4_0_3_1; }
 
-		//[Property]
+		//[ontouml::Property]
 		public CrossReference getMemberEndPropertyCrossReference_4_0_3_1_0() { return cMemberEndPropertyCrossReference_4_0_3_1_0; }
 
 		//ID
@@ -2685,7 +2687,7 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		//";"
 		public Keyword getSemicolonKeyword_4_0_4() { return cSemicolonKeyword_4_0_4; }
 
-		//("navigableOwnedEnd" ":" navigableOwnedEnd+=[Property] ("," navigableOwnedEnd+=[Property])* ";")?
+		//("navigableOwnedEnd" ":" navigableOwnedEnd+=[ontouml::Property] ("," navigableOwnedEnd+=[ontouml::Property])* ";")?
 		public Group getGroup_4_1() { return cGroup_4_1; }
 
 		//"navigableOwnedEnd"
@@ -2694,25 +2696,25 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		//":"
 		public Keyword getColonKeyword_4_1_1() { return cColonKeyword_4_1_1; }
 
-		//navigableOwnedEnd+=[Property]
+		//navigableOwnedEnd+=[ontouml::Property]
 		public Assignment getNavigableOwnedEndAssignment_4_1_2() { return cNavigableOwnedEndAssignment_4_1_2; }
 
-		//[Property]
+		//[ontouml::Property]
 		public CrossReference getNavigableOwnedEndPropertyCrossReference_4_1_2_0() { return cNavigableOwnedEndPropertyCrossReference_4_1_2_0; }
 
 		//ID
 		public RuleCall getNavigableOwnedEndPropertyIDTerminalRuleCall_4_1_2_0_1() { return cNavigableOwnedEndPropertyIDTerminalRuleCall_4_1_2_0_1; }
 
-		//("," navigableOwnedEnd+=[Property])*
+		//("," navigableOwnedEnd+=[ontouml::Property])*
 		public Group getGroup_4_1_3() { return cGroup_4_1_3; }
 
 		//","
 		public Keyword getCommaKeyword_4_1_3_0() { return cCommaKeyword_4_1_3_0; }
 
-		//navigableOwnedEnd+=[Property]
+		//navigableOwnedEnd+=[ontouml::Property]
 		public Assignment getNavigableOwnedEndAssignment_4_1_3_1() { return cNavigableOwnedEndAssignment_4_1_3_1; }
 
-		//[Property]
+		//[ontouml::Property]
 		public CrossReference getNavigableOwnedEndPropertyCrossReference_4_1_3_1_0() { return cNavigableOwnedEndPropertyCrossReference_4_1_3_1_0; }
 
 		//ID
@@ -2761,20 +2763,22 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//// #subCollectionOf (Meronymic)
-		//subCollectionOf:
-		//	{subCollectionOf} //( isDerived?='derived'? & isAbstract?='abstract'? & isLeaf?='leaf'? )
+		//subCollectionOf returns ontouml::subCollectionOf:
+		//	{ontouml::subCollectionOf} //( isDerived?='derived'? & isAbstract?='abstract'? & isLeaf?='leaf'? )
 		//	//( isEssential?='essential'? & isImmutablePart?='imutable-part'? & isImmutableWhole?='imutable-whole'? & isInseparable?='inseparable'? & isShareable?='shareable'? )
-		//	"subCollectionOf" name=ID "{" (("memberEnd" ":" memberEnd+=[Property] ("," memberEnd+=[Property])* ";")? &
-		//	("navigableOwnedEnd" ":" navigableOwnedEnd+=[Property] ("," navigableOwnedEnd+=[Property])* ";")?)? "}";
+		//	"subCollectionOf" name=ID "{" (("memberEnd" ":" memberEnd+=[ontouml::Property] ("," memberEnd+=[ontouml::Property])*
+		//	";")? & ("navigableOwnedEnd" ":" navigableOwnedEnd+=[ontouml::Property] ("," navigableOwnedEnd+=[ontouml::Property])*
+		//	";")?)? "}";
 		public ParserRule getRule() { return rule; }
 
-		//{subCollectionOf} //( isDerived?='derived'? & isAbstract?='abstract'? & isLeaf?='leaf'? )
+		//{ontouml::subCollectionOf} //( isDerived?='derived'? & isAbstract?='abstract'? & isLeaf?='leaf'? )
 		////( isEssential?='essential'? & isImmutablePart?='imutable-part'? & isImmutableWhole?='imutable-whole'? & isInseparable?='inseparable'? & isShareable?='shareable'? )
-		//"subCollectionOf" name=ID "{" (("memberEnd" ":" memberEnd+=[Property] ("," memberEnd+=[Property])* ";")? &
-		//("navigableOwnedEnd" ":" navigableOwnedEnd+=[Property] ("," navigableOwnedEnd+=[Property])* ";")?)? "}"
+		//"subCollectionOf" name=ID "{" (("memberEnd" ":" memberEnd+=[ontouml::Property] ("," memberEnd+=[ontouml::Property])*
+		//";")? & ("navigableOwnedEnd" ":" navigableOwnedEnd+=[ontouml::Property] ("," navigableOwnedEnd+=[ontouml::Property])*
+		//";")?)? "}"
 		public Group getGroup() { return cGroup; }
 
-		//{subCollectionOf}
+		//{ontouml::subCollectionOf}
 		public Action getSubCollectionOfAction_0() { return cSubCollectionOfAction_0; }
 
 		////( isDerived?='derived'? & isAbstract?='abstract'? & isLeaf?='leaf'? )
@@ -2791,11 +2795,11 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
 
-		//(("memberEnd" ":" memberEnd+=[Property] ("," memberEnd+=[Property])* ";")? & ("navigableOwnedEnd" ":"
-		//navigableOwnedEnd+=[Property] ("," navigableOwnedEnd+=[Property])* ";")?)?
+		//(("memberEnd" ":" memberEnd+=[ontouml::Property] ("," memberEnd+=[ontouml::Property])* ";")? & ("navigableOwnedEnd" ":"
+		//navigableOwnedEnd+=[ontouml::Property] ("," navigableOwnedEnd+=[ontouml::Property])* ";")?)?
 		public UnorderedGroup getUnorderedGroup_4() { return cUnorderedGroup_4; }
 
-		//("memberEnd" ":" memberEnd+=[Property] ("," memberEnd+=[Property])* ";")?
+		//("memberEnd" ":" memberEnd+=[ontouml::Property] ("," memberEnd+=[ontouml::Property])* ";")?
 		public Group getGroup_4_0() { return cGroup_4_0; }
 
 		//"memberEnd"
@@ -2804,25 +2808,25 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		//":"
 		public Keyword getColonKeyword_4_0_1() { return cColonKeyword_4_0_1; }
 
-		//memberEnd+=[Property]
+		//memberEnd+=[ontouml::Property]
 		public Assignment getMemberEndAssignment_4_0_2() { return cMemberEndAssignment_4_0_2; }
 
-		//[Property]
+		//[ontouml::Property]
 		public CrossReference getMemberEndPropertyCrossReference_4_0_2_0() { return cMemberEndPropertyCrossReference_4_0_2_0; }
 
 		//ID
 		public RuleCall getMemberEndPropertyIDTerminalRuleCall_4_0_2_0_1() { return cMemberEndPropertyIDTerminalRuleCall_4_0_2_0_1; }
 
-		//("," memberEnd+=[Property])*
+		//("," memberEnd+=[ontouml::Property])*
 		public Group getGroup_4_0_3() { return cGroup_4_0_3; }
 
 		//","
 		public Keyword getCommaKeyword_4_0_3_0() { return cCommaKeyword_4_0_3_0; }
 
-		//memberEnd+=[Property]
+		//memberEnd+=[ontouml::Property]
 		public Assignment getMemberEndAssignment_4_0_3_1() { return cMemberEndAssignment_4_0_3_1; }
 
-		//[Property]
+		//[ontouml::Property]
 		public CrossReference getMemberEndPropertyCrossReference_4_0_3_1_0() { return cMemberEndPropertyCrossReference_4_0_3_1_0; }
 
 		//ID
@@ -2831,7 +2835,7 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		//";"
 		public Keyword getSemicolonKeyword_4_0_4() { return cSemicolonKeyword_4_0_4; }
 
-		//("navigableOwnedEnd" ":" navigableOwnedEnd+=[Property] ("," navigableOwnedEnd+=[Property])* ";")?
+		//("navigableOwnedEnd" ":" navigableOwnedEnd+=[ontouml::Property] ("," navigableOwnedEnd+=[ontouml::Property])* ";")?
 		public Group getGroup_4_1() { return cGroup_4_1; }
 
 		//"navigableOwnedEnd"
@@ -2840,25 +2844,25 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		//":"
 		public Keyword getColonKeyword_4_1_1() { return cColonKeyword_4_1_1; }
 
-		//navigableOwnedEnd+=[Property]
+		//navigableOwnedEnd+=[ontouml::Property]
 		public Assignment getNavigableOwnedEndAssignment_4_1_2() { return cNavigableOwnedEndAssignment_4_1_2; }
 
-		//[Property]
+		//[ontouml::Property]
 		public CrossReference getNavigableOwnedEndPropertyCrossReference_4_1_2_0() { return cNavigableOwnedEndPropertyCrossReference_4_1_2_0; }
 
 		//ID
 		public RuleCall getNavigableOwnedEndPropertyIDTerminalRuleCall_4_1_2_0_1() { return cNavigableOwnedEndPropertyIDTerminalRuleCall_4_1_2_0_1; }
 
-		//("," navigableOwnedEnd+=[Property])*
+		//("," navigableOwnedEnd+=[ontouml::Property])*
 		public Group getGroup_4_1_3() { return cGroup_4_1_3; }
 
 		//","
 		public Keyword getCommaKeyword_4_1_3_0() { return cCommaKeyword_4_1_3_0; }
 
-		//navigableOwnedEnd+=[Property]
+		//navigableOwnedEnd+=[ontouml::Property]
 		public Assignment getNavigableOwnedEndAssignment_4_1_3_1() { return cNavigableOwnedEndAssignment_4_1_3_1; }
 
-		//[Property]
+		//[ontouml::Property]
 		public CrossReference getNavigableOwnedEndPropertyCrossReference_4_1_3_1_0() { return cNavigableOwnedEndPropertyCrossReference_4_1_3_1_0; }
 
 		//ID
@@ -2929,20 +2933,22 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		// *
 		// * public property casadoCom (Pessoa) throught contratoDeCasamento //MaterialAssociation
 		// * OCL: Precisa de um Derivation cujo memberEnd[1] = MaterialAssociation
-		// * /MaterialAssociation:
-		//	{MaterialAssociation} (isDerived?="derived" & isAbstract?="abstract"? & isLeaf?="leaf"?) // derived: required
+		// * /MaterialAssociation returns ontouml::MaterialAssociation:
+		//	{ontouml::MaterialAssociation} (isDerived?="derived" & isAbstract?="abstract"? & isLeaf?="leaf"?) // derived: required
 		//	"materialAssociation" name=ID? (":" generalization+=InlineGeneralization ("," generalization+=InlineGeneralization)*)?
-		//	"{" (ownedEnd+=InlinePropertyDefinition ";")+ (("memberEnd" ":" memberEnd+=[Property] ("," memberEnd+=[Property])*
-		//	";")? & ("navigableOwnedEnd" ":" navigableOwnedEnd+=[Property] ("," navigableOwnedEnd+=[Property])* ";")?) "}";
+		//	"{" (ownedEnd+=InlinePropertyDefinition ";")+ (("memberEnd" ":" memberEnd+=[ontouml::Property] (","
+		//	memberEnd+=[ontouml::Property])* ";")? & ("navigableOwnedEnd" ":" navigableOwnedEnd+=[ontouml::Property] (","
+		//	navigableOwnedEnd+=[ontouml::Property])* ";")?) "}";
 		public ParserRule getRule() { return rule; }
 
-		//{MaterialAssociation} (isDerived?="derived" & isAbstract?="abstract"? & isLeaf?="leaf"?) // derived: required
+		//{ontouml::MaterialAssociation} (isDerived?="derived" & isAbstract?="abstract"? & isLeaf?="leaf"?) // derived: required
 		//"materialAssociation" name=ID? (":" generalization+=InlineGeneralization ("," generalization+=InlineGeneralization)*)?
-		//"{" (ownedEnd+=InlinePropertyDefinition ";")+ (("memberEnd" ":" memberEnd+=[Property] ("," memberEnd+=[Property])*
-		//";")? & ("navigableOwnedEnd" ":" navigableOwnedEnd+=[Property] ("," navigableOwnedEnd+=[Property])* ";")?) "}"
+		//"{" (ownedEnd+=InlinePropertyDefinition ";")+ (("memberEnd" ":" memberEnd+=[ontouml::Property] (","
+		//memberEnd+=[ontouml::Property])* ";")? & ("navigableOwnedEnd" ":" navigableOwnedEnd+=[ontouml::Property] (","
+		//navigableOwnedEnd+=[ontouml::Property])* ";")?) "}"
 		public Group getGroup() { return cGroup; }
 
-		//{MaterialAssociation}
+		//{ontouml::MaterialAssociation}
 		public Action getMaterialAssociationAction_0() { return cMaterialAssociationAction_0; }
 
 		//isDerived?="derived" & isAbstract?="abstract"? & isLeaf?="leaf"?
@@ -3014,11 +3020,11 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		//";"
 		public Keyword getSemicolonKeyword_6_1() { return cSemicolonKeyword_6_1; }
 
-		//("memberEnd" ":" memberEnd+=[Property] ("," memberEnd+=[Property])* ";")? & ("navigableOwnedEnd" ":"
-		//navigableOwnedEnd+=[Property] ("," navigableOwnedEnd+=[Property])* ";")?
+		//("memberEnd" ":" memberEnd+=[ontouml::Property] ("," memberEnd+=[ontouml::Property])* ";")? & ("navigableOwnedEnd" ":"
+		//navigableOwnedEnd+=[ontouml::Property] ("," navigableOwnedEnd+=[ontouml::Property])* ";")?
 		public UnorderedGroup getUnorderedGroup_7() { return cUnorderedGroup_7; }
 
-		//("memberEnd" ":" memberEnd+=[Property] ("," memberEnd+=[Property])* ";")?
+		//("memberEnd" ":" memberEnd+=[ontouml::Property] ("," memberEnd+=[ontouml::Property])* ";")?
 		public Group getGroup_7_0() { return cGroup_7_0; }
 
 		//"memberEnd"
@@ -3027,25 +3033,25 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		//":"
 		public Keyword getColonKeyword_7_0_1() { return cColonKeyword_7_0_1; }
 
-		//memberEnd+=[Property]
+		//memberEnd+=[ontouml::Property]
 		public Assignment getMemberEndAssignment_7_0_2() { return cMemberEndAssignment_7_0_2; }
 
-		//[Property]
+		//[ontouml::Property]
 		public CrossReference getMemberEndPropertyCrossReference_7_0_2_0() { return cMemberEndPropertyCrossReference_7_0_2_0; }
 
 		//ID
 		public RuleCall getMemberEndPropertyIDTerminalRuleCall_7_0_2_0_1() { return cMemberEndPropertyIDTerminalRuleCall_7_0_2_0_1; }
 
-		//("," memberEnd+=[Property])*
+		//("," memberEnd+=[ontouml::Property])*
 		public Group getGroup_7_0_3() { return cGroup_7_0_3; }
 
 		//","
 		public Keyword getCommaKeyword_7_0_3_0() { return cCommaKeyword_7_0_3_0; }
 
-		//memberEnd+=[Property]
+		//memberEnd+=[ontouml::Property]
 		public Assignment getMemberEndAssignment_7_0_3_1() { return cMemberEndAssignment_7_0_3_1; }
 
-		//[Property]
+		//[ontouml::Property]
 		public CrossReference getMemberEndPropertyCrossReference_7_0_3_1_0() { return cMemberEndPropertyCrossReference_7_0_3_1_0; }
 
 		//ID
@@ -3054,7 +3060,7 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		//";"
 		public Keyword getSemicolonKeyword_7_0_4() { return cSemicolonKeyword_7_0_4; }
 
-		//("navigableOwnedEnd" ":" navigableOwnedEnd+=[Property] ("," navigableOwnedEnd+=[Property])* ";")?
+		//("navigableOwnedEnd" ":" navigableOwnedEnd+=[ontouml::Property] ("," navigableOwnedEnd+=[ontouml::Property])* ";")?
 		public Group getGroup_7_1() { return cGroup_7_1; }
 
 		//"navigableOwnedEnd"
@@ -3063,25 +3069,25 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		//":"
 		public Keyword getColonKeyword_7_1_1() { return cColonKeyword_7_1_1; }
 
-		//navigableOwnedEnd+=[Property]
+		//navigableOwnedEnd+=[ontouml::Property]
 		public Assignment getNavigableOwnedEndAssignment_7_1_2() { return cNavigableOwnedEndAssignment_7_1_2; }
 
-		//[Property]
+		//[ontouml::Property]
 		public CrossReference getNavigableOwnedEndPropertyCrossReference_7_1_2_0() { return cNavigableOwnedEndPropertyCrossReference_7_1_2_0; }
 
 		//ID
 		public RuleCall getNavigableOwnedEndPropertyIDTerminalRuleCall_7_1_2_0_1() { return cNavigableOwnedEndPropertyIDTerminalRuleCall_7_1_2_0_1; }
 
-		//("," navigableOwnedEnd+=[Property])*
+		//("," navigableOwnedEnd+=[ontouml::Property])*
 		public Group getGroup_7_1_3() { return cGroup_7_1_3; }
 
 		//","
 		public Keyword getCommaKeyword_7_1_3_0() { return cCommaKeyword_7_1_3_0; }
 
-		//navigableOwnedEnd+=[Property]
+		//navigableOwnedEnd+=[ontouml::Property]
 		public Assignment getNavigableOwnedEndAssignment_7_1_3_1() { return cNavigableOwnedEndAssignment_7_1_3_1; }
 
-		//[Property]
+		//[ontouml::Property]
 		public CrossReference getNavigableOwnedEndPropertyCrossReference_7_1_3_1_0() { return cNavigableOwnedEndPropertyCrossReference_7_1_3_1_0; }
 
 		//ID
@@ -3141,18 +3147,20 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
 		////public property maisVelhoQue (Pessoa) //FormalAssociation entre Pessoa e Pessoa
-		//FormalAssociation:
-		//	{FormalAssociation} (isAbstract?="abstract"? & isDerived?="derived"? & isLeaf?="leaf"?) "formalAssociation" name=ID?
-		//	"{" (ownedEnd+=InlinePropertyDefinition ";")+ (("memberEnd" ":" memberEnd+=[Property] ("," memberEnd+=[Property])*
-		//	";")? & ("navigableOwnedEnd" ":" navigableOwnedEnd+=[Property] ("," navigableOwnedEnd+=[Property])* ";")?) "}";
+		//FormalAssociation returns ontouml::FormalAssociation:
+		//	{ontouml::FormalAssociation} (isAbstract?="abstract"? & isDerived?="derived"? & isLeaf?="leaf"?) "formalAssociation"
+		//	name=ID? "{" (ownedEnd+=InlinePropertyDefinition ";")+ (("memberEnd" ":" memberEnd+=[ontouml::Property] (","
+		//	memberEnd+=[ontouml::Property])* ";")? & ("navigableOwnedEnd" ":" navigableOwnedEnd+=[ontouml::Property] (","
+		//	navigableOwnedEnd+=[ontouml::Property])* ";")?) "}";
 		public ParserRule getRule() { return rule; }
 
-		//{FormalAssociation} (isAbstract?="abstract"? & isDerived?="derived"? & isLeaf?="leaf"?) "formalAssociation" name=ID? "{"
-		//(ownedEnd+=InlinePropertyDefinition ";")+ (("memberEnd" ":" memberEnd+=[Property] ("," memberEnd+=[Property])* ";")? &
-		//("navigableOwnedEnd" ":" navigableOwnedEnd+=[Property] ("," navigableOwnedEnd+=[Property])* ";")?) "}"
+		//{ontouml::FormalAssociation} (isAbstract?="abstract"? & isDerived?="derived"? & isLeaf?="leaf"?) "formalAssociation"
+		//name=ID? "{" (ownedEnd+=InlinePropertyDefinition ";")+ (("memberEnd" ":" memberEnd+=[ontouml::Property] (","
+		//memberEnd+=[ontouml::Property])* ";")? & ("navigableOwnedEnd" ":" navigableOwnedEnd+=[ontouml::Property] (","
+		//navigableOwnedEnd+=[ontouml::Property])* ";")?) "}"
 		public Group getGroup() { return cGroup; }
 
-		//{FormalAssociation}
+		//{ontouml::FormalAssociation}
 		public Action getFormalAssociationAction_0() { return cFormalAssociationAction_0; }
 
 		//isAbstract?="abstract"? & isDerived?="derived"? & isLeaf?="leaf"?
@@ -3200,11 +3208,11 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		//";"
 		public Keyword getSemicolonKeyword_5_1() { return cSemicolonKeyword_5_1; }
 
-		//("memberEnd" ":" memberEnd+=[Property] ("," memberEnd+=[Property])* ";")? & ("navigableOwnedEnd" ":"
-		//navigableOwnedEnd+=[Property] ("," navigableOwnedEnd+=[Property])* ";")?
+		//("memberEnd" ":" memberEnd+=[ontouml::Property] ("," memberEnd+=[ontouml::Property])* ";")? & ("navigableOwnedEnd" ":"
+		//navigableOwnedEnd+=[ontouml::Property] ("," navigableOwnedEnd+=[ontouml::Property])* ";")?
 		public UnorderedGroup getUnorderedGroup_6() { return cUnorderedGroup_6; }
 
-		//("memberEnd" ":" memberEnd+=[Property] ("," memberEnd+=[Property])* ";")?
+		//("memberEnd" ":" memberEnd+=[ontouml::Property] ("," memberEnd+=[ontouml::Property])* ";")?
 		public Group getGroup_6_0() { return cGroup_6_0; }
 
 		//"memberEnd"
@@ -3213,25 +3221,25 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		//":"
 		public Keyword getColonKeyword_6_0_1() { return cColonKeyword_6_0_1; }
 
-		//memberEnd+=[Property]
+		//memberEnd+=[ontouml::Property]
 		public Assignment getMemberEndAssignment_6_0_2() { return cMemberEndAssignment_6_0_2; }
 
-		//[Property]
+		//[ontouml::Property]
 		public CrossReference getMemberEndPropertyCrossReference_6_0_2_0() { return cMemberEndPropertyCrossReference_6_0_2_0; }
 
 		//ID
 		public RuleCall getMemberEndPropertyIDTerminalRuleCall_6_0_2_0_1() { return cMemberEndPropertyIDTerminalRuleCall_6_0_2_0_1; }
 
-		//("," memberEnd+=[Property])*
+		//("," memberEnd+=[ontouml::Property])*
 		public Group getGroup_6_0_3() { return cGroup_6_0_3; }
 
 		//","
 		public Keyword getCommaKeyword_6_0_3_0() { return cCommaKeyword_6_0_3_0; }
 
-		//memberEnd+=[Property]
+		//memberEnd+=[ontouml::Property]
 		public Assignment getMemberEndAssignment_6_0_3_1() { return cMemberEndAssignment_6_0_3_1; }
 
-		//[Property]
+		//[ontouml::Property]
 		public CrossReference getMemberEndPropertyCrossReference_6_0_3_1_0() { return cMemberEndPropertyCrossReference_6_0_3_1_0; }
 
 		//ID
@@ -3240,7 +3248,7 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		//";"
 		public Keyword getSemicolonKeyword_6_0_4() { return cSemicolonKeyword_6_0_4; }
 
-		//("navigableOwnedEnd" ":" navigableOwnedEnd+=[Property] ("," navigableOwnedEnd+=[Property])* ";")?
+		//("navigableOwnedEnd" ":" navigableOwnedEnd+=[ontouml::Property] ("," navigableOwnedEnd+=[ontouml::Property])* ";")?
 		public Group getGroup_6_1() { return cGroup_6_1; }
 
 		//"navigableOwnedEnd"
@@ -3249,25 +3257,25 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		//":"
 		public Keyword getColonKeyword_6_1_1() { return cColonKeyword_6_1_1; }
 
-		//navigableOwnedEnd+=[Property]
+		//navigableOwnedEnd+=[ontouml::Property]
 		public Assignment getNavigableOwnedEndAssignment_6_1_2() { return cNavigableOwnedEndAssignment_6_1_2; }
 
-		//[Property]
+		//[ontouml::Property]
 		public CrossReference getNavigableOwnedEndPropertyCrossReference_6_1_2_0() { return cNavigableOwnedEndPropertyCrossReference_6_1_2_0; }
 
 		//ID
 		public RuleCall getNavigableOwnedEndPropertyIDTerminalRuleCall_6_1_2_0_1() { return cNavigableOwnedEndPropertyIDTerminalRuleCall_6_1_2_0_1; }
 
-		//("," navigableOwnedEnd+=[Property])*
+		//("," navigableOwnedEnd+=[ontouml::Property])*
 		public Group getGroup_6_1_3() { return cGroup_6_1_3; }
 
 		//","
 		public Keyword getCommaKeyword_6_1_3_0() { return cCommaKeyword_6_1_3_0; }
 
-		//navigableOwnedEnd+=[Property]
+		//navigableOwnedEnd+=[ontouml::Property]
 		public Assignment getNavigableOwnedEndAssignment_6_1_3_1() { return cNavigableOwnedEndAssignment_6_1_3_1; }
 
-		//[Property]
+		//[ontouml::Property]
 		public CrossReference getNavigableOwnedEndPropertyCrossReference_6_1_3_1_0() { return cNavigableOwnedEndPropertyCrossReference_6_1_3_1_0; }
 
 		//ID
@@ -3290,7 +3298,7 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cInstanceValueParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
 		private final RuleCall cOpaqueExpressionParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
 		
-		//NonExpressionValue returns ValueSpecification:
+		//NonExpressionValue returns ontouml::ValueSpecification:
 		//	LiteralInteger | LiteralString | LiteralNull | LiteralBoolean | InstanceValue | OpaqueExpression;
 		public ParserRule getRule() { return rule; }
 
@@ -3322,7 +3330,7 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cNonExpressionValueParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cExpressionValueParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
-		//ValueSpecification: //StringExpression | //O que Ž iso???
+		//ValueSpecification returns ontouml::ValueSpecification: //StringExpression | //O que Ž iso???
 		//	NonExpressionValue | ExpressionValue;
 		public ParserRule getRule() { return rule; }
 
@@ -3344,7 +3352,7 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cDataTypeParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cPrimitiveTypeParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
-		//Type:
+		//Type returns ontouml::Type:
 		//	DataType | PrimitiveType;
 		public ParserRule getRule() { return rule; }
 
@@ -3380,7 +3388,7 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cSemicolonKeyword_3_1_1 = (Keyword)cGroup_3_1.eContents().get(1);
 		private final Keyword cRightCurlyBracketKeyword_3_2 = (Keyword)cGroup_3.eContents().get(2);
 		
-		//DataType:
+		//DataType returns ontouml::DataType:
 		//	"datatype" name=ID (":" generalization+=InlineGeneralization ("," generalization+=InlineGeneralization)*)? ("{"
 		//	(ownedAttribute+=ClassProperty ";")+ "}")?;
 		public ParserRule getRule() { return rule; }
@@ -3458,22 +3466,13 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cCommaKeyword_2_2_0 = (Keyword)cGroup_2_2.eContents().get(0);
 		private final Assignment cGeneralizationAssignment_2_2_1 = (Assignment)cGroup_2_2.eContents().get(1);
 		private final RuleCall cGeneralizationInlineGeneralizationParserRuleCall_2_2_1_0 = (RuleCall)cGeneralizationAssignment_2_2_1.eContents().get(0);
-		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Keyword cLeftCurlyBracketKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
-		private final Group cGroup_3_1 = (Group)cGroup_3.eContents().get(1);
-		private final Assignment cOwnedAttributeAssignment_3_1_0 = (Assignment)cGroup_3_1.eContents().get(0);
-		private final RuleCall cOwnedAttributeClassPropertyParserRuleCall_3_1_0_0 = (RuleCall)cOwnedAttributeAssignment_3_1_0.eContents().get(0);
-		private final Keyword cSemicolonKeyword_3_1_1 = (Keyword)cGroup_3_1.eContents().get(1);
-		private final Keyword cRightCurlyBracketKeyword_3_2 = (Keyword)cGroup_3.eContents().get(2);
 		
-		////Mesma coisa que DataType
-		//PrimitiveType:
-		//	"type" name=ID (":" generalization+=InlineGeneralization ("," generalization+=InlineGeneralization)*)? ("{"
-		//	(ownedAttribute+=ClassProperty ";")+ "}")?;
+		////???: Mesma coisa que DataType?
+		//PrimitiveType returns ontouml::PrimitiveType:
+		//	"type" name=ID (":" generalization+=InlineGeneralization ("," generalization+=InlineGeneralization)*)?;
 		public ParserRule getRule() { return rule; }
 
-		//"type" name=ID (":" generalization+=InlineGeneralization ("," generalization+=InlineGeneralization)*)? ("{"
-		//(ownedAttribute+=ClassProperty ";")+ "}")?
+		//"type" name=ID (":" generalization+=InlineGeneralization ("," generalization+=InlineGeneralization)*)?
 		public Group getGroup() { return cGroup; }
 
 		//"type"
@@ -3508,27 +3507,6 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 
 		//InlineGeneralization
 		public RuleCall getGeneralizationInlineGeneralizationParserRuleCall_2_2_1_0() { return cGeneralizationInlineGeneralizationParserRuleCall_2_2_1_0; }
-
-		//("{" (ownedAttribute+=ClassProperty ";")+ "}")?
-		public Group getGroup_3() { return cGroup_3; }
-
-		//"{"
-		public Keyword getLeftCurlyBracketKeyword_3_0() { return cLeftCurlyBracketKeyword_3_0; }
-
-		//(ownedAttribute+=ClassProperty ";")+
-		public Group getGroup_3_1() { return cGroup_3_1; }
-
-		//ownedAttribute+=ClassProperty
-		public Assignment getOwnedAttributeAssignment_3_1_0() { return cOwnedAttributeAssignment_3_1_0; }
-
-		//ClassProperty
-		public RuleCall getOwnedAttributeClassPropertyParserRuleCall_3_1_0_0() { return cOwnedAttributeClassPropertyParserRuleCall_3_1_0_0; }
-
-		//";"
-		public Keyword getSemicolonKeyword_3_1_1() { return cSemicolonKeyword_3_1_1; }
-
-		//"}"
-		public Keyword getRightCurlyBracketKeyword_3_2() { return cRightCurlyBracketKeyword_3_2; }
 	}
 
 	public class DependencyElements extends AbstractParserRuleElementFinder {
@@ -3560,16 +3538,16 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightParenthesisKeyword_10 = (Keyword)cGroup.eContents().get(10);
 		private final Keyword cRightCurlyBracketKeyword_11 = (Keyword)cGroup.eContents().get(11);
 		
-		//Dependency:
-		//	{Dependency} "Dependency" name=ID? "{" client+=[NamedElement] ("," client+=[NamedElement])* "depends on" "("
-		//	supplier+=[NamedElement] ("," supplier+=[NamedElement])* ")" "}";
+		//Dependency returns ontouml::Dependency:
+		//	{ontouml::Dependency} "Dependency" name=ID? "{" client+=[ontouml::NamedElement] ("," client+=[ontouml::NamedElement])*
+		//	"depends on" "(" supplier+=[ontouml::NamedElement] ("," supplier+=[ontouml::NamedElement])* ")" "}";
 		public ParserRule getRule() { return rule; }
 
-		//{Dependency} "Dependency" name=ID? "{" client+=[NamedElement] ("," client+=[NamedElement])* "depends on" "("
-		//supplier+=[NamedElement] ("," supplier+=[NamedElement])* ")" "}"
+		//{ontouml::Dependency} "Dependency" name=ID? "{" client+=[ontouml::NamedElement] ("," client+=[ontouml::NamedElement])*
+		//"depends on" "(" supplier+=[ontouml::NamedElement] ("," supplier+=[ontouml::NamedElement])* ")" "}"
 		public Group getGroup() { return cGroup; }
 
-		//{Dependency}
+		//{ontouml::Dependency}
 		public Action getDependencyAction_0() { return cDependencyAction_0; }
 
 		//"Dependency"
@@ -3584,25 +3562,25 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
 
-		//client+=[NamedElement]
+		//client+=[ontouml::NamedElement]
 		public Assignment getClientAssignment_4() { return cClientAssignment_4; }
 
-		//[NamedElement]
+		//[ontouml::NamedElement]
 		public CrossReference getClientNamedElementCrossReference_4_0() { return cClientNamedElementCrossReference_4_0; }
 
 		//ID
 		public RuleCall getClientNamedElementIDTerminalRuleCall_4_0_1() { return cClientNamedElementIDTerminalRuleCall_4_0_1; }
 
-		//("," client+=[NamedElement])*
+		//("," client+=[ontouml::NamedElement])*
 		public Group getGroup_5() { return cGroup_5; }
 
 		//","
 		public Keyword getCommaKeyword_5_0() { return cCommaKeyword_5_0; }
 
-		//client+=[NamedElement]
+		//client+=[ontouml::NamedElement]
 		public Assignment getClientAssignment_5_1() { return cClientAssignment_5_1; }
 
-		//[NamedElement]
+		//[ontouml::NamedElement]
 		public CrossReference getClientNamedElementCrossReference_5_1_0() { return cClientNamedElementCrossReference_5_1_0; }
 
 		//ID
@@ -3614,25 +3592,25 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		//"("
 		public Keyword getLeftParenthesisKeyword_7() { return cLeftParenthesisKeyword_7; }
 
-		//supplier+=[NamedElement]
+		//supplier+=[ontouml::NamedElement]
 		public Assignment getSupplierAssignment_8() { return cSupplierAssignment_8; }
 
-		//[NamedElement]
+		//[ontouml::NamedElement]
 		public CrossReference getSupplierNamedElementCrossReference_8_0() { return cSupplierNamedElementCrossReference_8_0; }
 
 		//ID
 		public RuleCall getSupplierNamedElementIDTerminalRuleCall_8_0_1() { return cSupplierNamedElementIDTerminalRuleCall_8_0_1; }
 
-		//("," supplier+=[NamedElement])*
+		//("," supplier+=[ontouml::NamedElement])*
 		public Group getGroup_9() { return cGroup_9; }
 
 		//","
 		public Keyword getCommaKeyword_9_0() { return cCommaKeyword_9_0; }
 
-		//supplier+=[NamedElement]
+		//supplier+=[ontouml::NamedElement]
 		public Assignment getSupplierAssignment_9_1() { return cSupplierAssignment_9_1; }
 
-		//[NamedElement]
+		//[ontouml::NamedElement]
 		public CrossReference getSupplierNamedElementCrossReference_9_1_0() { return cSupplierNamedElementCrossReference_9_1_0; }
 
 		//ID
@@ -3658,20 +3636,20 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cAliasIDTerminalRuleCall_2_1_0 = (RuleCall)cAliasAssignment_2_1.eContents().get(0);
 		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
-		//ElementImport:
-		//	"import" importedElement=[PackageableElement|STRING] ("as" alias=ID)? ";";
+		//ElementImport returns ontouml::ElementImport:
+		//	"import" importedElement=[ontouml::PackageableElement|STRING] ("as" alias=ID)? ";";
 		public ParserRule getRule() { return rule; }
 
-		//"import" importedElement=[PackageableElement|STRING] ("as" alias=ID)? ";"
+		//"import" importedElement=[ontouml::PackageableElement|STRING] ("as" alias=ID)? ";"
 		public Group getGroup() { return cGroup; }
 
 		//"import"
 		public Keyword getImportKeyword_0() { return cImportKeyword_0; }
 
-		//importedElement=[PackageableElement|STRING]
+		//importedElement=[ontouml::PackageableElement|STRING]
 		public Assignment getImportedElementAssignment_1() { return cImportedElementAssignment_1; }
 
-		//[PackageableElement|STRING]
+		//[ontouml::PackageableElement|STRING]
 		public CrossReference getImportedElementPackageableElementCrossReference_1_0() { return cImportedElementPackageableElementCrossReference_1_0; }
 
 		//STRING
@@ -3702,20 +3680,20 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cImportedPackagePackageSTRINGTerminalRuleCall_1_0_1 = (RuleCall)cImportedPackagePackageCrossReference_1_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		
-		//PackageImport:
-		//	"import" importedPackage=[Package|STRING] ";";
+		//PackageImport returns ontouml::PackageImport:
+		//	"import" importedPackage=[ontouml::Package|STRING] ";";
 		public ParserRule getRule() { return rule; }
 
-		//"import" importedPackage=[Package|STRING] ";"
+		//"import" importedPackage=[ontouml::Package|STRING] ";"
 		public Group getGroup() { return cGroup; }
 
 		//"import"
 		public Keyword getImportKeyword_0() { return cImportKeyword_0; }
 
-		//importedPackage=[Package|STRING]
+		//importedPackage=[ontouml::Package|STRING]
 		public Assignment getImportedPackageAssignment_1() { return cImportedPackageAssignment_1; }
 
-		//[Package|STRING]
+		//[ontouml::Package|STRING]
 		public CrossReference getImportedPackagePackageCrossReference_1_0() { return cImportedPackagePackageCrossReference_1_0; }
 
 		//STRING
@@ -3745,43 +3723,43 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cSpecificationValueSpecificationParserRuleCall_3_0 = (RuleCall)cSpecificationAssignment_3.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
-		//Constraintx:
-		//	"constraint" ("(" constrainedElement+=[Element] ("," constrainedElement+=[Element])* ")")? "{"
+		//Constraintx returns ontouml::Constraintx:
+		//	"constraint" ("(" constrainedElement+=[ontouml::Element] ("," constrainedElement+=[ontouml::Element])* ")")? "{"
 		//	specification=ValueSpecification "}";
 		public ParserRule getRule() { return rule; }
 
-		//"constraint" ("(" constrainedElement+=[Element] ("," constrainedElement+=[Element])* ")")? "{"
+		//"constraint" ("(" constrainedElement+=[ontouml::Element] ("," constrainedElement+=[ontouml::Element])* ")")? "{"
 		//specification=ValueSpecification "}"
 		public Group getGroup() { return cGroup; }
 
 		//"constraint"
 		public Keyword getConstraintKeyword_0() { return cConstraintKeyword_0; }
 
-		//("(" constrainedElement+=[Element] ("," constrainedElement+=[Element])* ")")?
+		//("(" constrainedElement+=[ontouml::Element] ("," constrainedElement+=[ontouml::Element])* ")")?
 		public Group getGroup_1() { return cGroup_1; }
 
 		//"("
 		public Keyword getLeftParenthesisKeyword_1_0() { return cLeftParenthesisKeyword_1_0; }
 
-		//constrainedElement+=[Element]
+		//constrainedElement+=[ontouml::Element]
 		public Assignment getConstrainedElementAssignment_1_1() { return cConstrainedElementAssignment_1_1; }
 
-		//[Element]
+		//[ontouml::Element]
 		public CrossReference getConstrainedElementElementCrossReference_1_1_0() { return cConstrainedElementElementCrossReference_1_1_0; }
 
 		//ID
 		public RuleCall getConstrainedElementElementIDTerminalRuleCall_1_1_0_1() { return cConstrainedElementElementIDTerminalRuleCall_1_1_0_1; }
 
-		//("," constrainedElement+=[Element])*
+		//("," constrainedElement+=[ontouml::Element])*
 		public Group getGroup_1_2() { return cGroup_1_2; }
 
 		//","
 		public Keyword getCommaKeyword_1_2_0() { return cCommaKeyword_1_2_0; }
 
-		//constrainedElement+=[Element]
+		//constrainedElement+=[ontouml::Element]
 		public Assignment getConstrainedElementAssignment_1_2_1() { return cConstrainedElementAssignment_1_2_1; }
 
-		//[Element]
+		//[ontouml::Element]
 		public CrossReference getConstrainedElementElementCrossReference_1_2_1_0() { return cConstrainedElementElementCrossReference_1_2_1_0; }
 
 		//ID
@@ -3811,23 +3789,23 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		private final CrossReference cMergedPackagePackageCrossReference_1_0 = (CrossReference)cMergedPackageAssignment_1.eContents().get(0);
 		private final RuleCall cMergedPackagePackageSTRINGTerminalRuleCall_1_0_1 = (RuleCall)cMergedPackagePackageCrossReference_1_0.eContents().get(1);
 		
-		//PackageMerge:
-		//	{PackageMerge} //('PackageMerge')?
-		//	mergedPackage=[Package|STRING];
+		//PackageMerge returns ontouml::PackageMerge:
+		//	{ontouml::PackageMerge} //('PackageMerge')?
+		//	mergedPackage=[ontouml::Package|STRING];
 		public ParserRule getRule() { return rule; }
 
-		//{PackageMerge} //('PackageMerge')?
-		//mergedPackage=[Package|STRING]
+		//{ontouml::PackageMerge} //('PackageMerge')?
+		//mergedPackage=[ontouml::Package|STRING]
 		public Group getGroup() { return cGroup; }
 
-		//{PackageMerge}
+		//{ontouml::PackageMerge}
 		public Action getPackageMergeAction_0() { return cPackageMergeAction_0; }
 
 		////('PackageMerge')?
-		//mergedPackage=[Package|STRING]
+		//mergedPackage=[ontouml::Package|STRING]
 		public Assignment getMergedPackageAssignment_1() { return cMergedPackageAssignment_1; }
 
-		//[Package|STRING]
+		//[ontouml::Package|STRING]
 		public CrossReference getMergedPackagePackageCrossReference_1_0() { return cMergedPackagePackageCrossReference_1_0; }
 
 		//STRING
@@ -3862,16 +3840,16 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		////		('elementImport' '{' elementImport+=ElementImport ( "," elementImport+=ElementImport)* '}' )?
 		////		('packageImport' '{' packageImport+=PackageImport ( "," packageImport+=PackageImport)* '}' )?
 		////		('ownedRule' '{' ownedRule+=Constraintx ( "," ownedRule+=Constraintx)* '}' )?
-		//Package_Impl returns Package:
-		//	{Package} "package" name=ID "{" ("merge" ":" packageMerge+=PackageMerge ("," packageMerge+=PackageMerge)*)?
+		//Package_Impl returns ontouml::Package:
+		//	{ontouml::Package} "package" name=ID "{" ("merge" ":" packageMerge+=PackageMerge ("," packageMerge+=PackageMerge)*)?
 		//	packagedElement+=PackageableElement* "}";
 		public ParserRule getRule() { return rule; }
 
-		//{Package} "package" name=ID "{" ("merge" ":" packageMerge+=PackageMerge ("," packageMerge+=PackageMerge)*)?
+		//{ontouml::Package} "package" name=ID "{" ("merge" ":" packageMerge+=PackageMerge ("," packageMerge+=PackageMerge)*)?
 		//packagedElement+=PackageableElement* "}"
 		public Group getGroup() { return cGroup; }
 
-		//{Package}
+		//{ontouml::Package}
 		public Action getPackageAction_0() { return cPackageAction_0; }
 
 		//"package"
@@ -3947,13 +3925,13 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		// * Duvida:
 		// * Generalization::generalizationSet Ž uma collection, por que?
 		// ***************************************************************************** ///('(' generalizationSet+=[GeneralizationSet] ')' )?
-		//InlineGeneralization returns Generalization:
-		//	isSubstitutable?="substitutable"? general=[Classifier] ("(" generalizationSet+=[GeneralizationSet] (","
-		//	generalizationSet+=[GeneralizationSet])* ")")?;
+		//InlineGeneralization returns ontouml::Generalization:
+		//	isSubstitutable?="substitutable"? general=[ontouml::Classifier] ("(" generalizationSet+=[ontouml::GeneralizationSet]
+		//	("," generalizationSet+=[ontouml::GeneralizationSet])* ")")?;
 		public ParserRule getRule() { return rule; }
 
-		//isSubstitutable?="substitutable"? general=[Classifier] ("(" generalizationSet+=[GeneralizationSet] (","
-		//generalizationSet+=[GeneralizationSet])* ")")?
+		//isSubstitutable?="substitutable"? general=[ontouml::Classifier] ("(" generalizationSet+=[ontouml::GeneralizationSet]
+		//("," generalizationSet+=[ontouml::GeneralizationSet])* ")")?
 		public Group getGroup() { return cGroup; }
 
 		//isSubstitutable?="substitutable"?
@@ -3962,40 +3940,40 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		//"substitutable"
 		public Keyword getIsSubstitutableSubstitutableKeyword_0_0() { return cIsSubstitutableSubstitutableKeyword_0_0; }
 
-		//general=[Classifier]
+		//general=[ontouml::Classifier]
 		public Assignment getGeneralAssignment_1() { return cGeneralAssignment_1; }
 
-		//[Classifier]
+		//[ontouml::Classifier]
 		public CrossReference getGeneralClassifierCrossReference_1_0() { return cGeneralClassifierCrossReference_1_0; }
 
 		//ID
 		public RuleCall getGeneralClassifierIDTerminalRuleCall_1_0_1() { return cGeneralClassifierIDTerminalRuleCall_1_0_1; }
 
-		//("(" generalizationSet+=[GeneralizationSet] ("," generalizationSet+=[GeneralizationSet])* ")")?
+		//("(" generalizationSet+=[ontouml::GeneralizationSet] ("," generalizationSet+=[ontouml::GeneralizationSet])* ")")?
 		public Group getGroup_2() { return cGroup_2; }
 
 		//"("
 		public Keyword getLeftParenthesisKeyword_2_0() { return cLeftParenthesisKeyword_2_0; }
 
-		//generalizationSet+=[GeneralizationSet]
+		//generalizationSet+=[ontouml::GeneralizationSet]
 		public Assignment getGeneralizationSetAssignment_2_1() { return cGeneralizationSetAssignment_2_1; }
 
-		//[GeneralizationSet]
+		//[ontouml::GeneralizationSet]
 		public CrossReference getGeneralizationSetGeneralizationSetCrossReference_2_1_0() { return cGeneralizationSetGeneralizationSetCrossReference_2_1_0; }
 
 		//ID
 		public RuleCall getGeneralizationSetGeneralizationSetIDTerminalRuleCall_2_1_0_1() { return cGeneralizationSetGeneralizationSetIDTerminalRuleCall_2_1_0_1; }
 
-		//("," generalizationSet+=[GeneralizationSet])*
+		//("," generalizationSet+=[ontouml::GeneralizationSet])*
 		public Group getGroup_2_2() { return cGroup_2_2; }
 
 		//","
 		public Keyword getCommaKeyword_2_2_0() { return cCommaKeyword_2_2_0; }
 
-		//generalizationSet+=[GeneralizationSet]
+		//generalizationSet+=[ontouml::GeneralizationSet]
 		public Assignment getGeneralizationSetAssignment_2_2_1() { return cGeneralizationSetAssignment_2_2_1; }
 
-		//[GeneralizationSet]
+		//[ontouml::GeneralizationSet]
 		public CrossReference getGeneralizationSetGeneralizationSetCrossReference_2_2_1_0() { return cGeneralizationSetGeneralizationSetCrossReference_2_2_1_0; }
 
 		//ID
@@ -4021,12 +3999,12 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		
 		/// *
 		// * Problema: N‹o tem name, como referenciar?
-		// * /Generalization: //isSubstitutable?='substitutable'? //Default t‡ sendo TRUE?
-		//	"generalization" "of" general=[Classifier] "as" owner=[Classifier] ";";
+		// * /Generalization returns ontouml::Generalization: //isSubstitutable?='substitutable'? //Default t‡ sendo TRUE?
+		//	"generalization" "of" general=[ontouml::Classifier] "as" owner=[ontouml::Classifier] ";";
 		public ParserRule getRule() { return rule; }
 
 		////isSubstitutable?='substitutable'? //Default t‡ sendo TRUE?
-		//"generalization" "of" general=[Classifier] "as" owner=[Classifier] ";"
+		//"generalization" "of" general=[ontouml::Classifier] "as" owner=[ontouml::Classifier] ";"
 		public Group getGroup() { return cGroup; }
 
 		////isSubstitutable?='substitutable'? //Default t‡ sendo TRUE?
@@ -4036,10 +4014,10 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		//"of"
 		public Keyword getOfKeyword_1() { return cOfKeyword_1; }
 
-		//general=[Classifier]
+		//general=[ontouml::Classifier]
 		public Assignment getGeneralAssignment_2() { return cGeneralAssignment_2; }
 
-		//[Classifier]
+		//[ontouml::Classifier]
 		public CrossReference getGeneralClassifierCrossReference_2_0() { return cGeneralClassifierCrossReference_2_0; }
 
 		//ID
@@ -4048,10 +4026,10 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		//"as"
 		public Keyword getAsKeyword_3() { return cAsKeyword_3; }
 
-		//owner=[Classifier]
+		//owner=[ontouml::Classifier]
 		public Assignment getOwnerAssignment_4() { return cOwnerAssignment_4; }
 
-		//[Classifier]
+		//[ontouml::Classifier]
 		public CrossReference getOwnerClassifierCrossReference_4_0() { return cOwnerClassifierCrossReference_4_0; }
 
 		//ID
@@ -4080,7 +4058,8 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		// * GeneralizationSet::generalization Ž opposite, mas n‹o est‡ sendo definida automaticamente
 		// * Motivo: http://www.eclipse.org/forums/index.php/t/245235/
 		// * Solu‹o, mudar essas opposite que s‹o assim, para transient="true" e resolveProxies="false"
-		// ***************************************************************************** /GeneralizationSet:
+		// ***************************************************************************** /GeneralizationSet returns
+		//ontouml::GeneralizationSet:
 		//	(isCovering?="complete"? & isDisjoint?="disjoint"?) "generalizationSet" name=ID "{" "}";
 		public ParserRule getRule() { return rule; }
 
@@ -4121,22 +4100,68 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 	public class ExpressionSymbolElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ExpressionSymbol");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cIDTerminalRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cANY_OTHERTerminalRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cDefaultOperatorParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
+		private final Keyword cOpKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Keyword cLeftSquareBracketKeyword_1_1 = (Keyword)cGroup_1.eContents().get(1);
+		private final RuleCall cIDTerminalRuleCall_1_2 = (RuleCall)cGroup_1.eContents().get(2);
+		private final Keyword cRightSquareBracketKeyword_1_3 = (Keyword)cGroup_1.eContents().get(3);
 		
 		////Um operador (+, -, >, <)
+		////100 + 2
+		////100 op[shif] 2
 		//ExpressionSymbol returns ecore::EString:
-		//	ID | ANY_OTHER+;
+		//	DefaultOperator | "op" "[" ID "]";
 		public ParserRule getRule() { return rule; }
 
-		//ID | ANY_OTHER+
+		//DefaultOperator | "op" "[" ID "]"
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//ID
-		public RuleCall getIDTerminalRuleCall_0() { return cIDTerminalRuleCall_0; }
+		//DefaultOperator
+		public RuleCall getDefaultOperatorParserRuleCall_0() { return cDefaultOperatorParserRuleCall_0; }
 
-		//ANY_OTHER+
-		public RuleCall getANY_OTHERTerminalRuleCall_1() { return cANY_OTHERTerminalRuleCall_1; }
+		//"op" "[" ID "]"
+		public Group getGroup_1() { return cGroup_1; }
+
+		//"op"
+		public Keyword getOpKeyword_1_0() { return cOpKeyword_1_0; }
+
+		//"["
+		public Keyword getLeftSquareBracketKeyword_1_1() { return cLeftSquareBracketKeyword_1_1; }
+
+		//ID
+		public RuleCall getIDTerminalRuleCall_1_2() { return cIDTerminalRuleCall_1_2; }
+
+		//"]"
+		public Keyword getRightSquareBracketKeyword_1_3() { return cRightSquareBracketKeyword_1_3; }
+	}
+
+	public class DefaultOperatorElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "DefaultOperator");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final Keyword cPlusSignKeyword_0 = (Keyword)cAlternatives.eContents().get(0);
+		private final Keyword cHyphenMinusKeyword_1 = (Keyword)cAlternatives.eContents().get(1);
+		private final Keyword cAsteriskKeyword_2 = (Keyword)cAlternatives.eContents().get(2);
+		private final Keyword cSolidusKeyword_3 = (Keyword)cAlternatives.eContents().get(3);
+		
+		//DefaultOperator returns ecore::EString:
+		//	"+" | "-" | "*" | "/";
+		public ParserRule getRule() { return rule; }
+
+		//"+" | "-" | "*" | "/"
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//"+"
+		public Keyword getPlusSignKeyword_0() { return cPlusSignKeyword_0; }
+
+		//"-"
+		public Keyword getHyphenMinusKeyword_1() { return cHyphenMinusKeyword_1; }
+
+		//"*"
+		public Keyword getAsteriskKeyword_2() { return cAsteriskKeyword_2; }
+
+		//"/"
+		public Keyword getSolidusKeyword_3() { return cSolidusKeyword_3; }
 	}
 
 	public class ExpressionValueElements extends AbstractParserRuleElementFinder {
@@ -4176,25 +4201,18 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		// * media {10, 20, 30}
 		// * not 100
 		// * ///TODO: resolver o left-recursion
-		////	'Expression'
-		////		('name' name=ID)?
-		////		('visibility' visibility=VisibilityKind)?
-		////		('clientDependency' '(' clientDependency+=[Dependency|EString] ( "," clientDependency+=[Dependency|EString])* ')' )?
-		////		('type' type=[Type|EString])?
-		////('eAnnotations' '{' eAnnotations+=EAnnotation ( "," eAnnotations+=EAnnotation)* '}' )?
-		////		('ownedComment' '{' ownedComment+=Comment ( "," ownedComment+=Comment)* '}' )?
-		//ExpressionValue returns Expression:
-		//	{Expression} "(" (operand+=ValueSpecification symbol=ExpressionSymbol operand+=ValueSpecification //Se eu tiro o parenteses d‡ left-recursion 
+		//ExpressionValue returns ontouml::Expression:
+		//	{ontouml::Expression} "(" (operand+=ValueSpecification symbol=ExpressionSymbol operand+=ValueSpecification //Se eu tiro o parenteses d‡ left-recursion 
 		//	| symbol=ExpressionSymbol operand+=ValueSpecification | symbol=ExpressionSymbol "{" operand+=ValueSpecification (","
 		//	operand+=ValueSpecification)+ "}") ")";
 		public ParserRule getRule() { return rule; }
 
-		//{Expression} "(" (operand+=ValueSpecification symbol=ExpressionSymbol operand+=ValueSpecification //Se eu tiro o parenteses d‡ left-recursion 
+		//{ontouml::Expression} "(" (operand+=ValueSpecification symbol=ExpressionSymbol operand+=ValueSpecification //Se eu tiro o parenteses d‡ left-recursion 
 		//| symbol=ExpressionSymbol operand+=ValueSpecification | symbol=ExpressionSymbol "{" operand+=ValueSpecification (","
 		//operand+=ValueSpecification)+ "}") ")"
 		public Group getGroup() { return cGroup; }
 
-		//{Expression}
+		//{ontouml::Expression}
 		public Action getExpressionAction_0() { return cExpressionAction_0; }
 
 		//"("
@@ -4312,16 +4330,18 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		//			# Reinaldo2
 		//		end
 		// * ///OK
-		//OpaqueExpression:
-		//	{OpaqueExpression} "OpaqueExpression" name=ID? ("(" type=[Type] ")")? ":" language+=STRING ("," language+=STRING)* //'begin' body+=OPAQUE_TEXT 'end'
+		//OpaqueExpression returns ontouml::OpaqueExpression:
+		//	{ontouml::OpaqueExpression} "OpaqueExpression" name=ID? ("(" type=[ontouml::Type] ")")? ":" language+=STRING (","
+		//	language+=STRING)* //'begin' body+=OPAQUE_TEXT 'end'
 		//	"begin" ("#" body+=LINE)* "end";
 		public ParserRule getRule() { return rule; }
 
-		//{OpaqueExpression} "OpaqueExpression" name=ID? ("(" type=[Type] ")")? ":" language+=STRING ("," language+=STRING)* //'begin' body+=OPAQUE_TEXT 'end'
+		//{ontouml::OpaqueExpression} "OpaqueExpression" name=ID? ("(" type=[ontouml::Type] ")")? ":" language+=STRING (","
+		//language+=STRING)* //'begin' body+=OPAQUE_TEXT 'end'
 		//"begin" ("#" body+=LINE)* "end"
 		public Group getGroup() { return cGroup; }
 
-		//{OpaqueExpression}
+		//{ontouml::OpaqueExpression}
 		public Action getOpaqueExpressionAction_0() { return cOpaqueExpressionAction_0; }
 
 		//"OpaqueExpression"
@@ -4333,16 +4353,16 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_2_0() { return cNameIDTerminalRuleCall_2_0; }
 
-		//("(" type=[Type] ")")?
+		//("(" type=[ontouml::Type] ")")?
 		public Group getGroup_3() { return cGroup_3; }
 
 		//"("
 		public Keyword getLeftParenthesisKeyword_3_0() { return cLeftParenthesisKeyword_3_0; }
 
-		//type=[Type]
+		//type=[ontouml::Type]
 		public Assignment getTypeAssignment_3_1() { return cTypeAssignment_3_1; }
 
-		//[Type]
+		//[ontouml::Type]
 		public CrossReference getTypeTypeCrossReference_3_1_0() { return cTypeTypeCrossReference_3_1_0; }
 
 		//ID
@@ -4536,24 +4556,26 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		// *****************************************************************************
 		//  * FIXME: Property::association Ž opposite, mas n‹o est‡ sendo definida automaticamente
 		// ***************************************************************************** ///ATENTION: Ao mudar, mude tambŽm o de baixo
-		//InlinePropertyDefinition returns Property:
-		//	{Property} //	'property'
+		//InlinePropertyDefinition returns ontouml::Property:
+		//	{ontouml::Property} //	'property'
 		//	name=ID? ("(" (isStatic?="static"? & isOrdered?="ordered"? & isUnique?="unique"? & isReadOnly?="read-only"? &
-		//	isDerivedUnion?="derived-union"?) ")")? type=[Type] ("[" lowerValue=LiteralInteger ","
+		//	isDerivedUnion?="derived-union"?) ")")? type=[ontouml::Type] ("[" lowerValue=LiteralInteger ","
 		//	upperValue=LiteralUnlimitedNatural "]")? ("{" ("defaults to" defaultValue=ValueSpecification)? ("aggregation"
-		//	aggregation=AggregationKind)? ("subset of" "(" subsettedProperty+=[Property] ("," subsettedProperty+=[Property])*
-		//	")")? ("redefines" "(" redefinedProperty+=[Property] ("," redefinedProperty+=[Property])* ")")? "}")?;
+		//	aggregation=AggregationKind)? ("subset of" "(" subsettedProperty+=[ontouml::Property] (","
+		//	subsettedProperty+=[ontouml::Property])* ")")? ("redefines" "(" redefinedProperty+=[ontouml::Property] (","
+		//	redefinedProperty+=[ontouml::Property])* ")")? "}")?;
 		public ParserRule getRule() { return rule; }
 
-		//{Property} //	'property'
+		//{ontouml::Property} //	'property'
 		//name=ID? ("(" (isStatic?="static"? & isOrdered?="ordered"? & isUnique?="unique"? & isReadOnly?="read-only"? &
-		//isDerivedUnion?="derived-union"?) ")")? type=[Type] ("[" lowerValue=LiteralInteger ","
+		//isDerivedUnion?="derived-union"?) ")")? type=[ontouml::Type] ("[" lowerValue=LiteralInteger ","
 		//upperValue=LiteralUnlimitedNatural "]")? ("{" ("defaults to" defaultValue=ValueSpecification)? ("aggregation"
-		//aggregation=AggregationKind)? ("subset of" "(" subsettedProperty+=[Property] ("," subsettedProperty+=[Property])* ")")?
-		//("redefines" "(" redefinedProperty+=[Property] ("," redefinedProperty+=[Property])* ")")? "}")?
+		//aggregation=AggregationKind)? ("subset of" "(" subsettedProperty+=[ontouml::Property] (","
+		//subsettedProperty+=[ontouml::Property])* ")")? ("redefines" "(" redefinedProperty+=[ontouml::Property] (","
+		//redefinedProperty+=[ontouml::Property])* ")")? "}")?
 		public Group getGroup() { return cGroup; }
 
-		//{Property}
+		//{ontouml::Property}
 		public Action getPropertyAction_0() { return cPropertyAction_0; }
 
 		////	'property'
@@ -4607,10 +4629,10 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		//")"
 		public Keyword getRightParenthesisKeyword_2_2() { return cRightParenthesisKeyword_2_2; }
 
-		//type=[Type]
+		//type=[ontouml::Type]
 		public Assignment getTypeAssignment_3() { return cTypeAssignment_3; }
 
-		//[Type]
+		//[ontouml::Type]
 		public CrossReference getTypeTypeCrossReference_3_0() { return cTypeTypeCrossReference_3_0; }
 
 		//ID
@@ -4641,8 +4663,8 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		public Keyword getRightSquareBracketKeyword_4_4() { return cRightSquareBracketKeyword_4_4; }
 
 		//("{" ("defaults to" defaultValue=ValueSpecification)? ("aggregation" aggregation=AggregationKind)? ("subset of" "("
-		//subsettedProperty+=[Property] ("," subsettedProperty+=[Property])* ")")? ("redefines" "(" redefinedProperty+=[Property]
-		//("," redefinedProperty+=[Property])* ")")? "}")?
+		//subsettedProperty+=[ontouml::Property] ("," subsettedProperty+=[ontouml::Property])* ")")? ("redefines" "("
+		//redefinedProperty+=[ontouml::Property] ("," redefinedProperty+=[ontouml::Property])* ")")? "}")?
 		public Group getGroup_5() { return cGroup_5; }
 
 		//"{"
@@ -4672,7 +4694,7 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		//AggregationKind
 		public RuleCall getAggregationAggregationKindEnumRuleCall_5_2_1_0() { return cAggregationAggregationKindEnumRuleCall_5_2_1_0; }
 
-		//("subset of" "(" subsettedProperty+=[Property] ("," subsettedProperty+=[Property])* ")")?
+		//("subset of" "(" subsettedProperty+=[ontouml::Property] ("," subsettedProperty+=[ontouml::Property])* ")")?
 		public Group getGroup_5_3() { return cGroup_5_3; }
 
 		//"subset of"
@@ -4681,25 +4703,25 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		//"("
 		public Keyword getLeftParenthesisKeyword_5_3_1() { return cLeftParenthesisKeyword_5_3_1; }
 
-		//subsettedProperty+=[Property]
+		//subsettedProperty+=[ontouml::Property]
 		public Assignment getSubsettedPropertyAssignment_5_3_2() { return cSubsettedPropertyAssignment_5_3_2; }
 
-		//[Property]
+		//[ontouml::Property]
 		public CrossReference getSubsettedPropertyPropertyCrossReference_5_3_2_0() { return cSubsettedPropertyPropertyCrossReference_5_3_2_0; }
 
 		//ID
 		public RuleCall getSubsettedPropertyPropertyIDTerminalRuleCall_5_3_2_0_1() { return cSubsettedPropertyPropertyIDTerminalRuleCall_5_3_2_0_1; }
 
-		//("," subsettedProperty+=[Property])*
+		//("," subsettedProperty+=[ontouml::Property])*
 		public Group getGroup_5_3_3() { return cGroup_5_3_3; }
 
 		//","
 		public Keyword getCommaKeyword_5_3_3_0() { return cCommaKeyword_5_3_3_0; }
 
-		//subsettedProperty+=[Property]
+		//subsettedProperty+=[ontouml::Property]
 		public Assignment getSubsettedPropertyAssignment_5_3_3_1() { return cSubsettedPropertyAssignment_5_3_3_1; }
 
-		//[Property]
+		//[ontouml::Property]
 		public CrossReference getSubsettedPropertyPropertyCrossReference_5_3_3_1_0() { return cSubsettedPropertyPropertyCrossReference_5_3_3_1_0; }
 
 		//ID
@@ -4708,7 +4730,7 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		//")"
 		public Keyword getRightParenthesisKeyword_5_3_4() { return cRightParenthesisKeyword_5_3_4; }
 
-		//("redefines" "(" redefinedProperty+=[Property] ("," redefinedProperty+=[Property])* ")")?
+		//("redefines" "(" redefinedProperty+=[ontouml::Property] ("," redefinedProperty+=[ontouml::Property])* ")")?
 		public Group getGroup_5_4() { return cGroup_5_4; }
 
 		//"redefines"
@@ -4717,25 +4739,25 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		//"("
 		public Keyword getLeftParenthesisKeyword_5_4_1() { return cLeftParenthesisKeyword_5_4_1; }
 
-		//redefinedProperty+=[Property]
+		//redefinedProperty+=[ontouml::Property]
 		public Assignment getRedefinedPropertyAssignment_5_4_2() { return cRedefinedPropertyAssignment_5_4_2; }
 
-		//[Property]
+		//[ontouml::Property]
 		public CrossReference getRedefinedPropertyPropertyCrossReference_5_4_2_0() { return cRedefinedPropertyPropertyCrossReference_5_4_2_0; }
 
 		//ID
 		public RuleCall getRedefinedPropertyPropertyIDTerminalRuleCall_5_4_2_0_1() { return cRedefinedPropertyPropertyIDTerminalRuleCall_5_4_2_0_1; }
 
-		//("," redefinedProperty+=[Property])*
+		//("," redefinedProperty+=[ontouml::Property])*
 		public Group getGroup_5_4_3() { return cGroup_5_4_3; }
 
 		//","
 		public Keyword getCommaKeyword_5_4_3_0() { return cCommaKeyword_5_4_3_0; }
 
-		//redefinedProperty+=[Property]
+		//redefinedProperty+=[ontouml::Property]
 		public Assignment getRedefinedPropertyAssignment_5_4_3_1() { return cRedefinedPropertyAssignment_5_4_3_1; }
 
-		//[Property]
+		//[ontouml::Property]
 		public CrossReference getRedefinedPropertyPropertyCrossReference_5_4_3_1_0() { return cRedefinedPropertyPropertyCrossReference_5_4_3_1_0; }
 
 		//ID
@@ -4816,27 +4838,32 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightParenthesisKeyword_6_4_4 = (Keyword)cGroup_6_4.eContents().get(4);
 		private final Keyword cRightCurlyBracketKeyword_6_5 = (Keyword)cGroup_6.eContents().get(5);
 		
+		////Property returns ontouml::Property:
+		////	{ontouml::Property}
+		////;
 		/// *
 		// Sintaxe para criar properties em Classes
 		// - public Person father[1, 2] (unique)
 		// - public father[1,2] (Person) <unique>
 		// - public (unique) father[1,2] : Person
-		// * /ClassProperty returns Property:
-		//	{Property} ("(" (isStatic?="static"? & isOrdered?="ordered"? & isUnique?="unique"? & isReadOnly?="read-only"? &
-		//	isDerivedUnion?="derived-union"?) ")")? name=ID ("[" lowerValue=LiteralInteger "," upperValue=LiteralUnlimitedNatural
-		//	"]")? ":" type=[Type] ("{" ("defaults to" defaultValue=ValueSpecification)? ("aggregation"
-		//	aggregation=AggregationKind)? ("subset of" "(" subsettedProperty+=[Property] ("," subsettedProperty+=[Property])*
-		//	")")? ("redefines" "(" redefinedProperty+=[Property] ("," redefinedProperty+=[Property])* ")")? "}")?;
+		// * /ClassProperty returns ontouml::Property:
+		//	{ontouml::Property} ("(" (isStatic?="static"? & isOrdered?="ordered"? & isUnique?="unique"? & isReadOnly?="read-only"?
+		//	& isDerivedUnion?="derived-union"?) ")")? name=ID ("[" lowerValue=LiteralInteger ","
+		//	upperValue=LiteralUnlimitedNatural "]")? ":" type=[ontouml::Type] ("{" ("defaults to"
+		//	defaultValue=ValueSpecification)? ("aggregation" aggregation=AggregationKind)? ("subset of" "("
+		//	subsettedProperty+=[ontouml::Property] ("," subsettedProperty+=[ontouml::Property])* ")")? ("redefines" "("
+		//	redefinedProperty+=[ontouml::Property] ("," redefinedProperty+=[ontouml::Property])* ")")? "}")?;
 		public ParserRule getRule() { return rule; }
 
-		//{Property} ("(" (isStatic?="static"? & isOrdered?="ordered"? & isUnique?="unique"? & isReadOnly?="read-only"? &
+		//{ontouml::Property} ("(" (isStatic?="static"? & isOrdered?="ordered"? & isUnique?="unique"? & isReadOnly?="read-only"? &
 		//isDerivedUnion?="derived-union"?) ")")? name=ID ("[" lowerValue=LiteralInteger "," upperValue=LiteralUnlimitedNatural
-		//"]")? ":" type=[Type] ("{" ("defaults to" defaultValue=ValueSpecification)? ("aggregation"
-		//aggregation=AggregationKind)? ("subset of" "(" subsettedProperty+=[Property] ("," subsettedProperty+=[Property])* ")")?
-		//("redefines" "(" redefinedProperty+=[Property] ("," redefinedProperty+=[Property])* ")")? "}")?
+		//"]")? ":" type=[ontouml::Type] ("{" ("defaults to" defaultValue=ValueSpecification)? ("aggregation"
+		//aggregation=AggregationKind)? ("subset of" "(" subsettedProperty+=[ontouml::Property] (","
+		//subsettedProperty+=[ontouml::Property])* ")")? ("redefines" "(" redefinedProperty+=[ontouml::Property] (","
+		//redefinedProperty+=[ontouml::Property])* ")")? "}")?
 		public Group getGroup() { return cGroup; }
 
-		//{Property}
+		//{ontouml::Property}
 		public Action getPropertyAction_0() { return cPropertyAction_0; }
 
 		//("(" (isStatic?="static"? & isOrdered?="ordered"? & isUnique?="unique"? & isReadOnly?="read-only"? &
@@ -4916,18 +4943,18 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		//":"
 		public Keyword getColonKeyword_4() { return cColonKeyword_4; }
 
-		//type=[Type]
+		//type=[ontouml::Type]
 		public Assignment getTypeAssignment_5() { return cTypeAssignment_5; }
 
-		//[Type]
+		//[ontouml::Type]
 		public CrossReference getTypeTypeCrossReference_5_0() { return cTypeTypeCrossReference_5_0; }
 
 		//ID
 		public RuleCall getTypeTypeIDTerminalRuleCall_5_0_1() { return cTypeTypeIDTerminalRuleCall_5_0_1; }
 
 		//("{" ("defaults to" defaultValue=ValueSpecification)? ("aggregation" aggregation=AggregationKind)? ("subset of" "("
-		//subsettedProperty+=[Property] ("," subsettedProperty+=[Property])* ")")? ("redefines" "(" redefinedProperty+=[Property]
-		//("," redefinedProperty+=[Property])* ")")? "}")?
+		//subsettedProperty+=[ontouml::Property] ("," subsettedProperty+=[ontouml::Property])* ")")? ("redefines" "("
+		//redefinedProperty+=[ontouml::Property] ("," redefinedProperty+=[ontouml::Property])* ")")? "}")?
 		public Group getGroup_6() { return cGroup_6; }
 
 		//"{"
@@ -4957,7 +4984,7 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		//AggregationKind
 		public RuleCall getAggregationAggregationKindEnumRuleCall_6_2_1_0() { return cAggregationAggregationKindEnumRuleCall_6_2_1_0; }
 
-		//("subset of" "(" subsettedProperty+=[Property] ("," subsettedProperty+=[Property])* ")")?
+		//("subset of" "(" subsettedProperty+=[ontouml::Property] ("," subsettedProperty+=[ontouml::Property])* ")")?
 		public Group getGroup_6_3() { return cGroup_6_3; }
 
 		//"subset of"
@@ -4966,25 +4993,25 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		//"("
 		public Keyword getLeftParenthesisKeyword_6_3_1() { return cLeftParenthesisKeyword_6_3_1; }
 
-		//subsettedProperty+=[Property]
+		//subsettedProperty+=[ontouml::Property]
 		public Assignment getSubsettedPropertyAssignment_6_3_2() { return cSubsettedPropertyAssignment_6_3_2; }
 
-		//[Property]
+		//[ontouml::Property]
 		public CrossReference getSubsettedPropertyPropertyCrossReference_6_3_2_0() { return cSubsettedPropertyPropertyCrossReference_6_3_2_0; }
 
 		//ID
 		public RuleCall getSubsettedPropertyPropertyIDTerminalRuleCall_6_3_2_0_1() { return cSubsettedPropertyPropertyIDTerminalRuleCall_6_3_2_0_1; }
 
-		//("," subsettedProperty+=[Property])*
+		//("," subsettedProperty+=[ontouml::Property])*
 		public Group getGroup_6_3_3() { return cGroup_6_3_3; }
 
 		//","
 		public Keyword getCommaKeyword_6_3_3_0() { return cCommaKeyword_6_3_3_0; }
 
-		//subsettedProperty+=[Property]
+		//subsettedProperty+=[ontouml::Property]
 		public Assignment getSubsettedPropertyAssignment_6_3_3_1() { return cSubsettedPropertyAssignment_6_3_3_1; }
 
-		//[Property]
+		//[ontouml::Property]
 		public CrossReference getSubsettedPropertyPropertyCrossReference_6_3_3_1_0() { return cSubsettedPropertyPropertyCrossReference_6_3_3_1_0; }
 
 		//ID
@@ -4993,7 +5020,7 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		//")"
 		public Keyword getRightParenthesisKeyword_6_3_4() { return cRightParenthesisKeyword_6_3_4; }
 
-		//("redefines" "(" redefinedProperty+=[Property] ("," redefinedProperty+=[Property])* ")")?
+		//("redefines" "(" redefinedProperty+=[ontouml::Property] ("," redefinedProperty+=[ontouml::Property])* ")")?
 		public Group getGroup_6_4() { return cGroup_6_4; }
 
 		//"redefines"
@@ -5002,25 +5029,25 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		//"("
 		public Keyword getLeftParenthesisKeyword_6_4_1() { return cLeftParenthesisKeyword_6_4_1; }
 
-		//redefinedProperty+=[Property]
+		//redefinedProperty+=[ontouml::Property]
 		public Assignment getRedefinedPropertyAssignment_6_4_2() { return cRedefinedPropertyAssignment_6_4_2; }
 
-		//[Property]
+		//[ontouml::Property]
 		public CrossReference getRedefinedPropertyPropertyCrossReference_6_4_2_0() { return cRedefinedPropertyPropertyCrossReference_6_4_2_0; }
 
 		//ID
 		public RuleCall getRedefinedPropertyPropertyIDTerminalRuleCall_6_4_2_0_1() { return cRedefinedPropertyPropertyIDTerminalRuleCall_6_4_2_0_1; }
 
-		//("," redefinedProperty+=[Property])*
+		//("," redefinedProperty+=[ontouml::Property])*
 		public Group getGroup_6_4_3() { return cGroup_6_4_3; }
 
 		//","
 		public Keyword getCommaKeyword_6_4_3_0() { return cCommaKeyword_6_4_3_0; }
 
-		//redefinedProperty+=[Property]
+		//redefinedProperty+=[ontouml::Property]
 		public Assignment getRedefinedPropertyAssignment_6_4_3_1() { return cRedefinedPropertyAssignment_6_4_3_1; }
 
-		//[Property]
+		//[ontouml::Property]
 		public CrossReference getRedefinedPropertyPropertyCrossReference_6_4_3_1_0() { return cRedefinedPropertyPropertyCrossReference_6_4_3_1_0; }
 
 		//ID
@@ -5096,8 +5123,8 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		////	('{'
 		////		('defaults to' defaultValue=ValueSpecification)?
 		////		('aggregation' aggregation=AggregationKind)?
-		////		('subset of' '(' subsettedProperty+=[Property] ( "," subsettedProperty+=[Property])* ')' )?
-		////		('redefines' '(' redefinedProperty+=[Property] ( "," redefinedProperty+=[Property])* ')' )?
+		////		('subset of' '(' subsettedProperty+=[ontouml::Property] ( "," subsettedProperty+=[ontouml::Property])* ')' )?
+		////		('redefines' '(' redefinedProperty+=[ontouml::Property] ( "," redefinedProperty+=[ontouml::Property])* ')' )?
 		////    '}')?
 		////;
 		////CharacterizationCharacterized returns Property:
@@ -5114,8 +5141,8 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		////	('{'
 		////		('defaults to' defaultValue=ValueSpecification)?
 		////		('aggregation' aggregation=AggregationKind)?
-		////		('subset of' '(' subsettedProperty+=[Property] ( "," subsettedProperty+=[Property])* ')' )?
-		////		('redefines' '(' redefinedProperty+=[Property] ( "," redefinedProperty+=[Property])* ')' )?
+		////		('subset of' '(' subsettedProperty+=[ontouml::Property] ( "," subsettedProperty+=[ontouml::Property])* ')' )?
+		////		('redefines' '(' redefinedProperty+=[ontouml::Property] ( "," redefinedProperty+=[ontouml::Property])* ')' )?
 		////    '}')?
 		////;
 		/// * 
@@ -5162,7 +5189,7 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		//		('ownedAttribute' '{' ownedAttribute+=Property ( "," ownedAttribute+=Property)* '}' )?
 		//    '}';
 		//
-		// * /Enumeration:
+		// * /Enumeration returns ontouml::Enumeration:
 		//	"enum" name=ID "{" ownedLiteral+=EnumerationLiteral ("," ownedLiteral+=EnumerationLiteral)* //		('ownedAttribute' '{' ownedAttribute+=Property ( "," ownedAttribute+=Property)* '}' )?
 		//
 		//	//		('clientDependency' '(' clientDependency+=[Dependency|EString] ( "," clientDependency+=[Dependency|EString])* ')' )?
@@ -5252,18 +5279,18 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		////		('ownedComment' '{' ownedComment+=Comment ( "," ownedComment+=Comment)* '}' )?	
 		////		('slot' '{' slot+=Slot ( "," slot+=Slot)* '}' )?
 		////    '}'
-		//EnumerationLiteral:
-		//	{EnumerationLiteral} //	'EnumerationLiteral'
+		//EnumerationLiteral returns ontouml::EnumerationLiteral:
+		//	{ontouml::EnumerationLiteral} //	'EnumerationLiteral'
 		//	//	'{'
 		//	name=ID "=" specification=ValueSpecification;
 		public ParserRule getRule() { return rule; }
 
-		//{EnumerationLiteral} //	'EnumerationLiteral'
+		//{ontouml::EnumerationLiteral} //	'EnumerationLiteral'
 		////	'{'
 		//name=ID "=" specification=ValueSpecification
 		public Group getGroup() { return cGroup; }
 
-		//{EnumerationLiteral}
+		//{ontouml::EnumerationLiteral}
 		public Action getEnumerationLiteralAction_0() { return cEnumerationLiteralAction_0; }
 
 		////	'EnumerationLiteral'
@@ -5317,16 +5344,18 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		
 		/// *
 		// * Especifica uma inst‰ncia
-		// * /Instance returns InstanceSpecification:
-		//	{InstanceSpecification} "instance" name=ID (":" classifier+=[Classifier] ("," classifier+=[Classifier])*)?
-		//	("specification" specification=ValueSpecification)? "{" (slot+=Slot ("," slot+=Slot)*)? "}";
+		// * /Instance returns ontouml::InstanceSpecification:
+		//	{ontouml::InstanceSpecification} "instance" name=ID (":" classifier+=[ontouml::Classifier] (","
+		//	classifier+=[ontouml::Classifier])*)? ("specification" specification=ValueSpecification)? "{" (slot+=Slot (","
+		//	slot+=Slot)*)? "}";
 		public ParserRule getRule() { return rule; }
 
-		//{InstanceSpecification} "instance" name=ID (":" classifier+=[Classifier] ("," classifier+=[Classifier])*)?
-		//("specification" specification=ValueSpecification)? "{" (slot+=Slot ("," slot+=Slot)*)? "}"
+		//{ontouml::InstanceSpecification} "instance" name=ID (":" classifier+=[ontouml::Classifier] (","
+		//classifier+=[ontouml::Classifier])*)? ("specification" specification=ValueSpecification)? "{" (slot+=Slot (","
+		//slot+=Slot)*)? "}"
 		public Group getGroup() { return cGroup; }
 
-		//{InstanceSpecification}
+		//{ontouml::InstanceSpecification}
 		public Action getInstanceSpecificationAction_0() { return cInstanceSpecificationAction_0; }
 
 		//"instance"
@@ -5338,31 +5367,31 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_2_0() { return cNameIDTerminalRuleCall_2_0; }
 
-		//(":" classifier+=[Classifier] ("," classifier+=[Classifier])*)?
+		//(":" classifier+=[ontouml::Classifier] ("," classifier+=[ontouml::Classifier])*)?
 		public Group getGroup_3() { return cGroup_3; }
 
 		//":"
 		public Keyword getColonKeyword_3_0() { return cColonKeyword_3_0; }
 
-		//classifier+=[Classifier]
+		//classifier+=[ontouml::Classifier]
 		public Assignment getClassifierAssignment_3_1() { return cClassifierAssignment_3_1; }
 
-		//[Classifier]
+		//[ontouml::Classifier]
 		public CrossReference getClassifierClassifierCrossReference_3_1_0() { return cClassifierClassifierCrossReference_3_1_0; }
 
 		//ID
 		public RuleCall getClassifierClassifierIDTerminalRuleCall_3_1_0_1() { return cClassifierClassifierIDTerminalRuleCall_3_1_0_1; }
 
-		//("," classifier+=[Classifier])*
+		//("," classifier+=[ontouml::Classifier])*
 		public Group getGroup_3_2() { return cGroup_3_2; }
 
 		//","
 		public Keyword getCommaKeyword_3_2_0() { return cCommaKeyword_3_2_0; }
 
-		//classifier+=[Classifier]
+		//classifier+=[ontouml::Classifier]
 		public Assignment getClassifierAssignment_3_2_1() { return cClassifierAssignment_3_2_1; }
 
-		//[Classifier]
+		//[ontouml::Classifier]
 		public CrossReference getClassifierClassifierCrossReference_3_2_1_0() { return cClassifierClassifierCrossReference_3_2_1_0; }
 
 		//ID
@@ -5413,7 +5442,7 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cDefiningFeatureAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final CrossReference cDefiningFeatureStructuralFeatureCrossReference_0_0 = (CrossReference)cDefiningFeatureAssignment_0.eContents().get(0);
-		private final RuleCall cDefiningFeatureStructuralFeatureSTRINGTerminalRuleCall_0_0_1 = (RuleCall)cDefiningFeatureStructuralFeatureCrossReference_0_0.eContents().get(1);
+		private final RuleCall cDefiningFeatureStructuralFeatureIDTerminalRuleCall_0_0_1 = (RuleCall)cDefiningFeatureStructuralFeatureCrossReference_0_0.eContents().get(1);
 		private final Keyword cEqualsSignGreaterThanSignKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Alternatives cAlternatives_2 = (Alternatives)cGroup.eContents().get(2);
 		private final Assignment cValueAssignment_2_0 = (Assignment)cAlternatives_2.eContents().get(0);
@@ -5428,23 +5457,23 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cValueValueSpecificationParserRuleCall_2_1_2_1_0 = (RuleCall)cValueAssignment_2_1_2_1.eContents().get(0);
 		private final Keyword cRightSquareBracketKeyword_2_1_3 = (Keyword)cGroup_2_1.eContents().get(3);
 		
-		//Slot:
-		//	definingFeature=[StructuralFeature|STRING] "=>" (value+=ValueSpecification | "[" value+=ValueSpecification (","
+		//Slot returns ontouml::Slot:
+		//	definingFeature=[ontouml::StructuralFeature] "=>" (value+=ValueSpecification | "[" value+=ValueSpecification (","
 		//	value+=ValueSpecification)* "]");
 		public ParserRule getRule() { return rule; }
 
-		//definingFeature=[StructuralFeature|STRING] "=>" (value+=ValueSpecification | "[" value+=ValueSpecification (","
+		//definingFeature=[ontouml::StructuralFeature] "=>" (value+=ValueSpecification | "[" value+=ValueSpecification (","
 		//value+=ValueSpecification)* "]")
 		public Group getGroup() { return cGroup; }
 
-		//definingFeature=[StructuralFeature|STRING]
+		//definingFeature=[ontouml::StructuralFeature]
 		public Assignment getDefiningFeatureAssignment_0() { return cDefiningFeatureAssignment_0; }
 
-		//[StructuralFeature|STRING]
+		//[ontouml::StructuralFeature]
 		public CrossReference getDefiningFeatureStructuralFeatureCrossReference_0_0() { return cDefiningFeatureStructuralFeatureCrossReference_0_0; }
 
-		//STRING
-		public RuleCall getDefiningFeatureStructuralFeatureSTRINGTerminalRuleCall_0_0_1() { return cDefiningFeatureStructuralFeatureSTRINGTerminalRuleCall_0_0_1; }
+		//ID
+		public RuleCall getDefiningFeatureStructuralFeatureIDTerminalRuleCall_0_0_1() { return cDefiningFeatureStructuralFeatureIDTerminalRuleCall_0_0_1; }
 
 		//"=>"
 		public Keyword getEqualsSignGreaterThanSignKeyword_1() { return cEqualsSignGreaterThanSignKeyword_1; }
@@ -5489,18 +5518,15 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 	public class InstanceValueElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "InstanceValue");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cInstanceKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Keyword cLeftParenthesisKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
-		private final Assignment cTypeAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
-		private final CrossReference cTypeTypeCrossReference_2_1_0 = (CrossReference)cTypeAssignment_2_1.eContents().get(0);
-		private final RuleCall cTypeTypeIDTerminalRuleCall_2_1_0_1 = (RuleCall)cTypeTypeCrossReference_2_1_0.eContents().get(1);
-		private final Keyword cRightParenthesisKeyword_2_2 = (Keyword)cGroup_2.eContents().get(2);
-		private final Assignment cInstanceAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final CrossReference cInstanceInstanceSpecificationCrossReference_3_0 = (CrossReference)cInstanceAssignment_3.eContents().get(0);
-		private final RuleCall cInstanceInstanceSpecificationIDTerminalRuleCall_3_0_1 = (RuleCall)cInstanceInstanceSpecificationCrossReference_3_0.eContents().get(1);
+		private final Assignment cInstanceAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final CrossReference cInstanceInstanceSpecificationCrossReference_0_0 = (CrossReference)cInstanceAssignment_0.eContents().get(0);
+		private final RuleCall cInstanceInstanceSpecificationIDTerminalRuleCall_0_0_1 = (RuleCall)cInstanceInstanceSpecificationCrossReference_0_0.eContents().get(1);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Keyword cLeftParenthesisKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Assignment cTypeAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final CrossReference cTypeTypeCrossReference_1_1_0 = (CrossReference)cTypeAssignment_1_1.eContents().get(0);
+		private final RuleCall cTypeTypeIDTerminalRuleCall_1_1_0_1 = (RuleCall)cTypeTypeCrossReference_1_1_0.eContents().get(1);
+		private final Keyword cRightParenthesisKeyword_1_2 = (Keyword)cGroup_1.eContents().get(2);
 		
 		////InstanceValue
 		/// *
@@ -5508,48 +5534,39 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		// *
 		// * private instance reinaldinho (Person)
 		// * ///OK
-		//InstanceValue:
-		//	"instance" name=ID? ("(" type=[Type] ")")? instance=[InstanceSpecification];
+		//InstanceValue returns ontouml::InstanceValue:
+		//	instance=[ontouml::InstanceSpecification] ("(" type=[ontouml::Type] ")")?;
 		public ParserRule getRule() { return rule; }
 
-		//"instance" name=ID? ("(" type=[Type] ")")? instance=[InstanceSpecification]
+		//instance=[ontouml::InstanceSpecification] ("(" type=[ontouml::Type] ")")?
 		public Group getGroup() { return cGroup; }
 
-		//"instance"
-		public Keyword getInstanceKeyword_0() { return cInstanceKeyword_0; }
+		//instance=[ontouml::InstanceSpecification]
+		public Assignment getInstanceAssignment_0() { return cInstanceAssignment_0; }
 
-		//name=ID?
-		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+		//[ontouml::InstanceSpecification]
+		public CrossReference getInstanceInstanceSpecificationCrossReference_0_0() { return cInstanceInstanceSpecificationCrossReference_0_0; }
 
 		//ID
-		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+		public RuleCall getInstanceInstanceSpecificationIDTerminalRuleCall_0_0_1() { return cInstanceInstanceSpecificationIDTerminalRuleCall_0_0_1; }
 
-		//("(" type=[Type] ")")?
-		public Group getGroup_2() { return cGroup_2; }
+		//("(" type=[ontouml::Type] ")")?
+		public Group getGroup_1() { return cGroup_1; }
 
 		//"("
-		public Keyword getLeftParenthesisKeyword_2_0() { return cLeftParenthesisKeyword_2_0; }
+		public Keyword getLeftParenthesisKeyword_1_0() { return cLeftParenthesisKeyword_1_0; }
 
-		//type=[Type]
-		public Assignment getTypeAssignment_2_1() { return cTypeAssignment_2_1; }
+		//type=[ontouml::Type]
+		public Assignment getTypeAssignment_1_1() { return cTypeAssignment_1_1; }
 
-		//[Type]
-		public CrossReference getTypeTypeCrossReference_2_1_0() { return cTypeTypeCrossReference_2_1_0; }
+		//[ontouml::Type]
+		public CrossReference getTypeTypeCrossReference_1_1_0() { return cTypeTypeCrossReference_1_1_0; }
 
 		//ID
-		public RuleCall getTypeTypeIDTerminalRuleCall_2_1_0_1() { return cTypeTypeIDTerminalRuleCall_2_1_0_1; }
+		public RuleCall getTypeTypeIDTerminalRuleCall_1_1_0_1() { return cTypeTypeIDTerminalRuleCall_1_1_0_1; }
 
 		//")"
-		public Keyword getRightParenthesisKeyword_2_2() { return cRightParenthesisKeyword_2_2; }
-
-		//instance=[InstanceSpecification]
-		public Assignment getInstanceAssignment_3() { return cInstanceAssignment_3; }
-
-		//[InstanceSpecification]
-		public CrossReference getInstanceInstanceSpecificationCrossReference_3_0() { return cInstanceInstanceSpecificationCrossReference_3_0; }
-
-		//ID
-		public RuleCall getInstanceInstanceSpecificationIDTerminalRuleCall_3_0_1() { return cInstanceInstanceSpecificationIDTerminalRuleCall_3_0_1; }
+		public Keyword getRightParenthesisKeyword_1_2() { return cRightParenthesisKeyword_1_2; }
 	}
 
 	public class LiteralIntegerElements extends AbstractParserRuleElementFinder {
@@ -5561,14 +5578,14 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		
 		////Um UnlimitedNatural pode ser reduzido a um INT assim como um LiteralInteger
 		////Por isso t‡ dando ambiguidade na gram‡tica??? Mas ainda assim est‡ funcionando.
-		//LiteralInteger:
-		//	{LiteralInteger} value=INT;
+		//LiteralInteger returns ontouml::LiteralInteger:
+		//	{ontouml::LiteralInteger} value=INT;
 		public ParserRule getRule() { return rule; }
 
-		//{LiteralInteger} value=INT
+		//{ontouml::LiteralInteger} value=INT
 		public Group getGroup() { return cGroup; }
 
-		//{LiteralInteger}
+		//{ontouml::LiteralInteger}
 		public Action getLiteralIntegerAction_0() { return cLiteralIntegerAction_0; }
 
 		//value=INT
@@ -5585,14 +5602,14 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cValueAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cValueSTRINGTerminalRuleCall_1_0 = (RuleCall)cValueAssignment_1.eContents().get(0);
 		
-		//LiteralString:
-		//	{LiteralString} value=STRING;
+		//LiteralString returns ontouml::LiteralString:
+		//	{ontouml::LiteralString} value=STRING;
 		public ParserRule getRule() { return rule; }
 
-		//{LiteralString} value=STRING
+		//{ontouml::LiteralString} value=STRING
 		public Group getGroup() { return cGroup; }
 
-		//{LiteralString}
+		//{ontouml::LiteralString}
 		public Action getLiteralStringAction_0() { return cLiteralStringAction_0; }
 
 		//value=STRING
@@ -5609,14 +5626,14 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cValueAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cValueBooleanParserRuleCall_1_0 = (RuleCall)cValueAssignment_1.eContents().get(0);
 		
-		//LiteralBoolean:
-		//	{LiteralBoolean} value=Boolean;
+		//LiteralBoolean returns ontouml::LiteralBoolean:
+		//	{ontouml::LiteralBoolean} value=Boolean;
 		public ParserRule getRule() { return rule; }
 
-		//{LiteralBoolean} value=Boolean
+		//{ontouml::LiteralBoolean} value=Boolean
 		public Group getGroup() { return cGroup; }
 
-		//{LiteralBoolean}
+		//{ontouml::LiteralBoolean}
 		public Action getLiteralBooleanAction_0() { return cLiteralBooleanAction_0; }
 
 		//value=Boolean
@@ -5657,7 +5674,7 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		////Acho que n‹o precisa
 		////EBoolean returns ecore::EBoolean:
 		////	'true' | 'false';
-		//LiteralUnlimitedNatural:
+		//LiteralUnlimitedNatural returns ontouml::LiteralUnlimitedNatural:
 		//	value=UnlimitedNaturalValue | value=INT;
 		public ParserRule getRule() { return rule; }
 
@@ -5697,14 +5714,14 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cNULLKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		
 		////Tentar um ValueConverter??
-		//LiteralNull:
-		//	{LiteralNull} "NULL";
+		//LiteralNull returns ontouml::LiteralNull:
+		//	{ontouml::LiteralNull} "NULL";
 		public ParserRule getRule() { return rule; }
 
-		//{LiteralNull} "NULL"
+		//{ontouml::LiteralNull} "NULL"
 		public Group getGroup() { return cGroup; }
 
-		//{LiteralNull}
+		//{ontouml::LiteralNull}
 		public Action getLiteralNullAction_0() { return cLiteralNullAction_0; }
 
 		//"NULL"
@@ -5944,7 +5961,7 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		//
 		//EInt returns ecore::EInt:
 		//	'-'? INT;
-		// * /enum AggregationKind:
+		// * /enum AggregationKind returns ontouml::AggregationKind:
 		//	none | shared | composite;
 		public EnumRule getRule() { return rule; }
 
@@ -6229,6 +6246,7 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 	private GeneralizationElements pGeneralization;
 	private GeneralizationSetElements pGeneralizationSet;
 	private ExpressionSymbolElements pExpressionSymbol;
+	private DefaultOperatorElements pDefaultOperator;
 	private ExpressionValueElements pExpressionValue;
 	private OpaqueExpressionElements pOpaqueExpression;
 	private LINEElements pLINE;
@@ -6272,8 +6290,6 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	
-	////import "http://nemo.inf.ufes.br/ontouml/dsl"
-	////import  "RefOntoUML"
 	/// *
 	// * NOTAS
 	// *
@@ -6290,8 +6306,8 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 	// * Seria interessante trabalhar nas Constraints
 	// *
 	// * /// #Model
-	//Model:
-	//	{Model} "model" name=ID ("viewpoint" viewpoint=STRING)? "{" //('elementImport' '{' elementImport+=ElementImport ( "," elementImport+=ElementImport)* '}' )?
+	//Model returns ontouml::Model:
+	//	{ontouml::Model} "model" name=ID ("viewpoint" viewpoint=STRING)? "{" //('elementImport' '{' elementImport+=ElementImport ( "," elementImport+=ElementImport)* '}' )?
 	//	//('packageImport' '{' packageImport+=PackageImport ( "," packageImport+=PackageImport)* '}' )?
 	//	//('ownedRule' '{' ownedRule+=Constraintx ( "," ownedRule+=Constraintx)* '}' )?
 	//	packagedElement+=PackageableElement* "}";
@@ -6308,7 +6324,7 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 	////	| StringExpression | Expression_Impl | OpaqueExpression | LiteralInteger | LiteralString | LiteralBoolean | LiteralNull | InstanceValue | LiteralUnlimitedNatural //(ACHO que n‹o precisa, s— se forem named)
 	////	| Dependency | Constraintx |
 	////	Package_Impl | GeneralizationSet | InstanceSpecification_Impl
-	//PackageableElement:
+	//PackageableElement returns ontouml::PackageableElement:
 	//	Type | Instance | Class | Association | GeneralizationSet;
 	public PackageableElementElements getPackageableElementAccess() {
 		return (pPackageableElement != null) ? pPackageableElement : (pPackageableElement = new PackageableElementElements());
@@ -6318,7 +6334,7 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		return getPackageableElementAccess().getRule();
 	}
 
-	//Class:
+	//Class returns ontouml::Class:
 	//	Kind | Quantity | Collective | SubKind | Category | Phase | Role | Mixin | RoleMixin | Mode | Relator;
 	public ClassElements getClassAccess() {
 		return (pClass != null) ? pClass : (pClass = new ClassElements());
@@ -6328,7 +6344,7 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		return getClassAccess().getRule();
 	}
 
-	//Association:
+	//Association returns ontouml::Association:
 	//	Characterization | Mediation | Derivation | //	memberOf |
 	//	//	componentOf |
 	//	//	subQuantityOf |
@@ -6345,7 +6361,7 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 	/// *
 	// * ONTOUML
 	// * /// #Kind (SubstanceSortal)
-	//Kind:
+	//Kind returns ontouml::Kind:
 	//	(isActive?="active"? & isAbstract?="abstract"?) "kind" name=ID (":" generalization+=InlineGeneralization (","
 	//	generalization+=InlineGeneralization)*)? "{" (ownedAttribute+=ClassProperty ";")* "}";
 	public KindElements getKindAccess() {
@@ -6357,7 +6373,7 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//// #Quantity (SubstanceSortal)
-	//Quantity:
+	//Quantity returns ontouml::Quantity:
 	//	(isActive?="active"? & isAbstract?="abstract"?) "quantity" name=ID (":" generalization+=InlineGeneralization (","
 	//	generalization+=InlineGeneralization)*)? "{" (ownedAttribute+=ClassProperty ";")* "}";
 	public QuantityElements getQuantityAccess() {
@@ -6369,7 +6385,7 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//// #Collective (SubstanceSortal)
-	//Collective:
+	//Collective returns ontouml::Collective:
 	//	(isActive?="active"? & isExtensional?="extensional"? & isAbstract?="abstract"?) "collective" name=ID (":"
 	//	generalization+=InlineGeneralization ("," generalization+=InlineGeneralization)*)? "{" (ownedAttribute+=ClassProperty
 	//	";")* "}";
@@ -6382,7 +6398,7 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//// #SubKind (RigidSortal)
-	//SubKind:
+	//SubKind returns ontouml::SubKind:
 	//	(isActive?="active"? & isAbstract?="abstract"?) "subKind" name=ID (":" generalization+=InlineGeneralization (","
 	//	generalization+=InlineGeneralization)*)? "{" (ownedAttribute+=ClassProperty ";")* "}";
 	public SubKindElements getSubKindAccess() {
@@ -6394,7 +6410,7 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//// #Category (RigidMixin)
-	//Category:
+	//Category returns ontouml::Category:
 	//	(isActive?="active"? & isAbstract?="abstract") // abstract: required (poderia colocar abstract+='{' ...)
 	//	"category" name=ID (":" generalization+=InlineGeneralization ("," generalization+=InlineGeneralization)*)? "{"
 	//	(ownedAttribute+=ClassProperty ";")* "}";
@@ -6407,7 +6423,7 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//// #Phase (AntiRigidSortal)
-	//Phase:
+	//Phase returns ontouml::Phase:
 	//	(isActive?="active"? & isAbstract?="abstract"?) "phase" name=ID (":" generalization+=InlineGeneralization (","
 	//	generalization+=InlineGeneralization)*)? "{" (ownedAttribute+=ClassProperty ";")* "}";
 	public PhaseElements getPhaseAccess() {
@@ -6419,7 +6435,7 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//// #Role (AntiRigidSortal)
-	//Role:
+	//Role returns ontouml::Role:
 	//	(isActive?="active"? & isAbstract?="abstract"?) "role" name=ID (":" generalization+=InlineGeneralization (","
 	//	generalization+=InlineGeneralization)*)? "{" (ownedAttribute+=ClassProperty ";")* "}";
 	public RoleElements getRoleAccess() {
@@ -6431,7 +6447,7 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//// #Mixin (SemiRigidMixin)
-	//Mixin:
+	//Mixin returns ontouml::Mixin:
 	//	(isActive?="active"? & isAbstract?="abstract") // abstract: required
 	//	"mixin" name=ID (":" generalization+=InlineGeneralization ("," generalization+=InlineGeneralization)*)? "{"
 	//	(ownedAttribute+=ClassProperty ";")* "}";
@@ -6444,7 +6460,7 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//// #RoleMixin (AntiRigidMixin)
-	//RoleMixin:
+	//RoleMixin returns ontouml::RoleMixin:
 	//	(isActive?="active"? & isAbstract?="abstract"?) "roleMixin" name=ID (":" generalization+=InlineGeneralization (","
 	//	generalization+=InlineGeneralization)*)? "{" (ownedAttribute+=ClassProperty ";")* "}";
 	public RoleMixinElements getRoleMixinAccess() {
@@ -6456,7 +6472,7 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//// #Mode (Moment)
-	//Mode:
+	//Mode returns ontouml::Mode:
 	//	(isActive?="active"? & isAbstract?="abstract"?) "mode" name=ID (":" generalization+=InlineGeneralization (","
 	//	generalization+=InlineGeneralization)*)? "{" (ownedAttribute+=ClassProperty ";")* "}";
 	public ModeElements getModeAccess() {
@@ -6468,7 +6484,7 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//// #Relator (Moment)
-	//Relator:
+	//Relator returns ontouml::Relator:
 	//	(isActive?="active"? & isAbstract?="abstract"?) "relator" name=ID (":" generalization+=InlineGeneralization (","
 	//	generalization+=InlineGeneralization)*)? "{" (ownedAttribute+=ClassProperty ";")* "}";
 	public RelatorElements getRelatorAccess() {
@@ -6496,12 +6512,12 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 	// * Igual memberEnd, mas ao invŽs de retornar Properties retorna Classes. ƒ uma rela‹o derived.
 	// * self.memberEnd->collect(e | e.type)
 	// * /// #Characterization (DependencyRelationship)
-	//Characterization:
+	//Characterization returns ontouml::Characterization:
 	//	(isDerived?="derived"? & isAbstract?="abstract"? & isLeaf?="leaf"?) "characterization" name=ID? (":"
 	//	generalization+=InlineGeneralization ("," generalization+=InlineGeneralization)*)? "{" "mode:"
 	//	(ownedEnd+=InlinePropertyDefinition ";") "characterized:" (ownedEnd+=InlinePropertyDefinition ";") (("memberEnd" ":"
-	//	memberEnd+=[Property] ("," memberEnd+=[Property])* ";")? & ("navigableOwnedEnd" ":" navigableOwnedEnd+=[Property] (","
-	//	navigableOwnedEnd+=[Property])* ";")?) "}";
+	//	memberEnd+=[ontouml::Property] ("," memberEnd+=[ontouml::Property])* ";")? & ("navigableOwnedEnd" ":"
+	//	navigableOwnedEnd+=[ontouml::Property] ("," navigableOwnedEnd+=[ontouml::Property])* ";")?) "}";
 	public CharacterizationElements getCharacterizationAccess() {
 		return (pCharacterization != null) ? pCharacterization : (pCharacterization = new CharacterizationElements());
 	}
@@ -6511,14 +6527,14 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//// #Mediation (DependencyRelationship)
-	//Mediation:
+	//Mediation returns ontouml::Mediation:
 	//	(isDerived?="derived"? & isAbstract?="abstract"? & isLeaf?="leaf"?) "mediation" name=ID? (":"
 	//	generalization+=InlineGeneralization ("," generalization+=InlineGeneralization)*)? "{" (("relator" ":"
 	//	ownedEnd+=InlinePropertyDefinition ";") // relator
 	//	("mediated" ":" ownedEnd+=InlinePropertyDefinition ";") // mediated
 	//	// TODO: Tem que ser [>1, ?]
-	//	(("memberEnd" ":" memberEnd+=[Property] ("," memberEnd+=[Property])* ";")? & ("navigableOwnedEnd" ":"
-	//	navigableOwnedEnd+=[Property] ("," navigableOwnedEnd+=[Property])* ";")?)) "}";
+	//	(("memberEnd" ":" memberEnd+=[ontouml::Property] ("," memberEnd+=[ontouml::Property])* ";")? & ("navigableOwnedEnd" ":"
+	//	navigableOwnedEnd+=[ontouml::Property] ("," navigableOwnedEnd+=[ontouml::Property])* ";")?)) "}";
 	public MediationElements getMediationAccess() {
 		return (pMediation != null) ? pMediation : (pMediation = new MediationElements());
 	}
@@ -6528,12 +6544,12 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//// #Derivation (DependencyRelationship)
-	//Derivation:
+	//Derivation returns ontouml::Derivation:
 	//	(isDerived?="derived"? & isAbstract?="abstract"? & isLeaf?="leaf"?) "derivation" name=ID? (":"
 	//	generalization+=InlineGeneralization ("," generalization+=InlineGeneralization)*)? "{" "material:"
 	//	(ownedEnd+=InlinePropertyDefinition ";") "relator:" (ownedEnd+=InlinePropertyDefinition ";") (("memberEnd" ":"
-	//	memberEnd+=[Property] ("," memberEnd+=[Property])* ";")? & ("navigableOwnedEnd" ":" navigableOwnedEnd+=[Property] (","
-	//	navigableOwnedEnd+=[Property])* ";")?) "}";
+	//	memberEnd+=[ontouml::Property] ("," memberEnd+=[ontouml::Property])* ";")? & ("navigableOwnedEnd" ":"
+	//	navigableOwnedEnd+=[ontouml::Property] ("," navigableOwnedEnd+=[ontouml::Property])* ";")?) "}";
 	public DerivationElements getDerivationAccess() {
 		return (pDerivation != null) ? pDerivation : (pDerivation = new DerivationElements());
 	}
@@ -6543,11 +6559,12 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//// #memberOf (Meronymic)
-	//memberOf:
-	//	{memberOf} (isDerived?="derived"? & isAbstract?="abstract"? & isLeaf?="leaf"? & isEssential?="essential"? &
+	//memberOf returns ontouml::memberOf:
+	//	{ontouml::memberOf} (isDerived?="derived"? & isAbstract?="abstract"? & isLeaf?="leaf"? & isEssential?="essential"? &
 	//	isImmutablePart?="imutablePart"? & isImmutableWhole?="imutableWhole"? & isInseparable?="inseparable"? &
-	//	isShareable?="shareable"?) "memberOf" name=ID "{" (("memberEnd" ":" memberEnd+=[Property] ("," memberEnd+=[Property])*
-	//	";")? & ("navigableOwnedEnd" ":" navigableOwnedEnd+=[Property] ("," navigableOwnedEnd+=[Property])* ";")?)? "}";
+	//	isShareable?="shareable"?) "memberOf" name=ID "{" (("memberEnd" ":" memberEnd+=[ontouml::Property] (","
+	//	memberEnd+=[ontouml::Property])* ";")? & ("navigableOwnedEnd" ":" navigableOwnedEnd+=[ontouml::Property] (","
+	//	navigableOwnedEnd+=[ontouml::Property])* ";")?)? "}";
 	public MemberOfElements getMemberOfAccess() {
 		return (pMemberOf != null) ? pMemberOf : (pMemberOf = new MemberOfElements());
 	}
@@ -6557,12 +6574,12 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//// #componentOf (Meronymic)
-	//componentOf:
-	//	{componentOf} (isDerived?="derived"? & isAbstract?="abstract"? & isLeaf?="leaf"? & isEssential?="essential"? &
-	//	isImmutablePart?="imutablePart"? & isImmutableWhole?="imutableWhole"? & isInseparable?="inseparable"? &
-	//	isShareable?="shareable"?) "componentOf" name=ID "{" (("memberEnd" ":" memberEnd+=[Property] (","
-	//	memberEnd+=[Property])* ";")? & ("navigableOwnedEnd" ":" navigableOwnedEnd+=[Property] (","
-	//	navigableOwnedEnd+=[Property])* ";")?)? "}";
+	//componentOf returns ontouml::componentOf:
+	//	{ontouml::componentOf} (isDerived?="derived"? & isAbstract?="abstract"? & isLeaf?="leaf"? & isEssential?="essential"?
+	//	& isImmutablePart?="imutablePart"? & isImmutableWhole?="imutableWhole"? & isInseparable?="inseparable"? &
+	//	isShareable?="shareable"?) "componentOf" name=ID "{" (("memberEnd" ":" memberEnd+=[ontouml::Property] (","
+	//	memberEnd+=[ontouml::Property])* ";")? & ("navigableOwnedEnd" ":" navigableOwnedEnd+=[ontouml::Property] (","
+	//	navigableOwnedEnd+=[ontouml::Property])* ";")?)? "}";
 	public ComponentOfElements getComponentOfAccess() {
 		return (pComponentOf != null) ? pComponentOf : (pComponentOf = new ComponentOfElements());
 	}
@@ -6572,11 +6589,12 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//// #subQuantityOf (Meronymic)
-	//subQuantityOf:
-	//	{subQuantityOf} //( isDerived?='derived'? & isAbstract?='abstract'? & isLeaf?='leaf'? )
+	//subQuantityOf returns ontouml::subQuantityOf:
+	//	{ontouml::subQuantityOf} //( isDerived?='derived'? & isAbstract?='abstract'? & isLeaf?='leaf'? )
 	//	//( isEssential?='essential'? & isImmutablePart?='imutable-part'? & isImmutableWhole?='imutable-whole'? & isInseparable?='inseparable'? & isShareable?='shareable'? )
-	//	"subQuantityOf" name=ID "{" (("memberEnd" ":" memberEnd+=[Property] ("," memberEnd+=[Property])* ";")? &
-	//	("navigableOwnedEnd" ":" navigableOwnedEnd+=[Property] ("," navigableOwnedEnd+=[Property])* ";")?)? "}";
+	//	"subQuantityOf" name=ID "{" (("memberEnd" ":" memberEnd+=[ontouml::Property] ("," memberEnd+=[ontouml::Property])*
+	//	";")? & ("navigableOwnedEnd" ":" navigableOwnedEnd+=[ontouml::Property] ("," navigableOwnedEnd+=[ontouml::Property])*
+	//	";")?)? "}";
 	public SubQuantityOfElements getSubQuantityOfAccess() {
 		return (pSubQuantityOf != null) ? pSubQuantityOf : (pSubQuantityOf = new SubQuantityOfElements());
 	}
@@ -6586,11 +6604,12 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//// #subCollectionOf (Meronymic)
-	//subCollectionOf:
-	//	{subCollectionOf} //( isDerived?='derived'? & isAbstract?='abstract'? & isLeaf?='leaf'? )
+	//subCollectionOf returns ontouml::subCollectionOf:
+	//	{ontouml::subCollectionOf} //( isDerived?='derived'? & isAbstract?='abstract'? & isLeaf?='leaf'? )
 	//	//( isEssential?='essential'? & isImmutablePart?='imutable-part'? & isImmutableWhole?='imutable-whole'? & isInseparable?='inseparable'? & isShareable?='shareable'? )
-	//	"subCollectionOf" name=ID "{" (("memberEnd" ":" memberEnd+=[Property] ("," memberEnd+=[Property])* ";")? &
-	//	("navigableOwnedEnd" ":" navigableOwnedEnd+=[Property] ("," navigableOwnedEnd+=[Property])* ";")?)? "}";
+	//	"subCollectionOf" name=ID "{" (("memberEnd" ":" memberEnd+=[ontouml::Property] ("," memberEnd+=[ontouml::Property])*
+	//	";")? & ("navigableOwnedEnd" ":" navigableOwnedEnd+=[ontouml::Property] ("," navigableOwnedEnd+=[ontouml::Property])*
+	//	";")?)? "}";
 	public SubCollectionOfElements getSubCollectionOfAccess() {
 		return (pSubCollectionOf != null) ? pSubCollectionOf : (pSubCollectionOf = new SubCollectionOfElements());
 	}
@@ -6603,11 +6622,12 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 	// *
 	// * public property casadoCom (Pessoa) throught contratoDeCasamento //MaterialAssociation
 	// * OCL: Precisa de um Derivation cujo memberEnd[1] = MaterialAssociation
-	// * /MaterialAssociation:
-	//	{MaterialAssociation} (isDerived?="derived" & isAbstract?="abstract"? & isLeaf?="leaf"?) // derived: required
+	// * /MaterialAssociation returns ontouml::MaterialAssociation:
+	//	{ontouml::MaterialAssociation} (isDerived?="derived" & isAbstract?="abstract"? & isLeaf?="leaf"?) // derived: required
 	//	"materialAssociation" name=ID? (":" generalization+=InlineGeneralization ("," generalization+=InlineGeneralization)*)?
-	//	"{" (ownedEnd+=InlinePropertyDefinition ";")+ (("memberEnd" ":" memberEnd+=[Property] ("," memberEnd+=[Property])*
-	//	";")? & ("navigableOwnedEnd" ":" navigableOwnedEnd+=[Property] ("," navigableOwnedEnd+=[Property])* ";")?) "}";
+	//	"{" (ownedEnd+=InlinePropertyDefinition ";")+ (("memberEnd" ":" memberEnd+=[ontouml::Property] (","
+	//	memberEnd+=[ontouml::Property])* ";")? & ("navigableOwnedEnd" ":" navigableOwnedEnd+=[ontouml::Property] (","
+	//	navigableOwnedEnd+=[ontouml::Property])* ";")?) "}";
 	public MaterialAssociationElements getMaterialAssociationAccess() {
 		return (pMaterialAssociation != null) ? pMaterialAssociation : (pMaterialAssociation = new MaterialAssociationElements());
 	}
@@ -6617,10 +6637,11 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	////public property maisVelhoQue (Pessoa) //FormalAssociation entre Pessoa e Pessoa
-	//FormalAssociation:
-	//	{FormalAssociation} (isAbstract?="abstract"? & isDerived?="derived"? & isLeaf?="leaf"?) "formalAssociation" name=ID?
-	//	"{" (ownedEnd+=InlinePropertyDefinition ";")+ (("memberEnd" ":" memberEnd+=[Property] ("," memberEnd+=[Property])*
-	//	";")? & ("navigableOwnedEnd" ":" navigableOwnedEnd+=[Property] ("," navigableOwnedEnd+=[Property])* ";")?) "}";
+	//FormalAssociation returns ontouml::FormalAssociation:
+	//	{ontouml::FormalAssociation} (isAbstract?="abstract"? & isDerived?="derived"? & isLeaf?="leaf"?) "formalAssociation"
+	//	name=ID? "{" (ownedEnd+=InlinePropertyDefinition ";")+ (("memberEnd" ":" memberEnd+=[ontouml::Property] (","
+	//	memberEnd+=[ontouml::Property])* ";")? & ("navigableOwnedEnd" ":" navigableOwnedEnd+=[ontouml::Property] (","
+	//	navigableOwnedEnd+=[ontouml::Property])* ";")?) "}";
 	public FormalAssociationElements getFormalAssociationAccess() {
 		return (pFormalAssociation != null) ? pFormalAssociation : (pFormalAssociation = new FormalAssociationElements());
 	}
@@ -6629,7 +6650,7 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		return getFormalAssociationAccess().getRule();
 	}
 
-	//NonExpressionValue returns ValueSpecification:
+	//NonExpressionValue returns ontouml::ValueSpecification:
 	//	LiteralInteger | LiteralString | LiteralNull | LiteralBoolean | InstanceValue | OpaqueExpression;
 	public NonExpressionValueElements getNonExpressionValueAccess() {
 		return (pNonExpressionValue != null) ? pNonExpressionValue : (pNonExpressionValue = new NonExpressionValueElements());
@@ -6639,7 +6660,7 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		return getNonExpressionValueAccess().getRule();
 	}
 
-	//ValueSpecification: //StringExpression | //O que Ž iso???
+	//ValueSpecification returns ontouml::ValueSpecification: //StringExpression | //O que Ž iso???
 	//	NonExpressionValue | ExpressionValue;
 	public ValueSpecificationElements getValueSpecificationAccess() {
 		return (pValueSpecification != null) ? pValueSpecification : (pValueSpecification = new ValueSpecificationElements());
@@ -6649,7 +6670,7 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		return getValueSpecificationAccess().getRule();
 	}
 
-	//Type:
+	//Type returns ontouml::Type:
 	//	DataType | PrimitiveType;
 	public TypeElements getTypeAccess() {
 		return (pType != null) ? pType : (pType = new TypeElements());
@@ -6659,7 +6680,7 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		return getTypeAccess().getRule();
 	}
 
-	//DataType:
+	//DataType returns ontouml::DataType:
 	//	"datatype" name=ID (":" generalization+=InlineGeneralization ("," generalization+=InlineGeneralization)*)? ("{"
 	//	(ownedAttribute+=ClassProperty ";")+ "}")?;
 	public DataTypeElements getDataTypeAccess() {
@@ -6670,10 +6691,9 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		return getDataTypeAccess().getRule();
 	}
 
-	////Mesma coisa que DataType
-	//PrimitiveType:
-	//	"type" name=ID (":" generalization+=InlineGeneralization ("," generalization+=InlineGeneralization)*)? ("{"
-	//	(ownedAttribute+=ClassProperty ";")+ "}")?;
+	////???: Mesma coisa que DataType?
+	//PrimitiveType returns ontouml::PrimitiveType:
+	//	"type" name=ID (":" generalization+=InlineGeneralization ("," generalization+=InlineGeneralization)*)?;
 	public PrimitiveTypeElements getPrimitiveTypeAccess() {
 		return (pPrimitiveType != null) ? pPrimitiveType : (pPrimitiveType = new PrimitiveTypeElements());
 	}
@@ -6682,9 +6702,9 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		return getPrimitiveTypeAccess().getRule();
 	}
 
-	//Dependency:
-	//	{Dependency} "Dependency" name=ID? "{" client+=[NamedElement] ("," client+=[NamedElement])* "depends on" "("
-	//	supplier+=[NamedElement] ("," supplier+=[NamedElement])* ")" "}";
+	//Dependency returns ontouml::Dependency:
+	//	{ontouml::Dependency} "Dependency" name=ID? "{" client+=[ontouml::NamedElement] ("," client+=[ontouml::NamedElement])*
+	//	"depends on" "(" supplier+=[ontouml::NamedElement] ("," supplier+=[ontouml::NamedElement])* ")" "}";
 	public DependencyElements getDependencyAccess() {
 		return (pDependency != null) ? pDependency : (pDependency = new DependencyElements());
 	}
@@ -6693,8 +6713,8 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		return getDependencyAccess().getRule();
 	}
 
-	//ElementImport:
-	//	"import" importedElement=[PackageableElement|STRING] ("as" alias=ID)? ";";
+	//ElementImport returns ontouml::ElementImport:
+	//	"import" importedElement=[ontouml::PackageableElement|STRING] ("as" alias=ID)? ";";
 	public ElementImportElements getElementImportAccess() {
 		return (pElementImport != null) ? pElementImport : (pElementImport = new ElementImportElements());
 	}
@@ -6703,8 +6723,8 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		return getElementImportAccess().getRule();
 	}
 
-	//PackageImport:
-	//	"import" importedPackage=[Package|STRING] ";";
+	//PackageImport returns ontouml::PackageImport:
+	//	"import" importedPackage=[ontouml::Package|STRING] ";";
 	public PackageImportElements getPackageImportAccess() {
 		return (pPackageImport != null) ? pPackageImport : (pPackageImport = new PackageImportElements());
 	}
@@ -6713,8 +6733,8 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		return getPackageImportAccess().getRule();
 	}
 
-	//Constraintx:
-	//	"constraint" ("(" constrainedElement+=[Element] ("," constrainedElement+=[Element])* ")")? "{"
+	//Constraintx returns ontouml::Constraintx:
+	//	"constraint" ("(" constrainedElement+=[ontouml::Element] ("," constrainedElement+=[ontouml::Element])* ")")? "{"
 	//	specification=ValueSpecification "}";
 	public ConstraintxElements getConstraintxAccess() {
 		return (pConstraintx != null) ? pConstraintx : (pConstraintx = new ConstraintxElements());
@@ -6724,9 +6744,9 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		return getConstraintxAccess().getRule();
 	}
 
-	//PackageMerge:
-	//	{PackageMerge} //('PackageMerge')?
-	//	mergedPackage=[Package|STRING];
+	//PackageMerge returns ontouml::PackageMerge:
+	//	{ontouml::PackageMerge} //('PackageMerge')?
+	//	mergedPackage=[ontouml::Package|STRING];
 	public PackageMergeElements getPackageMergeAccess() {
 		return (pPackageMerge != null) ? pPackageMerge : (pPackageMerge = new PackageMergeElements());
 	}
@@ -6742,8 +6762,8 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 	////		('elementImport' '{' elementImport+=ElementImport ( "," elementImport+=ElementImport)* '}' )?
 	////		('packageImport' '{' packageImport+=PackageImport ( "," packageImport+=PackageImport)* '}' )?
 	////		('ownedRule' '{' ownedRule+=Constraintx ( "," ownedRule+=Constraintx)* '}' )?
-	//Package_Impl returns Package:
-	//	{Package} "package" name=ID "{" ("merge" ":" packageMerge+=PackageMerge ("," packageMerge+=PackageMerge)*)?
+	//Package_Impl returns ontouml::Package:
+	//	{ontouml::Package} "package" name=ID "{" ("merge" ":" packageMerge+=PackageMerge ("," packageMerge+=PackageMerge)*)?
 	//	packagedElement+=PackageableElement* "}";
 	public Package_ImplElements getPackage_ImplAccess() {
 		return (pPackage_Impl != null) ? pPackage_Impl : (pPackage_Impl = new Package_ImplElements());
@@ -6757,9 +6777,9 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 	// * Duvida:
 	// * Generalization::generalizationSet Ž uma collection, por que?
 	// ***************************************************************************** ///('(' generalizationSet+=[GeneralizationSet] ')' )?
-	//InlineGeneralization returns Generalization:
-	//	isSubstitutable?="substitutable"? general=[Classifier] ("(" generalizationSet+=[GeneralizationSet] (","
-	//	generalizationSet+=[GeneralizationSet])* ")")?;
+	//InlineGeneralization returns ontouml::Generalization:
+	//	isSubstitutable?="substitutable"? general=[ontouml::Classifier] ("(" generalizationSet+=[ontouml::GeneralizationSet]
+	//	("," generalizationSet+=[ontouml::GeneralizationSet])* ")")?;
 	public InlineGeneralizationElements getInlineGeneralizationAccess() {
 		return (pInlineGeneralization != null) ? pInlineGeneralization : (pInlineGeneralization = new InlineGeneralizationElements());
 	}
@@ -6770,8 +6790,8 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 
 	/// *
 	// * Problema: N‹o tem name, como referenciar?
-	// * /Generalization: //isSubstitutable?='substitutable'? //Default t‡ sendo TRUE?
-	//	"generalization" "of" general=[Classifier] "as" owner=[Classifier] ";";
+	// * /Generalization returns ontouml::Generalization: //isSubstitutable?='substitutable'? //Default t‡ sendo TRUE?
+	//	"generalization" "of" general=[ontouml::Classifier] "as" owner=[ontouml::Classifier] ";";
 	public GeneralizationElements getGeneralizationAccess() {
 		return (pGeneralization != null) ? pGeneralization : (pGeneralization = new GeneralizationElements());
 	}
@@ -6785,7 +6805,8 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 	// * GeneralizationSet::generalization Ž opposite, mas n‹o est‡ sendo definida automaticamente
 	// * Motivo: http://www.eclipse.org/forums/index.php/t/245235/
 	// * Solu‹o, mudar essas opposite que s‹o assim, para transient="true" e resolveProxies="false"
-	// ***************************************************************************** /GeneralizationSet:
+	// ***************************************************************************** /GeneralizationSet returns
+	//ontouml::GeneralizationSet:
 	//	(isCovering?="complete"? & isDisjoint?="disjoint"?) "generalizationSet" name=ID "{" "}";
 	public GeneralizationSetElements getGeneralizationSetAccess() {
 		return (pGeneralizationSet != null) ? pGeneralizationSet : (pGeneralizationSet = new GeneralizationSetElements());
@@ -6796,8 +6817,10 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	////Um operador (+, -, >, <)
+	////100 + 2
+	////100 op[shif] 2
 	//ExpressionSymbol returns ecore::EString:
-	//	ID | ANY_OTHER+;
+	//	DefaultOperator | "op" "[" ID "]";
 	public ExpressionSymbolElements getExpressionSymbolAccess() {
 		return (pExpressionSymbol != null) ? pExpressionSymbol : (pExpressionSymbol = new ExpressionSymbolElements());
 	}
@@ -6806,21 +6829,24 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		return getExpressionSymbolAccess().getRule();
 	}
 
+	//DefaultOperator returns ecore::EString:
+	//	"+" | "-" | "*" | "/";
+	public DefaultOperatorElements getDefaultOperatorAccess() {
+		return (pDefaultOperator != null) ? pDefaultOperator : (pDefaultOperator = new DefaultOperatorElements());
+	}
+	
+	public ParserRule getDefaultOperatorRule() {
+		return getDefaultOperatorAccess().getRule();
+	}
+
 	/// *
 	// *
 	// * (100 + 100 - 200)
 	// * media {10, 20, 30}
 	// * not 100
 	// * ///TODO: resolver o left-recursion
-	////	'Expression'
-	////		('name' name=ID)?
-	////		('visibility' visibility=VisibilityKind)?
-	////		('clientDependency' '(' clientDependency+=[Dependency|EString] ( "," clientDependency+=[Dependency|EString])* ')' )?
-	////		('type' type=[Type|EString])?
-	////('eAnnotations' '{' eAnnotations+=EAnnotation ( "," eAnnotations+=EAnnotation)* '}' )?
-	////		('ownedComment' '{' ownedComment+=Comment ( "," ownedComment+=Comment)* '}' )?
-	//ExpressionValue returns Expression:
-	//	{Expression} "(" (operand+=ValueSpecification symbol=ExpressionSymbol operand+=ValueSpecification //Se eu tiro o parenteses d‡ left-recursion 
+	//ExpressionValue returns ontouml::Expression:
+	//	{ontouml::Expression} "(" (operand+=ValueSpecification symbol=ExpressionSymbol operand+=ValueSpecification //Se eu tiro o parenteses d‡ left-recursion 
 	//	| symbol=ExpressionSymbol operand+=ValueSpecification | symbol=ExpressionSymbol "{" operand+=ValueSpecification (","
 	//	operand+=ValueSpecification)+ "}") ")";
 	public ExpressionValueElements getExpressionValueAccess() {
@@ -6838,8 +6864,9 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 	//			# Reinaldo2
 	//		end
 	// * ///OK
-	//OpaqueExpression:
-	//	{OpaqueExpression} "OpaqueExpression" name=ID? ("(" type=[Type] ")")? ":" language+=STRING ("," language+=STRING)* //'begin' body+=OPAQUE_TEXT 'end'
+	//OpaqueExpression returns ontouml::OpaqueExpression:
+	//	{ontouml::OpaqueExpression} "OpaqueExpression" name=ID? ("(" type=[ontouml::Type] ")")? ":" language+=STRING (","
+	//	language+=STRING)* //'begin' body+=OPAQUE_TEXT 'end'
 	//	"begin" ("#" body+=LINE)* "end";
 	public OpaqueExpressionElements getOpaqueExpressionAccess() {
 		return (pOpaqueExpression != null) ? pOpaqueExpression : (pOpaqueExpression = new OpaqueExpressionElements());
@@ -6908,13 +6935,14 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 	// *****************************************************************************
 	//  * FIXME: Property::association Ž opposite, mas n‹o est‡ sendo definida automaticamente
 	// ***************************************************************************** ///ATENTION: Ao mudar, mude tambŽm o de baixo
-	//InlinePropertyDefinition returns Property:
-	//	{Property} //	'property'
+	//InlinePropertyDefinition returns ontouml::Property:
+	//	{ontouml::Property} //	'property'
 	//	name=ID? ("(" (isStatic?="static"? & isOrdered?="ordered"? & isUnique?="unique"? & isReadOnly?="read-only"? &
-	//	isDerivedUnion?="derived-union"?) ")")? type=[Type] ("[" lowerValue=LiteralInteger ","
+	//	isDerivedUnion?="derived-union"?) ")")? type=[ontouml::Type] ("[" lowerValue=LiteralInteger ","
 	//	upperValue=LiteralUnlimitedNatural "]")? ("{" ("defaults to" defaultValue=ValueSpecification)? ("aggregation"
-	//	aggregation=AggregationKind)? ("subset of" "(" subsettedProperty+=[Property] ("," subsettedProperty+=[Property])*
-	//	")")? ("redefines" "(" redefinedProperty+=[Property] ("," redefinedProperty+=[Property])* ")")? "}")?;
+	//	aggregation=AggregationKind)? ("subset of" "(" subsettedProperty+=[ontouml::Property] (","
+	//	subsettedProperty+=[ontouml::Property])* ")")? ("redefines" "(" redefinedProperty+=[ontouml::Property] (","
+	//	redefinedProperty+=[ontouml::Property])* ")")? "}")?;
 	public InlinePropertyDefinitionElements getInlinePropertyDefinitionAccess() {
 		return (pInlinePropertyDefinition != null) ? pInlinePropertyDefinition : (pInlinePropertyDefinition = new InlinePropertyDefinitionElements());
 	}
@@ -6923,17 +6951,21 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		return getInlinePropertyDefinitionAccess().getRule();
 	}
 
+	////Property returns ontouml::Property:
+	////	{ontouml::Property}
+	////;
 	/// *
 	// Sintaxe para criar properties em Classes
 	// - public Person father[1, 2] (unique)
 	// - public father[1,2] (Person) <unique>
 	// - public (unique) father[1,2] : Person
-	// * /ClassProperty returns Property:
-	//	{Property} ("(" (isStatic?="static"? & isOrdered?="ordered"? & isUnique?="unique"? & isReadOnly?="read-only"? &
-	//	isDerivedUnion?="derived-union"?) ")")? name=ID ("[" lowerValue=LiteralInteger "," upperValue=LiteralUnlimitedNatural
-	//	"]")? ":" type=[Type] ("{" ("defaults to" defaultValue=ValueSpecification)? ("aggregation"
-	//	aggregation=AggregationKind)? ("subset of" "(" subsettedProperty+=[Property] ("," subsettedProperty+=[Property])*
-	//	")")? ("redefines" "(" redefinedProperty+=[Property] ("," redefinedProperty+=[Property])* ")")? "}")?;
+	// * /ClassProperty returns ontouml::Property:
+	//	{ontouml::Property} ("(" (isStatic?="static"? & isOrdered?="ordered"? & isUnique?="unique"? & isReadOnly?="read-only"?
+	//	& isDerivedUnion?="derived-union"?) ")")? name=ID ("[" lowerValue=LiteralInteger ","
+	//	upperValue=LiteralUnlimitedNatural "]")? ":" type=[ontouml::Type] ("{" ("defaults to"
+	//	defaultValue=ValueSpecification)? ("aggregation" aggregation=AggregationKind)? ("subset of" "("
+	//	subsettedProperty+=[ontouml::Property] ("," subsettedProperty+=[ontouml::Property])* ")")? ("redefines" "("
+	//	redefinedProperty+=[ontouml::Property] ("," redefinedProperty+=[ontouml::Property])* ")")? "}")?;
 	public ClassPropertyElements getClassPropertyAccess() {
 		return (pClassProperty != null) ? pClassProperty : (pClassProperty = new ClassPropertyElements());
 	}
@@ -6990,8 +7022,8 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 	////	('{'
 	////		('defaults to' defaultValue=ValueSpecification)?
 	////		('aggregation' aggregation=AggregationKind)?
-	////		('subset of' '(' subsettedProperty+=[Property] ( "," subsettedProperty+=[Property])* ')' )?
-	////		('redefines' '(' redefinedProperty+=[Property] ( "," redefinedProperty+=[Property])* ')' )?
+	////		('subset of' '(' subsettedProperty+=[ontouml::Property] ( "," subsettedProperty+=[ontouml::Property])* ')' )?
+	////		('redefines' '(' redefinedProperty+=[ontouml::Property] ( "," redefinedProperty+=[ontouml::Property])* ')' )?
 	////    '}')?
 	////;
 	////CharacterizationCharacterized returns Property:
@@ -7008,8 +7040,8 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 	////	('{'
 	////		('defaults to' defaultValue=ValueSpecification)?
 	////		('aggregation' aggregation=AggregationKind)?
-	////		('subset of' '(' subsettedProperty+=[Property] ( "," subsettedProperty+=[Property])* ')' )?
-	////		('redefines' '(' redefinedProperty+=[Property] ( "," redefinedProperty+=[Property])* ')' )?
+	////		('subset of' '(' subsettedProperty+=[ontouml::Property] ( "," subsettedProperty+=[ontouml::Property])* ')' )?
+	////		('redefines' '(' redefinedProperty+=[ontouml::Property] ( "," redefinedProperty+=[ontouml::Property])* ')' )?
 	////    '}')?
 	////;
 	/// * 
@@ -7056,7 +7088,7 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 	//		('ownedAttribute' '{' ownedAttribute+=Property ( "," ownedAttribute+=Property)* '}' )?
 	//    '}';
 	//
-	// * /Enumeration:
+	// * /Enumeration returns ontouml::Enumeration:
 	//	"enum" name=ID "{" ownedLiteral+=EnumerationLiteral ("," ownedLiteral+=EnumerationLiteral)* //		('ownedAttribute' '{' ownedAttribute+=Property ( "," ownedAttribute+=Property)* '}' )?
 	//
 	//	//		('clientDependency' '(' clientDependency+=[Dependency|EString] ( "," clientDependency+=[Dependency|EString])* ')' )?
@@ -7085,8 +7117,8 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 	////		('ownedComment' '{' ownedComment+=Comment ( "," ownedComment+=Comment)* '}' )?	
 	////		('slot' '{' slot+=Slot ( "," slot+=Slot)* '}' )?
 	////    '}'
-	//EnumerationLiteral:
-	//	{EnumerationLiteral} //	'EnumerationLiteral'
+	//EnumerationLiteral returns ontouml::EnumerationLiteral:
+	//	{ontouml::EnumerationLiteral} //	'EnumerationLiteral'
 	//	//	'{'
 	//	name=ID "=" specification=ValueSpecification;
 	public EnumerationLiteralElements getEnumerationLiteralAccess() {
@@ -7099,9 +7131,10 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 
 	/// *
 	// * Especifica uma inst‰ncia
-	// * /Instance returns InstanceSpecification:
-	//	{InstanceSpecification} "instance" name=ID (":" classifier+=[Classifier] ("," classifier+=[Classifier])*)?
-	//	("specification" specification=ValueSpecification)? "{" (slot+=Slot ("," slot+=Slot)*)? "}";
+	// * /Instance returns ontouml::InstanceSpecification:
+	//	{ontouml::InstanceSpecification} "instance" name=ID (":" classifier+=[ontouml::Classifier] (","
+	//	classifier+=[ontouml::Classifier])*)? ("specification" specification=ValueSpecification)? "{" (slot+=Slot (","
+	//	slot+=Slot)*)? "}";
 	public InstanceElements getInstanceAccess() {
 		return (pInstance != null) ? pInstance : (pInstance = new InstanceElements());
 	}
@@ -7110,8 +7143,8 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		return getInstanceAccess().getRule();
 	}
 
-	//Slot:
-	//	definingFeature=[StructuralFeature|STRING] "=>" (value+=ValueSpecification | "[" value+=ValueSpecification (","
+	//Slot returns ontouml::Slot:
+	//	definingFeature=[ontouml::StructuralFeature] "=>" (value+=ValueSpecification | "[" value+=ValueSpecification (","
 	//	value+=ValueSpecification)* "]");
 	public SlotElements getSlotAccess() {
 		return (pSlot != null) ? pSlot : (pSlot = new SlotElements());
@@ -7127,8 +7160,8 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 	// *
 	// * private instance reinaldinho (Person)
 	// * ///OK
-	//InstanceValue:
-	//	"instance" name=ID? ("(" type=[Type] ")")? instance=[InstanceSpecification];
+	//InstanceValue returns ontouml::InstanceValue:
+	//	instance=[ontouml::InstanceSpecification] ("(" type=[ontouml::Type] ")")?;
 	public InstanceValueElements getInstanceValueAccess() {
 		return (pInstanceValue != null) ? pInstanceValue : (pInstanceValue = new InstanceValueElements());
 	}
@@ -7139,8 +7172,8 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 
 	////Um UnlimitedNatural pode ser reduzido a um INT assim como um LiteralInteger
 	////Por isso t‡ dando ambiguidade na gram‡tica??? Mas ainda assim est‡ funcionando.
-	//LiteralInteger:
-	//	{LiteralInteger} value=INT;
+	//LiteralInteger returns ontouml::LiteralInteger:
+	//	{ontouml::LiteralInteger} value=INT;
 	public LiteralIntegerElements getLiteralIntegerAccess() {
 		return (pLiteralInteger != null) ? pLiteralInteger : (pLiteralInteger = new LiteralIntegerElements());
 	}
@@ -7149,8 +7182,8 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		return getLiteralIntegerAccess().getRule();
 	}
 
-	//LiteralString:
-	//	{LiteralString} value=STRING;
+	//LiteralString returns ontouml::LiteralString:
+	//	{ontouml::LiteralString} value=STRING;
 	public LiteralStringElements getLiteralStringAccess() {
 		return (pLiteralString != null) ? pLiteralString : (pLiteralString = new LiteralStringElements());
 	}
@@ -7159,8 +7192,8 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 		return getLiteralStringAccess().getRule();
 	}
 
-	//LiteralBoolean:
-	//	{LiteralBoolean} value=Boolean;
+	//LiteralBoolean returns ontouml::LiteralBoolean:
+	//	{ontouml::LiteralBoolean} value=Boolean;
 	public LiteralBooleanElements getLiteralBooleanAccess() {
 		return (pLiteralBoolean != null) ? pLiteralBoolean : (pLiteralBoolean = new LiteralBooleanElements());
 	}
@@ -7182,7 +7215,7 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 	////Acho que n‹o precisa
 	////EBoolean returns ecore::EBoolean:
 	////	'true' | 'false';
-	//LiteralUnlimitedNatural:
+	//LiteralUnlimitedNatural returns ontouml::LiteralUnlimitedNatural:
 	//	value=UnlimitedNaturalValue | value=INT;
 	public LiteralUnlimitedNaturalElements getLiteralUnlimitedNaturalAccess() {
 		return (pLiteralUnlimitedNatural != null) ? pLiteralUnlimitedNatural : (pLiteralUnlimitedNatural = new LiteralUnlimitedNaturalElements());
@@ -7203,8 +7236,8 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	////Tentar um ValueConverter??
-	//LiteralNull:
-	//	{LiteralNull} "NULL";
+	//LiteralNull returns ontouml::LiteralNull:
+	//	{ontouml::LiteralNull} "NULL";
 	public LiteralNullElements getLiteralNullAccess() {
 		return (pLiteralNull != null) ? pLiteralNull : (pLiteralNull = new LiteralNullElements());
 	}
@@ -7455,7 +7488,7 @@ public class DslOntoUMLGrammarAccess extends AbstractGrammarElementFinder {
 	//
 	//EInt returns ecore::EInt:
 	//	'-'? INT;
-	// * /enum AggregationKind:
+	// * /enum AggregationKind returns ontouml::AggregationKind:
 	//	none | shared | composite;
 	public AggregationKindElements getAggregationKindAccess() {
 		return (unknownRuleAggregationKind != null) ? unknownRuleAggregationKind : (unknownRuleAggregationKind = new AggregationKindElements());

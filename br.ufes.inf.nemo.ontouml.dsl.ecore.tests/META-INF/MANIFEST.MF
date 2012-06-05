@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: br.ufes.inf.nemo.ontouml.dsl.ecore.tests;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-ClassPath: .
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Export-Package: OntoDSL.tests
+Require-Bundle: org.eclipse.core.runtime,
+ br.ufes.inf.nemo.ontouml.dsl.ecore;visibility:=reexport,
+ br.ufes.inf.nemo.ontouml.refontouml;visibility:=reexport,
+ org.eclipse.emf.ecore.xmi;visibility:=reexport,
+ org.junit;visibility:=reexport
+Bundle-ActivationPolicy: lazy

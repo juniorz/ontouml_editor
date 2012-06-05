@@ -91,8 +91,6 @@ protected class ThisRootNode extends RootToken {
 
 /************ begin Rule Model ****************
  *
- * //import "http://nemo.inf.ufes.br/ontouml/dsl"
- * //import  "RefOntoUML"
  * / *
  *  * NOTAS
  *  *
@@ -109,15 +107,15 @@ protected class ThisRootNode extends RootToken {
  *  * Seria interessante trabalhar nas Constraints
  *  *
  *  * /// #Model
- * Model:
- * 	{Model} "model" name=ID ("viewpoint" viewpoint=STRING)? "{" //('elementImport' '{' elementImport+=ElementImport ( "," elementImport+=ElementImport)* '}' )?
+ * Model returns ontouml::Model:
+ * 	{ontouml::Model} "model" name=ID ("viewpoint" viewpoint=STRING)? "{" //('elementImport' '{' elementImport+=ElementImport ( "," elementImport+=ElementImport)* '}' )?
  * 	//('packageImport' '{' packageImport+=PackageImport ( "," packageImport+=PackageImport)* '}' )?
  * 	//('ownedRule' '{' ownedRule+=Constraintx ( "," ownedRule+=Constraintx)* '}' )?
  * 	packagedElement+=PackageableElement* "}";
  *
  **/
 
-// {Model} "model" name=ID ("viewpoint" viewpoint=STRING)? "{" //('elementImport' '{' elementImport+=ElementImport ( "," elementImport+=ElementImport)* '}' )?
+// {ontouml::Model} "model" name=ID ("viewpoint" viewpoint=STRING)? "{" //('elementImport' '{' elementImport+=ElementImport ( "," elementImport+=ElementImport)* '}' )?
 // //('packageImport' '{' packageImport+=PackageImport ( "," packageImport+=PackageImport)* '}' )?
 // //('ownedRule' '{' ownedRule+=Constraintx ( "," ownedRule+=Constraintx)* '}' )?
 // packagedElement+=PackageableElement* "}"
@@ -149,7 +147,7 @@ protected class Model_Group extends GroupToken {
 
 }
 
-// {Model}
+// {ontouml::Model}
 protected class Model_ModelAction_0 extends ActionToken  {
 
 	public Model_ModelAction_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -414,7 +412,7 @@ protected class Model_RightCurlyBracketKeyword_6 extends KeywordToken  {
  * //	| StringExpression | Expression_Impl | OpaqueExpression | LiteralInteger | LiteralString | LiteralBoolean | LiteralNull | InstanceValue | LiteralUnlimitedNatural //(ACHO que não precisa, só se forem named)
  * //	| Dependency | Constraintx |
  * //	Package_Impl | GeneralizationSet | InstanceSpecification_Impl
- * PackageableElement:
+ * PackageableElement returns ontouml::PackageableElement:
  * 	Type | Instance | Class | Association | GeneralizationSet;
  *
  **/
@@ -672,7 +670,7 @@ protected class PackageableElement_GeneralizationSetParserRuleCall_4 extends Rul
 
 /************ begin Rule Class ****************
  *
- * Class:
+ * Class returns ontouml::Class:
  * 	Kind | Quantity | Collective | SubKind | Category | Phase | Role | Mixin | RoleMixin | Mode | Relator;
  *
  **/
@@ -1128,7 +1126,7 @@ protected class Class_RelatorParserRuleCall_10 extends RuleCallToken {
 
 /************ begin Rule Association ****************
  *
- * Association:
+ * Association returns ontouml::Association:
  * 	Characterization | Mediation | Derivation | //	memberOf |
  * 	//	componentOf |
  * 	//	subQuantityOf |
@@ -1371,7 +1369,7 @@ protected class Association_MaterialAssociationParserRuleCall_4 extends RuleCall
  * / *
  *  * ONTOUML
  *  * /// #Kind (SubstanceSortal)
- * Kind:
+ * Kind returns ontouml::Kind:
  * 	(isActive?="active"? & isAbstract?="abstract"?) "kind" name=ID (":" generalization+=InlineGeneralization (","
  * 	generalization+=InlineGeneralization)*)? "{" (ownedAttribute+=ClassProperty ";")* "}";
  *
@@ -1883,7 +1881,7 @@ protected class Kind_RightCurlyBracketKeyword_6 extends KeywordToken  {
 /************ begin Rule Quantity ****************
  *
  * // #Quantity (SubstanceSortal)
- * Quantity:
+ * Quantity returns ontouml::Quantity:
  * 	(isActive?="active"? & isAbstract?="abstract"?) "quantity" name=ID (":" generalization+=InlineGeneralization (","
  * 	generalization+=InlineGeneralization)*)? "{" (ownedAttribute+=ClassProperty ";")* "}";
  *
@@ -2395,7 +2393,7 @@ protected class Quantity_RightCurlyBracketKeyword_6 extends KeywordToken  {
 /************ begin Rule Collective ****************
  *
  * // #Collective (SubstanceSortal)
- * Collective:
+ * Collective returns ontouml::Collective:
  * 	(isActive?="active"? & isExtensional?="extensional"? & isAbstract?="abstract"?) "collective" name=ID (":"
  * 	generalization+=InlineGeneralization ("," generalization+=InlineGeneralization)*)? "{" (ownedAttribute+=ClassProperty
  * 	";")* "}";
@@ -2945,7 +2943,7 @@ protected class Collective_RightCurlyBracketKeyword_6 extends KeywordToken  {
 /************ begin Rule SubKind ****************
  *
  * // #SubKind (RigidSortal)
- * SubKind:
+ * SubKind returns ontouml::SubKind:
  * 	(isActive?="active"? & isAbstract?="abstract"?) "subKind" name=ID (":" generalization+=InlineGeneralization (","
  * 	generalization+=InlineGeneralization)*)? "{" (ownedAttribute+=ClassProperty ";")* "}";
  *
@@ -3457,7 +3455,7 @@ protected class SubKind_RightCurlyBracketKeyword_6 extends KeywordToken  {
 /************ begin Rule Category ****************
  *
  * // #Category (RigidMixin)
- * Category:
+ * Category returns ontouml::Category:
  * 	(isActive?="active"? & isAbstract?="abstract") // abstract: required (poderia colocar abstract+='{' ...)
  * 	"category" name=ID (":" generalization+=InlineGeneralization ("," generalization+=InlineGeneralization)*)? "{"
  * 	(ownedAttribute+=ClassProperty ";")* "}";
@@ -3970,7 +3968,7 @@ protected class Category_RightCurlyBracketKeyword_6 extends KeywordToken  {
 /************ begin Rule Phase ****************
  *
  * // #Phase (AntiRigidSortal)
- * Phase:
+ * Phase returns ontouml::Phase:
  * 	(isActive?="active"? & isAbstract?="abstract"?) "phase" name=ID (":" generalization+=InlineGeneralization (","
  * 	generalization+=InlineGeneralization)*)? "{" (ownedAttribute+=ClassProperty ";")* "}";
  *
@@ -4482,7 +4480,7 @@ protected class Phase_RightCurlyBracketKeyword_6 extends KeywordToken  {
 /************ begin Rule Role ****************
  *
  * // #Role (AntiRigidSortal)
- * Role:
+ * Role returns ontouml::Role:
  * 	(isActive?="active"? & isAbstract?="abstract"?) "role" name=ID (":" generalization+=InlineGeneralization (","
  * 	generalization+=InlineGeneralization)*)? "{" (ownedAttribute+=ClassProperty ";")* "}";
  *
@@ -4994,7 +4992,7 @@ protected class Role_RightCurlyBracketKeyword_6 extends KeywordToken  {
 /************ begin Rule Mixin ****************
  *
  * // #Mixin (SemiRigidMixin)
- * Mixin:
+ * Mixin returns ontouml::Mixin:
  * 	(isActive?="active"? & isAbstract?="abstract") // abstract: required
  * 	"mixin" name=ID (":" generalization+=InlineGeneralization ("," generalization+=InlineGeneralization)*)? "{"
  * 	(ownedAttribute+=ClassProperty ";")* "}";
@@ -5507,7 +5505,7 @@ protected class Mixin_RightCurlyBracketKeyword_6 extends KeywordToken  {
 /************ begin Rule RoleMixin ****************
  *
  * // #RoleMixin (AntiRigidMixin)
- * RoleMixin:
+ * RoleMixin returns ontouml::RoleMixin:
  * 	(isActive?="active"? & isAbstract?="abstract"?) "roleMixin" name=ID (":" generalization+=InlineGeneralization (","
  * 	generalization+=InlineGeneralization)*)? "{" (ownedAttribute+=ClassProperty ";")* "}";
  *
@@ -6019,7 +6017,7 @@ protected class RoleMixin_RightCurlyBracketKeyword_6 extends KeywordToken  {
 /************ begin Rule Mode ****************
  *
  * // #Mode (Moment)
- * Mode:
+ * Mode returns ontouml::Mode:
  * 	(isActive?="active"? & isAbstract?="abstract"?) "mode" name=ID (":" generalization+=InlineGeneralization (","
  * 	generalization+=InlineGeneralization)*)? "{" (ownedAttribute+=ClassProperty ";")* "}";
  *
@@ -6531,7 +6529,7 @@ protected class Mode_RightCurlyBracketKeyword_6 extends KeywordToken  {
 /************ begin Rule Relator ****************
  *
  * // #Relator (Moment)
- * Relator:
+ * Relator returns ontouml::Relator:
  * 	(isActive?="active"? & isAbstract?="abstract"?) "relator" name=ID (":" generalization+=InlineGeneralization (","
  * 	generalization+=InlineGeneralization)*)? "{" (ownedAttribute+=ClassProperty ";")* "}";
  *
@@ -7059,20 +7057,20 @@ protected class Relator_RightCurlyBracketKeyword_6 extends KeywordToken  {
  *  * Igual memberEnd, mas ao invés de retornar Properties retorna Classes. É uma relação derived.
  *  * self.memberEnd->collect(e | e.type)
  *  * /// #Characterization (DependencyRelationship)
- * Characterization:
+ * Characterization returns ontouml::Characterization:
  * 	(isDerived?="derived"? & isAbstract?="abstract"? & isLeaf?="leaf"?) "characterization" name=ID? (":"
  * 	generalization+=InlineGeneralization ("," generalization+=InlineGeneralization)*)? "{" "mode:"
  * 	(ownedEnd+=InlinePropertyDefinition ";") "characterized:" (ownedEnd+=InlinePropertyDefinition ";") (("memberEnd" ":"
- * 	memberEnd+=[Property] ("," memberEnd+=[Property])* ";")? & ("navigableOwnedEnd" ":" navigableOwnedEnd+=[Property] (","
- * 	navigableOwnedEnd+=[Property])* ";")?) "}";
+ * 	memberEnd+=[ontouml::Property] ("," memberEnd+=[ontouml::Property])* ";")? & ("navigableOwnedEnd" ":"
+ * 	navigableOwnedEnd+=[ontouml::Property] ("," navigableOwnedEnd+=[ontouml::Property])* ";")?) "}";
  *
  **/
 
 // (isDerived?="derived"? & isAbstract?="abstract"? & isLeaf?="leaf"?) "characterization" name=ID? (":"
 // generalization+=InlineGeneralization ("," generalization+=InlineGeneralization)*)? "{" "mode:"
 // (ownedEnd+=InlinePropertyDefinition ";") "characterized:" (ownedEnd+=InlinePropertyDefinition ";") (("memberEnd" ":"
-// memberEnd+=[Property] ("," memberEnd+=[Property])* ";")? & ("navigableOwnedEnd" ":" navigableOwnedEnd+=[Property] (","
-// navigableOwnedEnd+=[Property])* ";")?) "}"
+// memberEnd+=[ontouml::Property] ("," memberEnd+=[ontouml::Property])* ";")? & ("navigableOwnedEnd" ":"
+// navigableOwnedEnd+=[ontouml::Property] ("," navigableOwnedEnd+=[ontouml::Property])* ";")?) "}"
 protected class Characterization_Group extends GroupToken {
 	
 	public Characterization_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -7719,8 +7717,8 @@ protected class Characterization_SemicolonKeyword_8_1 extends KeywordToken  {
 }
 
 
-// ("memberEnd" ":" memberEnd+=[Property] ("," memberEnd+=[Property])* ";")? & ("navigableOwnedEnd" ":"
-// navigableOwnedEnd+=[Property] ("," navigableOwnedEnd+=[Property])* ";")?
+// ("memberEnd" ":" memberEnd+=[ontouml::Property] ("," memberEnd+=[ontouml::Property])* ";")? & ("navigableOwnedEnd" ":"
+// navigableOwnedEnd+=[ontouml::Property] ("," navigableOwnedEnd+=[ontouml::Property])* ";")?
 protected class Characterization_UnorderedGroup_9 extends UnorderedGroupToken {
 	
 	public Characterization_UnorderedGroup_9(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -7744,7 +7742,7 @@ protected class Characterization_UnorderedGroup_9 extends UnorderedGroupToken {
 
 }
 
-// ("memberEnd" ":" memberEnd+=[Property] ("," memberEnd+=[Property])* ";")?
+// ("memberEnd" ":" memberEnd+=[ontouml::Property] ("," memberEnd+=[ontouml::Property])* ";")?
 protected class Characterization_Group_9_0 extends GroupToken {
 	
 	public Characterization_Group_9_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -7810,7 +7808,7 @@ protected class Characterization_ColonKeyword_9_0_1 extends KeywordToken  {
 
 }
 
-// memberEnd+=[Property]
+// memberEnd+=[ontouml::Property]
 protected class Characterization_MemberEndAssignment_9_0_2 extends AssignmentToken  {
 	
 	public Characterization_MemberEndAssignment_9_0_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -7847,7 +7845,7 @@ protected class Characterization_MemberEndAssignment_9_0_2 extends AssignmentTok
 
 }
 
-// ("," memberEnd+=[Property])*
+// ("," memberEnd+=[ontouml::Property])*
 protected class Characterization_Group_9_0_3 extends GroupToken {
 	
 	public Characterization_Group_9_0_3(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -7892,7 +7890,7 @@ protected class Characterization_CommaKeyword_9_0_3_0 extends KeywordToken  {
 
 }
 
-// memberEnd+=[Property]
+// memberEnd+=[ontouml::Property]
 protected class Characterization_MemberEndAssignment_9_0_3_1 extends AssignmentToken  {
 	
 	public Characterization_MemberEndAssignment_9_0_3_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -7954,7 +7952,7 @@ protected class Characterization_SemicolonKeyword_9_0_4 extends KeywordToken  {
 }
 
 
-// ("navigableOwnedEnd" ":" navigableOwnedEnd+=[Property] ("," navigableOwnedEnd+=[Property])* ";")?
+// ("navigableOwnedEnd" ":" navigableOwnedEnd+=[ontouml::Property] ("," navigableOwnedEnd+=[ontouml::Property])* ";")?
 protected class Characterization_Group_9_1 extends GroupToken {
 	
 	public Characterization_Group_9_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -8021,7 +8019,7 @@ protected class Characterization_ColonKeyword_9_1_1 extends KeywordToken  {
 
 }
 
-// navigableOwnedEnd+=[Property]
+// navigableOwnedEnd+=[ontouml::Property]
 protected class Characterization_NavigableOwnedEndAssignment_9_1_2 extends AssignmentToken  {
 	
 	public Characterization_NavigableOwnedEndAssignment_9_1_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -8058,7 +8056,7 @@ protected class Characterization_NavigableOwnedEndAssignment_9_1_2 extends Assig
 
 }
 
-// ("," navigableOwnedEnd+=[Property])*
+// ("," navigableOwnedEnd+=[ontouml::Property])*
 protected class Characterization_Group_9_1_3 extends GroupToken {
 	
 	public Characterization_Group_9_1_3(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -8103,7 +8101,7 @@ protected class Characterization_CommaKeyword_9_1_3_0 extends KeywordToken  {
 
 }
 
-// navigableOwnedEnd+=[Property]
+// navigableOwnedEnd+=[ontouml::Property]
 protected class Characterization_NavigableOwnedEndAssignment_9_1_3_1 extends AssignmentToken  {
 	
 	public Characterization_NavigableOwnedEndAssignment_9_1_3_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -8195,14 +8193,14 @@ protected class Characterization_RightCurlyBracketKeyword_10 extends KeywordToke
 /************ begin Rule Mediation ****************
  *
  * // #Mediation (DependencyRelationship)
- * Mediation:
+ * Mediation returns ontouml::Mediation:
  * 	(isDerived?="derived"? & isAbstract?="abstract"? & isLeaf?="leaf"?) "mediation" name=ID? (":"
  * 	generalization+=InlineGeneralization ("," generalization+=InlineGeneralization)*)? "{" (("relator" ":"
  * 	ownedEnd+=InlinePropertyDefinition ";") // relator
  * 	("mediated" ":" ownedEnd+=InlinePropertyDefinition ";") // mediated
  * 	// TODO: Tem que ser [>1, ?]
- * 	(("memberEnd" ":" memberEnd+=[Property] ("," memberEnd+=[Property])* ";")? & ("navigableOwnedEnd" ":"
- * 	navigableOwnedEnd+=[Property] ("," navigableOwnedEnd+=[Property])* ";")?)) "}";
+ * 	(("memberEnd" ":" memberEnd+=[ontouml::Property] ("," memberEnd+=[ontouml::Property])* ";")? & ("navigableOwnedEnd" ":"
+ * 	navigableOwnedEnd+=[ontouml::Property] ("," navigableOwnedEnd+=[ontouml::Property])* ";")?)) "}";
  *
  **/
 
@@ -8211,8 +8209,8 @@ protected class Characterization_RightCurlyBracketKeyword_10 extends KeywordToke
 // ownedEnd+=InlinePropertyDefinition ";") // relator
 // ("mediated" ":" ownedEnd+=InlinePropertyDefinition ";") // mediated
 // // TODO: Tem que ser [>1, ?]
-// (("memberEnd" ":" memberEnd+=[Property] ("," memberEnd+=[Property])* ";")? & ("navigableOwnedEnd" ":"
-// navigableOwnedEnd+=[Property] ("," navigableOwnedEnd+=[Property])* ";")?)) "}"
+// (("memberEnd" ":" memberEnd+=[ontouml::Property] ("," memberEnd+=[ontouml::Property])* ";")? & ("navigableOwnedEnd" ":"
+// navigableOwnedEnd+=[ontouml::Property] ("," navigableOwnedEnd+=[ontouml::Property])* ";")?)) "}"
 protected class Mediation_Group extends GroupToken {
 	
 	public Mediation_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -8636,8 +8634,8 @@ protected class Mediation_LeftCurlyBracketKeyword_4 extends KeywordToken  {
 // ("relator" ":" ownedEnd+=InlinePropertyDefinition ";") // relator
 // ("mediated" ":" ownedEnd+=InlinePropertyDefinition ";") // mediated
 // // TODO: Tem que ser [>1, ?]
-// (("memberEnd" ":" memberEnd+=[Property] ("," memberEnd+=[Property])* ";")? & ("navigableOwnedEnd" ":"
-// navigableOwnedEnd+=[Property] ("," navigableOwnedEnd+=[Property])* ";")?)
+// (("memberEnd" ":" memberEnd+=[ontouml::Property] ("," memberEnd+=[ontouml::Property])* ";")? & ("navigableOwnedEnd" ":"
+// navigableOwnedEnd+=[ontouml::Property] ("," navigableOwnedEnd+=[ontouml::Property])* ";")?)
 protected class Mediation_Group_5 extends GroupToken {
 	
 	public Mediation_Group_5(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -8929,8 +8927,8 @@ protected class Mediation_SemicolonKeyword_5_1_3 extends KeywordToken  {
 }
 
 
-// ("memberEnd" ":" memberEnd+=[Property] ("," memberEnd+=[Property])* ";")? & ("navigableOwnedEnd" ":"
-// navigableOwnedEnd+=[Property] ("," navigableOwnedEnd+=[Property])* ";")?
+// ("memberEnd" ":" memberEnd+=[ontouml::Property] ("," memberEnd+=[ontouml::Property])* ";")? & ("navigableOwnedEnd" ":"
+// navigableOwnedEnd+=[ontouml::Property] ("," navigableOwnedEnd+=[ontouml::Property])* ";")?
 protected class Mediation_UnorderedGroup_5_2 extends UnorderedGroupToken {
 	
 	public Mediation_UnorderedGroup_5_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -8954,7 +8952,7 @@ protected class Mediation_UnorderedGroup_5_2 extends UnorderedGroupToken {
 
 }
 
-// ("memberEnd" ":" memberEnd+=[Property] ("," memberEnd+=[Property])* ";")?
+// ("memberEnd" ":" memberEnd+=[ontouml::Property] ("," memberEnd+=[ontouml::Property])* ";")?
 protected class Mediation_Group_5_2_0 extends GroupToken {
 	
 	public Mediation_Group_5_2_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -9020,7 +9018,7 @@ protected class Mediation_ColonKeyword_5_2_0_1 extends KeywordToken  {
 
 }
 
-// memberEnd+=[Property]
+// memberEnd+=[ontouml::Property]
 protected class Mediation_MemberEndAssignment_5_2_0_2 extends AssignmentToken  {
 	
 	public Mediation_MemberEndAssignment_5_2_0_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -9057,7 +9055,7 @@ protected class Mediation_MemberEndAssignment_5_2_0_2 extends AssignmentToken  {
 
 }
 
-// ("," memberEnd+=[Property])*
+// ("," memberEnd+=[ontouml::Property])*
 protected class Mediation_Group_5_2_0_3 extends GroupToken {
 	
 	public Mediation_Group_5_2_0_3(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -9102,7 +9100,7 @@ protected class Mediation_CommaKeyword_5_2_0_3_0 extends KeywordToken  {
 
 }
 
-// memberEnd+=[Property]
+// memberEnd+=[ontouml::Property]
 protected class Mediation_MemberEndAssignment_5_2_0_3_1 extends AssignmentToken  {
 	
 	public Mediation_MemberEndAssignment_5_2_0_3_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -9164,7 +9162,7 @@ protected class Mediation_SemicolonKeyword_5_2_0_4 extends KeywordToken  {
 }
 
 
-// ("navigableOwnedEnd" ":" navigableOwnedEnd+=[Property] ("," navigableOwnedEnd+=[Property])* ";")?
+// ("navigableOwnedEnd" ":" navigableOwnedEnd+=[ontouml::Property] ("," navigableOwnedEnd+=[ontouml::Property])* ";")?
 protected class Mediation_Group_5_2_1 extends GroupToken {
 	
 	public Mediation_Group_5_2_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -9231,7 +9229,7 @@ protected class Mediation_ColonKeyword_5_2_1_1 extends KeywordToken  {
 
 }
 
-// navigableOwnedEnd+=[Property]
+// navigableOwnedEnd+=[ontouml::Property]
 protected class Mediation_NavigableOwnedEndAssignment_5_2_1_2 extends AssignmentToken  {
 	
 	public Mediation_NavigableOwnedEndAssignment_5_2_1_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -9268,7 +9266,7 @@ protected class Mediation_NavigableOwnedEndAssignment_5_2_1_2 extends Assignment
 
 }
 
-// ("," navigableOwnedEnd+=[Property])*
+// ("," navigableOwnedEnd+=[ontouml::Property])*
 protected class Mediation_Group_5_2_1_3 extends GroupToken {
 	
 	public Mediation_Group_5_2_1_3(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -9313,7 +9311,7 @@ protected class Mediation_CommaKeyword_5_2_1_3_0 extends KeywordToken  {
 
 }
 
-// navigableOwnedEnd+=[Property]
+// navigableOwnedEnd+=[ontouml::Property]
 protected class Mediation_NavigableOwnedEndAssignment_5_2_1_3_1 extends AssignmentToken  {
 	
 	public Mediation_NavigableOwnedEndAssignment_5_2_1_3_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -9406,20 +9404,20 @@ protected class Mediation_RightCurlyBracketKeyword_6 extends KeywordToken  {
 /************ begin Rule Derivation ****************
  *
  * // #Derivation (DependencyRelationship)
- * Derivation:
+ * Derivation returns ontouml::Derivation:
  * 	(isDerived?="derived"? & isAbstract?="abstract"? & isLeaf?="leaf"?) "derivation" name=ID? (":"
  * 	generalization+=InlineGeneralization ("," generalization+=InlineGeneralization)*)? "{" "material:"
  * 	(ownedEnd+=InlinePropertyDefinition ";") "relator:" (ownedEnd+=InlinePropertyDefinition ";") (("memberEnd" ":"
- * 	memberEnd+=[Property] ("," memberEnd+=[Property])* ";")? & ("navigableOwnedEnd" ":" navigableOwnedEnd+=[Property] (","
- * 	navigableOwnedEnd+=[Property])* ";")?) "}";
+ * 	memberEnd+=[ontouml::Property] ("," memberEnd+=[ontouml::Property])* ";")? & ("navigableOwnedEnd" ":"
+ * 	navigableOwnedEnd+=[ontouml::Property] ("," navigableOwnedEnd+=[ontouml::Property])* ";")?) "}";
  *
  **/
 
 // (isDerived?="derived"? & isAbstract?="abstract"? & isLeaf?="leaf"?) "derivation" name=ID? (":"
 // generalization+=InlineGeneralization ("," generalization+=InlineGeneralization)*)? "{" "material:"
 // (ownedEnd+=InlinePropertyDefinition ";") "relator:" (ownedEnd+=InlinePropertyDefinition ";") (("memberEnd" ":"
-// memberEnd+=[Property] ("," memberEnd+=[Property])* ";")? & ("navigableOwnedEnd" ":" navigableOwnedEnd+=[Property] (","
-// navigableOwnedEnd+=[Property])* ";")?) "}"
+// memberEnd+=[ontouml::Property] ("," memberEnd+=[ontouml::Property])* ";")? & ("navigableOwnedEnd" ":"
+// navigableOwnedEnd+=[ontouml::Property] ("," navigableOwnedEnd+=[ontouml::Property])* ";")?) "}"
 protected class Derivation_Group extends GroupToken {
 	
 	public Derivation_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -10066,8 +10064,8 @@ protected class Derivation_SemicolonKeyword_8_1 extends KeywordToken  {
 }
 
 
-// ("memberEnd" ":" memberEnd+=[Property] ("," memberEnd+=[Property])* ";")? & ("navigableOwnedEnd" ":"
-// navigableOwnedEnd+=[Property] ("," navigableOwnedEnd+=[Property])* ";")?
+// ("memberEnd" ":" memberEnd+=[ontouml::Property] ("," memberEnd+=[ontouml::Property])* ";")? & ("navigableOwnedEnd" ":"
+// navigableOwnedEnd+=[ontouml::Property] ("," navigableOwnedEnd+=[ontouml::Property])* ";")?
 protected class Derivation_UnorderedGroup_9 extends UnorderedGroupToken {
 	
 	public Derivation_UnorderedGroup_9(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -10091,7 +10089,7 @@ protected class Derivation_UnorderedGroup_9 extends UnorderedGroupToken {
 
 }
 
-// ("memberEnd" ":" memberEnd+=[Property] ("," memberEnd+=[Property])* ";")?
+// ("memberEnd" ":" memberEnd+=[ontouml::Property] ("," memberEnd+=[ontouml::Property])* ";")?
 protected class Derivation_Group_9_0 extends GroupToken {
 	
 	public Derivation_Group_9_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -10157,7 +10155,7 @@ protected class Derivation_ColonKeyword_9_0_1 extends KeywordToken  {
 
 }
 
-// memberEnd+=[Property]
+// memberEnd+=[ontouml::Property]
 protected class Derivation_MemberEndAssignment_9_0_2 extends AssignmentToken  {
 	
 	public Derivation_MemberEndAssignment_9_0_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -10194,7 +10192,7 @@ protected class Derivation_MemberEndAssignment_9_0_2 extends AssignmentToken  {
 
 }
 
-// ("," memberEnd+=[Property])*
+// ("," memberEnd+=[ontouml::Property])*
 protected class Derivation_Group_9_0_3 extends GroupToken {
 	
 	public Derivation_Group_9_0_3(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -10239,7 +10237,7 @@ protected class Derivation_CommaKeyword_9_0_3_0 extends KeywordToken  {
 
 }
 
-// memberEnd+=[Property]
+// memberEnd+=[ontouml::Property]
 protected class Derivation_MemberEndAssignment_9_0_3_1 extends AssignmentToken  {
 	
 	public Derivation_MemberEndAssignment_9_0_3_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -10301,7 +10299,7 @@ protected class Derivation_SemicolonKeyword_9_0_4 extends KeywordToken  {
 }
 
 
-// ("navigableOwnedEnd" ":" navigableOwnedEnd+=[Property] ("," navigableOwnedEnd+=[Property])* ";")?
+// ("navigableOwnedEnd" ":" navigableOwnedEnd+=[ontouml::Property] ("," navigableOwnedEnd+=[ontouml::Property])* ";")?
 protected class Derivation_Group_9_1 extends GroupToken {
 	
 	public Derivation_Group_9_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -10368,7 +10366,7 @@ protected class Derivation_ColonKeyword_9_1_1 extends KeywordToken  {
 
 }
 
-// navigableOwnedEnd+=[Property]
+// navigableOwnedEnd+=[ontouml::Property]
 protected class Derivation_NavigableOwnedEndAssignment_9_1_2 extends AssignmentToken  {
 	
 	public Derivation_NavigableOwnedEndAssignment_9_1_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -10405,7 +10403,7 @@ protected class Derivation_NavigableOwnedEndAssignment_9_1_2 extends AssignmentT
 
 }
 
-// ("," navigableOwnedEnd+=[Property])*
+// ("," navigableOwnedEnd+=[ontouml::Property])*
 protected class Derivation_Group_9_1_3 extends GroupToken {
 	
 	public Derivation_Group_9_1_3(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -10450,7 +10448,7 @@ protected class Derivation_CommaKeyword_9_1_3_0 extends KeywordToken  {
 
 }
 
-// navigableOwnedEnd+=[Property]
+// navigableOwnedEnd+=[ontouml::Property]
 protected class Derivation_NavigableOwnedEndAssignment_9_1_3_1 extends AssignmentToken  {
 	
 	public Derivation_NavigableOwnedEndAssignment_9_1_3_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -10542,18 +10540,20 @@ protected class Derivation_RightCurlyBracketKeyword_10 extends KeywordToken  {
 /************ begin Rule memberOf ****************
  *
  * // #memberOf (Meronymic)
- * memberOf:
- * 	{memberOf} (isDerived?="derived"? & isAbstract?="abstract"? & isLeaf?="leaf"? & isEssential?="essential"? &
+ * memberOf returns ontouml::memberOf:
+ * 	{ontouml::memberOf} (isDerived?="derived"? & isAbstract?="abstract"? & isLeaf?="leaf"? & isEssential?="essential"? &
  * 	isImmutablePart?="imutablePart"? & isImmutableWhole?="imutableWhole"? & isInseparable?="inseparable"? &
- * 	isShareable?="shareable"?) "memberOf" name=ID "{" (("memberEnd" ":" memberEnd+=[Property] ("," memberEnd+=[Property])*
- * 	";")? & ("navigableOwnedEnd" ":" navigableOwnedEnd+=[Property] ("," navigableOwnedEnd+=[Property])* ";")?)? "}";
+ * 	isShareable?="shareable"?) "memberOf" name=ID "{" (("memberEnd" ":" memberEnd+=[ontouml::Property] (","
+ * 	memberEnd+=[ontouml::Property])* ";")? & ("navigableOwnedEnd" ":" navigableOwnedEnd+=[ontouml::Property] (","
+ * 	navigableOwnedEnd+=[ontouml::Property])* ";")?)? "}";
  *
  **/
 
-// {memberOf} (isDerived?="derived"? & isAbstract?="abstract"? & isLeaf?="leaf"? & isEssential?="essential"? &
+// {ontouml::memberOf} (isDerived?="derived"? & isAbstract?="abstract"? & isLeaf?="leaf"? & isEssential?="essential"? &
 // isImmutablePart?="imutablePart"? & isImmutableWhole?="imutableWhole"? & isInseparable?="inseparable"? &
-// isShareable?="shareable"?) "memberOf" name=ID "{" (("memberEnd" ":" memberEnd+=[Property] ("," memberEnd+=[Property])*
-// ";")? & ("navigableOwnedEnd" ":" navigableOwnedEnd+=[Property] ("," navigableOwnedEnd+=[Property])* ";")?)? "}"
+// isShareable?="shareable"?) "memberOf" name=ID "{" (("memberEnd" ":" memberEnd+=[ontouml::Property] (","
+// memberEnd+=[ontouml::Property])* ";")? & ("navigableOwnedEnd" ":" navigableOwnedEnd+=[ontouml::Property] (","
+// navigableOwnedEnd+=[ontouml::Property])* ";")?)? "}"
 protected class MemberOf_Group extends GroupToken {
 	
 	public MemberOf_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -10582,7 +10582,7 @@ protected class MemberOf_Group extends GroupToken {
 
 }
 
-// {memberOf}
+// {ontouml::memberOf}
 protected class MemberOf_MemberOfAction_0 extends ActionToken  {
 
 	public MemberOf_MemberOfAction_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -11019,8 +11019,8 @@ protected class MemberOf_LeftCurlyBracketKeyword_4 extends KeywordToken  {
 
 }
 
-// (("memberEnd" ":" memberEnd+=[Property] ("," memberEnd+=[Property])* ";")? & ("navigableOwnedEnd" ":"
-// navigableOwnedEnd+=[Property] ("," navigableOwnedEnd+=[Property])* ";")?)?
+// (("memberEnd" ":" memberEnd+=[ontouml::Property] ("," memberEnd+=[ontouml::Property])* ";")? & ("navigableOwnedEnd" ":"
+// navigableOwnedEnd+=[ontouml::Property] ("," navigableOwnedEnd+=[ontouml::Property])* ";")?)?
 protected class MemberOf_UnorderedGroup_5 extends UnorderedGroupToken {
 	
 	public MemberOf_UnorderedGroup_5(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -11043,7 +11043,7 @@ protected class MemberOf_UnorderedGroup_5 extends UnorderedGroupToken {
 
 }
 
-// ("memberEnd" ":" memberEnd+=[Property] ("," memberEnd+=[Property])* ";")?
+// ("memberEnd" ":" memberEnd+=[ontouml::Property] ("," memberEnd+=[ontouml::Property])* ";")?
 protected class MemberOf_Group_5_0 extends GroupToken {
 	
 	public MemberOf_Group_5_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -11109,7 +11109,7 @@ protected class MemberOf_ColonKeyword_5_0_1 extends KeywordToken  {
 
 }
 
-// memberEnd+=[Property]
+// memberEnd+=[ontouml::Property]
 protected class MemberOf_MemberEndAssignment_5_0_2 extends AssignmentToken  {
 	
 	public MemberOf_MemberEndAssignment_5_0_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -11146,7 +11146,7 @@ protected class MemberOf_MemberEndAssignment_5_0_2 extends AssignmentToken  {
 
 }
 
-// ("," memberEnd+=[Property])*
+// ("," memberEnd+=[ontouml::Property])*
 protected class MemberOf_Group_5_0_3 extends GroupToken {
 	
 	public MemberOf_Group_5_0_3(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -11191,7 +11191,7 @@ protected class MemberOf_CommaKeyword_5_0_3_0 extends KeywordToken  {
 
 }
 
-// memberEnd+=[Property]
+// memberEnd+=[ontouml::Property]
 protected class MemberOf_MemberEndAssignment_5_0_3_1 extends AssignmentToken  {
 	
 	public MemberOf_MemberEndAssignment_5_0_3_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -11253,7 +11253,7 @@ protected class MemberOf_SemicolonKeyword_5_0_4 extends KeywordToken  {
 }
 
 
-// ("navigableOwnedEnd" ":" navigableOwnedEnd+=[Property] ("," navigableOwnedEnd+=[Property])* ";")?
+// ("navigableOwnedEnd" ":" navigableOwnedEnd+=[ontouml::Property] ("," navigableOwnedEnd+=[ontouml::Property])* ";")?
 protected class MemberOf_Group_5_1 extends GroupToken {
 	
 	public MemberOf_Group_5_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -11320,7 +11320,7 @@ protected class MemberOf_ColonKeyword_5_1_1 extends KeywordToken  {
 
 }
 
-// navigableOwnedEnd+=[Property]
+// navigableOwnedEnd+=[ontouml::Property]
 protected class MemberOf_NavigableOwnedEndAssignment_5_1_2 extends AssignmentToken  {
 	
 	public MemberOf_NavigableOwnedEndAssignment_5_1_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -11357,7 +11357,7 @@ protected class MemberOf_NavigableOwnedEndAssignment_5_1_2 extends AssignmentTok
 
 }
 
-// ("," navigableOwnedEnd+=[Property])*
+// ("," navigableOwnedEnd+=[ontouml::Property])*
 protected class MemberOf_Group_5_1_3 extends GroupToken {
 	
 	public MemberOf_Group_5_1_3(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -11402,7 +11402,7 @@ protected class MemberOf_CommaKeyword_5_1_3_0 extends KeywordToken  {
 
 }
 
-// navigableOwnedEnd+=[Property]
+// navigableOwnedEnd+=[ontouml::Property]
 protected class MemberOf_NavigableOwnedEndAssignment_5_1_3_1 extends AssignmentToken  {
 	
 	public MemberOf_NavigableOwnedEndAssignment_5_1_3_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -11495,20 +11495,20 @@ protected class MemberOf_RightCurlyBracketKeyword_6 extends KeywordToken  {
 /************ begin Rule componentOf ****************
  *
  * // #componentOf (Meronymic)
- * componentOf:
- * 	{componentOf} (isDerived?="derived"? & isAbstract?="abstract"? & isLeaf?="leaf"? & isEssential?="essential"? &
- * 	isImmutablePart?="imutablePart"? & isImmutableWhole?="imutableWhole"? & isInseparable?="inseparable"? &
- * 	isShareable?="shareable"?) "componentOf" name=ID "{" (("memberEnd" ":" memberEnd+=[Property] (","
- * 	memberEnd+=[Property])* ";")? & ("navigableOwnedEnd" ":" navigableOwnedEnd+=[Property] (","
- * 	navigableOwnedEnd+=[Property])* ";")?)? "}";
+ * componentOf returns ontouml::componentOf:
+ * 	{ontouml::componentOf} (isDerived?="derived"? & isAbstract?="abstract"? & isLeaf?="leaf"? & isEssential?="essential"?
+ * 	& isImmutablePart?="imutablePart"? & isImmutableWhole?="imutableWhole"? & isInseparable?="inseparable"? &
+ * 	isShareable?="shareable"?) "componentOf" name=ID "{" (("memberEnd" ":" memberEnd+=[ontouml::Property] (","
+ * 	memberEnd+=[ontouml::Property])* ";")? & ("navigableOwnedEnd" ":" navigableOwnedEnd+=[ontouml::Property] (","
+ * 	navigableOwnedEnd+=[ontouml::Property])* ";")?)? "}";
  *
  **/
 
-// {componentOf} (isDerived?="derived"? & isAbstract?="abstract"? & isLeaf?="leaf"? & isEssential?="essential"? &
+// {ontouml::componentOf} (isDerived?="derived"? & isAbstract?="abstract"? & isLeaf?="leaf"? & isEssential?="essential"? &
 // isImmutablePart?="imutablePart"? & isImmutableWhole?="imutableWhole"? & isInseparable?="inseparable"? &
-// isShareable?="shareable"?) "componentOf" name=ID "{" (("memberEnd" ":" memberEnd+=[Property] (","
-// memberEnd+=[Property])* ";")? & ("navigableOwnedEnd" ":" navigableOwnedEnd+=[Property] (","
-// navigableOwnedEnd+=[Property])* ";")?)? "}"
+// isShareable?="shareable"?) "componentOf" name=ID "{" (("memberEnd" ":" memberEnd+=[ontouml::Property] (","
+// memberEnd+=[ontouml::Property])* ";")? & ("navigableOwnedEnd" ":" navigableOwnedEnd+=[ontouml::Property] (","
+// navigableOwnedEnd+=[ontouml::Property])* ";")?)? "}"
 protected class ComponentOf_Group extends GroupToken {
 	
 	public ComponentOf_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -11537,7 +11537,7 @@ protected class ComponentOf_Group extends GroupToken {
 
 }
 
-// {componentOf}
+// {ontouml::componentOf}
 protected class ComponentOf_ComponentOfAction_0 extends ActionToken  {
 
 	public ComponentOf_ComponentOfAction_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -11974,8 +11974,8 @@ protected class ComponentOf_LeftCurlyBracketKeyword_4 extends KeywordToken  {
 
 }
 
-// (("memberEnd" ":" memberEnd+=[Property] ("," memberEnd+=[Property])* ";")? & ("navigableOwnedEnd" ":"
-// navigableOwnedEnd+=[Property] ("," navigableOwnedEnd+=[Property])* ";")?)?
+// (("memberEnd" ":" memberEnd+=[ontouml::Property] ("," memberEnd+=[ontouml::Property])* ";")? & ("navigableOwnedEnd" ":"
+// navigableOwnedEnd+=[ontouml::Property] ("," navigableOwnedEnd+=[ontouml::Property])* ";")?)?
 protected class ComponentOf_UnorderedGroup_5 extends UnorderedGroupToken {
 	
 	public ComponentOf_UnorderedGroup_5(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -11998,7 +11998,7 @@ protected class ComponentOf_UnorderedGroup_5 extends UnorderedGroupToken {
 
 }
 
-// ("memberEnd" ":" memberEnd+=[Property] ("," memberEnd+=[Property])* ";")?
+// ("memberEnd" ":" memberEnd+=[ontouml::Property] ("," memberEnd+=[ontouml::Property])* ";")?
 protected class ComponentOf_Group_5_0 extends GroupToken {
 	
 	public ComponentOf_Group_5_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -12064,7 +12064,7 @@ protected class ComponentOf_ColonKeyword_5_0_1 extends KeywordToken  {
 
 }
 
-// memberEnd+=[Property]
+// memberEnd+=[ontouml::Property]
 protected class ComponentOf_MemberEndAssignment_5_0_2 extends AssignmentToken  {
 	
 	public ComponentOf_MemberEndAssignment_5_0_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -12101,7 +12101,7 @@ protected class ComponentOf_MemberEndAssignment_5_0_2 extends AssignmentToken  {
 
 }
 
-// ("," memberEnd+=[Property])*
+// ("," memberEnd+=[ontouml::Property])*
 protected class ComponentOf_Group_5_0_3 extends GroupToken {
 	
 	public ComponentOf_Group_5_0_3(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -12146,7 +12146,7 @@ protected class ComponentOf_CommaKeyword_5_0_3_0 extends KeywordToken  {
 
 }
 
-// memberEnd+=[Property]
+// memberEnd+=[ontouml::Property]
 protected class ComponentOf_MemberEndAssignment_5_0_3_1 extends AssignmentToken  {
 	
 	public ComponentOf_MemberEndAssignment_5_0_3_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -12208,7 +12208,7 @@ protected class ComponentOf_SemicolonKeyword_5_0_4 extends KeywordToken  {
 }
 
 
-// ("navigableOwnedEnd" ":" navigableOwnedEnd+=[Property] ("," navigableOwnedEnd+=[Property])* ";")?
+// ("navigableOwnedEnd" ":" navigableOwnedEnd+=[ontouml::Property] ("," navigableOwnedEnd+=[ontouml::Property])* ";")?
 protected class ComponentOf_Group_5_1 extends GroupToken {
 	
 	public ComponentOf_Group_5_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -12275,7 +12275,7 @@ protected class ComponentOf_ColonKeyword_5_1_1 extends KeywordToken  {
 
 }
 
-// navigableOwnedEnd+=[Property]
+// navigableOwnedEnd+=[ontouml::Property]
 protected class ComponentOf_NavigableOwnedEndAssignment_5_1_2 extends AssignmentToken  {
 	
 	public ComponentOf_NavigableOwnedEndAssignment_5_1_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -12312,7 +12312,7 @@ protected class ComponentOf_NavigableOwnedEndAssignment_5_1_2 extends Assignment
 
 }
 
-// ("," navigableOwnedEnd+=[Property])*
+// ("," navigableOwnedEnd+=[ontouml::Property])*
 protected class ComponentOf_Group_5_1_3 extends GroupToken {
 	
 	public ComponentOf_Group_5_1_3(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -12357,7 +12357,7 @@ protected class ComponentOf_CommaKeyword_5_1_3_0 extends KeywordToken  {
 
 }
 
-// navigableOwnedEnd+=[Property]
+// navigableOwnedEnd+=[ontouml::Property]
 protected class ComponentOf_NavigableOwnedEndAssignment_5_1_3_1 extends AssignmentToken  {
 	
 	public ComponentOf_NavigableOwnedEndAssignment_5_1_3_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -12450,18 +12450,20 @@ protected class ComponentOf_RightCurlyBracketKeyword_6 extends KeywordToken  {
 /************ begin Rule subQuantityOf ****************
  *
  * // #subQuantityOf (Meronymic)
- * subQuantityOf:
- * 	{subQuantityOf} //( isDerived?='derived'? & isAbstract?='abstract'? & isLeaf?='leaf'? )
+ * subQuantityOf returns ontouml::subQuantityOf:
+ * 	{ontouml::subQuantityOf} //( isDerived?='derived'? & isAbstract?='abstract'? & isLeaf?='leaf'? )
  * 	//( isEssential?='essential'? & isImmutablePart?='imutable-part'? & isImmutableWhole?='imutable-whole'? & isInseparable?='inseparable'? & isShareable?='shareable'? )
- * 	"subQuantityOf" name=ID "{" (("memberEnd" ":" memberEnd+=[Property] ("," memberEnd+=[Property])* ";")? &
- * 	("navigableOwnedEnd" ":" navigableOwnedEnd+=[Property] ("," navigableOwnedEnd+=[Property])* ";")?)? "}";
+ * 	"subQuantityOf" name=ID "{" (("memberEnd" ":" memberEnd+=[ontouml::Property] ("," memberEnd+=[ontouml::Property])*
+ * 	";")? & ("navigableOwnedEnd" ":" navigableOwnedEnd+=[ontouml::Property] ("," navigableOwnedEnd+=[ontouml::Property])*
+ * 	";")?)? "}";
  *
  **/
 
-// {subQuantityOf} //( isDerived?='derived'? & isAbstract?='abstract'? & isLeaf?='leaf'? )
+// {ontouml::subQuantityOf} //( isDerived?='derived'? & isAbstract?='abstract'? & isLeaf?='leaf'? )
 // //( isEssential?='essential'? & isImmutablePart?='imutable-part'? & isImmutableWhole?='imutable-whole'? & isInseparable?='inseparable'? & isShareable?='shareable'? )
-// "subQuantityOf" name=ID "{" (("memberEnd" ":" memberEnd+=[Property] ("," memberEnd+=[Property])* ";")? &
-// ("navigableOwnedEnd" ":" navigableOwnedEnd+=[Property] ("," navigableOwnedEnd+=[Property])* ";")?)? "}"
+// "subQuantityOf" name=ID "{" (("memberEnd" ":" memberEnd+=[ontouml::Property] ("," memberEnd+=[ontouml::Property])* ";")?
+// & ("navigableOwnedEnd" ":" navigableOwnedEnd+=[ontouml::Property] ("," navigableOwnedEnd+=[ontouml::Property])* ";")?)?
+// "}"
 protected class SubQuantityOf_Group extends GroupToken {
 	
 	public SubQuantityOf_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -12490,7 +12492,7 @@ protected class SubQuantityOf_Group extends GroupToken {
 
 }
 
-// {subQuantityOf}
+// {ontouml::subQuantityOf}
 protected class SubQuantityOf_SubQuantityOfAction_0 extends ActionToken  {
 
 	public SubQuantityOf_SubQuantityOfAction_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -12596,8 +12598,8 @@ protected class SubQuantityOf_LeftCurlyBracketKeyword_3 extends KeywordToken  {
 
 }
 
-// (("memberEnd" ":" memberEnd+=[Property] ("," memberEnd+=[Property])* ";")? & ("navigableOwnedEnd" ":"
-// navigableOwnedEnd+=[Property] ("," navigableOwnedEnd+=[Property])* ";")?)?
+// (("memberEnd" ":" memberEnd+=[ontouml::Property] ("," memberEnd+=[ontouml::Property])* ";")? & ("navigableOwnedEnd" ":"
+// navigableOwnedEnd+=[ontouml::Property] ("," navigableOwnedEnd+=[ontouml::Property])* ";")?)?
 protected class SubQuantityOf_UnorderedGroup_4 extends UnorderedGroupToken {
 	
 	public SubQuantityOf_UnorderedGroup_4(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -12620,7 +12622,7 @@ protected class SubQuantityOf_UnorderedGroup_4 extends UnorderedGroupToken {
 
 }
 
-// ("memberEnd" ":" memberEnd+=[Property] ("," memberEnd+=[Property])* ";")?
+// ("memberEnd" ":" memberEnd+=[ontouml::Property] ("," memberEnd+=[ontouml::Property])* ";")?
 protected class SubQuantityOf_Group_4_0 extends GroupToken {
 	
 	public SubQuantityOf_Group_4_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -12686,7 +12688,7 @@ protected class SubQuantityOf_ColonKeyword_4_0_1 extends KeywordToken  {
 
 }
 
-// memberEnd+=[Property]
+// memberEnd+=[ontouml::Property]
 protected class SubQuantityOf_MemberEndAssignment_4_0_2 extends AssignmentToken  {
 	
 	public SubQuantityOf_MemberEndAssignment_4_0_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -12723,7 +12725,7 @@ protected class SubQuantityOf_MemberEndAssignment_4_0_2 extends AssignmentToken 
 
 }
 
-// ("," memberEnd+=[Property])*
+// ("," memberEnd+=[ontouml::Property])*
 protected class SubQuantityOf_Group_4_0_3 extends GroupToken {
 	
 	public SubQuantityOf_Group_4_0_3(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -12768,7 +12770,7 @@ protected class SubQuantityOf_CommaKeyword_4_0_3_0 extends KeywordToken  {
 
 }
 
-// memberEnd+=[Property]
+// memberEnd+=[ontouml::Property]
 protected class SubQuantityOf_MemberEndAssignment_4_0_3_1 extends AssignmentToken  {
 	
 	public SubQuantityOf_MemberEndAssignment_4_0_3_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -12830,7 +12832,7 @@ protected class SubQuantityOf_SemicolonKeyword_4_0_4 extends KeywordToken  {
 }
 
 
-// ("navigableOwnedEnd" ":" navigableOwnedEnd+=[Property] ("," navigableOwnedEnd+=[Property])* ";")?
+// ("navigableOwnedEnd" ":" navigableOwnedEnd+=[ontouml::Property] ("," navigableOwnedEnd+=[ontouml::Property])* ";")?
 protected class SubQuantityOf_Group_4_1 extends GroupToken {
 	
 	public SubQuantityOf_Group_4_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -12897,7 +12899,7 @@ protected class SubQuantityOf_ColonKeyword_4_1_1 extends KeywordToken  {
 
 }
 
-// navigableOwnedEnd+=[Property]
+// navigableOwnedEnd+=[ontouml::Property]
 protected class SubQuantityOf_NavigableOwnedEndAssignment_4_1_2 extends AssignmentToken  {
 	
 	public SubQuantityOf_NavigableOwnedEndAssignment_4_1_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -12934,7 +12936,7 @@ protected class SubQuantityOf_NavigableOwnedEndAssignment_4_1_2 extends Assignme
 
 }
 
-// ("," navigableOwnedEnd+=[Property])*
+// ("," navigableOwnedEnd+=[ontouml::Property])*
 protected class SubQuantityOf_Group_4_1_3 extends GroupToken {
 	
 	public SubQuantityOf_Group_4_1_3(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -12979,7 +12981,7 @@ protected class SubQuantityOf_CommaKeyword_4_1_3_0 extends KeywordToken  {
 
 }
 
-// navigableOwnedEnd+=[Property]
+// navigableOwnedEnd+=[ontouml::Property]
 protected class SubQuantityOf_NavigableOwnedEndAssignment_4_1_3_1 extends AssignmentToken  {
 	
 	public SubQuantityOf_NavigableOwnedEndAssignment_4_1_3_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -13072,18 +13074,20 @@ protected class SubQuantityOf_RightCurlyBracketKeyword_5 extends KeywordToken  {
 /************ begin Rule subCollectionOf ****************
  *
  * // #subCollectionOf (Meronymic)
- * subCollectionOf:
- * 	{subCollectionOf} //( isDerived?='derived'? & isAbstract?='abstract'? & isLeaf?='leaf'? )
+ * subCollectionOf returns ontouml::subCollectionOf:
+ * 	{ontouml::subCollectionOf} //( isDerived?='derived'? & isAbstract?='abstract'? & isLeaf?='leaf'? )
  * 	//( isEssential?='essential'? & isImmutablePart?='imutable-part'? & isImmutableWhole?='imutable-whole'? & isInseparable?='inseparable'? & isShareable?='shareable'? )
- * 	"subCollectionOf" name=ID "{" (("memberEnd" ":" memberEnd+=[Property] ("," memberEnd+=[Property])* ";")? &
- * 	("navigableOwnedEnd" ":" navigableOwnedEnd+=[Property] ("," navigableOwnedEnd+=[Property])* ";")?)? "}";
+ * 	"subCollectionOf" name=ID "{" (("memberEnd" ":" memberEnd+=[ontouml::Property] ("," memberEnd+=[ontouml::Property])*
+ * 	";")? & ("navigableOwnedEnd" ":" navigableOwnedEnd+=[ontouml::Property] ("," navigableOwnedEnd+=[ontouml::Property])*
+ * 	";")?)? "}";
  *
  **/
 
-// {subCollectionOf} //( isDerived?='derived'? & isAbstract?='abstract'? & isLeaf?='leaf'? )
+// {ontouml::subCollectionOf} //( isDerived?='derived'? & isAbstract?='abstract'? & isLeaf?='leaf'? )
 // //( isEssential?='essential'? & isImmutablePart?='imutable-part'? & isImmutableWhole?='imutable-whole'? & isInseparable?='inseparable'? & isShareable?='shareable'? )
-// "subCollectionOf" name=ID "{" (("memberEnd" ":" memberEnd+=[Property] ("," memberEnd+=[Property])* ";")? &
-// ("navigableOwnedEnd" ":" navigableOwnedEnd+=[Property] ("," navigableOwnedEnd+=[Property])* ";")?)? "}"
+// "subCollectionOf" name=ID "{" (("memberEnd" ":" memberEnd+=[ontouml::Property] ("," memberEnd+=[ontouml::Property])*
+// ";")? & ("navigableOwnedEnd" ":" navigableOwnedEnd+=[ontouml::Property] ("," navigableOwnedEnd+=[ontouml::Property])*
+// ";")?)? "}"
 protected class SubCollectionOf_Group extends GroupToken {
 	
 	public SubCollectionOf_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -13112,7 +13116,7 @@ protected class SubCollectionOf_Group extends GroupToken {
 
 }
 
-// {subCollectionOf}
+// {ontouml::subCollectionOf}
 protected class SubCollectionOf_SubCollectionOfAction_0 extends ActionToken  {
 
 	public SubCollectionOf_SubCollectionOfAction_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -13218,8 +13222,8 @@ protected class SubCollectionOf_LeftCurlyBracketKeyword_3 extends KeywordToken  
 
 }
 
-// (("memberEnd" ":" memberEnd+=[Property] ("," memberEnd+=[Property])* ";")? & ("navigableOwnedEnd" ":"
-// navigableOwnedEnd+=[Property] ("," navigableOwnedEnd+=[Property])* ";")?)?
+// (("memberEnd" ":" memberEnd+=[ontouml::Property] ("," memberEnd+=[ontouml::Property])* ";")? & ("navigableOwnedEnd" ":"
+// navigableOwnedEnd+=[ontouml::Property] ("," navigableOwnedEnd+=[ontouml::Property])* ";")?)?
 protected class SubCollectionOf_UnorderedGroup_4 extends UnorderedGroupToken {
 	
 	public SubCollectionOf_UnorderedGroup_4(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -13242,7 +13246,7 @@ protected class SubCollectionOf_UnorderedGroup_4 extends UnorderedGroupToken {
 
 }
 
-// ("memberEnd" ":" memberEnd+=[Property] ("," memberEnd+=[Property])* ";")?
+// ("memberEnd" ":" memberEnd+=[ontouml::Property] ("," memberEnd+=[ontouml::Property])* ";")?
 protected class SubCollectionOf_Group_4_0 extends GroupToken {
 	
 	public SubCollectionOf_Group_4_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -13308,7 +13312,7 @@ protected class SubCollectionOf_ColonKeyword_4_0_1 extends KeywordToken  {
 
 }
 
-// memberEnd+=[Property]
+// memberEnd+=[ontouml::Property]
 protected class SubCollectionOf_MemberEndAssignment_4_0_2 extends AssignmentToken  {
 	
 	public SubCollectionOf_MemberEndAssignment_4_0_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -13345,7 +13349,7 @@ protected class SubCollectionOf_MemberEndAssignment_4_0_2 extends AssignmentToke
 
 }
 
-// ("," memberEnd+=[Property])*
+// ("," memberEnd+=[ontouml::Property])*
 protected class SubCollectionOf_Group_4_0_3 extends GroupToken {
 	
 	public SubCollectionOf_Group_4_0_3(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -13390,7 +13394,7 @@ protected class SubCollectionOf_CommaKeyword_4_0_3_0 extends KeywordToken  {
 
 }
 
-// memberEnd+=[Property]
+// memberEnd+=[ontouml::Property]
 protected class SubCollectionOf_MemberEndAssignment_4_0_3_1 extends AssignmentToken  {
 	
 	public SubCollectionOf_MemberEndAssignment_4_0_3_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -13452,7 +13456,7 @@ protected class SubCollectionOf_SemicolonKeyword_4_0_4 extends KeywordToken  {
 }
 
 
-// ("navigableOwnedEnd" ":" navigableOwnedEnd+=[Property] ("," navigableOwnedEnd+=[Property])* ";")?
+// ("navigableOwnedEnd" ":" navigableOwnedEnd+=[ontouml::Property] ("," navigableOwnedEnd+=[ontouml::Property])* ";")?
 protected class SubCollectionOf_Group_4_1 extends GroupToken {
 	
 	public SubCollectionOf_Group_4_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -13519,7 +13523,7 @@ protected class SubCollectionOf_ColonKeyword_4_1_1 extends KeywordToken  {
 
 }
 
-// navigableOwnedEnd+=[Property]
+// navigableOwnedEnd+=[ontouml::Property]
 protected class SubCollectionOf_NavigableOwnedEndAssignment_4_1_2 extends AssignmentToken  {
 	
 	public SubCollectionOf_NavigableOwnedEndAssignment_4_1_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -13556,7 +13560,7 @@ protected class SubCollectionOf_NavigableOwnedEndAssignment_4_1_2 extends Assign
 
 }
 
-// ("," navigableOwnedEnd+=[Property])*
+// ("," navigableOwnedEnd+=[ontouml::Property])*
 protected class SubCollectionOf_Group_4_1_3 extends GroupToken {
 	
 	public SubCollectionOf_Group_4_1_3(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -13601,7 +13605,7 @@ protected class SubCollectionOf_CommaKeyword_4_1_3_0 extends KeywordToken  {
 
 }
 
-// navigableOwnedEnd+=[Property]
+// navigableOwnedEnd+=[ontouml::Property]
 protected class SubCollectionOf_NavigableOwnedEndAssignment_4_1_3_1 extends AssignmentToken  {
 	
 	public SubCollectionOf_NavigableOwnedEndAssignment_4_1_3_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -13697,18 +13701,20 @@ protected class SubCollectionOf_RightCurlyBracketKeyword_5 extends KeywordToken 
  *  *
  *  * public property casadoCom (Pessoa) throught contratoDeCasamento //MaterialAssociation
  *  * OCL: Precisa de um Derivation cujo memberEnd[1] = MaterialAssociation
- *  * /MaterialAssociation:
- * 	{MaterialAssociation} (isDerived?="derived" & isAbstract?="abstract"? & isLeaf?="leaf"?) // derived: required
+ *  * /MaterialAssociation returns ontouml::MaterialAssociation:
+ * 	{ontouml::MaterialAssociation} (isDerived?="derived" & isAbstract?="abstract"? & isLeaf?="leaf"?) // derived: required
  * 	"materialAssociation" name=ID? (":" generalization+=InlineGeneralization ("," generalization+=InlineGeneralization)*)?
- * 	"{" (ownedEnd+=InlinePropertyDefinition ";")+ (("memberEnd" ":" memberEnd+=[Property] ("," memberEnd+=[Property])*
- * 	";")? & ("navigableOwnedEnd" ":" navigableOwnedEnd+=[Property] ("," navigableOwnedEnd+=[Property])* ";")?) "}";
+ * 	"{" (ownedEnd+=InlinePropertyDefinition ";")+ (("memberEnd" ":" memberEnd+=[ontouml::Property] (","
+ * 	memberEnd+=[ontouml::Property])* ";")? & ("navigableOwnedEnd" ":" navigableOwnedEnd+=[ontouml::Property] (","
+ * 	navigableOwnedEnd+=[ontouml::Property])* ";")?) "}";
  *
  **/
 
-// {MaterialAssociation} (isDerived?="derived" & isAbstract?="abstract"? & isLeaf?="leaf"?) // derived: required
+// {ontouml::MaterialAssociation} (isDerived?="derived" & isAbstract?="abstract"? & isLeaf?="leaf"?) // derived: required
 // "materialAssociation" name=ID? (":" generalization+=InlineGeneralization ("," generalization+=InlineGeneralization)*)?
-// "{" (ownedEnd+=InlinePropertyDefinition ";")+ (("memberEnd" ":" memberEnd+=[Property] ("," memberEnd+=[Property])*
-// ";")? & ("navigableOwnedEnd" ":" navigableOwnedEnd+=[Property] ("," navigableOwnedEnd+=[Property])* ";")?) "}"
+// "{" (ownedEnd+=InlinePropertyDefinition ";")+ (("memberEnd" ":" memberEnd+=[ontouml::Property] (","
+// memberEnd+=[ontouml::Property])* ";")? & ("navigableOwnedEnd" ":" navigableOwnedEnd+=[ontouml::Property] (","
+// navigableOwnedEnd+=[ontouml::Property])* ";")?) "}"
 protected class MaterialAssociation_Group extends GroupToken {
 	
 	public MaterialAssociation_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -13737,7 +13743,7 @@ protected class MaterialAssociation_Group extends GroupToken {
 
 }
 
-// {MaterialAssociation}
+// {ontouml::MaterialAssociation}
 protected class MaterialAssociation_MaterialAssociationAction_0 extends ActionToken  {
 
 	public MaterialAssociation_MaterialAssociationAction_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -14248,8 +14254,8 @@ protected class MaterialAssociation_SemicolonKeyword_6_1 extends KeywordToken  {
 }
 
 
-// ("memberEnd" ":" memberEnd+=[Property] ("," memberEnd+=[Property])* ";")? & ("navigableOwnedEnd" ":"
-// navigableOwnedEnd+=[Property] ("," navigableOwnedEnd+=[Property])* ";")?
+// ("memberEnd" ":" memberEnd+=[ontouml::Property] ("," memberEnd+=[ontouml::Property])* ";")? & ("navigableOwnedEnd" ":"
+// navigableOwnedEnd+=[ontouml::Property] ("," navigableOwnedEnd+=[ontouml::Property])* ";")?
 protected class MaterialAssociation_UnorderedGroup_7 extends UnorderedGroupToken {
 	
 	public MaterialAssociation_UnorderedGroup_7(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -14273,7 +14279,7 @@ protected class MaterialAssociation_UnorderedGroup_7 extends UnorderedGroupToken
 
 }
 
-// ("memberEnd" ":" memberEnd+=[Property] ("," memberEnd+=[Property])* ";")?
+// ("memberEnd" ":" memberEnd+=[ontouml::Property] ("," memberEnd+=[ontouml::Property])* ";")?
 protected class MaterialAssociation_Group_7_0 extends GroupToken {
 	
 	public MaterialAssociation_Group_7_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -14339,7 +14345,7 @@ protected class MaterialAssociation_ColonKeyword_7_0_1 extends KeywordToken  {
 
 }
 
-// memberEnd+=[Property]
+// memberEnd+=[ontouml::Property]
 protected class MaterialAssociation_MemberEndAssignment_7_0_2 extends AssignmentToken  {
 	
 	public MaterialAssociation_MemberEndAssignment_7_0_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -14376,7 +14382,7 @@ protected class MaterialAssociation_MemberEndAssignment_7_0_2 extends Assignment
 
 }
 
-// ("," memberEnd+=[Property])*
+// ("," memberEnd+=[ontouml::Property])*
 protected class MaterialAssociation_Group_7_0_3 extends GroupToken {
 	
 	public MaterialAssociation_Group_7_0_3(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -14421,7 +14427,7 @@ protected class MaterialAssociation_CommaKeyword_7_0_3_0 extends KeywordToken  {
 
 }
 
-// memberEnd+=[Property]
+// memberEnd+=[ontouml::Property]
 protected class MaterialAssociation_MemberEndAssignment_7_0_3_1 extends AssignmentToken  {
 	
 	public MaterialAssociation_MemberEndAssignment_7_0_3_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -14483,7 +14489,7 @@ protected class MaterialAssociation_SemicolonKeyword_7_0_4 extends KeywordToken 
 }
 
 
-// ("navigableOwnedEnd" ":" navigableOwnedEnd+=[Property] ("," navigableOwnedEnd+=[Property])* ";")?
+// ("navigableOwnedEnd" ":" navigableOwnedEnd+=[ontouml::Property] ("," navigableOwnedEnd+=[ontouml::Property])* ";")?
 protected class MaterialAssociation_Group_7_1 extends GroupToken {
 	
 	public MaterialAssociation_Group_7_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -14550,7 +14556,7 @@ protected class MaterialAssociation_ColonKeyword_7_1_1 extends KeywordToken  {
 
 }
 
-// navigableOwnedEnd+=[Property]
+// navigableOwnedEnd+=[ontouml::Property]
 protected class MaterialAssociation_NavigableOwnedEndAssignment_7_1_2 extends AssignmentToken  {
 	
 	public MaterialAssociation_NavigableOwnedEndAssignment_7_1_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -14587,7 +14593,7 @@ protected class MaterialAssociation_NavigableOwnedEndAssignment_7_1_2 extends As
 
 }
 
-// ("," navigableOwnedEnd+=[Property])*
+// ("," navigableOwnedEnd+=[ontouml::Property])*
 protected class MaterialAssociation_Group_7_1_3 extends GroupToken {
 	
 	public MaterialAssociation_Group_7_1_3(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -14632,7 +14638,7 @@ protected class MaterialAssociation_CommaKeyword_7_1_3_0 extends KeywordToken  {
 
 }
 
-// navigableOwnedEnd+=[Property]
+// navigableOwnedEnd+=[ontouml::Property]
 protected class MaterialAssociation_NavigableOwnedEndAssignment_7_1_3_1 extends AssignmentToken  {
 	
 	public MaterialAssociation_NavigableOwnedEndAssignment_7_1_3_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -14724,16 +14730,18 @@ protected class MaterialAssociation_RightCurlyBracketKeyword_8 extends KeywordTo
 /************ begin Rule FormalAssociation ****************
  *
  * //public property maisVelhoQue (Pessoa) //FormalAssociation entre Pessoa e Pessoa
- * FormalAssociation:
- * 	{FormalAssociation} (isAbstract?="abstract"? & isDerived?="derived"? & isLeaf?="leaf"?) "formalAssociation" name=ID?
- * 	"{" (ownedEnd+=InlinePropertyDefinition ";")+ (("memberEnd" ":" memberEnd+=[Property] ("," memberEnd+=[Property])*
- * 	";")? & ("navigableOwnedEnd" ":" navigableOwnedEnd+=[Property] ("," navigableOwnedEnd+=[Property])* ";")?) "}";
+ * FormalAssociation returns ontouml::FormalAssociation:
+ * 	{ontouml::FormalAssociation} (isAbstract?="abstract"? & isDerived?="derived"? & isLeaf?="leaf"?) "formalAssociation"
+ * 	name=ID? "{" (ownedEnd+=InlinePropertyDefinition ";")+ (("memberEnd" ":" memberEnd+=[ontouml::Property] (","
+ * 	memberEnd+=[ontouml::Property])* ";")? & ("navigableOwnedEnd" ":" navigableOwnedEnd+=[ontouml::Property] (","
+ * 	navigableOwnedEnd+=[ontouml::Property])* ";")?) "}";
  *
  **/
 
-// {FormalAssociation} (isAbstract?="abstract"? & isDerived?="derived"? & isLeaf?="leaf"?) "formalAssociation" name=ID? "{"
-// (ownedEnd+=InlinePropertyDefinition ";")+ (("memberEnd" ":" memberEnd+=[Property] ("," memberEnd+=[Property])* ";")? &
-// ("navigableOwnedEnd" ":" navigableOwnedEnd+=[Property] ("," navigableOwnedEnd+=[Property])* ";")?) "}"
+// {ontouml::FormalAssociation} (isAbstract?="abstract"? & isDerived?="derived"? & isLeaf?="leaf"?) "formalAssociation"
+// name=ID? "{" (ownedEnd+=InlinePropertyDefinition ";")+ (("memberEnd" ":" memberEnd+=[ontouml::Property] (","
+// memberEnd+=[ontouml::Property])* ";")? & ("navigableOwnedEnd" ":" navigableOwnedEnd+=[ontouml::Property] (","
+// navigableOwnedEnd+=[ontouml::Property])* ";")?) "}"
 protected class FormalAssociation_Group extends GroupToken {
 	
 	public FormalAssociation_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -14762,7 +14770,7 @@ protected class FormalAssociation_Group extends GroupToken {
 
 }
 
-// {FormalAssociation}
+// {ontouml::FormalAssociation}
 protected class FormalAssociation_FormalAssociationAction_0 extends ActionToken  {
 
 	public FormalAssociation_FormalAssociationAction_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -15090,8 +15098,8 @@ protected class FormalAssociation_SemicolonKeyword_5_1 extends KeywordToken  {
 }
 
 
-// ("memberEnd" ":" memberEnd+=[Property] ("," memberEnd+=[Property])* ";")? & ("navigableOwnedEnd" ":"
-// navigableOwnedEnd+=[Property] ("," navigableOwnedEnd+=[Property])* ";")?
+// ("memberEnd" ":" memberEnd+=[ontouml::Property] ("," memberEnd+=[ontouml::Property])* ";")? & ("navigableOwnedEnd" ":"
+// navigableOwnedEnd+=[ontouml::Property] ("," navigableOwnedEnd+=[ontouml::Property])* ";")?
 protected class FormalAssociation_UnorderedGroup_6 extends UnorderedGroupToken {
 	
 	public FormalAssociation_UnorderedGroup_6(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -15115,7 +15123,7 @@ protected class FormalAssociation_UnorderedGroup_6 extends UnorderedGroupToken {
 
 }
 
-// ("memberEnd" ":" memberEnd+=[Property] ("," memberEnd+=[Property])* ";")?
+// ("memberEnd" ":" memberEnd+=[ontouml::Property] ("," memberEnd+=[ontouml::Property])* ";")?
 protected class FormalAssociation_Group_6_0 extends GroupToken {
 	
 	public FormalAssociation_Group_6_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -15181,7 +15189,7 @@ protected class FormalAssociation_ColonKeyword_6_0_1 extends KeywordToken  {
 
 }
 
-// memberEnd+=[Property]
+// memberEnd+=[ontouml::Property]
 protected class FormalAssociation_MemberEndAssignment_6_0_2 extends AssignmentToken  {
 	
 	public FormalAssociation_MemberEndAssignment_6_0_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -15218,7 +15226,7 @@ protected class FormalAssociation_MemberEndAssignment_6_0_2 extends AssignmentTo
 
 }
 
-// ("," memberEnd+=[Property])*
+// ("," memberEnd+=[ontouml::Property])*
 protected class FormalAssociation_Group_6_0_3 extends GroupToken {
 	
 	public FormalAssociation_Group_6_0_3(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -15263,7 +15271,7 @@ protected class FormalAssociation_CommaKeyword_6_0_3_0 extends KeywordToken  {
 
 }
 
-// memberEnd+=[Property]
+// memberEnd+=[ontouml::Property]
 protected class FormalAssociation_MemberEndAssignment_6_0_3_1 extends AssignmentToken  {
 	
 	public FormalAssociation_MemberEndAssignment_6_0_3_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -15325,7 +15333,7 @@ protected class FormalAssociation_SemicolonKeyword_6_0_4 extends KeywordToken  {
 }
 
 
-// ("navigableOwnedEnd" ":" navigableOwnedEnd+=[Property] ("," navigableOwnedEnd+=[Property])* ";")?
+// ("navigableOwnedEnd" ":" navigableOwnedEnd+=[ontouml::Property] ("," navigableOwnedEnd+=[ontouml::Property])* ";")?
 protected class FormalAssociation_Group_6_1 extends GroupToken {
 	
 	public FormalAssociation_Group_6_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -15392,7 +15400,7 @@ protected class FormalAssociation_ColonKeyword_6_1_1 extends KeywordToken  {
 
 }
 
-// navigableOwnedEnd+=[Property]
+// navigableOwnedEnd+=[ontouml::Property]
 protected class FormalAssociation_NavigableOwnedEndAssignment_6_1_2 extends AssignmentToken  {
 	
 	public FormalAssociation_NavigableOwnedEndAssignment_6_1_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -15429,7 +15437,7 @@ protected class FormalAssociation_NavigableOwnedEndAssignment_6_1_2 extends Assi
 
 }
 
-// ("," navigableOwnedEnd+=[Property])*
+// ("," navigableOwnedEnd+=[ontouml::Property])*
 protected class FormalAssociation_Group_6_1_3 extends GroupToken {
 	
 	public FormalAssociation_Group_6_1_3(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -15474,7 +15482,7 @@ protected class FormalAssociation_CommaKeyword_6_1_3_0 extends KeywordToken  {
 
 }
 
-// navigableOwnedEnd+=[Property]
+// navigableOwnedEnd+=[ontouml::Property]
 protected class FormalAssociation_NavigableOwnedEndAssignment_6_1_3_1 extends AssignmentToken  {
 	
 	public FormalAssociation_NavigableOwnedEndAssignment_6_1_3_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -15565,7 +15573,7 @@ protected class FormalAssociation_RightCurlyBracketKeyword_7 extends KeywordToke
 
 /************ begin Rule NonExpressionValue ****************
  *
- * NonExpressionValue returns ValueSpecification:
+ * NonExpressionValue returns ontouml::ValueSpecification:
  * 	LiteralInteger | LiteralString | LiteralNull | LiteralBoolean | InstanceValue | OpaqueExpression;
  *
  **/
@@ -15831,7 +15839,7 @@ protected class NonExpressionValue_OpaqueExpressionParserRuleCall_5 extends Rule
 
 /************ begin Rule ValueSpecification ****************
  *
- * ValueSpecification: //StringExpression | //O que é iso???
+ * ValueSpecification returns ontouml::ValueSpecification: //StringExpression | //O que é iso???
  * 	NonExpressionValue | ExpressionValue;
  *
  **/
@@ -15957,7 +15965,7 @@ protected class ValueSpecification_ExpressionValueParserRuleCall_1 extends RuleC
 
 /************ begin Rule Type ****************
  *
- * Type:
+ * Type returns ontouml::Type:
  * 	DataType | PrimitiveType;
  *
  **/
@@ -16071,7 +16079,7 @@ protected class Type_PrimitiveTypeParserRuleCall_1 extends RuleCallToken {
 
 /************ begin Rule DataType ****************
  *
- * DataType:
+ * DataType returns ontouml::DataType:
  * 	"datatype" name=ID (":" generalization+=InlineGeneralization ("," generalization+=InlineGeneralization)*)? ("{"
  * 	(ownedAttribute+=ClassProperty ";")+ "}")?;
  *
@@ -16514,15 +16522,13 @@ protected class DataType_RightCurlyBracketKeyword_3_2 extends KeywordToken  {
 
 /************ begin Rule PrimitiveType ****************
  *
- * //Mesma coisa que DataType
- * PrimitiveType:
- * 	"type" name=ID (":" generalization+=InlineGeneralization ("," generalization+=InlineGeneralization)*)? ("{"
- * 	(ownedAttribute+=ClassProperty ";")+ "}")?;
+ * //???: Mesma coisa que DataType?
+ * PrimitiveType returns ontouml::PrimitiveType:
+ * 	"type" name=ID (":" generalization+=InlineGeneralization ("," generalization+=InlineGeneralization)*)?;
  *
  **/
 
-// "type" name=ID (":" generalization+=InlineGeneralization ("," generalization+=InlineGeneralization)*)? ("{"
-// (ownedAttribute+=ClassProperty ";")+ "}")?
+// "type" name=ID (":" generalization+=InlineGeneralization ("," generalization+=InlineGeneralization)*)?
 protected class PrimitiveType_Group extends GroupToken {
 	
 	public PrimitiveType_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -16537,9 +16543,8 @@ protected class PrimitiveType_Group extends GroupToken {
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new PrimitiveType_Group_3(lastRuleCallOrigin, this, 0, inst);
-			case 1: return new PrimitiveType_Group_2(lastRuleCallOrigin, this, 1, inst);
-			case 2: return new PrimitiveType_NameAssignment_1(lastRuleCallOrigin, this, 2, inst);
+			case 0: return new PrimitiveType_Group_2(lastRuleCallOrigin, this, 0, inst);
+			case 1: return new PrimitiveType_NameAssignment_1(lastRuleCallOrigin, this, 1, inst);
 			default: return null;
 		}	
 	}
@@ -16792,180 +16797,20 @@ protected class PrimitiveType_GeneralizationAssignment_2_2_1 extends AssignmentT
 
 
 
-// ("{" (ownedAttribute+=ClassProperty ";")+ "}")?
-protected class PrimitiveType_Group_3 extends GroupToken {
-	
-	public PrimitiveType_Group_3(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
-		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
-	}
-	
-	@Override
-	public Group getGrammarElement() {
-		return grammarAccess.getPrimitiveTypeAccess().getGroup_3();
-	}
-
-    @Override
-	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
-		switch(index) {
-			case 0: return new PrimitiveType_RightCurlyBracketKeyword_3_2(lastRuleCallOrigin, this, 0, inst);
-			default: return null;
-		}	
-	}
-
-}
-
-// "{"
-protected class PrimitiveType_LeftCurlyBracketKeyword_3_0 extends KeywordToken  {
-	
-	public PrimitiveType_LeftCurlyBracketKeyword_3_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
-		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
-	}
-	
-	@Override
-	public Keyword getGrammarElement() {
-		return grammarAccess.getPrimitiveTypeAccess().getLeftCurlyBracketKeyword_3_0();
-	}
-
-    @Override
-	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
-		switch(index) {
-			case 0: return new PrimitiveType_Group_2(lastRuleCallOrigin, this, 0, inst);
-			case 1: return new PrimitiveType_NameAssignment_1(lastRuleCallOrigin, this, 1, inst);
-			default: return null;
-		}	
-	}
-
-}
-
-// (ownedAttribute+=ClassProperty ";")+
-protected class PrimitiveType_Group_3_1 extends GroupToken {
-	
-	public PrimitiveType_Group_3_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
-		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
-	}
-	
-	@Override
-	public Group getGrammarElement() {
-		return grammarAccess.getPrimitiveTypeAccess().getGroup_3_1();
-	}
-
-    @Override
-	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
-		switch(index) {
-			case 0: return new PrimitiveType_SemicolonKeyword_3_1_1(lastRuleCallOrigin, this, 0, inst);
-			default: return null;
-		}	
-	}
-
-}
-
-// ownedAttribute+=ClassProperty
-protected class PrimitiveType_OwnedAttributeAssignment_3_1_0 extends AssignmentToken  {
-	
-	public PrimitiveType_OwnedAttributeAssignment_3_1_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
-		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
-	}
-	
-	@Override
-	public Assignment getGrammarElement() {
-		return grammarAccess.getPrimitiveTypeAccess().getOwnedAttributeAssignment_3_1_0();
-	}
-
-    @Override
-	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
-		switch(index) {
-			case 0: return new ClassProperty_Group(this, this, 0, inst);
-			default: return null;
-		}	
-	}
-
-    @Override	
-	public IEObjectConsumer tryConsume() {
-		if((value = eObjectConsumer.getConsumable("ownedAttribute",false)) == null) return null;
-		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("ownedAttribute");
-		if(value instanceof EObject) { // org::eclipse::xtext::impl::RuleCallImpl
-			IEObjectConsumer param = createEObjectConsumer((EObject)value);
-			if(param.isInstanceOf(grammarAccess.getClassPropertyRule().getType().getClassifier())) {
-				type = AssignmentType.PARSER_RULE_CALL;
-				element = grammarAccess.getPrimitiveTypeAccess().getOwnedAttributeClassPropertyParserRuleCall_3_1_0_0(); 
-				consumed = obj;
-				return param;
-			}
-		}
-		return null;
-	}
-
-    @Override
-	public AbstractToken createFollowerAfterReturn(AbstractToken next,	int actIndex, int index, IEObjectConsumer inst) {
-		if(value == inst.getEObject() && !inst.isConsumed()) return null;
-		switch(index) {
-			case 0: return new PrimitiveType_Group_3_1(lastRuleCallOrigin, next, actIndex, consumed);
-			case 1: return new PrimitiveType_LeftCurlyBracketKeyword_3_0(lastRuleCallOrigin, next, actIndex, consumed);
-			default: return null;
-		}	
-	}	
-}
-
-// ";"
-protected class PrimitiveType_SemicolonKeyword_3_1_1 extends KeywordToken  {
-	
-	public PrimitiveType_SemicolonKeyword_3_1_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
-		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
-	}
-	
-	@Override
-	public Keyword getGrammarElement() {
-		return grammarAccess.getPrimitiveTypeAccess().getSemicolonKeyword_3_1_1();
-	}
-
-    @Override
-	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
-		switch(index) {
-			case 0: return new PrimitiveType_OwnedAttributeAssignment_3_1_0(lastRuleCallOrigin, this, 0, inst);
-			default: return null;
-		}	
-	}
-
-}
-
-
-// "}"
-protected class PrimitiveType_RightCurlyBracketKeyword_3_2 extends KeywordToken  {
-	
-	public PrimitiveType_RightCurlyBracketKeyword_3_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
-		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
-	}
-	
-	@Override
-	public Keyword getGrammarElement() {
-		return grammarAccess.getPrimitiveTypeAccess().getRightCurlyBracketKeyword_3_2();
-	}
-
-    @Override
-	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
-		switch(index) {
-			case 0: return new PrimitiveType_Group_3_1(lastRuleCallOrigin, this, 0, inst);
-			default: return null;
-		}	
-	}
-
-}
-
-
 
 /************ end Rule PrimitiveType ****************/
 
 
 /************ begin Rule Dependency ****************
  *
- * Dependency:
- * 	{Dependency} "Dependency" name=ID? "{" client+=[NamedElement] ("," client+=[NamedElement])* "depends on" "("
- * 	supplier+=[NamedElement] ("," supplier+=[NamedElement])* ")" "}";
+ * Dependency returns ontouml::Dependency:
+ * 	{ontouml::Dependency} "Dependency" name=ID? "{" client+=[ontouml::NamedElement] ("," client+=[ontouml::NamedElement])*
+ * 	"depends on" "(" supplier+=[ontouml::NamedElement] ("," supplier+=[ontouml::NamedElement])* ")" "}";
  *
  **/
 
-// {Dependency} "Dependency" name=ID? "{" client+=[NamedElement] ("," client+=[NamedElement])* "depends on" "("
-// supplier+=[NamedElement] ("," supplier+=[NamedElement])* ")" "}"
+// {ontouml::Dependency} "Dependency" name=ID? "{" client+=[ontouml::NamedElement] ("," client+=[ontouml::NamedElement])*
+// "depends on" "(" supplier+=[ontouml::NamedElement] ("," supplier+=[ontouml::NamedElement])* ")" "}"
 protected class Dependency_Group extends GroupToken {
 	
 	public Dependency_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -16994,7 +16839,7 @@ protected class Dependency_Group extends GroupToken {
 
 }
 
-// {Dependency}
+// {ontouml::Dependency}
 protected class Dependency_DependencyAction_0 extends ActionToken  {
 
 	public Dependency_DependencyAction_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -17099,7 +16944,7 @@ protected class Dependency_LeftCurlyBracketKeyword_3 extends KeywordToken  {
 
 }
 
-// client+=[NamedElement]
+// client+=[ontouml::NamedElement]
 protected class Dependency_ClientAssignment_4 extends AssignmentToken  {
 	
 	public Dependency_ClientAssignment_4(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -17136,7 +16981,7 @@ protected class Dependency_ClientAssignment_4 extends AssignmentToken  {
 
 }
 
-// ("," client+=[NamedElement])*
+// ("," client+=[ontouml::NamedElement])*
 protected class Dependency_Group_5 extends GroupToken {
 	
 	public Dependency_Group_5(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -17181,7 +17026,7 @@ protected class Dependency_CommaKeyword_5_0 extends KeywordToken  {
 
 }
 
-// client+=[NamedElement]
+// client+=[ontouml::NamedElement]
 protected class Dependency_ClientAssignment_5_1 extends AssignmentToken  {
 	
 	public Dependency_ClientAssignment_5_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -17264,7 +17109,7 @@ protected class Dependency_LeftParenthesisKeyword_7 extends KeywordToken  {
 
 }
 
-// supplier+=[NamedElement]
+// supplier+=[ontouml::NamedElement]
 protected class Dependency_SupplierAssignment_8 extends AssignmentToken  {
 	
 	public Dependency_SupplierAssignment_8(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -17301,7 +17146,7 @@ protected class Dependency_SupplierAssignment_8 extends AssignmentToken  {
 
 }
 
-// ("," supplier+=[NamedElement])*
+// ("," supplier+=[ontouml::NamedElement])*
 protected class Dependency_Group_9 extends GroupToken {
 	
 	public Dependency_Group_9(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -17346,7 +17191,7 @@ protected class Dependency_CommaKeyword_9_0 extends KeywordToken  {
 
 }
 
-// supplier+=[NamedElement]
+// supplier+=[ontouml::NamedElement]
 protected class Dependency_SupplierAssignment_9_1 extends AssignmentToken  {
 	
 	public Dependency_SupplierAssignment_9_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -17435,12 +17280,12 @@ protected class Dependency_RightCurlyBracketKeyword_11 extends KeywordToken  {
 
 /************ begin Rule ElementImport ****************
  *
- * ElementImport:
- * 	"import" importedElement=[PackageableElement|STRING] ("as" alias=ID)? ";";
+ * ElementImport returns ontouml::ElementImport:
+ * 	"import" importedElement=[ontouml::PackageableElement|STRING] ("as" alias=ID)? ";";
  *
  **/
 
-// "import" importedElement=[PackageableElement|STRING] ("as" alias=ID)? ";"
+// "import" importedElement=[ontouml::PackageableElement|STRING] ("as" alias=ID)? ";"
 protected class ElementImport_Group extends GroupToken {
 	
 	public ElementImport_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -17490,7 +17335,7 @@ protected class ElementImport_ImportKeyword_0 extends KeywordToken  {
 
 }
 
-// importedElement=[PackageableElement|STRING]
+// importedElement=[ontouml::PackageableElement|STRING]
 protected class ElementImport_ImportedElementAssignment_1 extends AssignmentToken  {
 	
 	public ElementImport_ImportedElementAssignment_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -17635,12 +17480,12 @@ protected class ElementImport_SemicolonKeyword_3 extends KeywordToken  {
 
 /************ begin Rule PackageImport ****************
  *
- * PackageImport:
- * 	"import" importedPackage=[Package|STRING] ";";
+ * PackageImport returns ontouml::PackageImport:
+ * 	"import" importedPackage=[ontouml::Package|STRING] ";";
  *
  **/
 
-// "import" importedPackage=[Package|STRING] ";"
+// "import" importedPackage=[ontouml::Package|STRING] ";"
 protected class PackageImport_Group extends GroupToken {
 	
 	public PackageImport_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -17690,7 +17535,7 @@ protected class PackageImport_ImportKeyword_0 extends KeywordToken  {
 
 }
 
-// importedPackage=[Package|STRING]
+// importedPackage=[ontouml::Package|STRING]
 protected class PackageImport_ImportedPackageAssignment_1 extends AssignmentToken  {
 	
 	public PackageImport_ImportedPackageAssignment_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -17755,13 +17600,13 @@ protected class PackageImport_SemicolonKeyword_2 extends KeywordToken  {
 
 /************ begin Rule Constraintx ****************
  *
- * Constraintx:
- * 	"constraint" ("(" constrainedElement+=[Element] ("," constrainedElement+=[Element])* ")")? "{"
+ * Constraintx returns ontouml::Constraintx:
+ * 	"constraint" ("(" constrainedElement+=[ontouml::Element] ("," constrainedElement+=[ontouml::Element])* ")")? "{"
  * 	specification=ValueSpecification "}";
  *
  **/
 
-// "constraint" ("(" constrainedElement+=[Element] ("," constrainedElement+=[Element])* ")")? "{"
+// "constraint" ("(" constrainedElement+=[ontouml::Element] ("," constrainedElement+=[ontouml::Element])* ")")? "{"
 // specification=ValueSpecification "}"
 protected class Constraintx_Group extends GroupToken {
 	
@@ -17812,7 +17657,7 @@ protected class Constraintx_ConstraintKeyword_0 extends KeywordToken  {
 
 }
 
-// ("(" constrainedElement+=[Element] ("," constrainedElement+=[Element])* ")")?
+// ("(" constrainedElement+=[ontouml::Element] ("," constrainedElement+=[ontouml::Element])* ")")?
 protected class Constraintx_Group_1 extends GroupToken {
 	
 	public Constraintx_Group_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -17856,7 +17701,7 @@ protected class Constraintx_LeftParenthesisKeyword_1_0 extends KeywordToken  {
 
 }
 
-// constrainedElement+=[Element]
+// constrainedElement+=[ontouml::Element]
 protected class Constraintx_ConstrainedElementAssignment_1_1 extends AssignmentToken  {
 	
 	public Constraintx_ConstrainedElementAssignment_1_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -17893,7 +17738,7 @@ protected class Constraintx_ConstrainedElementAssignment_1_1 extends AssignmentT
 
 }
 
-// ("," constrainedElement+=[Element])*
+// ("," constrainedElement+=[ontouml::Element])*
 protected class Constraintx_Group_1_2 extends GroupToken {
 	
 	public Constraintx_Group_1_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -17938,7 +17783,7 @@ protected class Constraintx_CommaKeyword_1_2_0 extends KeywordToken  {
 
 }
 
-// constrainedElement+=[Element]
+// constrainedElement+=[ontouml::Element]
 protected class Constraintx_ConstrainedElementAssignment_1_2_1 extends AssignmentToken  {
 	
 	public Constraintx_ConstrainedElementAssignment_1_2_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -18097,14 +17942,14 @@ protected class Constraintx_RightCurlyBracketKeyword_4 extends KeywordToken  {
 
 /************ begin Rule PackageMerge ****************
  *
- * PackageMerge:
- * 	{PackageMerge} //('PackageMerge')?
- * 	mergedPackage=[Package|STRING];
+ * PackageMerge returns ontouml::PackageMerge:
+ * 	{ontouml::PackageMerge} //('PackageMerge')?
+ * 	mergedPackage=[ontouml::Package|STRING];
  *
  **/
 
-// {PackageMerge} //('PackageMerge')?
-// mergedPackage=[Package|STRING]
+// {ontouml::PackageMerge} //('PackageMerge')?
+// mergedPackage=[ontouml::Package|STRING]
 protected class PackageMerge_Group extends GroupToken {
 	
 	public PackageMerge_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -18133,7 +17978,7 @@ protected class PackageMerge_Group extends GroupToken {
 
 }
 
-// {PackageMerge}
+// {ontouml::PackageMerge}
 protected class PackageMerge_PackageMergeAction_0 extends ActionToken  {
 
 	public PackageMerge_PackageMergeAction_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -18160,7 +18005,7 @@ protected class PackageMerge_PackageMergeAction_0 extends ActionToken  {
 }
 
 // //('PackageMerge')?
-// mergedPackage=[Package|STRING]
+// mergedPackage=[ontouml::Package|STRING]
 protected class PackageMerge_MergedPackageAssignment_1 extends AssignmentToken  {
 	
 	public PackageMerge_MergedPackageAssignment_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -18210,13 +18055,13 @@ protected class PackageMerge_MergedPackageAssignment_1 extends AssignmentToken  
  * //		('elementImport' '{' elementImport+=ElementImport ( "," elementImport+=ElementImport)* '}' )?
  * //		('packageImport' '{' packageImport+=PackageImport ( "," packageImport+=PackageImport)* '}' )?
  * //		('ownedRule' '{' ownedRule+=Constraintx ( "," ownedRule+=Constraintx)* '}' )?
- * Package_Impl returns Package:
- * 	{Package} "package" name=ID "{" ("merge" ":" packageMerge+=PackageMerge ("," packageMerge+=PackageMerge)*)?
+ * Package_Impl returns ontouml::Package:
+ * 	{ontouml::Package} "package" name=ID "{" ("merge" ":" packageMerge+=PackageMerge ("," packageMerge+=PackageMerge)*)?
  * 	packagedElement+=PackageableElement* "}";
  *
  **/
 
-// {Package} "package" name=ID "{" ("merge" ":" packageMerge+=PackageMerge ("," packageMerge+=PackageMerge)*)?
+// {ontouml::Package} "package" name=ID "{" ("merge" ":" packageMerge+=PackageMerge ("," packageMerge+=PackageMerge)*)?
 // packagedElement+=PackageableElement* "}"
 protected class Package_Impl_Group extends GroupToken {
 	
@@ -18246,7 +18091,7 @@ protected class Package_Impl_Group extends GroupToken {
 
 }
 
-// {Package}
+// {ontouml::Package}
 protected class Package_Impl_PackageAction_0 extends ActionToken  {
 
 	public Package_Impl_PackageAction_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -18638,14 +18483,14 @@ protected class Package_Impl_RightCurlyBracketKeyword_6 extends KeywordToken  {
  *  * Duvida:
  *  * Generalization::generalizationSet é uma collection, por que?
  *  ***************************************************************************** ///('(' generalizationSet+=[GeneralizationSet] ')' )?
- * InlineGeneralization returns Generalization:
- * 	isSubstitutable?="substitutable"? general=[Classifier] ("(" generalizationSet+=[GeneralizationSet] (","
- * 	generalizationSet+=[GeneralizationSet])* ")")?;
+ * InlineGeneralization returns ontouml::Generalization:
+ * 	isSubstitutable?="substitutable"? general=[ontouml::Classifier] ("(" generalizationSet+=[ontouml::GeneralizationSet]
+ * 	("," generalizationSet+=[ontouml::GeneralizationSet])* ")")?;
  *
  **/
 
-// isSubstitutable?="substitutable"? general=[Classifier] ("(" generalizationSet+=[GeneralizationSet] (","
-// generalizationSet+=[GeneralizationSet])* ")")?
+// isSubstitutable?="substitutable"? general=[ontouml::Classifier] ("(" generalizationSet+=[ontouml::GeneralizationSet]
+// ("," generalizationSet+=[ontouml::GeneralizationSet])* ")")?
 protected class InlineGeneralization_Group extends GroupToken {
 	
 	public InlineGeneralization_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -18708,7 +18553,7 @@ protected class InlineGeneralization_IsSubstitutableAssignment_0 extends Assignm
 
 }
 
-// general=[Classifier]
+// general=[ontouml::Classifier]
 protected class InlineGeneralization_GeneralAssignment_1 extends AssignmentToken  {
 	
 	public InlineGeneralization_GeneralAssignment_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -18745,7 +18590,7 @@ protected class InlineGeneralization_GeneralAssignment_1 extends AssignmentToken
 
 }
 
-// ("(" generalizationSet+=[GeneralizationSet] ("," generalizationSet+=[GeneralizationSet])* ")")?
+// ("(" generalizationSet+=[ontouml::GeneralizationSet] ("," generalizationSet+=[ontouml::GeneralizationSet])* ")")?
 protected class InlineGeneralization_Group_2 extends GroupToken {
 	
 	public InlineGeneralization_Group_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -18789,7 +18634,7 @@ protected class InlineGeneralization_LeftParenthesisKeyword_2_0 extends KeywordT
 
 }
 
-// generalizationSet+=[GeneralizationSet]
+// generalizationSet+=[ontouml::GeneralizationSet]
 protected class InlineGeneralization_GeneralizationSetAssignment_2_1 extends AssignmentToken  {
 	
 	public InlineGeneralization_GeneralizationSetAssignment_2_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -18826,7 +18671,7 @@ protected class InlineGeneralization_GeneralizationSetAssignment_2_1 extends Ass
 
 }
 
-// ("," generalizationSet+=[GeneralizationSet])*
+// ("," generalizationSet+=[ontouml::GeneralizationSet])*
 protected class InlineGeneralization_Group_2_2 extends GroupToken {
 	
 	public InlineGeneralization_Group_2_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -18871,7 +18716,7 @@ protected class InlineGeneralization_CommaKeyword_2_2_0 extends KeywordToken  {
 
 }
 
-// generalizationSet+=[GeneralizationSet]
+// generalizationSet+=[ontouml::GeneralizationSet]
 protected class InlineGeneralization_GeneralizationSetAssignment_2_2_1 extends AssignmentToken  {
 	
 	public InlineGeneralization_GeneralizationSetAssignment_2_2_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -18941,13 +18786,13 @@ protected class InlineGeneralization_RightParenthesisKeyword_2_3 extends Keyword
  *
  * / *
  *  * Problema: Não tem name, como referenciar?
- *  * /Generalization: //isSubstitutable?='substitutable'? //Default tá sendo TRUE?
- * 	"generalization" "of" general=[Classifier] "as" owner=[Classifier] ";";
+ *  * /Generalization returns ontouml::Generalization: //isSubstitutable?='substitutable'? //Default tá sendo TRUE?
+ * 	"generalization" "of" general=[ontouml::Classifier] "as" owner=[ontouml::Classifier] ";";
  *
  **/
 
 // //isSubstitutable?='substitutable'? //Default tá sendo TRUE?
-// "generalization" "of" general=[Classifier] "as" owner=[Classifier] ";"
+// "generalization" "of" general=[ontouml::Classifier] "as" owner=[ontouml::Classifier] ";"
 protected class Generalization_Group extends GroupToken {
 	
 	public Generalization_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -19020,7 +18865,7 @@ protected class Generalization_OfKeyword_1 extends KeywordToken  {
 
 }
 
-// general=[Classifier]
+// general=[ontouml::Classifier]
 protected class Generalization_GeneralAssignment_2 extends AssignmentToken  {
 	
 	public Generalization_GeneralAssignment_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -19079,7 +18924,7 @@ protected class Generalization_AsKeyword_3 extends KeywordToken  {
 
 }
 
-// owner=[Classifier]
+// owner=[ontouml::Classifier]
 protected class Generalization_OwnerAssignment_4 extends AssignmentToken  {
 	
 	public Generalization_OwnerAssignment_4(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -19149,7 +18994,8 @@ protected class Generalization_SemicolonKeyword_5 extends KeywordToken  {
  *  * GeneralizationSet::generalization é opposite, mas não está sendo definida automaticamente
  *  * Motivo: http://www.eclipse.org/forums/index.php/t/245235/
  *  * Solução, mudar essas opposite que são assim, para transient="true" e resolveProxies="false"
- *  ***************************************************************************** /GeneralizationSet:
+ *  ***************************************************************************** /GeneralizationSet returns
+ * ontouml::GeneralizationSet:
  * 	(isCovering?="complete"? & isDisjoint?="disjoint"?) "generalizationSet" name=ID "{" "}";
  *
  **/
@@ -19379,6 +19225,7 @@ protected class GeneralizationSet_RightCurlyBracketKeyword_4 extends KeywordToke
 
 
 
+
 /************ begin Rule ExpressionValue ****************
  *
  * / *
@@ -19387,21 +19234,14 @@ protected class GeneralizationSet_RightCurlyBracketKeyword_4 extends KeywordToke
  *  * media {10, 20, 30}
  *  * not 100
  *  * ///TODO: resolver o left-recursion
- * //	'Expression'
- * //		('name' name=ID)?
- * //		('visibility' visibility=VisibilityKind)?
- * //		('clientDependency' '(' clientDependency+=[Dependency|EString] ( "," clientDependency+=[Dependency|EString])* ')' )?
- * //		('type' type=[Type|EString])?
- * //('eAnnotations' '{' eAnnotations+=EAnnotation ( "," eAnnotations+=EAnnotation)* '}' )?
- * //		('ownedComment' '{' ownedComment+=Comment ( "," ownedComment+=Comment)* '}' )?
- * ExpressionValue returns Expression:
- * 	{Expression} "(" (operand+=ValueSpecification symbol=ExpressionSymbol operand+=ValueSpecification //Se eu tiro o parenteses dá left-recursion 
+ * ExpressionValue returns ontouml::Expression:
+ * 	{ontouml::Expression} "(" (operand+=ValueSpecification symbol=ExpressionSymbol operand+=ValueSpecification //Se eu tiro o parenteses dá left-recursion 
  * 	| symbol=ExpressionSymbol operand+=ValueSpecification | symbol=ExpressionSymbol "{" operand+=ValueSpecification (","
  * 	operand+=ValueSpecification)+ "}") ")";
  *
  **/
 
-// {Expression} "(" (operand+=ValueSpecification symbol=ExpressionSymbol operand+=ValueSpecification //Se eu tiro o parenteses dá left-recursion 
+// {ontouml::Expression} "(" (operand+=ValueSpecification symbol=ExpressionSymbol operand+=ValueSpecification //Se eu tiro o parenteses dá left-recursion 
 // | symbol=ExpressionSymbol operand+=ValueSpecification | symbol=ExpressionSymbol "{" operand+=ValueSpecification (","
 // operand+=ValueSpecification)+ "}") ")"
 protected class ExpressionValue_Group extends GroupToken {
@@ -19432,7 +19272,7 @@ protected class ExpressionValue_Group extends GroupToken {
 
 }
 
-// {Expression}
+// {ontouml::Expression}
 protected class ExpressionValue_ExpressionAction_0 extends ActionToken  {
 
 	public ExpressionValue_ExpressionAction_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -20033,13 +19873,15 @@ protected class ExpressionValue_RightParenthesisKeyword_3 extends KeywordToken  
  * 			# Reinaldo2
  * 		end
  * * ///OK
- * OpaqueExpression:
- * 	{OpaqueExpression} "OpaqueExpression" name=ID? ("(" type=[Type] ")")? ":" language+=STRING ("," language+=STRING)* //'begin' body+=OPAQUE_TEXT 'end'
+ * OpaqueExpression returns ontouml::OpaqueExpression:
+ * 	{ontouml::OpaqueExpression} "OpaqueExpression" name=ID? ("(" type=[ontouml::Type] ")")? ":" language+=STRING (","
+ * 	language+=STRING)* //'begin' body+=OPAQUE_TEXT 'end'
  * 	"begin" ("#" body+=LINE)* "end";
  *
  **/
 
-// {OpaqueExpression} "OpaqueExpression" name=ID? ("(" type=[Type] ")")? ":" language+=STRING ("," language+=STRING)* //'begin' body+=OPAQUE_TEXT 'end'
+// {ontouml::OpaqueExpression} "OpaqueExpression" name=ID? ("(" type=[ontouml::Type] ")")? ":" language+=STRING (","
+// language+=STRING)* //'begin' body+=OPAQUE_TEXT 'end'
 // "begin" ("#" body+=LINE)* "end"
 protected class OpaqueExpression_Group extends GroupToken {
 	
@@ -20069,7 +19911,7 @@ protected class OpaqueExpression_Group extends GroupToken {
 
 }
 
-// {OpaqueExpression}
+// {ontouml::OpaqueExpression}
 protected class OpaqueExpression_OpaqueExpressionAction_0 extends ActionToken  {
 
 	public OpaqueExpression_OpaqueExpressionAction_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -20151,7 +19993,7 @@ protected class OpaqueExpression_NameAssignment_2 extends AssignmentToken  {
 
 }
 
-// ("(" type=[Type] ")")?
+// ("(" type=[ontouml::Type] ")")?
 protected class OpaqueExpression_Group_3 extends GroupToken {
 	
 	public OpaqueExpression_Group_3(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -20196,7 +20038,7 @@ protected class OpaqueExpression_LeftParenthesisKeyword_3_0 extends KeywordToken
 
 }
 
-// type=[Type]
+// type=[ontouml::Type]
 protected class OpaqueExpression_TypeAssignment_3_1 extends AssignmentToken  {
 	
 	public OpaqueExpression_TypeAssignment_3_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -20577,22 +20419,24 @@ protected class OpaqueExpression_EndKeyword_9 extends KeywordToken  {
  *  *****************************************************************************
  *   * FIXME: Property::association é opposite, mas não está sendo definida automaticamente
  *  ***************************************************************************** ///ATENTION: Ao mudar, mude também o de baixo
- * InlinePropertyDefinition returns Property:
- * 	{Property} //	'property'
+ * InlinePropertyDefinition returns ontouml::Property:
+ * 	{ontouml::Property} //	'property'
  * 	name=ID? ("(" (isStatic?="static"? & isOrdered?="ordered"? & isUnique?="unique"? & isReadOnly?="read-only"? &
- * 	isDerivedUnion?="derived-union"?) ")")? type=[Type] ("[" lowerValue=LiteralInteger ","
+ * 	isDerivedUnion?="derived-union"?) ")")? type=[ontouml::Type] ("[" lowerValue=LiteralInteger ","
  * 	upperValue=LiteralUnlimitedNatural "]")? ("{" ("defaults to" defaultValue=ValueSpecification)? ("aggregation"
- * 	aggregation=AggregationKind)? ("subset of" "(" subsettedProperty+=[Property] ("," subsettedProperty+=[Property])*
- * 	")")? ("redefines" "(" redefinedProperty+=[Property] ("," redefinedProperty+=[Property])* ")")? "}")?;
+ * 	aggregation=AggregationKind)? ("subset of" "(" subsettedProperty+=[ontouml::Property] (","
+ * 	subsettedProperty+=[ontouml::Property])* ")")? ("redefines" "(" redefinedProperty+=[ontouml::Property] (","
+ * 	redefinedProperty+=[ontouml::Property])* ")")? "}")?;
  *
  **/
 
-// {Property} //	'property'
+// {ontouml::Property} //	'property'
 // name=ID? ("(" (isStatic?="static"? & isOrdered?="ordered"? & isUnique?="unique"? & isReadOnly?="read-only"? &
-// isDerivedUnion?="derived-union"?) ")")? type=[Type] ("[" lowerValue=LiteralInteger ","
+// isDerivedUnion?="derived-union"?) ")")? type=[ontouml::Type] ("[" lowerValue=LiteralInteger ","
 // upperValue=LiteralUnlimitedNatural "]")? ("{" ("defaults to" defaultValue=ValueSpecification)? ("aggregation"
-// aggregation=AggregationKind)? ("subset of" "(" subsettedProperty+=[Property] ("," subsettedProperty+=[Property])* ")")?
-// ("redefines" "(" redefinedProperty+=[Property] ("," redefinedProperty+=[Property])* ")")? "}")?
+// aggregation=AggregationKind)? ("subset of" "(" subsettedProperty+=[ontouml::Property] (","
+// subsettedProperty+=[ontouml::Property])* ")")? ("redefines" "(" redefinedProperty+=[ontouml::Property] (","
+// redefinedProperty+=[ontouml::Property])* ")")? "}")?
 protected class InlinePropertyDefinition_Group extends GroupToken {
 	
 	public InlinePropertyDefinition_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -20623,7 +20467,7 @@ protected class InlinePropertyDefinition_Group extends GroupToken {
 
 }
 
-// {Property}
+// {ontouml::Property}
 protected class InlinePropertyDefinition_PropertyAction_0 extends ActionToken  {
 
 	public InlinePropertyDefinition_PropertyAction_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -20961,7 +20805,7 @@ protected class InlinePropertyDefinition_RightParenthesisKeyword_2_2 extends Key
 }
 
 
-// type=[Type]
+// type=[ontouml::Type]
 protected class InlinePropertyDefinition_TypeAssignment_3 extends AssignmentToken  {
 	
 	public InlinePropertyDefinition_TypeAssignment_3(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -21182,8 +21026,8 @@ protected class InlinePropertyDefinition_RightSquareBracketKeyword_4_4 extends K
 
 
 // ("{" ("defaults to" defaultValue=ValueSpecification)? ("aggregation" aggregation=AggregationKind)? ("subset of" "("
-// subsettedProperty+=[Property] ("," subsettedProperty+=[Property])* ")")? ("redefines" "(" redefinedProperty+=[Property]
-// ("," redefinedProperty+=[Property])* ")")? "}")?
+// subsettedProperty+=[ontouml::Property] ("," subsettedProperty+=[ontouml::Property])* ")")? ("redefines" "("
+// redefinedProperty+=[ontouml::Property] ("," redefinedProperty+=[ontouml::Property])* ")")? "}")?
 protected class InlinePropertyDefinition_Group_5 extends GroupToken {
 	
 	public InlinePropertyDefinition_Group_5(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -21399,7 +21243,7 @@ protected class InlinePropertyDefinition_AggregationAssignment_5_2_1 extends Ass
 }
 
 
-// ("subset of" "(" subsettedProperty+=[Property] ("," subsettedProperty+=[Property])* ")")?
+// ("subset of" "(" subsettedProperty+=[ontouml::Property] ("," subsettedProperty+=[ontouml::Property])* ")")?
 protected class InlinePropertyDefinition_Group_5_3 extends GroupToken {
 	
 	public InlinePropertyDefinition_Group_5_3(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -21467,7 +21311,7 @@ protected class InlinePropertyDefinition_LeftParenthesisKeyword_5_3_1 extends Ke
 
 }
 
-// subsettedProperty+=[Property]
+// subsettedProperty+=[ontouml::Property]
 protected class InlinePropertyDefinition_SubsettedPropertyAssignment_5_3_2 extends AssignmentToken  {
 	
 	public InlinePropertyDefinition_SubsettedPropertyAssignment_5_3_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -21504,7 +21348,7 @@ protected class InlinePropertyDefinition_SubsettedPropertyAssignment_5_3_2 exten
 
 }
 
-// ("," subsettedProperty+=[Property])*
+// ("," subsettedProperty+=[ontouml::Property])*
 protected class InlinePropertyDefinition_Group_5_3_3 extends GroupToken {
 	
 	public InlinePropertyDefinition_Group_5_3_3(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -21549,7 +21393,7 @@ protected class InlinePropertyDefinition_CommaKeyword_5_3_3_0 extends KeywordTok
 
 }
 
-// subsettedProperty+=[Property]
+// subsettedProperty+=[ontouml::Property]
 protected class InlinePropertyDefinition_SubsettedPropertyAssignment_5_3_3_1 extends AssignmentToken  {
 	
 	public InlinePropertyDefinition_SubsettedPropertyAssignment_5_3_3_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -21611,7 +21455,7 @@ protected class InlinePropertyDefinition_RightParenthesisKeyword_5_3_4 extends K
 }
 
 
-// ("redefines" "(" redefinedProperty+=[Property] ("," redefinedProperty+=[Property])* ")")?
+// ("redefines" "(" redefinedProperty+=[ontouml::Property] ("," redefinedProperty+=[ontouml::Property])* ")")?
 protected class InlinePropertyDefinition_Group_5_4 extends GroupToken {
 	
 	public InlinePropertyDefinition_Group_5_4(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -21680,7 +21524,7 @@ protected class InlinePropertyDefinition_LeftParenthesisKeyword_5_4_1 extends Ke
 
 }
 
-// redefinedProperty+=[Property]
+// redefinedProperty+=[ontouml::Property]
 protected class InlinePropertyDefinition_RedefinedPropertyAssignment_5_4_2 extends AssignmentToken  {
 	
 	public InlinePropertyDefinition_RedefinedPropertyAssignment_5_4_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -21717,7 +21561,7 @@ protected class InlinePropertyDefinition_RedefinedPropertyAssignment_5_4_2 exten
 
 }
 
-// ("," redefinedProperty+=[Property])*
+// ("," redefinedProperty+=[ontouml::Property])*
 protected class InlinePropertyDefinition_Group_5_4_3 extends GroupToken {
 	
 	public InlinePropertyDefinition_Group_5_4_3(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -21762,7 +21606,7 @@ protected class InlinePropertyDefinition_CommaKeyword_5_4_3_0 extends KeywordTok
 
 }
 
-// redefinedProperty+=[Property]
+// redefinedProperty+=[ontouml::Property]
 protected class InlinePropertyDefinition_RedefinedPropertyAssignment_5_4_3_1 extends AssignmentToken  {
 	
 	public InlinePropertyDefinition_RedefinedPropertyAssignment_5_4_3_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -21856,25 +21700,30 @@ protected class InlinePropertyDefinition_RightCurlyBracketKeyword_5_5 extends Ke
 
 /************ begin Rule ClassProperty ****************
  *
+ * //Property returns ontouml::Property:
+ * //	{ontouml::Property}
+ * //;
  * / *
  *  Sintaxe para criar properties em Classes
  *  - public Person father[1, 2] (unique)
  *  - public father[1,2] (Person) <unique>
  *  - public (unique) father[1,2] : Person
- * * /ClassProperty returns Property:
- * 	{Property} ("(" (isStatic?="static"? & isOrdered?="ordered"? & isUnique?="unique"? & isReadOnly?="read-only"? &
- * 	isDerivedUnion?="derived-union"?) ")")? name=ID ("[" lowerValue=LiteralInteger "," upperValue=LiteralUnlimitedNatural
- * 	"]")? ":" type=[Type] ("{" ("defaults to" defaultValue=ValueSpecification)? ("aggregation"
- * 	aggregation=AggregationKind)? ("subset of" "(" subsettedProperty+=[Property] ("," subsettedProperty+=[Property])*
- * 	")")? ("redefines" "(" redefinedProperty+=[Property] ("," redefinedProperty+=[Property])* ")")? "}")?;
+ * * /ClassProperty returns ontouml::Property:
+ * 	{ontouml::Property} ("(" (isStatic?="static"? & isOrdered?="ordered"? & isUnique?="unique"? & isReadOnly?="read-only"?
+ * 	& isDerivedUnion?="derived-union"?) ")")? name=ID ("[" lowerValue=LiteralInteger ","
+ * 	upperValue=LiteralUnlimitedNatural "]")? ":" type=[ontouml::Type] ("{" ("defaults to"
+ * 	defaultValue=ValueSpecification)? ("aggregation" aggregation=AggregationKind)? ("subset of" "("
+ * 	subsettedProperty+=[ontouml::Property] ("," subsettedProperty+=[ontouml::Property])* ")")? ("redefines" "("
+ * 	redefinedProperty+=[ontouml::Property] ("," redefinedProperty+=[ontouml::Property])* ")")? "}")?;
  *
  **/
 
-// {Property} ("(" (isStatic?="static"? & isOrdered?="ordered"? & isUnique?="unique"? & isReadOnly?="read-only"? &
+// {ontouml::Property} ("(" (isStatic?="static"? & isOrdered?="ordered"? & isUnique?="unique"? & isReadOnly?="read-only"? &
 // isDerivedUnion?="derived-union"?) ")")? name=ID ("[" lowerValue=LiteralInteger "," upperValue=LiteralUnlimitedNatural
-// "]")? ":" type=[Type] ("{" ("defaults to" defaultValue=ValueSpecification)? ("aggregation"
-// aggregation=AggregationKind)? ("subset of" "(" subsettedProperty+=[Property] ("," subsettedProperty+=[Property])* ")")?
-// ("redefines" "(" redefinedProperty+=[Property] ("," redefinedProperty+=[Property])* ")")? "}")?
+// "]")? ":" type=[ontouml::Type] ("{" ("defaults to" defaultValue=ValueSpecification)? ("aggregation"
+// aggregation=AggregationKind)? ("subset of" "(" subsettedProperty+=[ontouml::Property] (","
+// subsettedProperty+=[ontouml::Property])* ")")? ("redefines" "(" redefinedProperty+=[ontouml::Property] (","
+// redefinedProperty+=[ontouml::Property])* ")")? "}")?
 protected class ClassProperty_Group extends GroupToken {
 	
 	public ClassProperty_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -21904,7 +21753,7 @@ protected class ClassProperty_Group extends GroupToken {
 
 }
 
-// {Property}
+// {ontouml::Property}
 protected class ClassProperty_PropertyAction_0 extends ActionToken  {
 
 	public ClassProperty_PropertyAction_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -22445,7 +22294,7 @@ protected class ClassProperty_ColonKeyword_4 extends KeywordToken  {
 
 }
 
-// type=[Type]
+// type=[ontouml::Type]
 protected class ClassProperty_TypeAssignment_5 extends AssignmentToken  {
 	
 	public ClassProperty_TypeAssignment_5(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -22483,8 +22332,8 @@ protected class ClassProperty_TypeAssignment_5 extends AssignmentToken  {
 }
 
 // ("{" ("defaults to" defaultValue=ValueSpecification)? ("aggregation" aggregation=AggregationKind)? ("subset of" "("
-// subsettedProperty+=[Property] ("," subsettedProperty+=[Property])* ")")? ("redefines" "(" redefinedProperty+=[Property]
-// ("," redefinedProperty+=[Property])* ")")? "}")?
+// subsettedProperty+=[ontouml::Property] ("," subsettedProperty+=[ontouml::Property])* ")")? ("redefines" "("
+// redefinedProperty+=[ontouml::Property] ("," redefinedProperty+=[ontouml::Property])* ")")? "}")?
 protected class ClassProperty_Group_6 extends GroupToken {
 	
 	public ClassProperty_Group_6(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -22699,7 +22548,7 @@ protected class ClassProperty_AggregationAssignment_6_2_1 extends AssignmentToke
 }
 
 
-// ("subset of" "(" subsettedProperty+=[Property] ("," subsettedProperty+=[Property])* ")")?
+// ("subset of" "(" subsettedProperty+=[ontouml::Property] ("," subsettedProperty+=[ontouml::Property])* ")")?
 protected class ClassProperty_Group_6_3 extends GroupToken {
 	
 	public ClassProperty_Group_6_3(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -22767,7 +22616,7 @@ protected class ClassProperty_LeftParenthesisKeyword_6_3_1 extends KeywordToken 
 
 }
 
-// subsettedProperty+=[Property]
+// subsettedProperty+=[ontouml::Property]
 protected class ClassProperty_SubsettedPropertyAssignment_6_3_2 extends AssignmentToken  {
 	
 	public ClassProperty_SubsettedPropertyAssignment_6_3_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -22804,7 +22653,7 @@ protected class ClassProperty_SubsettedPropertyAssignment_6_3_2 extends Assignme
 
 }
 
-// ("," subsettedProperty+=[Property])*
+// ("," subsettedProperty+=[ontouml::Property])*
 protected class ClassProperty_Group_6_3_3 extends GroupToken {
 	
 	public ClassProperty_Group_6_3_3(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -22849,7 +22698,7 @@ protected class ClassProperty_CommaKeyword_6_3_3_0 extends KeywordToken  {
 
 }
 
-// subsettedProperty+=[Property]
+// subsettedProperty+=[ontouml::Property]
 protected class ClassProperty_SubsettedPropertyAssignment_6_3_3_1 extends AssignmentToken  {
 	
 	public ClassProperty_SubsettedPropertyAssignment_6_3_3_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -22911,7 +22760,7 @@ protected class ClassProperty_RightParenthesisKeyword_6_3_4 extends KeywordToken
 }
 
 
-// ("redefines" "(" redefinedProperty+=[Property] ("," redefinedProperty+=[Property])* ")")?
+// ("redefines" "(" redefinedProperty+=[ontouml::Property] ("," redefinedProperty+=[ontouml::Property])* ")")?
 protected class ClassProperty_Group_6_4 extends GroupToken {
 	
 	public ClassProperty_Group_6_4(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -22980,7 +22829,7 @@ protected class ClassProperty_LeftParenthesisKeyword_6_4_1 extends KeywordToken 
 
 }
 
-// redefinedProperty+=[Property]
+// redefinedProperty+=[ontouml::Property]
 protected class ClassProperty_RedefinedPropertyAssignment_6_4_2 extends AssignmentToken  {
 	
 	public ClassProperty_RedefinedPropertyAssignment_6_4_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -23017,7 +22866,7 @@ protected class ClassProperty_RedefinedPropertyAssignment_6_4_2 extends Assignme
 
 }
 
-// ("," redefinedProperty+=[Property])*
+// ("," redefinedProperty+=[ontouml::Property])*
 protected class ClassProperty_Group_6_4_3 extends GroupToken {
 	
 	public ClassProperty_Group_6_4_3(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -23062,7 +22911,7 @@ protected class ClassProperty_CommaKeyword_6_4_3_0 extends KeywordToken  {
 
 }
 
-// redefinedProperty+=[Property]
+// redefinedProperty+=[ontouml::Property]
 protected class ClassProperty_RedefinedPropertyAssignment_6_4_3_1 extends AssignmentToken  {
 	
 	public ClassProperty_RedefinedPropertyAssignment_6_4_3_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -23204,8 +23053,8 @@ protected class ClassProperty_RightCurlyBracketKeyword_6_5 extends KeywordToken 
  * //	('{'
  * //		('defaults to' defaultValue=ValueSpecification)?
  * //		('aggregation' aggregation=AggregationKind)?
- * //		('subset of' '(' subsettedProperty+=[Property] ( "," subsettedProperty+=[Property])* ')' )?
- * //		('redefines' '(' redefinedProperty+=[Property] ( "," redefinedProperty+=[Property])* ')' )?
+ * //		('subset of' '(' subsettedProperty+=[ontouml::Property] ( "," subsettedProperty+=[ontouml::Property])* ')' )?
+ * //		('redefines' '(' redefinedProperty+=[ontouml::Property] ( "," redefinedProperty+=[ontouml::Property])* ')' )?
  * //    '}')?
  * //;
  * //CharacterizationCharacterized returns Property:
@@ -23222,8 +23071,8 @@ protected class ClassProperty_RightCurlyBracketKeyword_6_5 extends KeywordToken 
  * //	('{'
  * //		('defaults to' defaultValue=ValueSpecification)?
  * //		('aggregation' aggregation=AggregationKind)?
- * //		('subset of' '(' subsettedProperty+=[Property] ( "," subsettedProperty+=[Property])* ')' )?
- * //		('redefines' '(' redefinedProperty+=[Property] ( "," redefinedProperty+=[Property])* ')' )?
+ * //		('subset of' '(' subsettedProperty+=[ontouml::Property] ( "," subsettedProperty+=[ontouml::Property])* ')' )?
+ * //		('redefines' '(' redefinedProperty+=[ontouml::Property] ( "," redefinedProperty+=[ontouml::Property])* ')' )?
  * //    '}')?
  * //;
  * / * 
@@ -23270,7 +23119,7 @@ protected class ClassProperty_RightCurlyBracketKeyword_6_5 extends KeywordToken 
  * 		('ownedAttribute' '{' ownedAttribute+=Property ( "," ownedAttribute+=Property)* '}' )?
  *     '}';
  * 
- * * /Enumeration:
+ * * /Enumeration returns ontouml::Enumeration:
  * 	"enum" name=ID "{" ownedLiteral+=EnumerationLiteral ("," ownedLiteral+=EnumerationLiteral)* //		('ownedAttribute' '{' ownedAttribute+=Property ( "," ownedAttribute+=Property)* '}' )?
  * 
  * 	//		('clientDependency' '(' clientDependency+=[Dependency|EString] ( "," clientDependency+=[Dependency|EString])* ')' )?
@@ -23587,14 +23436,14 @@ protected class Enumeration_RightCurlyBracketKeyword_5 extends KeywordToken  {
  * //		('ownedComment' '{' ownedComment+=Comment ( "," ownedComment+=Comment)* '}' )?	
  * //		('slot' '{' slot+=Slot ( "," slot+=Slot)* '}' )?
  * //    '}'
- * EnumerationLiteral:
- * 	{EnumerationLiteral} //	'EnumerationLiteral'
+ * EnumerationLiteral returns ontouml::EnumerationLiteral:
+ * 	{ontouml::EnumerationLiteral} //	'EnumerationLiteral'
  * 	//	'{'
  * 	name=ID "=" specification=ValueSpecification;
  *
  **/
 
-// {EnumerationLiteral} //	'EnumerationLiteral'
+// {ontouml::EnumerationLiteral} //	'EnumerationLiteral'
 // //	'{'
 // name=ID "=" specification=ValueSpecification
 protected class EnumerationLiteral_Group extends GroupToken {
@@ -23625,7 +23474,7 @@ protected class EnumerationLiteral_Group extends GroupToken {
 
 }
 
-// {EnumerationLiteral}
+// {ontouml::EnumerationLiteral}
 protected class EnumerationLiteral_EnumerationLiteralAction_0 extends ActionToken  {
 
 	public EnumerationLiteral_EnumerationLiteralAction_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -23763,14 +23612,16 @@ protected class EnumerationLiteral_SpecificationAssignment_3 extends AssignmentT
  *
  * / *
  *  * Especifica uma instância
- *  * /Instance returns InstanceSpecification:
- * 	{InstanceSpecification} "instance" name=ID (":" classifier+=[Classifier] ("," classifier+=[Classifier])*)?
- * 	("specification" specification=ValueSpecification)? "{" (slot+=Slot ("," slot+=Slot)*)? "}";
+ *  * /Instance returns ontouml::InstanceSpecification:
+ * 	{ontouml::InstanceSpecification} "instance" name=ID (":" classifier+=[ontouml::Classifier] (","
+ * 	classifier+=[ontouml::Classifier])*)? ("specification" specification=ValueSpecification)? "{" (slot+=Slot (","
+ * 	slot+=Slot)*)? "}";
  *
  **/
 
-// {InstanceSpecification} "instance" name=ID (":" classifier+=[Classifier] ("," classifier+=[Classifier])*)?
-// ("specification" specification=ValueSpecification)? "{" (slot+=Slot ("," slot+=Slot)*)? "}"
+// {ontouml::InstanceSpecification} "instance" name=ID (":" classifier+=[ontouml::Classifier] (","
+// classifier+=[ontouml::Classifier])*)? ("specification" specification=ValueSpecification)? "{" (slot+=Slot (","
+// slot+=Slot)*)? "}"
 protected class Instance_Group extends GroupToken {
 	
 	public Instance_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -23799,7 +23650,7 @@ protected class Instance_Group extends GroupToken {
 
 }
 
-// {InstanceSpecification}
+// {ontouml::InstanceSpecification}
 protected class Instance_InstanceSpecificationAction_0 extends ActionToken  {
 
 	public Instance_InstanceSpecificationAction_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -23881,7 +23732,7 @@ protected class Instance_NameAssignment_2 extends AssignmentToken  {
 
 }
 
-// (":" classifier+=[Classifier] ("," classifier+=[Classifier])*)?
+// (":" classifier+=[ontouml::Classifier] ("," classifier+=[ontouml::Classifier])*)?
 protected class Instance_Group_3 extends GroupToken {
 	
 	public Instance_Group_3(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -23926,7 +23777,7 @@ protected class Instance_ColonKeyword_3_0 extends KeywordToken  {
 
 }
 
-// classifier+=[Classifier]
+// classifier+=[ontouml::Classifier]
 protected class Instance_ClassifierAssignment_3_1 extends AssignmentToken  {
 	
 	public Instance_ClassifierAssignment_3_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -23963,7 +23814,7 @@ protected class Instance_ClassifierAssignment_3_1 extends AssignmentToken  {
 
 }
 
-// ("," classifier+=[Classifier])*
+// ("," classifier+=[ontouml::Classifier])*
 protected class Instance_Group_3_2 extends GroupToken {
 	
 	public Instance_Group_3_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -24008,7 +23859,7 @@ protected class Instance_CommaKeyword_3_2_0 extends KeywordToken  {
 
 }
 
-// classifier+=[Classifier]
+// classifier+=[ontouml::Classifier]
 protected class Instance_ClassifierAssignment_3_2_1 extends AssignmentToken  {
 	
 	public Instance_ClassifierAssignment_3_2_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -24354,13 +24205,13 @@ protected class Instance_RightCurlyBracketKeyword_7 extends KeywordToken  {
 
 /************ begin Rule Slot ****************
  *
- * Slot:
- * 	definingFeature=[StructuralFeature|STRING] "=>" (value+=ValueSpecification | "[" value+=ValueSpecification (","
+ * Slot returns ontouml::Slot:
+ * 	definingFeature=[ontouml::StructuralFeature] "=>" (value+=ValueSpecification | "[" value+=ValueSpecification (","
  * 	value+=ValueSpecification)* "]");
  *
  **/
 
-// definingFeature=[StructuralFeature|STRING] "=>" (value+=ValueSpecification | "[" value+=ValueSpecification (","
+// definingFeature=[ontouml::StructuralFeature] "=>" (value+=ValueSpecification | "[" value+=ValueSpecification (","
 // value+=ValueSpecification)* "]")
 protected class Slot_Group extends GroupToken {
 	
@@ -24390,7 +24241,7 @@ protected class Slot_Group extends GroupToken {
 
 }
 
-// definingFeature=[StructuralFeature|STRING]
+// definingFeature=[ontouml::StructuralFeature]
 protected class Slot_DefiningFeatureAssignment_0 extends AssignmentToken  {
 	
 	public Slot_DefiningFeatureAssignment_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -24736,12 +24587,12 @@ protected class Slot_RightSquareBracketKeyword_2_1_3 extends KeywordToken  {
  *  *
  *  * private instance reinaldinho (Person)
  * * ///OK
- * InstanceValue:
- * 	"instance" name=ID? ("(" type=[Type] ")")? instance=[InstanceSpecification];
+ * InstanceValue returns ontouml::InstanceValue:
+ * 	instance=[ontouml::InstanceSpecification] ("(" type=[ontouml::Type] ")")?;
  *
  **/
 
-// "instance" name=ID? ("(" type=[Type] ")")? instance=[InstanceSpecification]
+// instance=[ontouml::InstanceSpecification] ("(" type=[ontouml::Type] ")")?
 protected class InstanceValue_Group extends GroupToken {
 	
 	public InstanceValue_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -24756,7 +24607,8 @@ protected class InstanceValue_Group extends GroupToken {
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new InstanceValue_InstanceAssignment_3(lastRuleCallOrigin, this, 0, inst);
+			case 0: return new InstanceValue_Group_1(lastRuleCallOrigin, this, 0, inst);
+			case 1: return new InstanceValue_InstanceAssignment_0(lastRuleCallOrigin, this, 1, inst);
 			default: return null;
 		}	
 	}
@@ -24770,16 +24622,16 @@ protected class InstanceValue_Group extends GroupToken {
 
 }
 
-// "instance"
-protected class InstanceValue_InstanceKeyword_0 extends KeywordToken  {
+// instance=[ontouml::InstanceSpecification]
+protected class InstanceValue_InstanceAssignment_0 extends AssignmentToken  {
 	
-	public InstanceValue_InstanceKeyword_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public InstanceValue_InstanceAssignment_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
-	public Keyword getGrammarElement() {
-		return grammarAccess.getInstanceValueAccess().getInstanceKeyword_0();
+	public Assignment getGrammarElement() {
+		return grammarAccess.getInstanceValueAccess().getInstanceAssignment_0();
 	}
 
     @Override
@@ -24789,58 +24641,39 @@ protected class InstanceValue_InstanceKeyword_0 extends KeywordToken  {
 		}	
 	}
 
-}
-
-// name=ID?
-protected class InstanceValue_NameAssignment_1 extends AssignmentToken  {
-	
-	public InstanceValue_NameAssignment_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
-		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
-	}
-	
-	@Override
-	public Assignment getGrammarElement() {
-		return grammarAccess.getInstanceValueAccess().getNameAssignment_1();
-	}
-
-    @Override
-	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
-		switch(index) {
-			case 0: return new InstanceValue_InstanceKeyword_0(lastRuleCallOrigin, this, 0, inst);
-			default: return null;
-		}	
-	}
-
     @Override	
 	public IEObjectConsumer tryConsume() {
-		if((value = eObjectConsumer.getConsumable("name",false)) == null) return null;
-		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("name");
-		if(valueSerializer.isValid(obj.getEObject(), grammarAccess.getInstanceValueAccess().getNameIDTerminalRuleCall_1_0(), value, null)) {
-			type = AssignmentType.TERMINAL_RULE_CALL;
-			element = grammarAccess.getInstanceValueAccess().getNameIDTerminalRuleCall_1_0();
-			return obj;
+		if((value = eObjectConsumer.getConsumable("instance",true)) == null) return null;
+		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("instance");
+		if(value instanceof EObject) { // org::eclipse::xtext::impl::CrossReferenceImpl
+			IEObjectConsumer param = createEObjectConsumer((EObject)value);
+			if(param.isInstanceOf(grammarAccess.getInstanceValueAccess().getInstanceInstanceSpecificationCrossReference_0_0().getType().getClassifier())) {
+				type = AssignmentType.CROSS_REFERENCE;
+				element = grammarAccess.getInstanceValueAccess().getInstanceInstanceSpecificationCrossReference_0_0(); 
+				return obj;
+			}
 		}
 		return null;
 	}
 
 }
 
-// ("(" type=[Type] ")")?
-protected class InstanceValue_Group_2 extends GroupToken {
+// ("(" type=[ontouml::Type] ")")?
+protected class InstanceValue_Group_1 extends GroupToken {
 	
-	public InstanceValue_Group_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public InstanceValue_Group_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public Group getGrammarElement() {
-		return grammarAccess.getInstanceValueAccess().getGroup_2();
+		return grammarAccess.getInstanceValueAccess().getGroup_1();
 	}
 
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new InstanceValue_RightParenthesisKeyword_2_2(lastRuleCallOrigin, this, 0, inst);
+			case 0: return new InstanceValue_RightParenthesisKeyword_1_2(lastRuleCallOrigin, this, 0, inst);
 			default: return null;
 		}	
 	}
@@ -24848,44 +24681,43 @@ protected class InstanceValue_Group_2 extends GroupToken {
 }
 
 // "("
-protected class InstanceValue_LeftParenthesisKeyword_2_0 extends KeywordToken  {
+protected class InstanceValue_LeftParenthesisKeyword_1_0 extends KeywordToken  {
 	
-	public InstanceValue_LeftParenthesisKeyword_2_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public InstanceValue_LeftParenthesisKeyword_1_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public Keyword getGrammarElement() {
-		return grammarAccess.getInstanceValueAccess().getLeftParenthesisKeyword_2_0();
+		return grammarAccess.getInstanceValueAccess().getLeftParenthesisKeyword_1_0();
 	}
 
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new InstanceValue_NameAssignment_1(lastRuleCallOrigin, this, 0, inst);
-			case 1: return new InstanceValue_InstanceKeyword_0(lastRuleCallOrigin, this, 1, inst);
+			case 0: return new InstanceValue_InstanceAssignment_0(lastRuleCallOrigin, this, 0, inst);
 			default: return null;
 		}	
 	}
 
 }
 
-// type=[Type]
-protected class InstanceValue_TypeAssignment_2_1 extends AssignmentToken  {
+// type=[ontouml::Type]
+protected class InstanceValue_TypeAssignment_1_1 extends AssignmentToken  {
 	
-	public InstanceValue_TypeAssignment_2_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public InstanceValue_TypeAssignment_1_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public Assignment getGrammarElement() {
-		return grammarAccess.getInstanceValueAccess().getTypeAssignment_2_1();
+		return grammarAccess.getInstanceValueAccess().getTypeAssignment_1_1();
 	}
 
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new InstanceValue_LeftParenthesisKeyword_2_0(lastRuleCallOrigin, this, 0, inst);
+			case 0: return new InstanceValue_LeftParenthesisKeyword_1_0(lastRuleCallOrigin, this, 0, inst);
 			default: return null;
 		}	
 	}
@@ -24896,9 +24728,9 @@ protected class InstanceValue_TypeAssignment_2_1 extends AssignmentToken  {
 		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("type");
 		if(value instanceof EObject) { // org::eclipse::xtext::impl::CrossReferenceImpl
 			IEObjectConsumer param = createEObjectConsumer((EObject)value);
-			if(param.isInstanceOf(grammarAccess.getInstanceValueAccess().getTypeTypeCrossReference_2_1_0().getType().getClassifier())) {
+			if(param.isInstanceOf(grammarAccess.getInstanceValueAccess().getTypeTypeCrossReference_1_1_0().getType().getClassifier())) {
 				type = AssignmentType.CROSS_REFERENCE;
-				element = grammarAccess.getInstanceValueAccess().getTypeTypeCrossReference_2_1_0(); 
+				element = grammarAccess.getInstanceValueAccess().getTypeTypeCrossReference_1_1_0(); 
 				return obj;
 			}
 		}
@@ -24908,66 +24740,27 @@ protected class InstanceValue_TypeAssignment_2_1 extends AssignmentToken  {
 }
 
 // ")"
-protected class InstanceValue_RightParenthesisKeyword_2_2 extends KeywordToken  {
+protected class InstanceValue_RightParenthesisKeyword_1_2 extends KeywordToken  {
 	
-	public InstanceValue_RightParenthesisKeyword_2_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public InstanceValue_RightParenthesisKeyword_1_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public Keyword getGrammarElement() {
-		return grammarAccess.getInstanceValueAccess().getRightParenthesisKeyword_2_2();
+		return grammarAccess.getInstanceValueAccess().getRightParenthesisKeyword_1_2();
 	}
 
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new InstanceValue_TypeAssignment_2_1(lastRuleCallOrigin, this, 0, inst);
+			case 0: return new InstanceValue_TypeAssignment_1_1(lastRuleCallOrigin, this, 0, inst);
 			default: return null;
 		}	
 	}
 
 }
 
-
-// instance=[InstanceSpecification]
-protected class InstanceValue_InstanceAssignment_3 extends AssignmentToken  {
-	
-	public InstanceValue_InstanceAssignment_3(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
-		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
-	}
-	
-	@Override
-	public Assignment getGrammarElement() {
-		return grammarAccess.getInstanceValueAccess().getInstanceAssignment_3();
-	}
-
-    @Override
-	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
-		switch(index) {
-			case 0: return new InstanceValue_Group_2(lastRuleCallOrigin, this, 0, inst);
-			case 1: return new InstanceValue_NameAssignment_1(lastRuleCallOrigin, this, 1, inst);
-			case 2: return new InstanceValue_InstanceKeyword_0(lastRuleCallOrigin, this, 2, inst);
-			default: return null;
-		}	
-	}
-
-    @Override	
-	public IEObjectConsumer tryConsume() {
-		if((value = eObjectConsumer.getConsumable("instance",true)) == null) return null;
-		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("instance");
-		if(value instanceof EObject) { // org::eclipse::xtext::impl::CrossReferenceImpl
-			IEObjectConsumer param = createEObjectConsumer((EObject)value);
-			if(param.isInstanceOf(grammarAccess.getInstanceValueAccess().getInstanceInstanceSpecificationCrossReference_3_0().getType().getClassifier())) {
-				type = AssignmentType.CROSS_REFERENCE;
-				element = grammarAccess.getInstanceValueAccess().getInstanceInstanceSpecificationCrossReference_3_0(); 
-				return obj;
-			}
-		}
-		return null;
-	}
-
-}
 
 
 /************ end Rule InstanceValue ****************/
@@ -24977,12 +24770,12 @@ protected class InstanceValue_InstanceAssignment_3 extends AssignmentToken  {
  *
  * //Um UnlimitedNatural pode ser reduzido a um INT assim como um LiteralInteger
  * //Por isso tá dando ambiguidade na gramática??? Mas ainda assim está funcionando.
- * LiteralInteger:
- * 	{LiteralInteger} value=INT;
+ * LiteralInteger returns ontouml::LiteralInteger:
+ * 	{ontouml::LiteralInteger} value=INT;
  *
  **/
 
-// {LiteralInteger} value=INT
+// {ontouml::LiteralInteger} value=INT
 protected class LiteralInteger_Group extends GroupToken {
 	
 	public LiteralInteger_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -25011,7 +24804,7 @@ protected class LiteralInteger_Group extends GroupToken {
 
 }
 
-// {LiteralInteger}
+// {ontouml::LiteralInteger}
 protected class LiteralInteger_LiteralIntegerAction_0 extends ActionToken  {
 
 	public LiteralInteger_LiteralIntegerAction_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -25077,12 +24870,12 @@ protected class LiteralInteger_ValueAssignment_1 extends AssignmentToken  {
 
 /************ begin Rule LiteralString ****************
  *
- * LiteralString:
- * 	{LiteralString} value=STRING;
+ * LiteralString returns ontouml::LiteralString:
+ * 	{ontouml::LiteralString} value=STRING;
  *
  **/
 
-// {LiteralString} value=STRING
+// {ontouml::LiteralString} value=STRING
 protected class LiteralString_Group extends GroupToken {
 	
 	public LiteralString_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -25111,7 +24904,7 @@ protected class LiteralString_Group extends GroupToken {
 
 }
 
-// {LiteralString}
+// {ontouml::LiteralString}
 protected class LiteralString_LiteralStringAction_0 extends ActionToken  {
 
 	public LiteralString_LiteralStringAction_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -25177,12 +24970,12 @@ protected class LiteralString_ValueAssignment_1 extends AssignmentToken  {
 
 /************ begin Rule LiteralBoolean ****************
  *
- * LiteralBoolean:
- * 	{LiteralBoolean} value=Boolean;
+ * LiteralBoolean returns ontouml::LiteralBoolean:
+ * 	{ontouml::LiteralBoolean} value=Boolean;
  *
  **/
 
-// {LiteralBoolean} value=Boolean
+// {ontouml::LiteralBoolean} value=Boolean
 protected class LiteralBoolean_Group extends GroupToken {
 	
 	public LiteralBoolean_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -25211,7 +25004,7 @@ protected class LiteralBoolean_Group extends GroupToken {
 
 }
 
-// {LiteralBoolean}
+// {ontouml::LiteralBoolean}
 protected class LiteralBoolean_LiteralBooleanAction_0 extends ActionToken  {
 
 	public LiteralBoolean_LiteralBooleanAction_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -25281,7 +25074,7 @@ protected class LiteralBoolean_ValueAssignment_1 extends AssignmentToken  {
  * //Acho que não precisa
  * //EBoolean returns ecore::EBoolean:
  * //	'true' | 'false';
- * LiteralUnlimitedNatural:
+ * LiteralUnlimitedNatural returns ontouml::LiteralUnlimitedNatural:
  * 	value=UnlimitedNaturalValue | value=INT;
  *
  **/
@@ -25390,12 +25183,12 @@ protected class LiteralUnlimitedNatural_ValueAssignment_1 extends AssignmentToke
 /************ begin Rule LiteralNull ****************
  *
  * //Tentar um ValueConverter??
- * LiteralNull:
- * 	{LiteralNull} "NULL";
+ * LiteralNull returns ontouml::LiteralNull:
+ * 	{ontouml::LiteralNull} "NULL";
  *
  **/
 
-// {LiteralNull} "NULL"
+// {ontouml::LiteralNull} "NULL"
 protected class LiteralNull_Group extends GroupToken {
 	
 	public LiteralNull_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -25424,7 +25217,7 @@ protected class LiteralNull_Group extends GroupToken {
 
 }
 
-// {LiteralNull}
+// {ontouml::LiteralNull}
 protected class LiteralNull_LiteralNullAction_0 extends ActionToken  {
 
 	public LiteralNull_LiteralNullAction_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {

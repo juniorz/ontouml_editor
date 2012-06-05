@@ -44,6 +44,7 @@ public class DslOntoUMLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getValueSpecificationAccess().getAlternatives(), "rule__ValueSpecification__Alternatives");
 					put(grammarAccess.getTypeAccess().getAlternatives(), "rule__Type__Alternatives");
 					put(grammarAccess.getExpressionSymbolAccess().getAlternatives(), "rule__ExpressionSymbol__Alternatives");
+					put(grammarAccess.getDefaultOperatorAccess().getAlternatives(), "rule__DefaultOperator__Alternatives");
 					put(grammarAccess.getExpressionValueAccess().getAlternatives_2(), "rule__ExpressionValue__Alternatives_2");
 					put(grammarAccess.getLINEAccess().getAlternatives(), "rule__LINE__Alternatives");
 					put(grammarAccess.getSlotAccess().getAlternatives_2(), "rule__Slot__Alternatives_2");
@@ -166,8 +167,6 @@ public class DslOntoUMLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getPrimitiveTypeAccess().getGroup(), "rule__PrimitiveType__Group__0");
 					put(grammarAccess.getPrimitiveTypeAccess().getGroup_2(), "rule__PrimitiveType__Group_2__0");
 					put(grammarAccess.getPrimitiveTypeAccess().getGroup_2_2(), "rule__PrimitiveType__Group_2_2__0");
-					put(grammarAccess.getPrimitiveTypeAccess().getGroup_3(), "rule__PrimitiveType__Group_3__0");
-					put(grammarAccess.getPrimitiveTypeAccess().getGroup_3_1(), "rule__PrimitiveType__Group_3_1__0");
 					put(grammarAccess.getDependencyAccess().getGroup(), "rule__Dependency__Group__0");
 					put(grammarAccess.getDependencyAccess().getGroup_5(), "rule__Dependency__Group_5__0");
 					put(grammarAccess.getDependencyAccess().getGroup_9(), "rule__Dependency__Group_9__0");
@@ -186,6 +185,7 @@ public class DslOntoUMLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getInlineGeneralizationAccess().getGroup_2_2(), "rule__InlineGeneralization__Group_2_2__0");
 					put(grammarAccess.getGeneralizationAccess().getGroup(), "rule__Generalization__Group__0");
 					put(grammarAccess.getGeneralizationSetAccess().getGroup(), "rule__GeneralizationSet__Group__0");
+					put(grammarAccess.getExpressionSymbolAccess().getGroup_1(), "rule__ExpressionSymbol__Group_1__0");
 					put(grammarAccess.getExpressionValueAccess().getGroup(), "rule__ExpressionValue__Group__0");
 					put(grammarAccess.getExpressionValueAccess().getGroup_2_0(), "rule__ExpressionValue__Group_2_0__0");
 					put(grammarAccess.getExpressionValueAccess().getGroup_2_1(), "rule__ExpressionValue__Group_2_1__0");
@@ -228,7 +228,7 @@ public class DslOntoUMLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getSlotAccess().getGroup_2_1(), "rule__Slot__Group_2_1__0");
 					put(grammarAccess.getSlotAccess().getGroup_2_1_2(), "rule__Slot__Group_2_1_2__0");
 					put(grammarAccess.getInstanceValueAccess().getGroup(), "rule__InstanceValue__Group__0");
-					put(grammarAccess.getInstanceValueAccess().getGroup_2(), "rule__InstanceValue__Group_2__0");
+					put(grammarAccess.getInstanceValueAccess().getGroup_1(), "rule__InstanceValue__Group_1__0");
 					put(grammarAccess.getLiteralIntegerAccess().getGroup(), "rule__LiteralInteger__Group__0");
 					put(grammarAccess.getLiteralStringAccess().getGroup(), "rule__LiteralString__Group__0");
 					put(grammarAccess.getLiteralBooleanAccess().getGroup(), "rule__LiteralBoolean__Group__0");
@@ -402,7 +402,6 @@ public class DslOntoUMLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getPrimitiveTypeAccess().getNameAssignment_1(), "rule__PrimitiveType__NameAssignment_1");
 					put(grammarAccess.getPrimitiveTypeAccess().getGeneralizationAssignment_2_1(), "rule__PrimitiveType__GeneralizationAssignment_2_1");
 					put(grammarAccess.getPrimitiveTypeAccess().getGeneralizationAssignment_2_2_1(), "rule__PrimitiveType__GeneralizationAssignment_2_2_1");
-					put(grammarAccess.getPrimitiveTypeAccess().getOwnedAttributeAssignment_3_1_0(), "rule__PrimitiveType__OwnedAttributeAssignment_3_1_0");
 					put(grammarAccess.getDependencyAccess().getNameAssignment_2(), "rule__Dependency__NameAssignment_2");
 					put(grammarAccess.getDependencyAccess().getClientAssignment_4(), "rule__Dependency__ClientAssignment_4");
 					put(grammarAccess.getDependencyAccess().getClientAssignment_5_1(), "rule__Dependency__ClientAssignment_5_1");
@@ -486,9 +485,8 @@ public class DslOntoUMLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getSlotAccess().getValueAssignment_2_0(), "rule__Slot__ValueAssignment_2_0");
 					put(grammarAccess.getSlotAccess().getValueAssignment_2_1_1(), "rule__Slot__ValueAssignment_2_1_1");
 					put(grammarAccess.getSlotAccess().getValueAssignment_2_1_2_1(), "rule__Slot__ValueAssignment_2_1_2_1");
-					put(grammarAccess.getInstanceValueAccess().getNameAssignment_1(), "rule__InstanceValue__NameAssignment_1");
-					put(grammarAccess.getInstanceValueAccess().getTypeAssignment_2_1(), "rule__InstanceValue__TypeAssignment_2_1");
-					put(grammarAccess.getInstanceValueAccess().getInstanceAssignment_3(), "rule__InstanceValue__InstanceAssignment_3");
+					put(grammarAccess.getInstanceValueAccess().getInstanceAssignment_0(), "rule__InstanceValue__InstanceAssignment_0");
+					put(grammarAccess.getInstanceValueAccess().getTypeAssignment_1_1(), "rule__InstanceValue__TypeAssignment_1_1");
 					put(grammarAccess.getLiteralIntegerAccess().getValueAssignment_1(), "rule__LiteralInteger__ValueAssignment_1");
 					put(grammarAccess.getLiteralStringAccess().getValueAssignment_1(), "rule__LiteralString__ValueAssignment_1");
 					put(grammarAccess.getLiteralBooleanAccess().getValueAssignment_1(), "rule__LiteralBoolean__ValueAssignment_1");

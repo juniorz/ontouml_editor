@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/br.ufes.inf.nemo.ontouml.dsl.ecore/src"
+    modelPluginID="br.ufes.inf.nemo.ontouml.dsl.ecore" modelName="ConcreteSyntax"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0" copyrightFields="false"
+    usedGenPackages="platform:/plugin/br.ufes.inf.nemo.ontouml.refontouml/model/RefOntoUML.genmodel#//RefOntoUML">
+  <foreignModel>ConcreteSyntax.ecore</foreignModel>
+  <genPackages prefix="OntoDSL" resource="XML" disposableProviderFactory="true" ecorePackage="ConcreteSyntax.ecore#/">
+    <genClasses ecoreClass="ConcreteSyntax.ecore#//DslMediation">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ConcreteSyntax.ecore#//DslMediation/relator"/>
+      <genOperations ecoreOperation="ConcreteSyntax.ecore#//DslMediation/getOwnedMediatedEnd"/>
+      <genOperations ecoreOperation="ConcreteSyntax.ecore#//DslMediation/setOwnedMediatedEnd">
+        <genParameters ecoreParameter="ConcreteSyntax.ecore#//DslMediation/setOwnedMediatedEnd/mediated"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="ConcreteSyntax.ecore#//DslRelator">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConcreteSyntax.ecore#//DslRelator/mediations"/>
+    </genClasses>
+    <genClasses ecoreClass="ConcreteSyntax.ecore#//DslModel"/>
+    <genClasses image="false" ecoreClass="ConcreteSyntax.ecore#//OwnedAndNavigableAssociation"/>
+  </genPackages>
+</genmodel:GenModel>

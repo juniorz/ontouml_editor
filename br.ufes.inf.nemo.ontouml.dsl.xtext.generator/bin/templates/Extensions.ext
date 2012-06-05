@@ -1,0 +1,4 @@
+import br::ufes::inf::nemo::ontouml::dsl::xtext::ontoDSL;
+
+sortedGreetings(Model this) :
+	this.greetings.sortBy(g|g.name.toLowerCase());
