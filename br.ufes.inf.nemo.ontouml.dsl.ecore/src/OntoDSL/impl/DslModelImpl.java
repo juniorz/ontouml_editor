@@ -8,6 +8,7 @@ package OntoDSL.impl;
 
 import OntoDSL.DslModel;
 import OntoDSL.OntoDSLPackage;
+import OntoDSL.adapter.DslAdapterFactory;
 import OntoDSL.adapter.OwnedMemberObserver;
 
 import RefOntoUML.impl.ModelImpl;
@@ -27,10 +28,13 @@ public class DslModelImpl extends ModelImpl implements DslModel {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	protected DslModelImpl() {
 		super();
+		
+//		DslAdapterFactory factory = new DslAdapterFactory();
+//		factory.adapt(this, OwnedMemberObserver.class);
 	}
 
 	/**

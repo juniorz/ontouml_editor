@@ -20,7 +20,6 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.DynamicEObjectImpl;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 
@@ -32,12 +31,23 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  * The following features are implemented:
  * <ul>
  *   <li>{@link OntoDSL.impl.DslMediationImpl#getRelator <em>Relator</em>}</li>
+ *   <li>{@link OntoDSL.impl.DslMediationImpl#getMediated <em>Mediated</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
 public class DslMediationImpl extends MediationImpl implements DslMediation {
+	/**
+	 * The cached value of the '{@link #getMediated() <em>Mediated</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMediated()
+	 * @generated
+	 * @ordered
+	 */
+	protected Property mediated;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -96,6 +106,49 @@ public class DslMediationImpl extends MediationImpl implements DslMediation {
 		}
 		else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, OntoDSLPackage.DSL_MEDIATION__RELATOR, newRelator, newRelator));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Property getMediated() {
+		return mediated;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetMediated(Property newMediated, NotificationChain msgs) {
+		Property oldMediated = mediated;
+		mediated = newMediated;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OntoDSLPackage.DSL_MEDIATION__MEDIATED, oldMediated, newMediated);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setMediated(Property newMediated) {
+		if (newMediated != mediated) {
+			NotificationChain msgs = null;
+			if (mediated != null)
+				msgs = ((InternalEObject)mediated).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OntoDSLPackage.DSL_MEDIATION__MEDIATED, null, msgs);
+			if (newMediated != null)
+				msgs = ((InternalEObject)newMediated).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OntoDSLPackage.DSL_MEDIATION__MEDIATED, null, msgs);
+			msgs = basicSetMediated(newMediated, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OntoDSLPackage.DSL_MEDIATION__MEDIATED, newMediated, newMediated));
 	}
 
 	/**
@@ -165,6 +218,8 @@ public class DslMediationImpl extends MediationImpl implements DslMediation {
 		switch (featureID) {
 			case OntoDSLPackage.DSL_MEDIATION__RELATOR:
 				return basicSetRelator(null, msgs);
+			case OntoDSLPackage.DSL_MEDIATION__MEDIATED:
+				return basicSetMediated(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -193,6 +248,8 @@ public class DslMediationImpl extends MediationImpl implements DslMediation {
 		switch (featureID) {
 			case OntoDSLPackage.DSL_MEDIATION__RELATOR:
 				return getRelator();
+			case OntoDSLPackage.DSL_MEDIATION__MEDIATED:
+				return getMediated();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -209,6 +266,9 @@ public class DslMediationImpl extends MediationImpl implements DslMediation {
 			case OntoDSLPackage.DSL_MEDIATION__RELATOR:
 				setRelator((DslRelator)newValue);
 				return;
+			case OntoDSLPackage.DSL_MEDIATION__MEDIATED:
+				setMediated((Property)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -224,6 +284,9 @@ public class DslMediationImpl extends MediationImpl implements DslMediation {
 			case OntoDSLPackage.DSL_MEDIATION__RELATOR:
 				setRelator((DslRelator)null);
 				return;
+			case OntoDSLPackage.DSL_MEDIATION__MEDIATED:
+				setMediated((Property)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -238,6 +301,8 @@ public class DslMediationImpl extends MediationImpl implements DslMediation {
 		switch (featureID) {
 			case OntoDSLPackage.DSL_MEDIATION__RELATOR:
 				return getRelator() != null;
+			case OntoDSLPackage.DSL_MEDIATION__MEDIATED:
+				return mediated != null;
 		}
 		return super.eIsSet(featureID);
 	}

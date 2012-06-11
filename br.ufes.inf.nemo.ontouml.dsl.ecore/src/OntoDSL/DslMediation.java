@@ -9,8 +9,6 @@ package OntoDSL;
 import RefOntoUML.Mediation;
 import RefOntoUML.Property;
 
-import org.eclipse.emf.common.util.EList;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Dsl Mediation</b></em>'.
@@ -20,6 +18,7 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * <ul>
  *   <li>{@link OntoDSL.DslMediation#getRelator <em>Relator</em>}</li>
+ *   <li>{@link OntoDSL.DslMediation#getMediated <em>Mediated</em>}</li>
  * </ul>
  * </p>
  *
@@ -27,7 +26,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface DslMediation extends Mediation, OwnedAndNavigableAssociation {
+public interface DslMediation extends Mediation {
 	/**
 	 * Returns the value of the '<em><b>Relator</b></em>' container reference.
 	 * It is bidirectional and its opposite is '{@link OntoDSL.DslRelator#getMediations <em>Mediations</em>}'.
@@ -57,19 +56,29 @@ public interface DslMediation extends Mediation, OwnedAndNavigableAssociation {
 	void setRelator(DslRelator value);
 
 	/**
+	 * Returns the value of the '<em><b>Mediated</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Mediated</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
-	 * @model kind="operation"
+	 * @return the value of the '<em>Mediated</em>' containment reference.
+	 * @see #setMediated(Property)
+	 * @see OntoDSL.OntoDSLPackage#getDslMediation_Mediated()
+	 * @model containment="true"
 	 * @generated
 	 */
-	Property getOwnedMediatedEnd();
+	Property getMediated();
 
 	/**
+	 * Sets the value of the '{@link OntoDSL.DslMediation#getMediated <em>Mediated</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model
+	 * @param value the new value of the '<em>Mediated</em>' containment reference.
+	 * @see #getMediated()
 	 * @generated
 	 */
-	void setOwnedMediatedEnd(Property mediated);
+	void setMediated(Property value);
 
 } // DslMediation

@@ -386,13 +386,22 @@ public interface OntoDSLPackage extends EPackage {
 	int DSL_MEDIATION__RELATOR = RefOntoUMLPackage.MEDIATION_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Mediated</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DSL_MEDIATION__MEDIATED = RefOntoUMLPackage.MEDIATION_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Dsl Mediation</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DSL_MEDIATION_FEATURE_COUNT = RefOntoUMLPackage.MEDIATION_FEATURE_COUNT + 1;
+	int DSL_MEDIATION_FEATURE_COUNT = RefOntoUMLPackage.MEDIATION_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link OntoDSL.impl.DslRelatorImpl <em>Dsl Relator</em>}' class.
@@ -710,7 +719,6 @@ public interface OntoDSLPackage extends EPackage {
 	 */
 	int DSL_RELATOR_FEATURE_COUNT = RefOntoUMLPackage.RELATOR_FEATURE_COUNT + 1;
 
-
 	/**
 	 * The meta object id for the '{@link OntoDSL.impl.DslModelImpl <em>Dsl Model</em>}' class.
 	 * <!-- begin-user-doc -->
@@ -930,331 +938,6 @@ public interface OntoDSLPackage extends EPackage {
 
 
 	/**
-	 * The meta object id for the '{@link OntoDSL.impl.OwnedAndNavigableAssociationImpl <em>Owned And Navigable Association</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see OntoDSL.impl.OwnedAndNavigableAssociationImpl
-	 * @see OntoDSL.impl.OntoDSLPackageImpl#getOwnedAndNavigableAssociation()
-	 * @generated
-	 */
-	int OWNED_AND_NAVIGABLE_ASSOCIATION = 3;
-
-	/**
-	 * The feature id for the '<em><b>EAnnotations</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OWNED_AND_NAVIGABLE_ASSOCIATION__EANNOTATIONS = RefOntoUMLPackage.ASSOCIATION__EANNOTATIONS;
-
-	/**
-	 * The feature id for the '<em><b>Owned Element</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OWNED_AND_NAVIGABLE_ASSOCIATION__OWNED_ELEMENT = RefOntoUMLPackage.ASSOCIATION__OWNED_ELEMENT;
-
-	/**
-	 * The feature id for the '<em><b>Owner</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OWNED_AND_NAVIGABLE_ASSOCIATION__OWNER = RefOntoUMLPackage.ASSOCIATION__OWNER;
-
-	/**
-	 * The feature id for the '<em><b>Owned Comment</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OWNED_AND_NAVIGABLE_ASSOCIATION__OWNED_COMMENT = RefOntoUMLPackage.ASSOCIATION__OWNED_COMMENT;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OWNED_AND_NAVIGABLE_ASSOCIATION__NAME = RefOntoUMLPackage.ASSOCIATION__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Visibility</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OWNED_AND_NAVIGABLE_ASSOCIATION__VISIBILITY = RefOntoUMLPackage.ASSOCIATION__VISIBILITY;
-
-	/**
-	 * The feature id for the '<em><b>Qualified Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OWNED_AND_NAVIGABLE_ASSOCIATION__QUALIFIED_NAME = RefOntoUMLPackage.ASSOCIATION__QUALIFIED_NAME;
-
-	/**
-	 * The feature id for the '<em><b>Client Dependency</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OWNED_AND_NAVIGABLE_ASSOCIATION__CLIENT_DEPENDENCY = RefOntoUMLPackage.ASSOCIATION__CLIENT_DEPENDENCY;
-
-	/**
-	 * The feature id for the '<em><b>Namespace</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OWNED_AND_NAVIGABLE_ASSOCIATION__NAMESPACE = RefOntoUMLPackage.ASSOCIATION__NAMESPACE;
-
-	/**
-	 * The feature id for the '<em><b>Name Expression</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OWNED_AND_NAVIGABLE_ASSOCIATION__NAME_EXPRESSION = RefOntoUMLPackage.ASSOCIATION__NAME_EXPRESSION;
-
-	/**
-	 * The feature id for the '<em><b>Element Import</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OWNED_AND_NAVIGABLE_ASSOCIATION__ELEMENT_IMPORT = RefOntoUMLPackage.ASSOCIATION__ELEMENT_IMPORT;
-
-	/**
-	 * The feature id for the '<em><b>Package Import</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OWNED_AND_NAVIGABLE_ASSOCIATION__PACKAGE_IMPORT = RefOntoUMLPackage.ASSOCIATION__PACKAGE_IMPORT;
-
-	/**
-	 * The feature id for the '<em><b>Owned Rule</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OWNED_AND_NAVIGABLE_ASSOCIATION__OWNED_RULE = RefOntoUMLPackage.ASSOCIATION__OWNED_RULE;
-
-	/**
-	 * The feature id for the '<em><b>Member</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OWNED_AND_NAVIGABLE_ASSOCIATION__MEMBER = RefOntoUMLPackage.ASSOCIATION__MEMBER;
-
-	/**
-	 * The feature id for the '<em><b>Imported Member</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OWNED_AND_NAVIGABLE_ASSOCIATION__IMPORTED_MEMBER = RefOntoUMLPackage.ASSOCIATION__IMPORTED_MEMBER;
-
-	/**
-	 * The feature id for the '<em><b>Owned Member</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OWNED_AND_NAVIGABLE_ASSOCIATION__OWNED_MEMBER = RefOntoUMLPackage.ASSOCIATION__OWNED_MEMBER;
-
-	/**
-	 * The feature id for the '<em><b>Is Leaf</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OWNED_AND_NAVIGABLE_ASSOCIATION__IS_LEAF = RefOntoUMLPackage.ASSOCIATION__IS_LEAF;
-
-	/**
-	 * The feature id for the '<em><b>Redefined Element</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OWNED_AND_NAVIGABLE_ASSOCIATION__REDEFINED_ELEMENT = RefOntoUMLPackage.ASSOCIATION__REDEFINED_ELEMENT;
-
-	/**
-	 * The feature id for the '<em><b>Redefinition Context</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OWNED_AND_NAVIGABLE_ASSOCIATION__REDEFINITION_CONTEXT = RefOntoUMLPackage.ASSOCIATION__REDEFINITION_CONTEXT;
-
-	/**
-	 * The feature id for the '<em><b>Package</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OWNED_AND_NAVIGABLE_ASSOCIATION__PACKAGE = RefOntoUMLPackage.ASSOCIATION__PACKAGE;
-
-	/**
-	 * The feature id for the '<em><b>Is Abstract</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OWNED_AND_NAVIGABLE_ASSOCIATION__IS_ABSTRACT = RefOntoUMLPackage.ASSOCIATION__IS_ABSTRACT;
-
-	/**
-	 * The feature id for the '<em><b>Generalization</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OWNED_AND_NAVIGABLE_ASSOCIATION__GENERALIZATION = RefOntoUMLPackage.ASSOCIATION__GENERALIZATION;
-
-	/**
-	 * The feature id for the '<em><b>Powertype Extent</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OWNED_AND_NAVIGABLE_ASSOCIATION__POWERTYPE_EXTENT = RefOntoUMLPackage.ASSOCIATION__POWERTYPE_EXTENT;
-
-	/**
-	 * The feature id for the '<em><b>Feature</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OWNED_AND_NAVIGABLE_ASSOCIATION__FEATURE = RefOntoUMLPackage.ASSOCIATION__FEATURE;
-
-	/**
-	 * The feature id for the '<em><b>Inherited Member</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OWNED_AND_NAVIGABLE_ASSOCIATION__INHERITED_MEMBER = RefOntoUMLPackage.ASSOCIATION__INHERITED_MEMBER;
-
-	/**
-	 * The feature id for the '<em><b>Redefined Classifier</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OWNED_AND_NAVIGABLE_ASSOCIATION__REDEFINED_CLASSIFIER = RefOntoUMLPackage.ASSOCIATION__REDEFINED_CLASSIFIER;
-
-	/**
-	 * The feature id for the '<em><b>General</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OWNED_AND_NAVIGABLE_ASSOCIATION__GENERAL = RefOntoUMLPackage.ASSOCIATION__GENERAL;
-
-	/**
-	 * The feature id for the '<em><b>Attribute</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OWNED_AND_NAVIGABLE_ASSOCIATION__ATTRIBUTE = RefOntoUMLPackage.ASSOCIATION__ATTRIBUTE;
-
-	/**
-	 * The feature id for the '<em><b>Related Element</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OWNED_AND_NAVIGABLE_ASSOCIATION__RELATED_ELEMENT = RefOntoUMLPackage.ASSOCIATION__RELATED_ELEMENT;
-
-	/**
-	 * The feature id for the '<em><b>Owned End</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OWNED_AND_NAVIGABLE_ASSOCIATION__OWNED_END = RefOntoUMLPackage.ASSOCIATION__OWNED_END;
-
-	/**
-	 * The feature id for the '<em><b>Member End</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OWNED_AND_NAVIGABLE_ASSOCIATION__MEMBER_END = RefOntoUMLPackage.ASSOCIATION__MEMBER_END;
-
-	/**
-	 * The feature id for the '<em><b>Is Derived</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OWNED_AND_NAVIGABLE_ASSOCIATION__IS_DERIVED = RefOntoUMLPackage.ASSOCIATION__IS_DERIVED;
-
-	/**
-	 * The feature id for the '<em><b>End Type</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OWNED_AND_NAVIGABLE_ASSOCIATION__END_TYPE = RefOntoUMLPackage.ASSOCIATION__END_TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Navigable Owned End</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OWNED_AND_NAVIGABLE_ASSOCIATION__NAVIGABLE_OWNED_END = RefOntoUMLPackage.ASSOCIATION__NAVIGABLE_OWNED_END;
-
-	/**
-	 * The number of structural features of the '<em>Owned And Navigable Association</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OWNED_AND_NAVIGABLE_ASSOCIATION_FEATURE_COUNT = RefOntoUMLPackage.ASSOCIATION_FEATURE_COUNT + 0;
-
-	/**
 	 * Returns the meta object for class '{@link OntoDSL.DslMediation <em>Dsl Mediation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1274,6 +957,17 @@ public interface OntoDSLPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getDslMediation_Relator();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link OntoDSL.DslMediation#getMediated <em>Mediated</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Mediated</em>'.
+	 * @see OntoDSL.DslMediation#getMediated()
+	 * @see #getDslMediation()
+	 * @generated
+	 */
+	EReference getDslMediation_Mediated();
 
 	/**
 	 * Returns the meta object for class '{@link OntoDSL.DslRelator <em>Dsl Relator</em>}'.
@@ -1305,16 +999,6 @@ public interface OntoDSLPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getDslModel();
-
-	/**
-	 * Returns the meta object for class '{@link OntoDSL.OwnedAndNavigableAssociation <em>Owned And Navigable Association</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Owned And Navigable Association</em>'.
-	 * @see OntoDSL.OwnedAndNavigableAssociation
-	 * @generated
-	 */
-	EClass getOwnedAndNavigableAssociation();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1357,6 +1041,14 @@ public interface OntoDSLPackage extends EPackage {
 		EReference DSL_MEDIATION__RELATOR = eINSTANCE.getDslMediation_Relator();
 
 		/**
+		 * The meta object literal for the '<em><b>Mediated</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DSL_MEDIATION__MEDIATED = eINSTANCE.getDslMediation_Mediated();
+
+		/**
 		 * The meta object literal for the '{@link OntoDSL.impl.DslRelatorImpl <em>Dsl Relator</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1383,16 +1075,6 @@ public interface OntoDSLPackage extends EPackage {
 		 * @generated
 		 */
 		EClass DSL_MODEL = eINSTANCE.getDslModel();
-
-		/**
-		 * The meta object literal for the '{@link OntoDSL.impl.OwnedAndNavigableAssociationImpl <em>Owned And Navigable Association</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see OntoDSL.impl.OwnedAndNavigableAssociationImpl
-		 * @see OntoDSL.impl.OntoDSLPackageImpl#getOwnedAndNavigableAssociation()
-		 * @generated
-		 */
-		EClass OWNED_AND_NAVIGABLE_ASSOCIATION = eINSTANCE.getOwnedAndNavigableAssociation();
 
 	}
 

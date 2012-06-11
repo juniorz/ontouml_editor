@@ -108,7 +108,6 @@ public class OntoDSLSwitch<T> {
 				DslMediation dslMediation = (DslMediation)theEObject;
 				T result = caseDslMediation(dslMediation);
 				if (result == null) result = caseMediation(dslMediation);
-				if (result == null) result = caseOwnedAndNavigableAssociation(dslMediation);
 				if (result == null) result = caseDependencyRelationship(dslMediation);
 				if (result == null) result = caseDirectedBinaryAssociation(dslMediation);
 				if (result == null) result = caseAssociation(dslMediation);
@@ -151,22 +150,6 @@ public class OntoDSLSwitch<T> {
 				if (result == null) result = caseNamedElement(dslModel);
 				if (result == null) result = caseElement(dslModel);
 				if (result == null) result = caseEModelElement(dslModel);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case OntoDSLPackage.OWNED_AND_NAVIGABLE_ASSOCIATION: {
-				OwnedAndNavigableAssociation ownedAndNavigableAssociation = (OwnedAndNavigableAssociation)theEObject;
-				T result = caseOwnedAndNavigableAssociation(ownedAndNavigableAssociation);
-				if (result == null) result = caseAssociation(ownedAndNavigableAssociation);
-				if (result == null) result = caseClassifier(ownedAndNavigableAssociation);
-				if (result == null) result = caseRelationship(ownedAndNavigableAssociation);
-				if (result == null) result = caseNamespace(ownedAndNavigableAssociation);
-				if (result == null) result = caseRedefinableElement(ownedAndNavigableAssociation);
-				if (result == null) result = caseType(ownedAndNavigableAssociation);
-				if (result == null) result = casePackageableElement(ownedAndNavigableAssociation);
-				if (result == null) result = caseNamedElement(ownedAndNavigableAssociation);
-				if (result == null) result = caseElement(ownedAndNavigableAssociation);
-				if (result == null) result = caseEModelElement(ownedAndNavigableAssociation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -216,21 +199,6 @@ public class OntoDSLSwitch<T> {
 	 * @generated
 	 */
 	public T caseDslModel(DslModel object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Owned And Navigable Association</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Owned And Navigable Association</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseOwnedAndNavigableAssociation(OwnedAndNavigableAssociation object) {
 		return null;
 	}
 

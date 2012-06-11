@@ -12,7 +12,6 @@ import OntoDSL.DslRelator;
 import OntoDSL.OntoDSLFactory;
 import OntoDSL.OntoDSLPackage;
 
-import OntoDSL.OwnedAndNavigableAssociation;
 import RefOntoUML.RefOntoUMLPackage;
 
 import org.eclipse.emf.ecore.EClass;
@@ -49,13 +48,6 @@ public class OntoDSLPackageImpl extends EPackageImpl implements OntoDSLPackage {
 	 * @generated
 	 */
 	private EClass dslModelEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass ownedAndNavigableAssociationEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -144,6 +136,15 @@ public class OntoDSLPackageImpl extends EPackageImpl implements OntoDSLPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getDslMediation_Mediated() {
+		return (EReference)dslMediationEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getDslRelator() {
 		return dslRelatorEClass;
 	}
@@ -164,15 +165,6 @@ public class OntoDSLPackageImpl extends EPackageImpl implements OntoDSLPackage {
 	 */
 	public EClass getDslModel() {
 		return dslModelEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getOwnedAndNavigableAssociation() {
-		return ownedAndNavigableAssociationEClass;
 	}
 
 	/**
@@ -205,13 +197,12 @@ public class OntoDSLPackageImpl extends EPackageImpl implements OntoDSLPackage {
 		// Create classes and their features
 		dslMediationEClass = createEClass(DSL_MEDIATION);
 		createEReference(dslMediationEClass, DSL_MEDIATION__RELATOR);
+		createEReference(dslMediationEClass, DSL_MEDIATION__MEDIATED);
 
 		dslRelatorEClass = createEClass(DSL_RELATOR);
 		createEReference(dslRelatorEClass, DSL_RELATOR__MEDIATIONS);
 
 		dslModelEClass = createEClass(DSL_MODEL);
-
-		ownedAndNavigableAssociationEClass = createEClass(OWNED_AND_NAVIGABLE_ASSOCIATION);
 	}
 
 	/**
@@ -246,26 +237,18 @@ public class OntoDSLPackageImpl extends EPackageImpl implements OntoDSLPackage {
 
 		// Add supertypes to classes
 		dslMediationEClass.getESuperTypes().add(theRefOntoUMLPackage.getMediation());
-		dslMediationEClass.getESuperTypes().add(this.getOwnedAndNavigableAssociation());
 		dslRelatorEClass.getESuperTypes().add(theRefOntoUMLPackage.getRelator());
 		dslModelEClass.getESuperTypes().add(theRefOntoUMLPackage.getModel());
-		ownedAndNavigableAssociationEClass.getESuperTypes().add(theRefOntoUMLPackage.getAssociation());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(dslMediationEClass, DslMediation.class, "DslMediation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDslMediation_Relator(), this.getDslRelator(), this.getDslRelator_Mediations(), "relator", null, 0, 1, DslMediation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		addEOperation(dslMediationEClass, theRefOntoUMLPackage.getProperty(), "getOwnedMediatedEnd", 0, 1, IS_UNIQUE, IS_ORDERED);
-
-		EOperation op = addEOperation(dslMediationEClass, null, "setOwnedMediatedEnd", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theRefOntoUMLPackage.getProperty(), "mediated", 0, 1, IS_UNIQUE, IS_ORDERED);
+		initEReference(getDslMediation_Mediated(), theRefOntoUMLPackage.getProperty(), null, "mediated", null, 0, 1, DslMediation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dslRelatorEClass, DslRelator.class, "DslRelator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDslRelator_Mediations(), this.getDslMediation(), this.getDslMediation_Relator(), "mediations", null, 1, -1, DslRelator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dslModelEClass, DslModel.class, "DslModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(ownedAndNavigableAssociationEClass, OwnedAndNavigableAssociation.class, "OwnedAndNavigableAssociation", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

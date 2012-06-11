@@ -1,10 +1,15 @@
 package OntoDSL.adapter;
 
+import OntoDSL.OntoDSLPackage;
+import OntoDSL.impl.OntoDSLPackageImpl;
 import RefOntoUML.Association;
+import RefOntoUML.NamedElement;
 import RefOntoUML.Property;
 import RefOntoUML.RefOntoUMLPackage;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.impl.AdapterImpl;
+import org.eclipse.emf.common.notify.impl.NotificationImpl;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.util.EContentAdapter;
@@ -26,6 +31,8 @@ public class OwnedMemberObserver extends EContentAdapter {
 				return;
 			}
 
+			System.out.println(" ** vai adaptar ");
+
 			if(hasNewMember()){
 				doAction();
 			}
@@ -40,6 +47,8 @@ public class OwnedMemberObserver extends EContentAdapter {
 		}
 
 		private void doAction(){
+			System.out.println(" -> ");
+
 			Property newValue = getNewValue();
 			getAssociation().getMemberEnd().add(newValue);
 			getAssociation().getNavigableOwnedEnd().add(newValue);
@@ -47,6 +56,8 @@ public class OwnedMemberObserver extends EContentAdapter {
 
 
 		private void undoAction(){
+			System.out.println(" <- ");
+
 			Property oldValue = getOldValue();
 			getAssociation().getMemberEnd().remove(oldValue);
 			getAssociation().getNavigableOwnedEnd().remove(oldValue);
@@ -84,9 +95,22 @@ public class OwnedMemberObserver extends EContentAdapter {
 	public void notifyChanged(Notification notification) {
 		super.notifyChanged(notification);
 
+//		System.out.print("changed ");
+//		EObject target = ((EObject) notification.getNotifier());
+//		System.out.print(target.eClass().getName());
+
+		if(false == RefOntoUMLPackage.eINSTANCE.getAssociation().isInstance(target)){
+			return;
+		}
+
+		Association target = ((Association) notification.getNotifier());
+
 		System.out.print("changed ");
-		EObject target = ((EObject) notification.getNotifier());
 		System.out.print(target.eClass().getName());
+
+		if(target.getName() != null){
+			System.out.print(" <" + target.getName()+ ">");
+		}
 
 		EStructuralFeature feature = (EStructuralFeature) notification.getFeature();
 		if(feature != null){
@@ -94,7 +118,11 @@ public class OwnedMemberObserver extends EContentAdapter {
 		}
 
 		System.out.println("");
-		
+
+		if( notification.getFeatureID(Association.class) == RefOntoUMLPackage.ASSOCIATION__MEMBER_END ) {
+			System.out.println(" tipo: " + notification.getEventType());
+		}
+
 		if( notification.getFeatureID(Association.class) == RefOntoUMLPackage.ASSOCIATION__OWNED_END ) {
 			System.out.println(" - ownedEnd");
 			AutoMemberAdapter adapter = new AutoMemberAdapter(notification);
@@ -102,8 +130,9 @@ public class OwnedMemberObserver extends EContentAdapter {
 		}
 	}
 
-//	public boolean isAdapterForType(Object type){
-//		return type == OwnedMemberObserver.class;
-//	}
+	public boolean isAdapterForType(Object type){
+		super.isAdapterForType(type);
+		return type == OwnedMemberObserver.class;
+	}
 
 }
