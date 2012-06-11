@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:xtext="http://www.eclipse.org/2008/Xtext">
-  <xtext:Grammar name="br.ufes.inf.nemo.ontouml.dsl.xtext.OntoDSL" usedGrammars="/1" definesHiddenTokens="true" hiddenTokens="/0/@rules.61 /0/@rules.60 /0/@rules.62 /1/@rules.4 /1/@rules.3">
+  <xtext:Grammar name="br.ufes.inf.nemo.ontouml.dsl.xtext.OntoDSL" usedGrammars="/1" definesHiddenTokens="true" hiddenTokens="/0/@rules.62 /0/@rules.61 /0/@rules.63 /1/@rules.4 /1/@rules.3">
     <metamodelDeclarations xsi:type="xtext:ReferencedMetamodel" alias="ecore">
       <ePackage href="http://www.eclipse.org/emf/2002/Ecore#/"/>
     </metamodelDeclarations>
@@ -43,7 +43,7 @@
       </type>
       <alternatives xsi:type="xtext:Alternatives">
         <elements xsi:type="xtext:RuleCall" rule="/0/@rules.29"/>
-        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.50"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.51"/>
         <elements xsi:type="xtext:RuleCall" rule="/0/@rules.2"/>
         <elements xsi:type="xtext:RuleCall" rule="/0/@rules.3"/>
         <elements xsi:type="xtext:RuleCall" rule="/0/@rules.40"/>
@@ -111,7 +111,7 @@
         <elements xsi:type="xtext:Keyword" value="{"/>
         <elements xsi:type="xtext:Group" cardinality="*">
           <elements xsi:type="xtext:Assignment" feature="ownedAttribute" operator="+=">
-            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.47"/>
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.48"/>
           </elements>
           <elements xsi:type="xtext:Keyword" value=";"/>
         </elements>
@@ -150,7 +150,7 @@
         <elements xsi:type="xtext:Keyword" value="{"/>
         <elements xsi:type="xtext:Group" cardinality="*">
           <elements xsi:type="xtext:Assignment" feature="ownedAttribute" operator="+=">
-            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.47"/>
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.48"/>
           </elements>
           <elements xsi:type="xtext:Keyword" value=";"/>
         </elements>
@@ -192,7 +192,7 @@
         <elements xsi:type="xtext:Keyword" value="{"/>
         <elements xsi:type="xtext:Group" cardinality="*">
           <elements xsi:type="xtext:Assignment" feature="ownedAttribute" operator="+=">
-            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.47"/>
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.48"/>
           </elements>
           <elements xsi:type="xtext:Keyword" value=";"/>
         </elements>
@@ -231,7 +231,7 @@
         <elements xsi:type="xtext:Keyword" value="{"/>
         <elements xsi:type="xtext:Group" cardinality="*">
           <elements xsi:type="xtext:Assignment" feature="ownedAttribute" operator="+=">
-            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.47"/>
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.48"/>
           </elements>
           <elements xsi:type="xtext:Keyword" value=";"/>
         </elements>
@@ -270,7 +270,7 @@
         <elements xsi:type="xtext:Keyword" value="{"/>
         <elements xsi:type="xtext:Group" cardinality="*">
           <elements xsi:type="xtext:Assignment" feature="ownedAttribute" operator="+=">
-            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.47"/>
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.48"/>
           </elements>
           <elements xsi:type="xtext:Keyword" value=";"/>
         </elements>
@@ -309,7 +309,7 @@
         <elements xsi:type="xtext:Keyword" value="{"/>
         <elements xsi:type="xtext:Group" cardinality="*">
           <elements xsi:type="xtext:Assignment" feature="ownedAttribute" operator="+=">
-            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.47"/>
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.48"/>
           </elements>
           <elements xsi:type="xtext:Keyword" value=";"/>
         </elements>
@@ -348,7 +348,7 @@
         <elements xsi:type="xtext:Keyword" value="{"/>
         <elements xsi:type="xtext:Group" cardinality="*">
           <elements xsi:type="xtext:Assignment" feature="ownedAttribute" operator="+=">
-            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.47"/>
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.48"/>
           </elements>
           <elements xsi:type="xtext:Keyword" value=";"/>
         </elements>
@@ -387,7 +387,7 @@
         <elements xsi:type="xtext:Keyword" value="{"/>
         <elements xsi:type="xtext:Group" cardinality="*">
           <elements xsi:type="xtext:Assignment" feature="ownedAttribute" operator="+=">
-            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.47"/>
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.48"/>
           </elements>
           <elements xsi:type="xtext:Keyword" value=";"/>
         </elements>
@@ -426,7 +426,7 @@
         <elements xsi:type="xtext:Keyword" value="{"/>
         <elements xsi:type="xtext:Group" cardinality="*">
           <elements xsi:type="xtext:Assignment" feature="ownedAttribute" operator="+=">
-            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.47"/>
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.48"/>
           </elements>
           <elements xsi:type="xtext:Keyword" value=";"/>
         </elements>
@@ -465,7 +465,7 @@
         <elements xsi:type="xtext:Keyword" value="{"/>
         <elements xsi:type="xtext:Group" cardinality="*">
           <elements xsi:type="xtext:Assignment" feature="ownedAttribute" operator="+=">
-            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.47"/>
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.48"/>
           </elements>
           <elements xsi:type="xtext:Keyword" value=";"/>
         </elements>
@@ -513,7 +513,7 @@
         <elements xsi:type="xtext:Keyword" value="{"/>
         <elements xsi:type="xtext:Group" cardinality="*">
           <elements xsi:type="xtext:Assignment" feature="ownedAttribute" operator="+=">
-            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.47"/>
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.48"/>
           </elements>
           <elements xsi:type="xtext:Keyword" value=";"/>
         </elements>
@@ -549,21 +549,22 @@
             </elements>
           </elements>
         </elements>
-        <elements xsi:type="xtext:Keyword" value="{"/>
-        <elements xsi:type="xtext:Group">
-          <elements xsi:type="xtext:Keyword" value="mediates"/>
+        <elements xsi:type="xtext:Keyword" value="mediates"/>
+        <elements xsi:type="xtext:Assignment" feature="mediations" operator="+=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.17"/>
+        </elements>
+        <elements xsi:type="xtext:Group" cardinality="+">
+          <elements xsi:type="xtext:Keyword" value="and"/>
           <elements xsi:type="xtext:Assignment" feature="mediations" operator="+=">
             <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.17"/>
           </elements>
         </elements>
+        <elements xsi:type="xtext:Keyword" value="{"/>
         <elements xsi:type="xtext:Group" cardinality="*">
-          <elements xsi:type="xtext:Keyword" value=","/>
-          <elements xsi:type="xtext:Group">
-            <elements xsi:type="xtext:Keyword" value="mediates"/>
-            <elements xsi:type="xtext:Assignment" feature="mediations" operator="+=">
-              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.17"/>
-            </elements>
+          <elements xsi:type="xtext:Assignment" feature="ownedAttribute" operator="+=">
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.48"/>
           </elements>
+          <elements xsi:type="xtext:Keyword" value=";"/>
         </elements>
         <elements xsi:type="xtext:Keyword" value="}"/>
       </alternatives>
@@ -572,8 +573,22 @@
       <type metamodel="/0/@metamodelDeclarations.1">
         <classifier xsi:type="ecore:EClass" href="http://nemo.inf.ufes.br/ontouml/dsl#//DslMediation"/>
       </type>
-      <alternatives xsi:type="xtext:Assignment" feature="ownedEnd" operator="+=">
-        <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.46"/>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Action">
+          <type metamodel="/0/@metamodelDeclarations.1">
+            <classifier xsi:type="ecore:EClass" href="http://nemo.inf.ufes.br/ontouml/dsl#//DslMediation"/>
+          </type>
+        </elements>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" value="&lt;"/>
+          <elements xsi:type="xtext:Assignment" feature="name" operator="=">
+            <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+          </elements>
+          <elements xsi:type="xtext:Keyword" value=">"/>
+        </elements>
+        <elements xsi:type="xtext:Assignment" feature="mediated" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.46"/>
+        </elements>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="Characterization">
@@ -581,17 +596,6 @@
         <classifier xsi:type="ecore:EClass" href="http://nemo.inf.ufes.br/ontouml/refontouml#//Characterization"/>
       </type>
       <alternatives xsi:type="xtext:Group">
-        <elements xsi:type="xtext:UnorderedGroup">
-          <elements xsi:type="xtext:Assignment" cardinality="?" feature="isDerived" operator="?=">
-            <terminal xsi:type="xtext:Keyword" value="derived"/>
-          </elements>
-          <elements xsi:type="xtext:Assignment" cardinality="?" feature="isAbstract" operator="?=">
-            <terminal xsi:type="xtext:Keyword" value="abstract"/>
-          </elements>
-          <elements xsi:type="xtext:Assignment" cardinality="?" feature="isLeaf" operator="?=">
-            <terminal xsi:type="xtext:Keyword" value="leaf"/>
-          </elements>
-        </elements>
         <elements xsi:type="xtext:Keyword" value="characterization"/>
         <elements xsi:type="xtext:Assignment" cardinality="?" feature="name" operator="=">
           <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
@@ -612,66 +616,16 @@
         <elements xsi:type="xtext:Keyword" value="mode:"/>
         <elements xsi:type="xtext:Group">
           <elements xsi:type="xtext:Assignment" feature="ownedEnd" operator="+=">
-            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.46"/>
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.47"/>
           </elements>
           <elements xsi:type="xtext:Keyword" value=";"/>
         </elements>
         <elements xsi:type="xtext:Keyword" value="characterized:"/>
         <elements xsi:type="xtext:Group">
           <elements xsi:type="xtext:Assignment" feature="ownedEnd" operator="+=">
-            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.46"/>
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.47"/>
           </elements>
           <elements xsi:type="xtext:Keyword" value=";"/>
-        </elements>
-        <elements xsi:type="xtext:UnorderedGroup">
-          <elements xsi:type="xtext:Group" cardinality="?">
-            <elements xsi:type="xtext:Keyword" value="memberEnd"/>
-            <elements xsi:type="xtext:Keyword" value=":"/>
-            <elements xsi:type="xtext:Assignment" feature="memberEnd" operator="+=">
-              <terminal xsi:type="xtext:CrossReference">
-                <type metamodel="/0/@metamodelDeclarations.2">
-                  <classifier xsi:type="ecore:EClass" href="http://nemo.inf.ufes.br/ontouml/refontouml#//Property"/>
-                </type>
-                <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
-              </terminal>
-            </elements>
-            <elements xsi:type="xtext:Group" cardinality="*">
-              <elements xsi:type="xtext:Keyword" value=","/>
-              <elements xsi:type="xtext:Assignment" feature="memberEnd" operator="+=">
-                <terminal xsi:type="xtext:CrossReference">
-                  <type metamodel="/0/@metamodelDeclarations.2">
-                    <classifier xsi:type="ecore:EClass" href="http://nemo.inf.ufes.br/ontouml/refontouml#//Property"/>
-                  </type>
-                  <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
-                </terminal>
-              </elements>
-            </elements>
-            <elements xsi:type="xtext:Keyword" value=";"/>
-          </elements>
-          <elements xsi:type="xtext:Group" cardinality="?">
-            <elements xsi:type="xtext:Keyword" value="navigableOwnedEnd"/>
-            <elements xsi:type="xtext:Keyword" value=":"/>
-            <elements xsi:type="xtext:Assignment" feature="navigableOwnedEnd" operator="+=">
-              <terminal xsi:type="xtext:CrossReference">
-                <type metamodel="/0/@metamodelDeclarations.2">
-                  <classifier xsi:type="ecore:EClass" href="http://nemo.inf.ufes.br/ontouml/refontouml#//Property"/>
-                </type>
-                <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
-              </terminal>
-            </elements>
-            <elements xsi:type="xtext:Group" cardinality="*">
-              <elements xsi:type="xtext:Keyword" value=","/>
-              <elements xsi:type="xtext:Assignment" feature="navigableOwnedEnd" operator="+=">
-                <terminal xsi:type="xtext:CrossReference">
-                  <type metamodel="/0/@metamodelDeclarations.2">
-                    <classifier xsi:type="ecore:EClass" href="http://nemo.inf.ufes.br/ontouml/refontouml#//Property"/>
-                  </type>
-                  <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
-                </terminal>
-              </elements>
-            </elements>
-            <elements xsi:type="xtext:Keyword" value=";"/>
-          </elements>
         </elements>
         <elements xsi:type="xtext:Keyword" value="}"/>
       </alternatives>
@@ -681,17 +635,6 @@
         <classifier xsi:type="ecore:EClass" href="http://nemo.inf.ufes.br/ontouml/refontouml#//Mediation"/>
       </type>
       <alternatives xsi:type="xtext:Group">
-        <elements xsi:type="xtext:UnorderedGroup">
-          <elements xsi:type="xtext:Assignment" cardinality="?" feature="isDerived" operator="?=">
-            <terminal xsi:type="xtext:Keyword" value="derived"/>
-          </elements>
-          <elements xsi:type="xtext:Assignment" cardinality="?" feature="isAbstract" operator="?=">
-            <terminal xsi:type="xtext:Keyword" value="abstract"/>
-          </elements>
-          <elements xsi:type="xtext:Assignment" cardinality="?" feature="isLeaf" operator="?=">
-            <terminal xsi:type="xtext:Keyword" value="leaf"/>
-          </elements>
-        </elements>
         <elements xsi:type="xtext:Keyword" value="mediation"/>
         <elements xsi:type="xtext:Assignment" cardinality="?" feature="name" operator="=">
           <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
@@ -711,18 +654,16 @@
         <elements xsi:type="xtext:Keyword" value="{"/>
         <elements xsi:type="xtext:Group">
           <elements xsi:type="xtext:Group">
-            <elements xsi:type="xtext:Keyword" value="relator"/>
-            <elements xsi:type="xtext:Keyword" value=":"/>
+            <elements xsi:type="xtext:Keyword" value="relator:"/>
             <elements xsi:type="xtext:Assignment" feature="ownedEnd" operator="+=">
-              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.46"/>
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.47"/>
             </elements>
             <elements xsi:type="xtext:Keyword" value=";"/>
           </elements>
           <elements xsi:type="xtext:Group">
-            <elements xsi:type="xtext:Keyword" value="mediated"/>
-            <elements xsi:type="xtext:Keyword" value=":"/>
+            <elements xsi:type="xtext:Keyword" value="mediated:"/>
             <elements xsi:type="xtext:Assignment" feature="ownedEnd" operator="+=">
-              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.46"/>
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.47"/>
             </elements>
             <elements xsi:type="xtext:Keyword" value=";"/>
           </elements>
@@ -735,17 +676,6 @@
         <classifier xsi:type="ecore:EClass" href="http://nemo.inf.ufes.br/ontouml/refontouml#//Derivation"/>
       </type>
       <alternatives xsi:type="xtext:Group">
-        <elements xsi:type="xtext:UnorderedGroup">
-          <elements xsi:type="xtext:Assignment" cardinality="?" feature="isDerived" operator="?=">
-            <terminal xsi:type="xtext:Keyword" value="derived"/>
-          </elements>
-          <elements xsi:type="xtext:Assignment" cardinality="?" feature="isAbstract" operator="?=">
-            <terminal xsi:type="xtext:Keyword" value="abstract"/>
-          </elements>
-          <elements xsi:type="xtext:Assignment" cardinality="?" feature="isLeaf" operator="?=">
-            <terminal xsi:type="xtext:Keyword" value="leaf"/>
-          </elements>
-        </elements>
         <elements xsi:type="xtext:Keyword" value="derivation"/>
         <elements xsi:type="xtext:Assignment" cardinality="?" feature="name" operator="=">
           <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
@@ -766,66 +696,16 @@
         <elements xsi:type="xtext:Keyword" value="material:"/>
         <elements xsi:type="xtext:Group">
           <elements xsi:type="xtext:Assignment" feature="ownedEnd" operator="+=">
-            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.46"/>
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.47"/>
           </elements>
           <elements xsi:type="xtext:Keyword" value=";"/>
         </elements>
         <elements xsi:type="xtext:Keyword" value="relator:"/>
         <elements xsi:type="xtext:Group">
           <elements xsi:type="xtext:Assignment" feature="ownedEnd" operator="+=">
-            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.46"/>
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.47"/>
           </elements>
           <elements xsi:type="xtext:Keyword" value=";"/>
-        </elements>
-        <elements xsi:type="xtext:UnorderedGroup">
-          <elements xsi:type="xtext:Group" cardinality="?">
-            <elements xsi:type="xtext:Keyword" value="memberEnd"/>
-            <elements xsi:type="xtext:Keyword" value=":"/>
-            <elements xsi:type="xtext:Assignment" feature="memberEnd" operator="+=">
-              <terminal xsi:type="xtext:CrossReference">
-                <type metamodel="/0/@metamodelDeclarations.2">
-                  <classifier xsi:type="ecore:EClass" href="http://nemo.inf.ufes.br/ontouml/refontouml#//Property"/>
-                </type>
-                <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
-              </terminal>
-            </elements>
-            <elements xsi:type="xtext:Group" cardinality="*">
-              <elements xsi:type="xtext:Keyword" value=","/>
-              <elements xsi:type="xtext:Assignment" feature="memberEnd" operator="+=">
-                <terminal xsi:type="xtext:CrossReference">
-                  <type metamodel="/0/@metamodelDeclarations.2">
-                    <classifier xsi:type="ecore:EClass" href="http://nemo.inf.ufes.br/ontouml/refontouml#//Property"/>
-                  </type>
-                  <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
-                </terminal>
-              </elements>
-            </elements>
-            <elements xsi:type="xtext:Keyword" value=";"/>
-          </elements>
-          <elements xsi:type="xtext:Group" cardinality="?">
-            <elements xsi:type="xtext:Keyword" value="navigableOwnedEnd"/>
-            <elements xsi:type="xtext:Keyword" value=":"/>
-            <elements xsi:type="xtext:Assignment" feature="navigableOwnedEnd" operator="+=">
-              <terminal xsi:type="xtext:CrossReference">
-                <type metamodel="/0/@metamodelDeclarations.2">
-                  <classifier xsi:type="ecore:EClass" href="http://nemo.inf.ufes.br/ontouml/refontouml#//Property"/>
-                </type>
-                <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
-              </terminal>
-            </elements>
-            <elements xsi:type="xtext:Group" cardinality="*">
-              <elements xsi:type="xtext:Keyword" value=","/>
-              <elements xsi:type="xtext:Assignment" feature="navigableOwnedEnd" operator="+=">
-                <terminal xsi:type="xtext:CrossReference">
-                  <type metamodel="/0/@metamodelDeclarations.2">
-                    <classifier xsi:type="ecore:EClass" href="http://nemo.inf.ufes.br/ontouml/refontouml#//Property"/>
-                  </type>
-                  <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
-                </terminal>
-              </elements>
-            </elements>
-            <elements xsi:type="xtext:Keyword" value=";"/>
-          </elements>
         </elements>
         <elements xsi:type="xtext:Keyword" value="}"/>
       </alternatives>
@@ -871,56 +751,6 @@
           <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
         </elements>
         <elements xsi:type="xtext:Keyword" value="{"/>
-        <elements xsi:type="xtext:UnorderedGroup" cardinality="?">
-          <elements xsi:type="xtext:Group" cardinality="?">
-            <elements xsi:type="xtext:Keyword" value="memberEnd"/>
-            <elements xsi:type="xtext:Keyword" value=":"/>
-            <elements xsi:type="xtext:Assignment" feature="memberEnd" operator="+=">
-              <terminal xsi:type="xtext:CrossReference">
-                <type metamodel="/0/@metamodelDeclarations.2">
-                  <classifier xsi:type="ecore:EClass" href="http://nemo.inf.ufes.br/ontouml/refontouml#//Property"/>
-                </type>
-                <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
-              </terminal>
-            </elements>
-            <elements xsi:type="xtext:Group" cardinality="*">
-              <elements xsi:type="xtext:Keyword" value=","/>
-              <elements xsi:type="xtext:Assignment" feature="memberEnd" operator="+=">
-                <terminal xsi:type="xtext:CrossReference">
-                  <type metamodel="/0/@metamodelDeclarations.2">
-                    <classifier xsi:type="ecore:EClass" href="http://nemo.inf.ufes.br/ontouml/refontouml#//Property"/>
-                  </type>
-                  <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
-                </terminal>
-              </elements>
-            </elements>
-            <elements xsi:type="xtext:Keyword" value=";"/>
-          </elements>
-          <elements xsi:type="xtext:Group" cardinality="?">
-            <elements xsi:type="xtext:Keyword" value="navigableOwnedEnd"/>
-            <elements xsi:type="xtext:Keyword" value=":"/>
-            <elements xsi:type="xtext:Assignment" feature="navigableOwnedEnd" operator="+=">
-              <terminal xsi:type="xtext:CrossReference">
-                <type metamodel="/0/@metamodelDeclarations.2">
-                  <classifier xsi:type="ecore:EClass" href="http://nemo.inf.ufes.br/ontouml/refontouml#//Property"/>
-                </type>
-                <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
-              </terminal>
-            </elements>
-            <elements xsi:type="xtext:Group" cardinality="*">
-              <elements xsi:type="xtext:Keyword" value=","/>
-              <elements xsi:type="xtext:Assignment" feature="navigableOwnedEnd" operator="+=">
-                <terminal xsi:type="xtext:CrossReference">
-                  <type metamodel="/0/@metamodelDeclarations.2">
-                    <classifier xsi:type="ecore:EClass" href="http://nemo.inf.ufes.br/ontouml/refontouml#//Property"/>
-                  </type>
-                  <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
-                </terminal>
-              </elements>
-            </elements>
-            <elements xsi:type="xtext:Keyword" value=";"/>
-          </elements>
-        </elements>
         <elements xsi:type="xtext:Keyword" value="}"/>
       </alternatives>
     </rules>
@@ -965,56 +795,6 @@
           <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
         </elements>
         <elements xsi:type="xtext:Keyword" value="{"/>
-        <elements xsi:type="xtext:UnorderedGroup" cardinality="?">
-          <elements xsi:type="xtext:Group" cardinality="?">
-            <elements xsi:type="xtext:Keyword" value="memberEnd"/>
-            <elements xsi:type="xtext:Keyword" value=":"/>
-            <elements xsi:type="xtext:Assignment" feature="memberEnd" operator="+=">
-              <terminal xsi:type="xtext:CrossReference">
-                <type metamodel="/0/@metamodelDeclarations.2">
-                  <classifier xsi:type="ecore:EClass" href="http://nemo.inf.ufes.br/ontouml/refontouml#//Property"/>
-                </type>
-                <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
-              </terminal>
-            </elements>
-            <elements xsi:type="xtext:Group" cardinality="*">
-              <elements xsi:type="xtext:Keyword" value=","/>
-              <elements xsi:type="xtext:Assignment" feature="memberEnd" operator="+=">
-                <terminal xsi:type="xtext:CrossReference">
-                  <type metamodel="/0/@metamodelDeclarations.2">
-                    <classifier xsi:type="ecore:EClass" href="http://nemo.inf.ufes.br/ontouml/refontouml#//Property"/>
-                  </type>
-                  <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
-                </terminal>
-              </elements>
-            </elements>
-            <elements xsi:type="xtext:Keyword" value=";"/>
-          </elements>
-          <elements xsi:type="xtext:Group" cardinality="?">
-            <elements xsi:type="xtext:Keyword" value="navigableOwnedEnd"/>
-            <elements xsi:type="xtext:Keyword" value=":"/>
-            <elements xsi:type="xtext:Assignment" feature="navigableOwnedEnd" operator="+=">
-              <terminal xsi:type="xtext:CrossReference">
-                <type metamodel="/0/@metamodelDeclarations.2">
-                  <classifier xsi:type="ecore:EClass" href="http://nemo.inf.ufes.br/ontouml/refontouml#//Property"/>
-                </type>
-                <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
-              </terminal>
-            </elements>
-            <elements xsi:type="xtext:Group" cardinality="*">
-              <elements xsi:type="xtext:Keyword" value=","/>
-              <elements xsi:type="xtext:Assignment" feature="navigableOwnedEnd" operator="+=">
-                <terminal xsi:type="xtext:CrossReference">
-                  <type metamodel="/0/@metamodelDeclarations.2">
-                    <classifier xsi:type="ecore:EClass" href="http://nemo.inf.ufes.br/ontouml/refontouml#//Property"/>
-                  </type>
-                  <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
-                </terminal>
-              </elements>
-            </elements>
-            <elements xsi:type="xtext:Keyword" value=";"/>
-          </elements>
-        </elements>
         <elements xsi:type="xtext:Keyword" value="}"/>
       </alternatives>
     </rules>
@@ -1033,56 +813,6 @@
           <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
         </elements>
         <elements xsi:type="xtext:Keyword" value="{"/>
-        <elements xsi:type="xtext:UnorderedGroup" cardinality="?">
-          <elements xsi:type="xtext:Group" cardinality="?">
-            <elements xsi:type="xtext:Keyword" value="memberEnd"/>
-            <elements xsi:type="xtext:Keyword" value=":"/>
-            <elements xsi:type="xtext:Assignment" feature="memberEnd" operator="+=">
-              <terminal xsi:type="xtext:CrossReference">
-                <type metamodel="/0/@metamodelDeclarations.2">
-                  <classifier xsi:type="ecore:EClass" href="http://nemo.inf.ufes.br/ontouml/refontouml#//Property"/>
-                </type>
-                <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
-              </terminal>
-            </elements>
-            <elements xsi:type="xtext:Group" cardinality="*">
-              <elements xsi:type="xtext:Keyword" value=","/>
-              <elements xsi:type="xtext:Assignment" feature="memberEnd" operator="+=">
-                <terminal xsi:type="xtext:CrossReference">
-                  <type metamodel="/0/@metamodelDeclarations.2">
-                    <classifier xsi:type="ecore:EClass" href="http://nemo.inf.ufes.br/ontouml/refontouml#//Property"/>
-                  </type>
-                  <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
-                </terminal>
-              </elements>
-            </elements>
-            <elements xsi:type="xtext:Keyword" value=";"/>
-          </elements>
-          <elements xsi:type="xtext:Group" cardinality="?">
-            <elements xsi:type="xtext:Keyword" value="navigableOwnedEnd"/>
-            <elements xsi:type="xtext:Keyword" value=":"/>
-            <elements xsi:type="xtext:Assignment" feature="navigableOwnedEnd" operator="+=">
-              <terminal xsi:type="xtext:CrossReference">
-                <type metamodel="/0/@metamodelDeclarations.2">
-                  <classifier xsi:type="ecore:EClass" href="http://nemo.inf.ufes.br/ontouml/refontouml#//Property"/>
-                </type>
-                <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
-              </terminal>
-            </elements>
-            <elements xsi:type="xtext:Group" cardinality="*">
-              <elements xsi:type="xtext:Keyword" value=","/>
-              <elements xsi:type="xtext:Assignment" feature="navigableOwnedEnd" operator="+=">
-                <terminal xsi:type="xtext:CrossReference">
-                  <type metamodel="/0/@metamodelDeclarations.2">
-                    <classifier xsi:type="ecore:EClass" href="http://nemo.inf.ufes.br/ontouml/refontouml#//Property"/>
-                  </type>
-                  <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
-                </terminal>
-              </elements>
-            </elements>
-            <elements xsi:type="xtext:Keyword" value=";"/>
-          </elements>
-        </elements>
         <elements xsi:type="xtext:Keyword" value="}"/>
       </alternatives>
     </rules>
@@ -1101,56 +831,6 @@
           <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
         </elements>
         <elements xsi:type="xtext:Keyword" value="{"/>
-        <elements xsi:type="xtext:UnorderedGroup" cardinality="?">
-          <elements xsi:type="xtext:Group" cardinality="?">
-            <elements xsi:type="xtext:Keyword" value="memberEnd"/>
-            <elements xsi:type="xtext:Keyword" value=":"/>
-            <elements xsi:type="xtext:Assignment" feature="memberEnd" operator="+=">
-              <terminal xsi:type="xtext:CrossReference">
-                <type metamodel="/0/@metamodelDeclarations.2">
-                  <classifier xsi:type="ecore:EClass" href="http://nemo.inf.ufes.br/ontouml/refontouml#//Property"/>
-                </type>
-                <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
-              </terminal>
-            </elements>
-            <elements xsi:type="xtext:Group" cardinality="*">
-              <elements xsi:type="xtext:Keyword" value=","/>
-              <elements xsi:type="xtext:Assignment" feature="memberEnd" operator="+=">
-                <terminal xsi:type="xtext:CrossReference">
-                  <type metamodel="/0/@metamodelDeclarations.2">
-                    <classifier xsi:type="ecore:EClass" href="http://nemo.inf.ufes.br/ontouml/refontouml#//Property"/>
-                  </type>
-                  <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
-                </terminal>
-              </elements>
-            </elements>
-            <elements xsi:type="xtext:Keyword" value=";"/>
-          </elements>
-          <elements xsi:type="xtext:Group" cardinality="?">
-            <elements xsi:type="xtext:Keyword" value="navigableOwnedEnd"/>
-            <elements xsi:type="xtext:Keyword" value=":"/>
-            <elements xsi:type="xtext:Assignment" feature="navigableOwnedEnd" operator="+=">
-              <terminal xsi:type="xtext:CrossReference">
-                <type metamodel="/0/@metamodelDeclarations.2">
-                  <classifier xsi:type="ecore:EClass" href="http://nemo.inf.ufes.br/ontouml/refontouml#//Property"/>
-                </type>
-                <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
-              </terminal>
-            </elements>
-            <elements xsi:type="xtext:Group" cardinality="*">
-              <elements xsi:type="xtext:Keyword" value=","/>
-              <elements xsi:type="xtext:Assignment" feature="navigableOwnedEnd" operator="+=">
-                <terminal xsi:type="xtext:CrossReference">
-                  <type metamodel="/0/@metamodelDeclarations.2">
-                    <classifier xsi:type="ecore:EClass" href="http://nemo.inf.ufes.br/ontouml/refontouml#//Property"/>
-                  </type>
-                  <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
-                </terminal>
-              </elements>
-            </elements>
-            <elements xsi:type="xtext:Keyword" value=";"/>
-          </elements>
-        </elements>
         <elements xsi:type="xtext:Keyword" value="}"/>
       </alternatives>
     </rules>
@@ -1192,62 +872,6 @@
           </elements>
         </elements>
         <elements xsi:type="xtext:Keyword" value="{"/>
-        <elements xsi:type="xtext:Group" cardinality="+">
-          <elements xsi:type="xtext:Assignment" feature="ownedEnd" operator="+=">
-            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.46"/>
-          </elements>
-          <elements xsi:type="xtext:Keyword" value=";"/>
-        </elements>
-        <elements xsi:type="xtext:UnorderedGroup">
-          <elements xsi:type="xtext:Group" cardinality="?">
-            <elements xsi:type="xtext:Keyword" value="memberEnd"/>
-            <elements xsi:type="xtext:Keyword" value=":"/>
-            <elements xsi:type="xtext:Assignment" feature="memberEnd" operator="+=">
-              <terminal xsi:type="xtext:CrossReference">
-                <type metamodel="/0/@metamodelDeclarations.2">
-                  <classifier xsi:type="ecore:EClass" href="http://nemo.inf.ufes.br/ontouml/refontouml#//Property"/>
-                </type>
-                <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
-              </terminal>
-            </elements>
-            <elements xsi:type="xtext:Group" cardinality="*">
-              <elements xsi:type="xtext:Keyword" value=","/>
-              <elements xsi:type="xtext:Assignment" feature="memberEnd" operator="+=">
-                <terminal xsi:type="xtext:CrossReference">
-                  <type metamodel="/0/@metamodelDeclarations.2">
-                    <classifier xsi:type="ecore:EClass" href="http://nemo.inf.ufes.br/ontouml/refontouml#//Property"/>
-                  </type>
-                  <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
-                </terminal>
-              </elements>
-            </elements>
-            <elements xsi:type="xtext:Keyword" value=";"/>
-          </elements>
-          <elements xsi:type="xtext:Group" cardinality="?">
-            <elements xsi:type="xtext:Keyword" value="navigableOwnedEnd"/>
-            <elements xsi:type="xtext:Keyword" value=":"/>
-            <elements xsi:type="xtext:Assignment" feature="navigableOwnedEnd" operator="+=">
-              <terminal xsi:type="xtext:CrossReference">
-                <type metamodel="/0/@metamodelDeclarations.2">
-                  <classifier xsi:type="ecore:EClass" href="http://nemo.inf.ufes.br/ontouml/refontouml#//Property"/>
-                </type>
-                <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
-              </terminal>
-            </elements>
-            <elements xsi:type="xtext:Group" cardinality="*">
-              <elements xsi:type="xtext:Keyword" value=","/>
-              <elements xsi:type="xtext:Assignment" feature="navigableOwnedEnd" operator="+=">
-                <terminal xsi:type="xtext:CrossReference">
-                  <type metamodel="/0/@metamodelDeclarations.2">
-                    <classifier xsi:type="ecore:EClass" href="http://nemo.inf.ufes.br/ontouml/refontouml#//Property"/>
-                  </type>
-                  <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
-                </terminal>
-              </elements>
-            </elements>
-            <elements xsi:type="xtext:Keyword" value=";"/>
-          </elements>
-        </elements>
         <elements xsi:type="xtext:Keyword" value="}"/>
       </alternatives>
     </rules>
@@ -1277,62 +901,6 @@
           <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
         </elements>
         <elements xsi:type="xtext:Keyword" value="{"/>
-        <elements xsi:type="xtext:Group" cardinality="+">
-          <elements xsi:type="xtext:Assignment" feature="ownedEnd" operator="+=">
-            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.46"/>
-          </elements>
-          <elements xsi:type="xtext:Keyword" value=";"/>
-        </elements>
-        <elements xsi:type="xtext:UnorderedGroup">
-          <elements xsi:type="xtext:Group" cardinality="?">
-            <elements xsi:type="xtext:Keyword" value="memberEnd"/>
-            <elements xsi:type="xtext:Keyword" value=":"/>
-            <elements xsi:type="xtext:Assignment" feature="memberEnd" operator="+=">
-              <terminal xsi:type="xtext:CrossReference">
-                <type metamodel="/0/@metamodelDeclarations.2">
-                  <classifier xsi:type="ecore:EClass" href="http://nemo.inf.ufes.br/ontouml/refontouml#//Property"/>
-                </type>
-                <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
-              </terminal>
-            </elements>
-            <elements xsi:type="xtext:Group" cardinality="*">
-              <elements xsi:type="xtext:Keyword" value=","/>
-              <elements xsi:type="xtext:Assignment" feature="memberEnd" operator="+=">
-                <terminal xsi:type="xtext:CrossReference">
-                  <type metamodel="/0/@metamodelDeclarations.2">
-                    <classifier xsi:type="ecore:EClass" href="http://nemo.inf.ufes.br/ontouml/refontouml#//Property"/>
-                  </type>
-                  <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
-                </terminal>
-              </elements>
-            </elements>
-            <elements xsi:type="xtext:Keyword" value=";"/>
-          </elements>
-          <elements xsi:type="xtext:Group" cardinality="?">
-            <elements xsi:type="xtext:Keyword" value="navigableOwnedEnd"/>
-            <elements xsi:type="xtext:Keyword" value=":"/>
-            <elements xsi:type="xtext:Assignment" feature="navigableOwnedEnd" operator="+=">
-              <terminal xsi:type="xtext:CrossReference">
-                <type metamodel="/0/@metamodelDeclarations.2">
-                  <classifier xsi:type="ecore:EClass" href="http://nemo.inf.ufes.br/ontouml/refontouml#//Property"/>
-                </type>
-                <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
-              </terminal>
-            </elements>
-            <elements xsi:type="xtext:Group" cardinality="*">
-              <elements xsi:type="xtext:Keyword" value=","/>
-              <elements xsi:type="xtext:Assignment" feature="navigableOwnedEnd" operator="+=">
-                <terminal xsi:type="xtext:CrossReference">
-                  <type metamodel="/0/@metamodelDeclarations.2">
-                    <classifier xsi:type="ecore:EClass" href="http://nemo.inf.ufes.br/ontouml/refontouml#//Property"/>
-                  </type>
-                  <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
-                </terminal>
-              </elements>
-            </elements>
-            <elements xsi:type="xtext:Keyword" value=";"/>
-          </elements>
-        </elements>
         <elements xsi:type="xtext:Keyword" value="}"/>
       </alternatives>
     </rules>
@@ -1341,11 +909,11 @@
         <classifier xsi:type="ecore:EClass" href="http://nemo.inf.ufes.br/ontouml/refontouml#//ValueSpecification"/>
       </type>
       <alternatives xsi:type="xtext:Alternatives">
-        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.53"/>
         <elements xsi:type="xtext:RuleCall" rule="/0/@rules.54"/>
-        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.59"/>
         <elements xsi:type="xtext:RuleCall" rule="/0/@rules.55"/>
-        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.52"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.60"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.56"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.53"/>
         <elements xsi:type="xtext:RuleCall" rule="/0/@rules.44"/>
       </alternatives>
     </rules>
@@ -1392,7 +960,7 @@
           <elements xsi:type="xtext:Keyword" value="{"/>
           <elements xsi:type="xtext:Group" cardinality="+">
             <elements xsi:type="xtext:Assignment" feature="ownedAttribute" operator="+=">
-              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.47"/>
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.48"/>
             </elements>
             <elements xsi:type="xtext:Keyword" value=";"/>
           </elements>
@@ -1830,8 +1398,39 @@
       <alternatives xsi:type="xtext:Alternatives" cardinality="+">
         <elements xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
         <elements xsi:type="xtext:RuleCall" rule="/1/@rules.1"/>
-        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.60"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.61"/>
         <elements xsi:type="xtext:RuleCall" rule="/1/@rules.6"/>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="AnonymousPropertyDefinition">
+      <type metamodel="/0/@metamodelDeclarations.2">
+        <classifier xsi:type="ecore:EClass" href="http://nemo.inf.ufes.br/ontouml/refontouml#//Property"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Action">
+          <type metamodel="/0/@metamodelDeclarations.2">
+            <classifier xsi:type="ecore:EClass" href="http://nemo.inf.ufes.br/ontouml/refontouml#//Property"/>
+          </type>
+        </elements>
+        <elements xsi:type="xtext:Assignment" feature="type" operator="=">
+          <terminal xsi:type="xtext:CrossReference">
+            <type metamodel="/0/@metamodelDeclarations.2">
+              <classifier xsi:type="ecore:EClass" href="http://nemo.inf.ufes.br/ontouml/refontouml#//Type"/>
+            </type>
+            <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+          </terminal>
+        </elements>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" value="["/>
+          <elements xsi:type="xtext:Assignment" feature="lowerValue" operator="=">
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.54"/>
+          </elements>
+          <elements xsi:type="xtext:Keyword" value=","/>
+          <elements xsi:type="xtext:Assignment" feature="upperValue" operator="=">
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.58"/>
+          </elements>
+          <elements xsi:type="xtext:Keyword" value="]"/>
+        </elements>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="InlinePropertyDefinition">
@@ -1879,11 +1478,11 @@
         <elements xsi:type="xtext:Group" cardinality="?">
           <elements xsi:type="xtext:Keyword" value="["/>
           <elements xsi:type="xtext:Assignment" feature="lowerValue" operator="=">
-            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.53"/>
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.54"/>
           </elements>
           <elements xsi:type="xtext:Keyword" value=","/>
           <elements xsi:type="xtext:Assignment" feature="upperValue" operator="=">
-            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.57"/>
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.58"/>
           </elements>
           <elements xsi:type="xtext:Keyword" value="]"/>
         </elements>
@@ -1898,7 +1497,7 @@
           <elements xsi:type="xtext:Group" cardinality="?">
             <elements xsi:type="xtext:Keyword" value="aggregation"/>
             <elements xsi:type="xtext:Assignment" feature="aggregation" operator="=">
-              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.63"/>
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.64"/>
             </elements>
           </elements>
           <elements xsi:type="xtext:Group" cardinality="?">
@@ -1990,11 +1589,11 @@
         <elements xsi:type="xtext:Group" cardinality="?">
           <elements xsi:type="xtext:Keyword" value="["/>
           <elements xsi:type="xtext:Assignment" feature="lowerValue" operator="=">
-            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.53"/>
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.54"/>
           </elements>
           <elements xsi:type="xtext:Keyword" value=","/>
           <elements xsi:type="xtext:Assignment" feature="upperValue" operator="=">
-            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.57"/>
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.58"/>
           </elements>
           <elements xsi:type="xtext:Keyword" value="]"/>
         </elements>
@@ -2018,7 +1617,7 @@
           <elements xsi:type="xtext:Group" cardinality="?">
             <elements xsi:type="xtext:Keyword" value="aggregation"/>
             <elements xsi:type="xtext:Assignment" feature="aggregation" operator="=">
-              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.63"/>
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.64"/>
             </elements>
           </elements>
           <elements xsi:type="xtext:Group" cardinality="?">
@@ -2084,12 +1683,12 @@
         </elements>
         <elements xsi:type="xtext:Keyword" value="{"/>
         <elements xsi:type="xtext:Assignment" feature="ownedLiteral" operator="+=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.49"/>
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.50"/>
         </elements>
         <elements xsi:type="xtext:Group" cardinality="*">
           <elements xsi:type="xtext:Keyword" value=","/>
           <elements xsi:type="xtext:Assignment" feature="ownedLiteral" operator="+=">
-            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.49"/>
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.50"/>
           </elements>
         </elements>
         <elements xsi:type="xtext:Keyword" value="}"/>
@@ -2159,12 +1758,12 @@
         <elements xsi:type="xtext:Keyword" value="{"/>
         <elements xsi:type="xtext:Group" cardinality="?">
           <elements xsi:type="xtext:Assignment" feature="slot" operator="+=">
-            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.51"/>
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.52"/>
           </elements>
           <elements xsi:type="xtext:Group" cardinality="*">
             <elements xsi:type="xtext:Keyword" value=","/>
             <elements xsi:type="xtext:Assignment" feature="slot" operator="+=">
-              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.51"/>
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.52"/>
             </elements>
           </elements>
         </elements>
@@ -2273,7 +1872,7 @@
           </type>
         </elements>
         <elements xsi:type="xtext:Assignment" feature="value" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.56"/>
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.57"/>
         </elements>
       </alternatives>
     </rules>
@@ -2292,7 +1891,7 @@
       </type>
       <alternatives xsi:type="xtext:Alternatives">
         <elements xsi:type="xtext:Assignment" feature="value" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.58"/>
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.59"/>
         </elements>
         <elements xsi:type="xtext:Assignment" feature="value" operator="=">
           <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.1"/>
@@ -2341,8 +1940,8 @@
         <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       </type>
       <alternatives xsi:type="xtext:Alternatives" cardinality="+">
-        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.60"/>
         <elements xsi:type="xtext:RuleCall" rule="/0/@rules.61"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.62"/>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:EnumRule" name="AggregationKind">
@@ -2365,7 +1964,7 @@
       </alternatives>
     </rules>
   </xtext:Grammar>
-  <xtext:Grammar name="org.eclipse.xtext.common.Terminals" definesHiddenTokens="true" hiddenTokens="/0/@rules.62 /1/@rules.3 /1/@rules.4">
+  <xtext:Grammar name="org.eclipse.xtext.common.Terminals" definesHiddenTokens="true" hiddenTokens="/0/@rules.63 /1/@rules.3 /1/@rules.4">
     <metamodelDeclarations xsi:type="xtext:ReferencedMetamodel" alias="ecore">
       <ePackage href="http://www.eclipse.org/emf/2002/Ecore#/"/>
     </metamodelDeclarations>
