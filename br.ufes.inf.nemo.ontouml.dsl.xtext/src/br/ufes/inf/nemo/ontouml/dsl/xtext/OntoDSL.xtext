@@ -2,11 +2,7 @@
 grammar br.ufes.inf.nemo.ontouml.dsl.xtext.OntoDSL
 	with org.eclipse.xtext.common.Terminals hidden(NL, RWS, WS, SL_COMMENT, ML_COMMENT) //Para adicionar um em hidden tem que redefinir Todos 
 
-
 import "http://www.eclipse.org/emf/2002/Ecore" as ecore
-//import "platform:/plugin/br.ufes.inf.nemo.ontouml.refontouml/model/RefOntoUML.ecore" as RefOntoUML
-//import "platform:/resource/br.ufes.inf.nemo.ontouml.refontouml/model/RefOntoUML.ecore" as RefOntoUML0
-
 import "http://nemo.inf.ufes.br/ontouml/dsl" as dsl
 import "http://nemo.inf.ufes.br/ontouml/refontouml"
 
@@ -203,79 +199,54 @@ SimplifiedRelator returns dsl::DslRelator:
 	(isActive?='active'? & isAbstract?='abstract'?)
 	'simpleRelator' name=ID
 	(':' generalization+=InlineGeneralization ( ',' generalization+=InlineGeneralization)* )?
+    'mediates'
+    mediations+=SimpleMediation ('and' mediations+=SimpleMediation)+
 	'{'
-		('mediates' mediations+=SimpleMediation) (',' ('mediates' mediations+=SimpleMediation))*
+        (ownedAttribute+=ClassProperty ';')*
     '}'
 ;
 
+
 SimpleMediation returns dsl::DslMediation:
-	ownedEnd+=InlinePropertyDefinition
+    {dsl::DslMediation}
+//    'mediates'
+    ('<' name=ID '>')?
+    mediated=AnonymousPropertyDefinition
 ;
-
-
-/*
- * Associations
- *
- * 2) (Carraretto, 2010, p.70).
- * - memberEnd:
- * Todas as Classes (na verdade, Properties) que estão sendo relacionadas em uma Association ficam em 'memberEnd'.
- * 
- * - ownedEnd:
- * Algumas dessas Classes (na verdade, Properties) ficam sob posse da Association, essas Classes são referenciadas por 'ownedEnd'. Tradicionalmente, todas as Classes (na verdade, Properties) ficam sob posse da Association. Mas é possível em UML fazer a Class ser dona da Property, ao invés da Association. A sintaxe concreta é um "ponto" entre a linha da association e a classe. 99% das vezes owned possui as mesmas Properties que memberEnd.
- * 
- * - navigableOwnedEnd:
- * Algumas dessas Classes (na verdade, Properties) que a Association tem posse são navegáveis. Tradicionalmente, uma Association é navegável em todos os sentidos, até que você fale o contrário. A sintaxe concreta é uma "seta" entre a linha da Association e a Class. 70% das vezes navigableOwnedEnd possui as mesmas Properties de ownedEnd.
- * 
- * - endType:
- * Igual memberEnd, mas ao invés de retornar Properties retorna Classes. É uma relação derived.
- * self.memberEnd->collect(e | e.type)
- */
 
 // #Characterization (DependencyRelationship)
 Characterization returns Characterization:
-	( isDerived?='derived'? & isAbstract?='abstract'? & isLeaf?='leaf'? )
+//	( isDerived?='derived'? & isAbstract?='abstract'? & isLeaf?='leaf'? )
 	'characterization' name=ID?
 	(':' generalization+=InlineGeneralization ( ',' generalization+=InlineGeneralization)* )?
 	'{'
 		'mode:' ( ownedEnd+=InlinePropertyDefinition ';' )
 		'characterized:' ( ownedEnd+=InlinePropertyDefinition ';' )
-	(
-		('memberEnd' ':' memberEnd+=[Property] (',' memberEnd+=[Property])* ';' )?
-		& ('navigableOwnedEnd' ':' navigableOwnedEnd+=[Property] ( ',' navigableOwnedEnd+=[Property])* ';' )?
-	)
     '}'
 ;
 
 // #Mediation (DependencyRelationship)
 Mediation returns Mediation:
-	( isDerived?='derived'? & isAbstract?='abstract'? & isLeaf?='leaf'? )
+//	( isDerived?='derived'? & isAbstract?='abstract'? & isLeaf?='leaf'? )
 	'mediation' name=ID?
 	(':' generalization+=InlineGeneralization ( ',' generalization+=InlineGeneralization)* )?
 	'{'
 	(
-		('relator' ':' ownedEnd+=InlinePropertyDefinition ';' )			// relator
-		('mediated' ':' ownedEnd+=InlinePropertyDefinition ';' )		// mediated
-		                      											// TODO: Tem que ser [>1, ?]
-//		(
-//			('memberEnd' ':' memberEnd+=[Property] (',' memberEnd+=[Property])* ';' )?
-//			& ('navigableOwnedEnd' ':' navigableOwnedEnd+=[Property] ( ',' navigableOwnedEnd+=[Property])* ';' )?
-//		)
+		('relator:' ownedEnd+=InlinePropertyDefinition ';' )		// relator
+		('mediated:' ownedEnd+=InlinePropertyDefinition ';' )		// mediated
+		                      										// TODO: Tem que ser [>1, ?]
 	)
     '}'
 ;
 
 // #Derivation (DependencyRelationship)
 Derivation returns Derivation:
-	( isDerived?='derived'? & isAbstract?='abstract'? & isLeaf?='leaf'? )
+//	( isDerived?='derived'? & isAbstract?='abstract'? & isLeaf?='leaf'? )
 	'derivation' name=ID?
 	(':' generalization+=InlineGeneralization ( ',' generalization+=InlineGeneralization)* )?
 	'{'
 		'material:' ( ownedEnd+=InlinePropertyDefinition ';' )
 		'relator:' ( ownedEnd+=InlinePropertyDefinition ';' )
-	(
-		('memberEnd' ':' memberEnd+=[Property] (',' memberEnd+=[Property])* ';' )?
-		& ('navigableOwnedEnd' ':' navigableOwnedEnd+=[Property] ( ',' navigableOwnedEnd+=[Property])* ';' )?
-	)
     '}'
 ;
 
@@ -288,10 +259,7 @@ memberOf returns memberOf:
 	)
 	'memberOf' name=ID
 	'{'
-	(
-		('memberEnd' ':' memberEnd+=[Property] (',' memberEnd+=[Property])* ';' )?
-		& ('navigableOwnedEnd' ':' navigableOwnedEnd+=[Property] ( ',' navigableOwnedEnd+=[Property])* ';' )?
-	)?
+//        (ownedEnd+=ClassProperty ';')*
     '}';
 
 // #componentOf (Meronymic)
@@ -303,10 +271,7 @@ componentOf returns componentOf:
 	)
 	'componentOf' name=ID
 	'{'
-	(
-		('memberEnd' ':' memberEnd+=[Property] (',' memberEnd+=[Property])* ';' )?
-		& ('navigableOwnedEnd' ':' navigableOwnedEnd+=[Property] ( ',' navigableOwnedEnd+=[Property])* ';' )?
-	)?
+//        (ownedEnd+=ClassProperty ';')*
     '}';
 
 // #subQuantityOf (Meronymic)
@@ -316,10 +281,7 @@ subQuantityOf returns subQuantityOf:
 	//( isEssential?='essential'? & isImmutablePart?='imutable-part'? & isImmutableWhole?='imutable-whole'? & isInseparable?='inseparable'? & isShareable?='shareable'? )
 	'subQuantityOf' name=ID
 	'{'
-	(
-		('memberEnd' ':' memberEnd+=[Property] (',' memberEnd+=[Property])* ';' )?
-		& ('navigableOwnedEnd' ':' navigableOwnedEnd+=[Property] ( ',' navigableOwnedEnd+=[Property])* ';' )?
-	)?
+//        (ownedEnd+=ClassProperty ';')*
     '}';
 
 // #subCollectionOf (Meronymic)
@@ -329,10 +291,7 @@ subCollectionOf returns subCollectionOf:
 	//( isEssential?='essential'? & isImmutablePart?='imutable-part'? & isImmutableWhole?='imutable-whole'? & isInseparable?='inseparable'? & isShareable?='shareable'? )
 	'subCollectionOf' name=ID
 	'{'
-	(
-		('memberEnd' ':' memberEnd+=[Property] (',' memberEnd+=[Property])* ';' )?
-		& ('navigableOwnedEnd' ':' navigableOwnedEnd+=[Property] ( ',' navigableOwnedEnd+=[Property])* ';' )?
-	)?
+//        (ownedEnd+=ClassProperty ';')*
     '}';
 
 
@@ -347,11 +306,7 @@ MaterialAssociation returns MaterialAssociation:
 	'materialAssociation' name=ID?
 	(':' generalization+=InlineGeneralization ( ',' generalization+=InlineGeneralization)* )?
 	'{'
-		( ownedEnd+=InlinePropertyDefinition ';' )+
-	(	
-		('memberEnd' ':' memberEnd+=[Property] (',' memberEnd+=[Property])* ';' )?
-		& ('navigableOwnedEnd' ':' navigableOwnedEnd+=[Property] ( ',' navigableOwnedEnd+=[Property])* ';' )?
-	)
+//		( ownedEnd+=InlinePropertyDefinition ';' )+
     '}'
 ;
 
@@ -362,11 +317,7 @@ FormalAssociation returns FormalAssociation:
 	( isAbstract?='abstract'? & isDerived?='derived'? & isLeaf?='leaf'? )
 	'formalAssociation' name=ID?
 	'{'
-		( ownedEnd+=InlinePropertyDefinition ';' )+
-	(	
-		('memberEnd' ':' memberEnd+=[Property] (',' memberEnd+=[Property])* ';' )?
-		& ('navigableOwnedEnd' ':' navigableOwnedEnd+=[Property] ( ',' navigableOwnedEnd+=[Property])* ';' )?
-	)
+//		( ownedEnd+=InlinePropertyDefinition ';' )+
     '}'
 	;
 
@@ -589,21 +540,14 @@ StringExpression returns StringExpression:
     ;
 */
 
+AnonymousPropertyDefinition returns Property:
+	{Property}
+	type=[Type]
+	( '[' lowerValue=LiteralInteger ',' upperValue=LiteralUnlimitedNatural ']')?
+;
 
-//PropertyBound returns ecore::EIntegerObject: // datatype rule handled by a value converter
-//PropertyBound returns ecore::EIntegerObject: // datatype rule handled by a value converter
-//    '*' | INT;
-
-/*****************************************************************************
- * property nome (TipoNome)
- * property amigos [2, 3] (TipoNome)
- *****************************************************************************
-  * FIXME: Property::association é opposite, mas não está sendo definida automaticamente
- *****************************************************************************/
-//ATENTION: Ao mudar, mude também o de baixo
 InlinePropertyDefinition returns Property:
 	{Property}
-//	'property'
 	name=ID?
 	(
 	  '('
