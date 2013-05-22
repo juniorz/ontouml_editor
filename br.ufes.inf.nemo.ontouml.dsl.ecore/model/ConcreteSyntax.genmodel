@@ -9,15 +9,20 @@
   <genPackages prefix="OntoDSL" resource="XML" disposableProviderFactory="true" ecorePackage="ConcreteSyntax.ecore#/">
     <genClasses ecoreClass="ConcreteSyntax.ecore#//DslMediation">
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ConcreteSyntax.ecore#//DslMediation/relator"/>
-      <genOperations ecoreOperation="ConcreteSyntax.ecore#//DslMediation/getOwnedMediatedEnd"/>
-      <genOperations ecoreOperation="ConcreteSyntax.ecore#//DslMediation/setOwnedMediatedEnd">
-        <genParameters ecoreParameter="ConcreteSyntax.ecore#//DslMediation/setOwnedMediatedEnd/mediated"/>
-      </genOperations>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConcreteSyntax.ecore#//DslMediation/mediated"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConcreteSyntax.ecore#//DslMediation/cardinality"/>
     </genClasses>
     <genClasses ecoreClass="ConcreteSyntax.ecore#//DslRelator">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConcreteSyntax.ecore#//DslRelator/mediations"/>
     </genClasses>
     <genClasses ecoreClass="ConcreteSyntax.ecore#//DslModel"/>
-    <genClasses image="false" ecoreClass="ConcreteSyntax.ecore#//OwnedAndNavigableAssociation"/>
+    <genClasses ecoreClass="ConcreteSyntax.ecore#//Cardinality">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConcreteSyntax.ecore#//Cardinality/lower"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConcreteSyntax.ecore#//Cardinality/upper"/>
+    </genClasses>
+    <genClasses ecoreClass="ConcreteSyntax.ecore#//LiteralOptionalCardinality"/>
+    <genClasses ecoreClass="ConcreteSyntax.ecore#//LiteralAtLeastOneCardinality"/>
+    <genClasses ecoreClass="ConcreteSyntax.ecore#//LiteralAnyCardinality"/>
+    <genClasses image="false" ecoreClass="ConcreteSyntax.ecore#//LiteralCardinality"/>
   </genPackages>
 </genmodel:GenModel>
