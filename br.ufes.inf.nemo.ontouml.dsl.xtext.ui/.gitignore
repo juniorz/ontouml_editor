@@ -1,0 +1,9 @@
+# https://github.com/github/gitignore/blob/master/Global/Eclipse.gitignore
+.project
+.metadata
+local.properties
+.classpath
+.settings/
+.loadpath
+.buildpath
+bin/**
