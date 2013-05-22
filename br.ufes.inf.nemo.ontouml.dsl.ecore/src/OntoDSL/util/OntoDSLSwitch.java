@@ -153,6 +153,43 @@ public class OntoDSLSwitch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case OntoDSLPackage.CARDINALITY: {
+				Cardinality cardinality = (Cardinality)theEObject;
+				T result = caseCardinality(cardinality);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case OntoDSLPackage.LITERAL_OPTIONAL_CARDINALITY: {
+				LiteralOptionalCardinality literalOptionalCardinality = (LiteralOptionalCardinality)theEObject;
+				T result = caseLiteralOptionalCardinality(literalOptionalCardinality);
+				if (result == null) result = caseLiteralCardinality(literalOptionalCardinality);
+				if (result == null) result = caseCardinality(literalOptionalCardinality);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case OntoDSLPackage.LITERAL_AT_LEAST_ONE_CARDINALITY: {
+				LiteralAtLeastOneCardinality literalAtLeastOneCardinality = (LiteralAtLeastOneCardinality)theEObject;
+				T result = caseLiteralAtLeastOneCardinality(literalAtLeastOneCardinality);
+				if (result == null) result = caseLiteralCardinality(literalAtLeastOneCardinality);
+				if (result == null) result = caseCardinality(literalAtLeastOneCardinality);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case OntoDSLPackage.LITERAL_ANY_CARDINALITY: {
+				LiteralAnyCardinality literalAnyCardinality = (LiteralAnyCardinality)theEObject;
+				T result = caseLiteralAnyCardinality(literalAnyCardinality);
+				if (result == null) result = caseLiteralCardinality(literalAnyCardinality);
+				if (result == null) result = caseCardinality(literalAnyCardinality);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case OntoDSLPackage.LITERAL_CARDINALITY: {
+				LiteralCardinality literalCardinality = (LiteralCardinality)theEObject;
+				T result = caseLiteralCardinality(literalCardinality);
+				if (result == null) result = caseCardinality(literalCardinality);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -199,6 +236,81 @@ public class OntoDSLSwitch<T> {
 	 * @generated
 	 */
 	public T caseDslModel(DslModel object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Cardinality</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Cardinality</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCardinality(Cardinality object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Literal Optional Cardinality</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Literal Optional Cardinality</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLiteralOptionalCardinality(LiteralOptionalCardinality object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Literal At Least One Cardinality</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Literal At Least One Cardinality</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLiteralAtLeastOneCardinality(LiteralAtLeastOneCardinality object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Literal Any Cardinality</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Literal Any Cardinality</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLiteralAnyCardinality(LiteralAnyCardinality object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Literal Cardinality</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Literal Cardinality</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLiteralCardinality(LiteralCardinality object) {
 		return null;
 	}
 

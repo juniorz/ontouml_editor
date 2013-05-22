@@ -8,6 +8,7 @@ package OntoDSL;
 
 import RefOntoUML.RefOntoUMLPackage;
 
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
@@ -395,13 +396,22 @@ public interface OntoDSLPackage extends EPackage {
 	int DSL_MEDIATION__MEDIATED = RefOntoUMLPackage.MEDIATION_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Cardinality</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DSL_MEDIATION__CARDINALITY = RefOntoUMLPackage.MEDIATION_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>Dsl Mediation</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DSL_MEDIATION_FEATURE_COUNT = RefOntoUMLPackage.MEDIATION_FEATURE_COUNT + 2;
+	int DSL_MEDIATION_FEATURE_COUNT = RefOntoUMLPackage.MEDIATION_FEATURE_COUNT + 3;
 
 	/**
 	 * The meta object id for the '{@link OntoDSL.impl.DslRelatorImpl <em>Dsl Relator</em>}' class.
@@ -938,6 +948,193 @@ public interface OntoDSLPackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link OntoDSL.impl.CardinalityImpl <em>Cardinality</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see OntoDSL.impl.CardinalityImpl
+	 * @see OntoDSL.impl.OntoDSLPackageImpl#getCardinality()
+	 * @generated
+	 */
+	int CARDINALITY = 3;
+
+	/**
+	 * The feature id for the '<em><b>Lower</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARDINALITY__LOWER = 0;
+
+	/**
+	 * The feature id for the '<em><b>Upper</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARDINALITY__UPPER = 1;
+
+	/**
+	 * The number of structural features of the '<em>Cardinality</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARDINALITY_FEATURE_COUNT = 2;
+
+
+	/**
+	 * The meta object id for the '{@link OntoDSL.impl.LiteralCardinalityImpl <em>Literal Cardinality</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see OntoDSL.impl.LiteralCardinalityImpl
+	 * @see OntoDSL.impl.OntoDSLPackageImpl#getLiteralCardinality()
+	 * @generated
+	 */
+	int LITERAL_CARDINALITY = 7;
+
+	/**
+	 * The feature id for the '<em><b>Lower</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LITERAL_CARDINALITY__LOWER = CARDINALITY__LOWER;
+
+	/**
+	 * The feature id for the '<em><b>Upper</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LITERAL_CARDINALITY__UPPER = CARDINALITY__UPPER;
+
+	/**
+	 * The number of structural features of the '<em>Literal Cardinality</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LITERAL_CARDINALITY_FEATURE_COUNT = CARDINALITY_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link OntoDSL.impl.LiteralOptionalCardinalityImpl <em>Literal Optional Cardinality</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see OntoDSL.impl.LiteralOptionalCardinalityImpl
+	 * @see OntoDSL.impl.OntoDSLPackageImpl#getLiteralOptionalCardinality()
+	 * @generated
+	 */
+	int LITERAL_OPTIONAL_CARDINALITY = 4;
+
+	/**
+	 * The feature id for the '<em><b>Lower</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LITERAL_OPTIONAL_CARDINALITY__LOWER = LITERAL_CARDINALITY__LOWER;
+
+	/**
+	 * The feature id for the '<em><b>Upper</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LITERAL_OPTIONAL_CARDINALITY__UPPER = LITERAL_CARDINALITY__UPPER;
+
+	/**
+	 * The number of structural features of the '<em>Literal Optional Cardinality</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LITERAL_OPTIONAL_CARDINALITY_FEATURE_COUNT = LITERAL_CARDINALITY_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link OntoDSL.impl.LiteralAtLeastOneCardinalityImpl <em>Literal At Least One Cardinality</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see OntoDSL.impl.LiteralAtLeastOneCardinalityImpl
+	 * @see OntoDSL.impl.OntoDSLPackageImpl#getLiteralAtLeastOneCardinality()
+	 * @generated
+	 */
+	int LITERAL_AT_LEAST_ONE_CARDINALITY = 5;
+
+	/**
+	 * The feature id for the '<em><b>Lower</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LITERAL_AT_LEAST_ONE_CARDINALITY__LOWER = LITERAL_CARDINALITY__LOWER;
+
+	/**
+	 * The feature id for the '<em><b>Upper</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LITERAL_AT_LEAST_ONE_CARDINALITY__UPPER = LITERAL_CARDINALITY__UPPER;
+
+	/**
+	 * The number of structural features of the '<em>Literal At Least One Cardinality</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LITERAL_AT_LEAST_ONE_CARDINALITY_FEATURE_COUNT = LITERAL_CARDINALITY_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link OntoDSL.impl.LiteralAnyCardinalityImpl <em>Literal Any Cardinality</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see OntoDSL.impl.LiteralAnyCardinalityImpl
+	 * @see OntoDSL.impl.OntoDSLPackageImpl#getLiteralAnyCardinality()
+	 * @generated
+	 */
+	int LITERAL_ANY_CARDINALITY = 6;
+
+	/**
+	 * The feature id for the '<em><b>Lower</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LITERAL_ANY_CARDINALITY__LOWER = LITERAL_CARDINALITY__LOWER;
+
+	/**
+	 * The feature id for the '<em><b>Upper</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LITERAL_ANY_CARDINALITY__UPPER = LITERAL_CARDINALITY__UPPER;
+
+	/**
+	 * The number of structural features of the '<em>Literal Any Cardinality</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LITERAL_ANY_CARDINALITY_FEATURE_COUNT = LITERAL_CARDINALITY_FEATURE_COUNT + 0;
+
+
+	/**
 	 * Returns the meta object for class '{@link OntoDSL.DslMediation <em>Dsl Mediation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -970,6 +1167,17 @@ public interface OntoDSLPackage extends EPackage {
 	EReference getDslMediation_Mediated();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link OntoDSL.DslMediation#getCardinality <em>Cardinality</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Cardinality</em>'.
+	 * @see OntoDSL.DslMediation#getCardinality()
+	 * @see #getDslMediation()
+	 * @generated
+	 */
+	EReference getDslMediation_Cardinality();
+
+	/**
 	 * Returns the meta object for class '{@link OntoDSL.DslRelator <em>Dsl Relator</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -999,6 +1207,78 @@ public interface OntoDSLPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getDslModel();
+
+	/**
+	 * Returns the meta object for class '{@link OntoDSL.Cardinality <em>Cardinality</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Cardinality</em>'.
+	 * @see OntoDSL.Cardinality
+	 * @generated
+	 */
+	EClass getCardinality();
+
+	/**
+	 * Returns the meta object for the attribute '{@link OntoDSL.Cardinality#getLower <em>Lower</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Lower</em>'.
+	 * @see OntoDSL.Cardinality#getLower()
+	 * @see #getCardinality()
+	 * @generated
+	 */
+	EAttribute getCardinality_Lower();
+
+	/**
+	 * Returns the meta object for the attribute '{@link OntoDSL.Cardinality#getUpper <em>Upper</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Upper</em>'.
+	 * @see OntoDSL.Cardinality#getUpper()
+	 * @see #getCardinality()
+	 * @generated
+	 */
+	EAttribute getCardinality_Upper();
+
+	/**
+	 * Returns the meta object for class '{@link OntoDSL.LiteralOptionalCardinality <em>Literal Optional Cardinality</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Literal Optional Cardinality</em>'.
+	 * @see OntoDSL.LiteralOptionalCardinality
+	 * @generated
+	 */
+	EClass getLiteralOptionalCardinality();
+
+	/**
+	 * Returns the meta object for class '{@link OntoDSL.LiteralAtLeastOneCardinality <em>Literal At Least One Cardinality</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Literal At Least One Cardinality</em>'.
+	 * @see OntoDSL.LiteralAtLeastOneCardinality
+	 * @generated
+	 */
+	EClass getLiteralAtLeastOneCardinality();
+
+	/**
+	 * Returns the meta object for class '{@link OntoDSL.LiteralAnyCardinality <em>Literal Any Cardinality</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Literal Any Cardinality</em>'.
+	 * @see OntoDSL.LiteralAnyCardinality
+	 * @generated
+	 */
+	EClass getLiteralAnyCardinality();
+
+	/**
+	 * Returns the meta object for class '{@link OntoDSL.LiteralCardinality <em>Literal Cardinality</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Literal Cardinality</em>'.
+	 * @see OntoDSL.LiteralCardinality
+	 * @generated
+	 */
+	EClass getLiteralCardinality();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1049,6 +1329,14 @@ public interface OntoDSLPackage extends EPackage {
 		EReference DSL_MEDIATION__MEDIATED = eINSTANCE.getDslMediation_Mediated();
 
 		/**
+		 * The meta object literal for the '<em><b>Cardinality</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DSL_MEDIATION__CARDINALITY = eINSTANCE.getDslMediation_Cardinality();
+
+		/**
 		 * The meta object literal for the '{@link OntoDSL.impl.DslRelatorImpl <em>Dsl Relator</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1075,6 +1363,72 @@ public interface OntoDSLPackage extends EPackage {
 		 * @generated
 		 */
 		EClass DSL_MODEL = eINSTANCE.getDslModel();
+
+		/**
+		 * The meta object literal for the '{@link OntoDSL.impl.CardinalityImpl <em>Cardinality</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see OntoDSL.impl.CardinalityImpl
+		 * @see OntoDSL.impl.OntoDSLPackageImpl#getCardinality()
+		 * @generated
+		 */
+		EClass CARDINALITY = eINSTANCE.getCardinality();
+
+		/**
+		 * The meta object literal for the '<em><b>Lower</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CARDINALITY__LOWER = eINSTANCE.getCardinality_Lower();
+
+		/**
+		 * The meta object literal for the '<em><b>Upper</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CARDINALITY__UPPER = eINSTANCE.getCardinality_Upper();
+
+		/**
+		 * The meta object literal for the '{@link OntoDSL.impl.LiteralOptionalCardinalityImpl <em>Literal Optional Cardinality</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see OntoDSL.impl.LiteralOptionalCardinalityImpl
+		 * @see OntoDSL.impl.OntoDSLPackageImpl#getLiteralOptionalCardinality()
+		 * @generated
+		 */
+		EClass LITERAL_OPTIONAL_CARDINALITY = eINSTANCE.getLiteralOptionalCardinality();
+
+		/**
+		 * The meta object literal for the '{@link OntoDSL.impl.LiteralAtLeastOneCardinalityImpl <em>Literal At Least One Cardinality</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see OntoDSL.impl.LiteralAtLeastOneCardinalityImpl
+		 * @see OntoDSL.impl.OntoDSLPackageImpl#getLiteralAtLeastOneCardinality()
+		 * @generated
+		 */
+		EClass LITERAL_AT_LEAST_ONE_CARDINALITY = eINSTANCE.getLiteralAtLeastOneCardinality();
+
+		/**
+		 * The meta object literal for the '{@link OntoDSL.impl.LiteralAnyCardinalityImpl <em>Literal Any Cardinality</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see OntoDSL.impl.LiteralAnyCardinalityImpl
+		 * @see OntoDSL.impl.OntoDSLPackageImpl#getLiteralAnyCardinality()
+		 * @generated
+		 */
+		EClass LITERAL_ANY_CARDINALITY = eINSTANCE.getLiteralAnyCardinality();
+
+		/**
+		 * The meta object literal for the '{@link OntoDSL.impl.LiteralCardinalityImpl <em>Literal Cardinality</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see OntoDSL.impl.LiteralCardinalityImpl
+		 * @see OntoDSL.impl.OntoDSLPackageImpl#getLiteralCardinality()
+		 * @generated
+		 */
+		EClass LITERAL_CARDINALITY = eINSTANCE.getLiteralCardinality();
 
 	}
 

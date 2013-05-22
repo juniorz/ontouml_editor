@@ -6,14 +6,20 @@
  */
 package OntoDSL.impl;
 
+import OntoDSL.Cardinality;
 import OntoDSL.DslMediation;
 import OntoDSL.DslModel;
 import OntoDSL.DslRelator;
+import OntoDSL.LiteralAnyCardinality;
+import OntoDSL.LiteralAtLeastOneCardinality;
+import OntoDSL.LiteralCardinality;
+import OntoDSL.LiteralOptionalCardinality;
 import OntoDSL.OntoDSLFactory;
 import OntoDSL.OntoDSLPackage;
 
 import RefOntoUML.RefOntoUMLPackage;
 
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
@@ -48,6 +54,41 @@ public class OntoDSLPackageImpl extends EPackageImpl implements OntoDSLPackage {
 	 * @generated
 	 */
 	private EClass dslModelEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass cardinalityEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass literalOptionalCardinalityEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass literalAtLeastOneCardinalityEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass literalAnyCardinalityEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass literalCardinalityEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -145,6 +186,15 @@ public class OntoDSLPackageImpl extends EPackageImpl implements OntoDSLPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getDslMediation_Cardinality() {
+		return (EReference)dslMediationEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getDslRelator() {
 		return dslRelatorEClass;
 	}
@@ -165,6 +215,69 @@ public class OntoDSLPackageImpl extends EPackageImpl implements OntoDSLPackage {
 	 */
 	public EClass getDslModel() {
 		return dslModelEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCardinality() {
+		return cardinalityEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCardinality_Lower() {
+		return (EAttribute)cardinalityEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCardinality_Upper() {
+		return (EAttribute)cardinalityEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getLiteralOptionalCardinality() {
+		return literalOptionalCardinalityEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getLiteralAtLeastOneCardinality() {
+		return literalAtLeastOneCardinalityEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getLiteralAnyCardinality() {
+		return literalAnyCardinalityEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getLiteralCardinality() {
+		return literalCardinalityEClass;
 	}
 
 	/**
@@ -198,11 +311,24 @@ public class OntoDSLPackageImpl extends EPackageImpl implements OntoDSLPackage {
 		dslMediationEClass = createEClass(DSL_MEDIATION);
 		createEReference(dslMediationEClass, DSL_MEDIATION__RELATOR);
 		createEReference(dslMediationEClass, DSL_MEDIATION__MEDIATED);
+		createEReference(dslMediationEClass, DSL_MEDIATION__CARDINALITY);
 
 		dslRelatorEClass = createEClass(DSL_RELATOR);
 		createEReference(dslRelatorEClass, DSL_RELATOR__MEDIATIONS);
 
 		dslModelEClass = createEClass(DSL_MODEL);
+
+		cardinalityEClass = createEClass(CARDINALITY);
+		createEAttribute(cardinalityEClass, CARDINALITY__LOWER);
+		createEAttribute(cardinalityEClass, CARDINALITY__UPPER);
+
+		literalOptionalCardinalityEClass = createEClass(LITERAL_OPTIONAL_CARDINALITY);
+
+		literalAtLeastOneCardinalityEClass = createEClass(LITERAL_AT_LEAST_ONE_CARDINALITY);
+
+		literalAnyCardinalityEClass = createEClass(LITERAL_ANY_CARDINALITY);
+
+		literalCardinalityEClass = createEClass(LITERAL_CARDINALITY);
 	}
 
 	/**
@@ -239,16 +365,33 @@ public class OntoDSLPackageImpl extends EPackageImpl implements OntoDSLPackage {
 		dslMediationEClass.getESuperTypes().add(theRefOntoUMLPackage.getMediation());
 		dslRelatorEClass.getESuperTypes().add(theRefOntoUMLPackage.getRelator());
 		dslModelEClass.getESuperTypes().add(theRefOntoUMLPackage.getModel());
+		literalOptionalCardinalityEClass.getESuperTypes().add(this.getLiteralCardinality());
+		literalAtLeastOneCardinalityEClass.getESuperTypes().add(this.getLiteralCardinality());
+		literalAnyCardinalityEClass.getESuperTypes().add(this.getLiteralCardinality());
+		literalCardinalityEClass.getESuperTypes().add(this.getCardinality());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(dslMediationEClass, DslMediation.class, "DslMediation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDslMediation_Relator(), this.getDslRelator(), this.getDslRelator_Mediations(), "relator", null, 0, 1, DslMediation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDslMediation_Mediated(), theRefOntoUMLPackage.getProperty(), null, "mediated", null, 0, 1, DslMediation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDslMediation_Cardinality(), this.getCardinality(), null, "cardinality", null, 0, 1, DslMediation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dslRelatorEClass, DslRelator.class, "DslRelator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDslRelator_Mediations(), this.getDslMediation(), this.getDslMediation_Relator(), "mediations", null, 1, -1, DslRelator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dslModelEClass, DslModel.class, "DslModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(cardinalityEClass, Cardinality.class, "Cardinality", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getCardinality_Lower(), theRefOntoUMLPackage.getInteger(), "lower", null, 0, 1, Cardinality.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCardinality_Upper(), theRefOntoUMLPackage.getUnlimitedNatural(), "upper", null, 0, 1, Cardinality.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(literalOptionalCardinalityEClass, LiteralOptionalCardinality.class, "LiteralOptionalCardinality", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(literalAtLeastOneCardinalityEClass, LiteralAtLeastOneCardinality.class, "LiteralAtLeastOneCardinality", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(literalAnyCardinalityEClass, LiteralAnyCardinality.class, "LiteralAnyCardinality", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(literalCardinalityEClass, LiteralCardinality.class, "LiteralCardinality", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

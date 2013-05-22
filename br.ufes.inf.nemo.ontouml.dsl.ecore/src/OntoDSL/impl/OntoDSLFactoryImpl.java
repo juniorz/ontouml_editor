@@ -63,6 +63,10 @@ public class OntoDSLFactoryImpl extends EFactoryImpl implements OntoDSLFactory {
 			case OntoDSLPackage.DSL_MEDIATION: return createDslMediation();
 			case OntoDSLPackage.DSL_RELATOR: return createDslRelator();
 			case OntoDSLPackage.DSL_MODEL: return createDslModel();
+			case OntoDSLPackage.CARDINALITY: return createCardinality();
+			case OntoDSLPackage.LITERAL_OPTIONAL_CARDINALITY: return createLiteralOptionalCardinality();
+			case OntoDSLPackage.LITERAL_AT_LEAST_ONE_CARDINALITY: return createLiteralAtLeastOneCardinality();
+			case OntoDSLPackage.LITERAL_ANY_CARDINALITY: return createLiteralAnyCardinality();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -96,6 +100,46 @@ public class OntoDSLFactoryImpl extends EFactoryImpl implements OntoDSLFactory {
 	public DslModel createDslModel() {
 		DslModelImpl dslModel = new DslModelImpl();
 		return dslModel;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Cardinality createCardinality() {
+		CardinalityImpl cardinality = new CardinalityImpl();
+		return cardinality;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LiteralOptionalCardinality createLiteralOptionalCardinality() {
+		LiteralOptionalCardinalityImpl literalOptionalCardinality = new LiteralOptionalCardinalityImpl();
+		return literalOptionalCardinality;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LiteralAtLeastOneCardinality createLiteralAtLeastOneCardinality() {
+		LiteralAtLeastOneCardinalityImpl literalAtLeastOneCardinality = new LiteralAtLeastOneCardinalityImpl();
+		return literalAtLeastOneCardinality;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LiteralAnyCardinality createLiteralAnyCardinality() {
+		LiteralAnyCardinalityImpl literalAnyCardinality = new LiteralAnyCardinalityImpl();
+		return literalAnyCardinality;
 	}
 
 	/**

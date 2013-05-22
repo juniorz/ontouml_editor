@@ -19,6 +19,7 @@ import RefOntoUML.Property;
  * <ul>
  *   <li>{@link OntoDSL.DslMediation#getRelator <em>Relator</em>}</li>
  *   <li>{@link OntoDSL.DslMediation#getMediated <em>Mediated</em>}</li>
+ *   <li>{@link OntoDSL.DslMediation#getCardinality <em>Cardinality</em>}</li>
  * </ul>
  * </p>
  *
@@ -80,5 +81,31 @@ public interface DslMediation extends Mediation {
 	 * @generated
 	 */
 	void setMediated(Property value);
+
+	/**
+	 * Returns the value of the '<em><b>Cardinality</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Cardinality</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Cardinality</em>' containment reference.
+	 * @see #setCardinality(Cardinality)
+	 * @see OntoDSL.OntoDSLPackage#getDslMediation_Cardinality()
+	 * @model containment="true"
+	 * @generated
+	 */
+	Cardinality getCardinality();
+
+	/**
+	 * Sets the value of the '{@link OntoDSL.DslMediation#getCardinality <em>Cardinality</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Cardinality</em>' containment reference.
+	 * @see #getCardinality()
+	 * @generated
+	 */
+	void setCardinality(Cardinality value);
 
 } // DslMediation

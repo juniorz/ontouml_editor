@@ -6,6 +6,7 @@
  */
 package OntoDSL.impl;
 
+import OntoDSL.Cardinality;
 import OntoDSL.DslMediation;
 import OntoDSL.DslRelator;
 import OntoDSL.OntoDSLPackage;
@@ -32,6 +33,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  * <ul>
  *   <li>{@link OntoDSL.impl.DslMediationImpl#getRelator <em>Relator</em>}</li>
  *   <li>{@link OntoDSL.impl.DslMediationImpl#getMediated <em>Mediated</em>}</li>
+ *   <li>{@link OntoDSL.impl.DslMediationImpl#getCardinality <em>Cardinality</em>}</li>
  * </ul>
  * </p>
  *
@@ -47,6 +49,16 @@ public class DslMediationImpl extends MediationImpl implements DslMediation {
 	 * @ordered
 	 */
 	protected Property mediated;
+
+	/**
+	 * The cached value of the '{@link #getCardinality() <em>Cardinality</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCardinality()
+	 * @generated
+	 * @ordered
+	 */
+	protected Cardinality cardinality;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -154,6 +166,49 @@ public class DslMediationImpl extends MediationImpl implements DslMediation {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Cardinality getCardinality() {
+		return cardinality;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetCardinality(Cardinality newCardinality, NotificationChain msgs) {
+		Cardinality oldCardinality = cardinality;
+		cardinality = newCardinality;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OntoDSLPackage.DSL_MEDIATION__CARDINALITY, oldCardinality, newCardinality);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCardinality(Cardinality newCardinality) {
+		if (newCardinality != cardinality) {
+			NotificationChain msgs = null;
+			if (cardinality != null)
+				msgs = ((InternalEObject)cardinality).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OntoDSLPackage.DSL_MEDIATION__CARDINALITY, null, msgs);
+			if (newCardinality != null)
+				msgs = ((InternalEObject)newCardinality).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OntoDSLPackage.DSL_MEDIATION__CARDINALITY, null, msgs);
+			msgs = basicSetCardinality(newCardinality, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OntoDSLPackage.DSL_MEDIATION__CARDINALITY, newCardinality, newCardinality));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public Property getOwnedMediatedEnd() {
@@ -220,6 +275,8 @@ public class DslMediationImpl extends MediationImpl implements DslMediation {
 				return basicSetRelator(null, msgs);
 			case OntoDSLPackage.DSL_MEDIATION__MEDIATED:
 				return basicSetMediated(null, msgs);
+			case OntoDSLPackage.DSL_MEDIATION__CARDINALITY:
+				return basicSetCardinality(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -250,6 +307,8 @@ public class DslMediationImpl extends MediationImpl implements DslMediation {
 				return getRelator();
 			case OntoDSLPackage.DSL_MEDIATION__MEDIATED:
 				return getMediated();
+			case OntoDSLPackage.DSL_MEDIATION__CARDINALITY:
+				return getCardinality();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -269,6 +328,9 @@ public class DslMediationImpl extends MediationImpl implements DslMediation {
 			case OntoDSLPackage.DSL_MEDIATION__MEDIATED:
 				setMediated((Property)newValue);
 				return;
+			case OntoDSLPackage.DSL_MEDIATION__CARDINALITY:
+				setCardinality((Cardinality)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -287,6 +349,9 @@ public class DslMediationImpl extends MediationImpl implements DslMediation {
 			case OntoDSLPackage.DSL_MEDIATION__MEDIATED:
 				setMediated((Property)null);
 				return;
+			case OntoDSLPackage.DSL_MEDIATION__CARDINALITY:
+				setCardinality((Cardinality)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -303,6 +368,8 @@ public class DslMediationImpl extends MediationImpl implements DslMediation {
 				return getRelator() != null;
 			case OntoDSLPackage.DSL_MEDIATION__MEDIATED:
 				return mediated != null;
+			case OntoDSLPackage.DSL_MEDIATION__CARDINALITY:
+				return cardinality != null;
 		}
 		return super.eIsSet(featureID);
 	}

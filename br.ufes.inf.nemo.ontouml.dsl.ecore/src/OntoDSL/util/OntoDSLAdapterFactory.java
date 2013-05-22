@@ -101,6 +101,26 @@ public class OntoDSLAdapterFactory extends AdapterFactoryImpl {
 				return createDslModelAdapter();
 			}
 			@Override
+			public Adapter caseCardinality(Cardinality object) {
+				return createCardinalityAdapter();
+			}
+			@Override
+			public Adapter caseLiteralOptionalCardinality(LiteralOptionalCardinality object) {
+				return createLiteralOptionalCardinalityAdapter();
+			}
+			@Override
+			public Adapter caseLiteralAtLeastOneCardinality(LiteralAtLeastOneCardinality object) {
+				return createLiteralAtLeastOneCardinalityAdapter();
+			}
+			@Override
+			public Adapter caseLiteralAnyCardinality(LiteralAnyCardinality object) {
+				return createLiteralAnyCardinalityAdapter();
+			}
+			@Override
+			public Adapter caseLiteralCardinality(LiteralCardinality object) {
+				return createLiteralCardinalityAdapter();
+			}
+			@Override
 			public Adapter caseEModelElement(EModelElement object) {
 				return createEModelElementAdapter();
 			}
@@ -231,6 +251,76 @@ public class OntoDSLAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createDslModelAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link OntoDSL.Cardinality <em>Cardinality</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see OntoDSL.Cardinality
+	 * @generated
+	 */
+	public Adapter createCardinalityAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link OntoDSL.LiteralOptionalCardinality <em>Literal Optional Cardinality</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see OntoDSL.LiteralOptionalCardinality
+	 * @generated
+	 */
+	public Adapter createLiteralOptionalCardinalityAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link OntoDSL.LiteralAtLeastOneCardinality <em>Literal At Least One Cardinality</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see OntoDSL.LiteralAtLeastOneCardinality
+	 * @generated
+	 */
+	public Adapter createLiteralAtLeastOneCardinalityAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link OntoDSL.LiteralAnyCardinality <em>Literal Any Cardinality</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see OntoDSL.LiteralAnyCardinality
+	 * @generated
+	 */
+	public Adapter createLiteralAnyCardinalityAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link OntoDSL.LiteralCardinality <em>Literal Cardinality</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see OntoDSL.LiteralCardinality
+	 * @generated
+	 */
+	public Adapter createLiteralCardinalityAdapter() {
 		return null;
 	}
 

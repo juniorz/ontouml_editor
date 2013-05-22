@@ -53,6 +53,42 @@ public interface OntoDSLFactory extends EFactory {
 	DslModel createDslModel();
 
 	/**
+	 * Returns a new object of class '<em>Cardinality</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Cardinality</em>'.
+	 * @generated
+	 */
+	Cardinality createCardinality();
+
+	/**
+	 * Returns a new object of class '<em>Literal Optional Cardinality</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Literal Optional Cardinality</em>'.
+	 * @generated
+	 */
+	LiteralOptionalCardinality createLiteralOptionalCardinality();
+
+	/**
+	 * Returns a new object of class '<em>Literal At Least One Cardinality</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Literal At Least One Cardinality</em>'.
+	 * @generated
+	 */
+	LiteralAtLeastOneCardinality createLiteralAtLeastOneCardinality();
+
+	/**
+	 * Returns a new object of class '<em>Literal Any Cardinality</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Literal Any Cardinality</em>'.
+	 * @generated
+	 */
+	LiteralAnyCardinality createLiteralAnyCardinality();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
