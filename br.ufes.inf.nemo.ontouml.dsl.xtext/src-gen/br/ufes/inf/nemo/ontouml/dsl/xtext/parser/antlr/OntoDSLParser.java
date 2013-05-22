@@ -22,7 +22,7 @@ public class OntoDSLParser extends org.eclipse.xtext.parser.antlr.AbstractAntlrP
 	protected IParseResult parse(String ruleName, CharStream in) {
 		TokenSource tokenSource = createLexer(in);
 		XtextTokenStream tokenStream = createTokenStream(tokenSource);
-		tokenStream.setInitialHiddenTokens("RULE_NL", "RULE_RWS", "RULE_WS", "RULE_SL_COMMENT", "RULE_ML_COMMENT");
+		tokenStream.setInitialHiddenTokens("RULE_WS", "RULE_ML_COMMENT", "RULE_SL_COMMENT");
 		br.ufes.inf.nemo.ontouml.dsl.xtext.parser.antlr.internal.InternalOntoDSLParser parser = createParser(tokenStream);
 		parser.setTokenTypeMap(getTokenDefProvider().getTokenDefMap());
 		parser.setSyntaxErrorProvider(getSyntaxErrorProvider());

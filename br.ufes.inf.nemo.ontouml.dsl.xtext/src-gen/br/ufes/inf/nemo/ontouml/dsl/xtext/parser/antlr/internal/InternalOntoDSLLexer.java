@@ -20,7 +20,7 @@ public class InternalOntoDSLLexer extends Lexer {
     public static final int T79=79;
     public static final int T77=77;
     public static final int T78=78;
-    public static final int RULE_ANY_OTHER=8;
+    public static final int RULE_ANY_OTHER=10;
     public static final int T29=29;
     public static final int T28=28;
     public static final int T27=27;
@@ -37,7 +37,6 @@ public class InternalOntoDSLLexer extends Lexer {
     public static final int T70=70;
     public static final int T62=62;
     public static final int T63=63;
-    public static final int RULE_RWS=7;
     public static final int T64=64;
     public static final int T65=65;
     public static final int T66=66;
@@ -57,41 +56,35 @@ public class InternalOntoDSLLexer extends Lexer {
     public static final int T32=32;
     public static final int T60=60;
     public static final int T31=31;
-    public static final int RULE_NL=9;
     public static final int T49=49;
     public static final int T48=48;
     public static final int T43=43;
-    public static final int Tokens=89;
-    public static final int RULE_SL_COMMENT=12;
+    public static final int Tokens=82;
+    public static final int RULE_SL_COMMENT=8;
     public static final int T42=42;
     public static final int T41=41;
     public static final int T40=40;
     public static final int T47=47;
     public static final int T46=46;
     public static final int T45=45;
-    public static final int RULE_ML_COMMENT=11;
+    public static final int RULE_ML_COMMENT=7;
     public static final int T44=44;
-    public static final int T88=88;
     public static final int RULE_STRING=5;
-    public static final int T84=84;
-    public static final int T85=85;
-    public static final int T86=86;
-    public static final int T87=87;
     public static final int T50=50;
     public static final int T59=59;
+    public static final int T11=11;
+    public static final int T12=12;
     public static final int T13=13;
     public static final int T14=14;
     public static final int T81=81;
     public static final int T52=52;
     public static final int T15=15;
-    public static final int RULE_WS=10;
+    public static final int RULE_WS=9;
     public static final int T80=80;
     public static final int T51=51;
     public static final int T16=16;
-    public static final int T83=83;
     public static final int T54=54;
     public static final int T17=17;
-    public static final int T82=82;
     public static final int T53=53;
     public static final int T18=18;
     public static final int T56=56;
@@ -105,14 +98,51 @@ public class InternalOntoDSLLexer extends Lexer {
     }
     public String getGrammarFileName() { return "../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g"; }
 
-    // $ANTLR start T13
-    public final void mT13() throws RecognitionException {
+    // $ANTLR start T11
+    public final void mT11() throws RecognitionException {
         try {
-            int _type = T13;
+            int _type = T11;
             // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:10:5: ( 'model' )
             // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:10:7: 'model'
             {
             match("model"); 
+
+
+            }
+
+            this.type = _type;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end T11
+
+    // $ANTLR start T12
+    public final void mT12() throws RecognitionException {
+        try {
+            int _type = T12;
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:11:5: ( ';' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:11:7: ';'
+            {
+            match(';'); 
+
+            }
+
+            this.type = _type;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end T12
+
+    // $ANTLR start T13
+    public final void mT13() throws RecognitionException {
+        try {
+            int _type = T13;
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:12:5: ( 'import' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:12:7: 'import'
+            {
+            match("import"); 
 
 
             }
@@ -128,10 +158,10 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mT14() throws RecognitionException {
         try {
             int _type = T14;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:11:5: ( 'viewpoint' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:11:7: 'viewpoint'
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:13:5: ( 'active' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:13:7: 'active'
             {
-            match("viewpoint"); 
+            match("active"); 
 
 
             }
@@ -147,10 +177,11 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mT15() throws RecognitionException {
         try {
             int _type = T15;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:12:5: ( '{' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:12:7: '{'
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:14:5: ( 'abstract' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:14:7: 'abstract'
             {
-            match('{'); 
+            match("abstract"); 
+
 
             }
 
@@ -165,10 +196,11 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mT16() throws RecognitionException {
         try {
             int _type = T16;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:13:5: ( '}' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:13:7: '}'
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:15:5: ( 'kind' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:15:7: 'kind'
             {
-            match('}'); 
+            match("kind"); 
+
 
             }
 
@@ -183,11 +215,10 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mT17() throws RecognitionException {
         try {
             int _type = T17;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:14:5: ( 'active' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:14:7: 'active'
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:16:5: ( ':' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:16:7: ':'
             {
-            match("active"); 
-
+            match(':'); 
 
             }
 
@@ -202,11 +233,10 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mT18() throws RecognitionException {
         try {
             int _type = T18;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:15:5: ( 'abstract' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:15:7: 'abstract'
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:17:5: ( ',' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:17:7: ','
             {
-            match("abstract"); 
-
+            match(','); 
 
             }
 
@@ -221,11 +251,10 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mT19() throws RecognitionException {
         try {
             int _type = T19;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:16:5: ( 'kind' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:16:7: 'kind'
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:18:5: ( '{' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:18:7: '{'
             {
-            match("kind"); 
-
+            match('{'); 
 
             }
 
@@ -240,10 +269,10 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mT20() throws RecognitionException {
         try {
             int _type = T20;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:17:5: ( ':' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:17:7: ':'
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:19:5: ( '}' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:19:7: '}'
             {
-            match(':'); 
+            match('}'); 
 
             }
 
@@ -258,10 +287,11 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mT21() throws RecognitionException {
         try {
             int _type = T21;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:18:5: ( ',' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:18:7: ','
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:20:5: ( 'quantity' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:20:7: 'quantity'
             {
-            match(','); 
+            match("quantity"); 
+
 
             }
 
@@ -276,10 +306,11 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mT22() throws RecognitionException {
         try {
             int _type = T22;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:19:5: ( ';' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:19:7: ';'
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:21:5: ( 'extensional' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:21:7: 'extensional'
             {
-            match(';'); 
+            match("extensional"); 
+
 
             }
 
@@ -294,10 +325,10 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mT23() throws RecognitionException {
         try {
             int _type = T23;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:20:5: ( 'quantity' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:20:7: 'quantity'
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:22:5: ( 'collective' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:22:7: 'collective'
             {
-            match("quantity"); 
+            match("collective"); 
 
 
             }
@@ -313,10 +344,10 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mT24() throws RecognitionException {
         try {
             int _type = T24;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:21:5: ( 'extensional' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:21:7: 'extensional'
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:23:5: ( 'subKind' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:23:7: 'subKind'
             {
-            match("extensional"); 
+            match("subKind"); 
 
 
             }
@@ -332,10 +363,10 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mT25() throws RecognitionException {
         try {
             int _type = T25;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:22:5: ( 'collective' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:22:7: 'collective'
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:24:5: ( 'category' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:24:7: 'category'
             {
-            match("collective"); 
+            match("category"); 
 
 
             }
@@ -351,10 +382,10 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mT26() throws RecognitionException {
         try {
             int _type = T26;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:23:5: ( 'subKind' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:23:7: 'subKind'
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:25:5: ( 'phase' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:25:7: 'phase'
             {
-            match("subKind"); 
+            match("phase"); 
 
 
             }
@@ -370,10 +401,10 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mT27() throws RecognitionException {
         try {
             int _type = T27;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:24:5: ( 'category' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:24:7: 'category'
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:26:5: ( 'role' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:26:7: 'role'
             {
-            match("category"); 
+            match("role"); 
 
 
             }
@@ -389,10 +420,10 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mT28() throws RecognitionException {
         try {
             int _type = T28;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:25:5: ( 'phase' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:25:7: 'phase'
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:27:5: ( 'mixin' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:27:7: 'mixin'
             {
-            match("phase"); 
+            match("mixin"); 
 
 
             }
@@ -408,10 +439,10 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mT29() throws RecognitionException {
         try {
             int _type = T29;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:26:5: ( 'role' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:26:7: 'role'
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:28:5: ( 'roleMixin' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:28:7: 'roleMixin'
             {
-            match("role"); 
+            match("roleMixin"); 
 
 
             }
@@ -427,10 +458,10 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mT30() throws RecognitionException {
         try {
             int _type = T30;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:27:5: ( 'mixin' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:27:7: 'mixin'
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:29:5: ( 'mode' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:29:7: 'mode'
             {
-            match("mixin"); 
+            match("mode"); 
 
 
             }
@@ -446,10 +477,10 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mT31() throws RecognitionException {
         try {
             int _type = T31;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:28:5: ( 'roleMixin' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:28:7: 'roleMixin'
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:30:5: ( 'relator' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:30:7: 'relator'
             {
-            match("roleMixin"); 
+            match("relator"); 
 
 
             }
@@ -465,10 +496,10 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mT32() throws RecognitionException {
         try {
             int _type = T32;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:29:5: ( 'mode' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:29:7: 'mode'
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:31:5: ( 'mediates' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:31:7: 'mediates'
             {
-            match("mode"); 
+            match("mediates"); 
 
 
             }
@@ -484,11 +515,10 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mT33() throws RecognitionException {
         try {
             int _type = T33;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:30:5: ( 'relator' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:30:7: 'relator'
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:32:5: ( '[' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:32:7: '['
             {
-            match("relator"); 
-
+            match('['); 
 
             }
 
@@ -503,10 +533,10 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mT34() throws RecognitionException {
         try {
             int _type = T34;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:31:5: ( 'simpleRelator' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:31:7: 'simpleRelator'
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:33:5: ( '..' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:33:7: '..'
             {
-            match("simpleRelator"); 
+            match(".."); 
 
 
             }
@@ -522,11 +552,10 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mT35() throws RecognitionException {
         try {
             int _type = T35;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:32:5: ( 'mediates' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:32:7: 'mediates'
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:34:5: ( ']' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:34:7: ']'
             {
-            match("mediates"); 
-
+            match(']'); 
 
             }
 
@@ -541,10 +570,10 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mT36() throws RecognitionException {
         try {
             int _type = T36;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:33:5: ( 'and' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:33:7: 'and'
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:35:5: ( 'as' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:35:7: 'as'
             {
-            match("and"); 
+            match("as"); 
 
 
             }
@@ -560,10 +589,11 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mT37() throws RecognitionException {
         try {
             int _type = T37;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:34:5: ( '<' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:34:7: '<'
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:36:5: ( '->' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:36:7: '->'
             {
-            match('<'); 
+            match("->"); 
+
 
             }
 
@@ -578,10 +608,11 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mT38() throws RecognitionException {
         try {
             int _type = T38;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:35:5: ( '>' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:35:7: '>'
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:37:5: ( 'characterization' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:37:7: 'characterization'
             {
-            match('>'); 
+            match("characterization"); 
+
 
             }
 
@@ -596,10 +627,10 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mT39() throws RecognitionException {
         try {
             int _type = T39;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:36:5: ( 'characterization' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:36:7: 'characterization'
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:38:5: ( 'mode:' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:38:7: 'mode:'
             {
-            match("characterization"); 
+            match("mode:"); 
 
 
             }
@@ -615,10 +646,10 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mT40() throws RecognitionException {
         try {
             int _type = T40;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:37:5: ( 'mode:' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:37:7: 'mode:'
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:39:5: ( 'characterized:' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:39:7: 'characterized:'
             {
-            match("mode:"); 
+            match("characterized:"); 
 
 
             }
@@ -634,10 +665,10 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mT41() throws RecognitionException {
         try {
             int _type = T41;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:38:5: ( 'characterized:' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:38:7: 'characterized:'
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:40:5: ( 'mediation' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:40:7: 'mediation'
             {
-            match("characterized:"); 
+            match("mediation"); 
 
 
             }
@@ -653,10 +684,10 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mT42() throws RecognitionException {
         try {
             int _type = T42;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:39:5: ( 'mediation' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:39:7: 'mediation'
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:41:5: ( 'relator:' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:41:7: 'relator:'
             {
-            match("mediation"); 
+            match("relator:"); 
 
 
             }
@@ -672,10 +703,10 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mT43() throws RecognitionException {
         try {
             int _type = T43;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:40:5: ( 'relator:' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:40:7: 'relator:'
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:42:5: ( 'mediated:' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:42:7: 'mediated:'
             {
-            match("relator:"); 
+            match("mediated:"); 
 
 
             }
@@ -691,10 +722,10 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mT44() throws RecognitionException {
         try {
             int _type = T44;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:41:5: ( 'mediated:' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:41:7: 'mediated:'
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:43:5: ( 'derivation' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:43:7: 'derivation'
             {
-            match("mediated:"); 
+            match("derivation"); 
 
 
             }
@@ -710,10 +741,10 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mT45() throws RecognitionException {
         try {
             int _type = T45;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:42:5: ( 'derivation' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:42:7: 'derivation'
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:44:5: ( 'material:' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:44:7: 'material:'
             {
-            match("derivation"); 
+            match("material:"); 
 
 
             }
@@ -729,10 +760,10 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mT46() throws RecognitionException {
         try {
             int _type = T46;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:43:5: ( 'material:' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:43:7: 'material:'
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:45:5: ( 'derived' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:45:7: 'derived'
             {
-            match("material:"); 
+            match("derived"); 
 
 
             }
@@ -748,10 +779,10 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mT47() throws RecognitionException {
         try {
             int _type = T47;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:44:5: ( 'derived' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:44:7: 'derived'
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:46:5: ( 'leaf' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:46:7: 'leaf'
             {
-            match("derived"); 
+            match("leaf"); 
 
 
             }
@@ -767,10 +798,10 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mT48() throws RecognitionException {
         try {
             int _type = T48;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:45:5: ( 'leaf' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:45:7: 'leaf'
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:47:5: ( 'materialAssociation' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:47:7: 'materialAssociation'
             {
-            match("leaf"); 
+            match("materialAssociation"); 
 
 
             }
@@ -786,10 +817,10 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mT49() throws RecognitionException {
         try {
             int _type = T49;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:46:5: ( 'materialAssociation' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:46:7: 'materialAssociation'
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:48:5: ( 'formalAssociation' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:48:7: 'formalAssociation'
             {
-            match("materialAssociation"); 
+            match("formalAssociation"); 
 
 
             }
@@ -805,10 +836,10 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mT50() throws RecognitionException {
         try {
             int _type = T50;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:47:5: ( 'formalAssociation' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:47:7: 'formalAssociation'
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:49:5: ( 'datatype' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:49:7: 'datatype'
             {
-            match("formalAssociation"); 
+            match("datatype"); 
 
 
             }
@@ -824,10 +855,10 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mT51() throws RecognitionException {
         try {
             int _type = T51;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:48:5: ( 'datatype' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:48:7: 'datatype'
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:50:5: ( 'type' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:50:7: 'type'
             {
-            match("datatype"); 
+            match("type"); 
 
 
             }
@@ -843,10 +874,10 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mT52() throws RecognitionException {
         try {
             int _type = T52;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:49:5: ( 'type' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:49:7: 'type'
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:51:5: ( 'substitutable' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:51:7: 'substitutable'
             {
-            match("type"); 
+            match("substitutable"); 
 
 
             }
@@ -862,11 +893,10 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mT53() throws RecognitionException {
         try {
             int _type = T53;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:50:5: ( 'substitutable' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:50:7: 'substitutable'
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:52:5: ( '(' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:52:7: '('
             {
-            match("substitutable"); 
-
+            match('('); 
 
             }
 
@@ -881,10 +911,10 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mT54() throws RecognitionException {
         try {
             int _type = T54;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:51:5: ( '(' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:51:7: '('
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:53:5: ( ')' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:53:7: ')'
             {
-            match('('); 
+            match(')'); 
 
             }
 
@@ -899,10 +929,11 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mT55() throws RecognitionException {
         try {
             int _type = T55;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:52:5: ( ')' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:52:7: ')'
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:54:5: ( 'complete' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:54:7: 'complete'
             {
-            match(')'); 
+            match("complete"); 
+
 
             }
 
@@ -917,10 +948,10 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mT56() throws RecognitionException {
         try {
             int _type = T56;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:53:5: ( 'complete' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:53:7: 'complete'
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:55:5: ( 'disjoint' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:55:7: 'disjoint'
             {
-            match("complete"); 
+            match("disjoint"); 
 
 
             }
@@ -936,10 +967,10 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mT57() throws RecognitionException {
         try {
             int _type = T57;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:54:5: ( 'disjoint' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:54:7: 'disjoint'
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:56:5: ( 'generalizationSet' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:56:7: 'generalizationSet'
             {
-            match("disjoint"); 
+            match("generalizationSet"); 
 
 
             }
@@ -955,10 +986,10 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mT58() throws RecognitionException {
         try {
             int _type = T58;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:55:5: ( 'generalizationSet' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:55:7: 'generalizationSet'
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:57:5: ( 'op' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:57:7: 'op'
             {
-            match("generalizationSet"); 
+            match("op"); 
 
 
             }
@@ -974,11 +1005,10 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mT59() throws RecognitionException {
         try {
             int _type = T59;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:56:5: ( 'op' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:56:7: 'op'
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:58:5: ( '+' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:58:7: '+'
             {
-            match("op"); 
-
+            match('+'); 
 
             }
 
@@ -993,10 +1023,10 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mT60() throws RecognitionException {
         try {
             int _type = T60;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:57:5: ( '[' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:57:7: '['
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:59:5: ( '-' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:59:7: '-'
             {
-            match('['); 
+            match('-'); 
 
             }
 
@@ -1011,10 +1041,10 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mT61() throws RecognitionException {
         try {
             int _type = T61;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:58:5: ( ']' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:58:7: ']'
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:60:5: ( '*' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:60:7: '*'
             {
-            match(']'); 
+            match('*'); 
 
             }
 
@@ -1029,10 +1059,10 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mT62() throws RecognitionException {
         try {
             int _type = T62;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:59:5: ( '+' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:59:7: '+'
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:61:5: ( '/' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:61:7: '/'
             {
-            match('+'); 
+            match('/'); 
 
             }
 
@@ -1047,10 +1077,11 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mT63() throws RecognitionException {
         try {
             int _type = T63;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:60:5: ( '-' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:60:7: '-'
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:62:5: ( 'static' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:62:7: 'static'
             {
-            match('-'); 
+            match("static"); 
+
 
             }
 
@@ -1065,10 +1096,11 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mT64() throws RecognitionException {
         try {
             int _type = T64;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:61:5: ( '*' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:61:7: '*'
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:63:5: ( 'ordered' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:63:7: 'ordered'
             {
-            match('*'); 
+            match("ordered"); 
+
 
             }
 
@@ -1083,10 +1115,11 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mT65() throws RecognitionException {
         try {
             int _type = T65;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:62:5: ( '/' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:62:7: '/'
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:64:5: ( 'unique' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:64:7: 'unique'
             {
-            match('/'); 
+            match("unique"); 
+
 
             }
 
@@ -1101,10 +1134,10 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mT66() throws RecognitionException {
         try {
             int _type = T66;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:63:5: ( 'OpaqueExpression' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:63:7: 'OpaqueExpression'
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:65:5: ( 'read-only' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:65:7: 'read-only'
             {
-            match("OpaqueExpression"); 
+            match("read-only"); 
 
 
             }
@@ -1120,10 +1153,10 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mT67() throws RecognitionException {
         try {
             int _type = T67;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:64:5: ( 'begin' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:64:7: 'begin'
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:66:5: ( 'derived-union' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:66:7: 'derived-union'
             {
-            match("begin"); 
+            match("derived-union"); 
 
 
             }
@@ -1139,10 +1172,11 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mT68() throws RecognitionException {
         try {
             int _type = T68;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:65:5: ( '#' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:65:7: '#'
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:67:5: ( 'defaults to' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:67:7: 'defaults to'
             {
-            match('#'); 
+            match("defaults to"); 
+
 
             }
 
@@ -1157,10 +1191,10 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mT69() throws RecognitionException {
         try {
             int _type = T69;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:66:5: ( 'end' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:66:7: 'end'
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:68:5: ( 'aggregation' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:68:7: 'aggregation'
             {
-            match("end"); 
+            match("aggregation"); 
 
 
             }
@@ -1176,10 +1210,10 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mT70() throws RecognitionException {
         try {
             int _type = T70;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:67:5: ( 'static' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:67:7: 'static'
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:69:5: ( 'subset of' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:69:7: 'subset of'
             {
-            match("static"); 
+            match("subset of"); 
 
 
             }
@@ -1195,10 +1229,10 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mT71() throws RecognitionException {
         try {
             int _type = T71;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:68:5: ( 'ordered' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:68:7: 'ordered'
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:70:5: ( 'redefines' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:70:7: 'redefines'
             {
-            match("ordered"); 
+            match("redefines"); 
 
 
             }
@@ -1214,10 +1248,10 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mT72() throws RecognitionException {
         try {
             int _type = T72;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:69:5: ( 'unique' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:69:7: 'unique'
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:71:5: ( 'property' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:71:7: 'property'
             {
-            match("unique"); 
+            match("property"); 
 
 
             }
@@ -1233,10 +1267,10 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mT73() throws RecognitionException {
         try {
             int _type = T73;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:70:5: ( 'read-only' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:70:7: 'read-only'
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:72:5: ( 'enum' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:72:7: 'enum'
             {
-            match("read-only"); 
+            match("enum"); 
 
 
             }
@@ -1252,11 +1286,10 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mT74() throws RecognitionException {
         try {
             int _type = T74;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:71:5: ( 'derived-union' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:71:7: 'derived-union'
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:73:5: ( '=' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:73:7: '='
             {
-            match("derived-union"); 
-
+            match('='); 
 
             }
 
@@ -1271,10 +1304,10 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mT75() throws RecognitionException {
         try {
             int _type = T75;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:72:5: ( 'defaults to' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:72:7: 'defaults to'
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:74:5: ( '=>' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:74:7: '=>'
             {
-            match("defaults to"); 
+            match("=>"); 
 
 
             }
@@ -1290,10 +1323,10 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mT76() throws RecognitionException {
         try {
             int _type = T76;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:73:5: ( 'aggregation' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:73:7: 'aggregation'
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:75:5: ( 'true' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:75:7: 'true'
             {
-            match("aggregation"); 
+            match("true"); 
 
 
             }
@@ -1309,10 +1342,10 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mT77() throws RecognitionException {
         try {
             int _type = T77;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:74:5: ( 'subset of' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:74:7: 'subset of'
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:76:5: ( 'false' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:76:7: 'false'
             {
-            match("subset of"); 
+            match("false"); 
 
 
             }
@@ -1328,10 +1361,10 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mT78() throws RecognitionException {
         try {
             int _type = T78;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:75:5: ( 'redefines' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:75:7: 'redefines'
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:77:5: ( 'NULL' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:77:7: 'NULL'
             {
-            match("redefines"); 
+            match("NULL"); 
 
 
             }
@@ -1347,10 +1380,11 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mT79() throws RecognitionException {
         try {
             int _type = T79;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:76:5: ( '=' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:76:7: '='
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:78:5: ( 'none' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:78:7: 'none'
             {
-            match('='); 
+            match("none"); 
+
 
             }
 
@@ -1365,10 +1399,10 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mT80() throws RecognitionException {
         try {
             int _type = T80;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:77:5: ( 'instance' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:77:7: 'instance'
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:79:5: ( 'shared' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:79:7: 'shared'
             {
-            match("instance"); 
+            match("shared"); 
 
 
             }
@@ -1384,141 +1418,8 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mT81() throws RecognitionException {
         try {
             int _type = T81;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:78:5: ( 'specification' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:78:7: 'specification'
-            {
-            match("specification"); 
-
-
-            }
-
-            this.type = _type;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end T81
-
-    // $ANTLR start T82
-    public final void mT82() throws RecognitionException {
-        try {
-            int _type = T82;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:79:5: ( '=>' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:79:7: '=>'
-            {
-            match("=>"); 
-
-
-            }
-
-            this.type = _type;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end T82
-
-    // $ANTLR start T83
-    public final void mT83() throws RecognitionException {
-        try {
-            int _type = T83;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:80:5: ( 'true' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:80:7: 'true'
-            {
-            match("true"); 
-
-
-            }
-
-            this.type = _type;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end T83
-
-    // $ANTLR start T84
-    public final void mT84() throws RecognitionException {
-        try {
-            int _type = T84;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:81:5: ( 'false' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:81:7: 'false'
-            {
-            match("false"); 
-
-
-            }
-
-            this.type = _type;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end T84
-
-    // $ANTLR start T85
-    public final void mT85() throws RecognitionException {
-        try {
-            int _type = T85;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:82:5: ( 'NULL' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:82:7: 'NULL'
-            {
-            match("NULL"); 
-
-
-            }
-
-            this.type = _type;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end T85
-
-    // $ANTLR start T86
-    public final void mT86() throws RecognitionException {
-        try {
-            int _type = T86;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:83:5: ( 'none' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:83:7: 'none'
-            {
-            match("none"); 
-
-
-            }
-
-            this.type = _type;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end T86
-
-    // $ANTLR start T87
-    public final void mT87() throws RecognitionException {
-        try {
-            int _type = T87;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:84:5: ( 'shared' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:84:7: 'shared'
-            {
-            match("shared"); 
-
-
-            }
-
-            this.type = _type;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end T87
-
-    // $ANTLR start T88
-    public final void mT88() throws RecognitionException {
-        try {
-            int _type = T88;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:85:5: ( 'composite' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:85:7: 'composite'
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:80:5: ( 'composite' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:80:7: 'composite'
             {
             match("composite"); 
 
@@ -1530,79 +1431,50 @@ public class InternalOntoDSLLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end T88
+    // $ANTLR end T81
 
-    // $ANTLR start RULE_RWS
-    public final void mRULE_RWS() throws RecognitionException {
+    // $ANTLR start RULE_ID
+    public final void mRULE_ID() throws RecognitionException {
         try {
-            int _type = RULE_RWS;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7566:10: ( ( ' ' | '\\t' )+ )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7566:12: ( ' ' | '\\t' )+
+            int _type = RULE_ID;
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7150:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7150:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7566:12: ( ' ' | '\\t' )+
-            int cnt1=0;
-            loop1:
-            do {
-                int alt1=2;
-                int LA1_0 = input.LA(1);
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7150:11: ( '^' )?
+            int alt1=2;
+            int LA1_0 = input.LA(1);
 
-                if ( (LA1_0=='\t'||LA1_0==' ') ) {
-                    alt1=1;
-                }
+            if ( (LA1_0=='^') ) {
+                alt1=1;
+            }
+            switch (alt1) {
+                case 1 :
+                    // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7150:11: '^'
+                    {
+                    match('^'); 
 
-
-                switch (alt1) {
-            	case 1 :
-            	    // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:
-            	    {
-            	    if ( input.LA(1)=='\t'||input.LA(1)==' ' ) {
-            	        input.consume();
-
-            	    }
-            	    else {
-            	        MismatchedSetException mse =
-            	            new MismatchedSetException(null,input);
-            	        recover(mse);    throw mse;
-            	    }
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    if ( cnt1 >= 1 ) break loop1;
-                        EarlyExitException eee =
-                            new EarlyExitException(1, input);
-                        throw eee;
-                }
-                cnt1++;
-            } while (true);
-
+                    }
+                    break;
 
             }
 
-            this.type = _type;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end RULE_RWS
+            if ( (input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z') ) {
+                input.consume();
 
-    // $ANTLR start RULE_NL
-    public final void mRULE_NL() throws RecognitionException {
-        try {
-            int _type = RULE_NL;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7568:9: ( ( '\\r' | '\\n' )+ )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7568:11: ( '\\r' | '\\n' )+
-            {
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7568:11: ( '\\r' | '\\n' )+
-            int cnt2=0;
+            }
+            else {
+                MismatchedSetException mse =
+                    new MismatchedSetException(null,input);
+                recover(mse);    throw mse;
+            }
+
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7150:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
                 int LA2_0 = input.LA(1);
 
-                if ( (LA2_0=='\n'||LA2_0=='\r') ) {
+                if ( ((LA2_0>='0' && LA2_0<='9')||(LA2_0>='A' && LA2_0<='Z')||LA2_0=='_'||(LA2_0>='a' && LA2_0<='z')) ) {
                     alt2=1;
                 }
 
@@ -1611,7 +1483,7 @@ public class InternalOntoDSLLexer extends Lexer {
             	case 1 :
             	    // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:
             	    {
-            	    if ( input.LA(1)=='\n'||input.LA(1)=='\r' ) {
+            	    if ( (input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z') ) {
             	        input.consume();
 
             	    }
@@ -1626,12 +1498,8 @@ public class InternalOntoDSLLexer extends Lexer {
             	    break;
 
             	default :
-            	    if ( cnt2 >= 1 ) break loop2;
-                        EarlyExitException eee =
-                            new EarlyExitException(2, input);
-                        throw eee;
+            	    break loop2;
                 }
-                cnt2++;
             } while (true);
 
 
@@ -1642,42 +1510,32 @@ public class InternalOntoDSLLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end RULE_NL
+    // $ANTLR end RULE_ID
 
-    // $ANTLR start RULE_WS
-    public final void mRULE_WS() throws RecognitionException {
+    // $ANTLR start RULE_INT
+    public final void mRULE_INT() throws RecognitionException {
         try {
-            int _type = RULE_WS;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7570:9: ( ( RULE_RWS | RULE_NL )+ )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7570:11: ( RULE_RWS | RULE_NL )+
+            int _type = RULE_INT;
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7152:10: ( ( '0' .. '9' )+ )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7152:12: ( '0' .. '9' )+
             {
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7570:11: ( RULE_RWS | RULE_NL )+
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7152:12: ( '0' .. '9' )+
             int cnt3=0;
             loop3:
             do {
-                int alt3=3;
+                int alt3=2;
                 int LA3_0 = input.LA(1);
 
-                if ( (LA3_0=='\t'||LA3_0==' ') ) {
+                if ( ((LA3_0>='0' && LA3_0<='9')) ) {
                     alt3=1;
-                }
-                else if ( (LA3_0=='\n'||LA3_0=='\r') ) {
-                    alt3=2;
                 }
 
 
                 switch (alt3) {
             	case 1 :
-            	    // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7570:12: RULE_RWS
+            	    // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7152:13: '0' .. '9'
             	    {
-            	    mRULE_RWS(); 
-
-            	    }
-            	    break;
-            	case 2 :
-            	    // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7570:21: RULE_NL
-            	    {
-            	    mRULE_NL(); 
+            	    matchRange('0','9'); 
 
             	    }
             	    break;
@@ -1699,179 +1557,53 @@ public class InternalOntoDSLLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end RULE_WS
-
-    // $ANTLR start RULE_ID
-    public final void mRULE_ID() throws RecognitionException {
-        try {
-            int _type = RULE_ID;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7572:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7572:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
-            {
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7572:11: ( '^' )?
-            int alt4=2;
-            int LA4_0 = input.LA(1);
-
-            if ( (LA4_0=='^') ) {
-                alt4=1;
-            }
-            switch (alt4) {
-                case 1 :
-                    // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7572:11: '^'
-                    {
-                    match('^'); 
-
-                    }
-                    break;
-
-            }
-
-            if ( (input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z') ) {
-                input.consume();
-
-            }
-            else {
-                MismatchedSetException mse =
-                    new MismatchedSetException(null,input);
-                recover(mse);    throw mse;
-            }
-
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7572:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
-            loop5:
-            do {
-                int alt5=2;
-                int LA5_0 = input.LA(1);
-
-                if ( ((LA5_0>='0' && LA5_0<='9')||(LA5_0>='A' && LA5_0<='Z')||LA5_0=='_'||(LA5_0>='a' && LA5_0<='z')) ) {
-                    alt5=1;
-                }
-
-
-                switch (alt5) {
-            	case 1 :
-            	    // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:
-            	    {
-            	    if ( (input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z') ) {
-            	        input.consume();
-
-            	    }
-            	    else {
-            	        MismatchedSetException mse =
-            	            new MismatchedSetException(null,input);
-            	        recover(mse);    throw mse;
-            	    }
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop5;
-                }
-            } while (true);
-
-
-            }
-
-            this.type = _type;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end RULE_ID
-
-    // $ANTLR start RULE_INT
-    public final void mRULE_INT() throws RecognitionException {
-        try {
-            int _type = RULE_INT;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7574:10: ( ( '0' .. '9' )+ )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7574:12: ( '0' .. '9' )+
-            {
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7574:12: ( '0' .. '9' )+
-            int cnt6=0;
-            loop6:
-            do {
-                int alt6=2;
-                int LA6_0 = input.LA(1);
-
-                if ( ((LA6_0>='0' && LA6_0<='9')) ) {
-                    alt6=1;
-                }
-
-
-                switch (alt6) {
-            	case 1 :
-            	    // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7574:13: '0' .. '9'
-            	    {
-            	    matchRange('0','9'); 
-
-            	    }
-            	    break;
-
-            	default :
-            	    if ( cnt6 >= 1 ) break loop6;
-                        EarlyExitException eee =
-                            new EarlyExitException(6, input);
-                        throw eee;
-                }
-                cnt6++;
-            } while (true);
-
-
-            }
-
-            this.type = _type;
-        }
-        finally {
-        }
-    }
     // $ANTLR end RULE_INT
 
     // $ANTLR start RULE_STRING
     public final void mRULE_STRING() throws RecognitionException {
         try {
             int _type = RULE_STRING;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7576:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7576:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7154:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7154:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7576:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
-            int alt9=2;
-            int LA9_0 = input.LA(1);
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7154:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            int alt6=2;
+            int LA6_0 = input.LA(1);
 
-            if ( (LA9_0=='\"') ) {
-                alt9=1;
+            if ( (LA6_0=='\"') ) {
+                alt6=1;
             }
-            else if ( (LA9_0=='\'') ) {
-                alt9=2;
+            else if ( (LA6_0=='\'') ) {
+                alt6=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("7576:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )", 9, 0, input);
+                    new NoViableAltException("7154:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )", 6, 0, input);
 
                 throw nvae;
             }
-            switch (alt9) {
+            switch (alt6) {
                 case 1 :
-                    // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7576:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7154:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7576:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
-                    loop7:
+                    // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7154:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
+                    loop4:
                     do {
-                        int alt7=3;
-                        int LA7_0 = input.LA(1);
+                        int alt4=3;
+                        int LA4_0 = input.LA(1);
 
-                        if ( (LA7_0=='\\') ) {
-                            alt7=1;
+                        if ( (LA4_0=='\\') ) {
+                            alt4=1;
                         }
-                        else if ( ((LA7_0>='\u0000' && LA7_0<='!')||(LA7_0>='#' && LA7_0<='[')||(LA7_0>=']' && LA7_0<='\uFFFE')) ) {
-                            alt7=2;
+                        else if ( ((LA4_0>='\u0000' && LA4_0<='!')||(LA4_0>='#' && LA4_0<='[')||(LA4_0>=']' && LA4_0<='\uFFFE')) ) {
+                            alt4=2;
                         }
 
 
-                        switch (alt7) {
+                        switch (alt4) {
                     	case 1 :
-                    	    // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7576:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' )
+                    	    // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7154:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||input.LA(1)=='t' ) {
@@ -1888,7 +1620,7 @@ public class InternalOntoDSLLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7576:62: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7154:62: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFE') ) {
                     	        input.consume();
@@ -1905,7 +1637,7 @@ public class InternalOntoDSLLexer extends Lexer {
                     	    break;
 
                     	default :
-                    	    break loop7;
+                    	    break loop4;
                         }
                     } while (true);
 
@@ -1914,26 +1646,26 @@ public class InternalOntoDSLLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7576:82: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7154:82: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7576:87: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
-                    loop8:
+                    // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7154:87: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    loop5:
                     do {
-                        int alt8=3;
-                        int LA8_0 = input.LA(1);
+                        int alt5=3;
+                        int LA5_0 = input.LA(1);
 
-                        if ( (LA8_0=='\\') ) {
-                            alt8=1;
+                        if ( (LA5_0=='\\') ) {
+                            alt5=1;
                         }
-                        else if ( ((LA8_0>='\u0000' && LA8_0<='&')||(LA8_0>='(' && LA8_0<='[')||(LA8_0>=']' && LA8_0<='\uFFFE')) ) {
-                            alt8=2;
+                        else if ( ((LA5_0>='\u0000' && LA5_0<='&')||(LA5_0>='(' && LA5_0<='[')||(LA5_0>=']' && LA5_0<='\uFFFE')) ) {
+                            alt5=2;
                         }
 
 
-                        switch (alt8) {
+                        switch (alt5) {
                     	case 1 :
-                    	    // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7576:88: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' )
+                    	    // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7154:88: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||input.LA(1)=='t' ) {
@@ -1950,7 +1682,7 @@ public class InternalOntoDSLLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7576:129: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7154:129: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFE') ) {
                     	        input.consume();
@@ -1967,7 +1699,7 @@ public class InternalOntoDSLLexer extends Lexer {
                     	    break;
 
                     	default :
-                    	    break loop8;
+                    	    break loop5;
                         }
                     } while (true);
 
@@ -1992,37 +1724,37 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mRULE_ML_COMMENT() throws RecognitionException {
         try {
             int _type = RULE_ML_COMMENT;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7578:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7578:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7156:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7156:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7578:24: ( options {greedy=false; } : . )*
-            loop10:
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7156:24: ( options {greedy=false; } : . )*
+            loop7:
             do {
-                int alt10=2;
-                int LA10_0 = input.LA(1);
+                int alt7=2;
+                int LA7_0 = input.LA(1);
 
-                if ( (LA10_0=='*') ) {
-                    int LA10_1 = input.LA(2);
+                if ( (LA7_0=='*') ) {
+                    int LA7_1 = input.LA(2);
 
-                    if ( (LA10_1=='/') ) {
-                        alt10=2;
+                    if ( (LA7_1=='/') ) {
+                        alt7=2;
                     }
-                    else if ( ((LA10_1>='\u0000' && LA10_1<='.')||(LA10_1>='0' && LA10_1<='\uFFFE')) ) {
-                        alt10=1;
+                    else if ( ((LA7_1>='\u0000' && LA7_1<='.')||(LA7_1>='0' && LA7_1<='\uFFFE')) ) {
+                        alt7=1;
                     }
 
 
                 }
-                else if ( ((LA10_0>='\u0000' && LA10_0<=')')||(LA10_0>='+' && LA10_0<='\uFFFE')) ) {
-                    alt10=1;
+                else if ( ((LA7_0>='\u0000' && LA7_0<=')')||(LA7_0>='+' && LA7_0<='\uFFFE')) ) {
+                    alt7=1;
                 }
 
 
-                switch (alt10) {
+                switch (alt7) {
             	case 1 :
-            	    // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7578:52: .
+            	    // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7156:52: .
             	    {
             	    matchAny(); 
 
@@ -2030,7 +1762,7 @@ public class InternalOntoDSLLexer extends Lexer {
             	    break;
 
             	default :
-            	    break loop10;
+            	    break loop7;
                 }
             } while (true);
 
@@ -2050,25 +1782,25 @@ public class InternalOntoDSLLexer extends Lexer {
     public final void mRULE_SL_COMMENT() throws RecognitionException {
         try {
             int _type = RULE_SL_COMMENT;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7580:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7580:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7158:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7158:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7580:24: (~ ( ( '\\n' | '\\r' ) ) )*
-            loop11:
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7158:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            loop8:
             do {
-                int alt11=2;
-                int LA11_0 = input.LA(1);
+                int alt8=2;
+                int LA8_0 = input.LA(1);
 
-                if ( ((LA11_0>='\u0000' && LA11_0<='\t')||(LA11_0>='\u000B' && LA11_0<='\f')||(LA11_0>='\u000E' && LA11_0<='\uFFFE')) ) {
-                    alt11=1;
+                if ( ((LA8_0>='\u0000' && LA8_0<='\t')||(LA8_0>='\u000B' && LA8_0<='\f')||(LA8_0>='\u000E' && LA8_0<='\uFFFE')) ) {
+                    alt8=1;
                 }
 
 
-                switch (alt11) {
+                switch (alt8) {
             	case 1 :
-            	    // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7580:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7158:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFE') ) {
             	        input.consume();
@@ -2085,31 +1817,31 @@ public class InternalOntoDSLLexer extends Lexer {
             	    break;
 
             	default :
-            	    break loop11;
+            	    break loop8;
                 }
             } while (true);
 
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7580:40: ( ( '\\r' )? '\\n' )?
-            int alt13=2;
-            int LA13_0 = input.LA(1);
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7158:40: ( ( '\\r' )? '\\n' )?
+            int alt10=2;
+            int LA10_0 = input.LA(1);
 
-            if ( (LA13_0=='\n'||LA13_0=='\r') ) {
-                alt13=1;
+            if ( (LA10_0=='\n'||LA10_0=='\r') ) {
+                alt10=1;
             }
-            switch (alt13) {
+            switch (alt10) {
                 case 1 :
-                    // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7580:41: ( '\\r' )? '\\n'
+                    // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7158:41: ( '\\r' )? '\\n'
                     {
-                    // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7580:41: ( '\\r' )?
-                    int alt12=2;
-                    int LA12_0 = input.LA(1);
+                    // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7158:41: ( '\\r' )?
+                    int alt9=2;
+                    int LA9_0 = input.LA(1);
 
-                    if ( (LA12_0=='\r') ) {
-                        alt12=1;
+                    if ( (LA9_0=='\r') ) {
+                        alt9=1;
                     }
-                    switch (alt12) {
+                    switch (alt9) {
                         case 1 :
-                            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7580:41: '\\r'
+                            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7158:41: '\\r'
                             {
                             match('\r'); 
 
@@ -2135,12 +1867,68 @@ public class InternalOntoDSLLexer extends Lexer {
     }
     // $ANTLR end RULE_SL_COMMENT
 
+    // $ANTLR start RULE_WS
+    public final void mRULE_WS() throws RecognitionException {
+        try {
+            int _type = RULE_WS;
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7160:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7160:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            {
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7160:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            int cnt11=0;
+            loop11:
+            do {
+                int alt11=2;
+                int LA11_0 = input.LA(1);
+
+                if ( ((LA11_0>='\t' && LA11_0<='\n')||LA11_0=='\r'||LA11_0==' ') ) {
+                    alt11=1;
+                }
+
+
+                switch (alt11) {
+            	case 1 :
+            	    // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:
+            	    {
+            	    if ( (input.LA(1)>='\t' && input.LA(1)<='\n')||input.LA(1)=='\r'||input.LA(1)==' ' ) {
+            	        input.consume();
+
+            	    }
+            	    else {
+            	        MismatchedSetException mse =
+            	            new MismatchedSetException(null,input);
+            	        recover(mse);    throw mse;
+            	    }
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    if ( cnt11 >= 1 ) break loop11;
+                        EarlyExitException eee =
+                            new EarlyExitException(11, input);
+                        throw eee;
+                }
+                cnt11++;
+            } while (true);
+
+
+            }
+
+            this.type = _type;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end RULE_WS
+
     // $ANTLR start RULE_ANY_OTHER
     public final void mRULE_ANY_OTHER() throws RecognitionException {
         try {
             int _type = RULE_ANY_OTHER;
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7582:16: ( . )
-            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7582:18: .
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7162:16: ( . )
+            // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:7162:18: .
             {
             matchAny(); 
 
@@ -2154,600 +1942,678 @@ public class InternalOntoDSLLexer extends Lexer {
     // $ANTLR end RULE_ANY_OTHER
 
     public void mTokens() throws RecognitionException {
-        // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:8: ( T13 | T14 | T15 | T16 | T17 | T18 | T19 | T20 | T21 | T22 | T23 | T24 | T25 | T26 | T27 | T28 | T29 | T30 | T31 | T32 | T33 | T34 | T35 | T36 | T37 | T38 | T39 | T40 | T41 | T42 | T43 | T44 | T45 | T46 | T47 | T48 | T49 | T50 | T51 | T52 | T53 | T54 | T55 | T56 | T57 | T58 | T59 | T60 | T61 | T62 | T63 | T64 | T65 | T66 | T67 | T68 | T69 | T70 | T71 | T72 | T73 | T74 | T75 | T76 | T77 | T78 | T79 | T80 | T81 | T82 | T83 | T84 | T85 | T86 | T87 | T88 | RULE_RWS | RULE_NL | RULE_WS | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_ANY_OTHER )
-        int alt14=85;
-        alt14 = dfa14.predict(input);
-        switch (alt14) {
+        // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:8: ( T11 | T12 | T13 | T14 | T15 | T16 | T17 | T18 | T19 | T20 | T21 | T22 | T23 | T24 | T25 | T26 | T27 | T28 | T29 | T30 | T31 | T32 | T33 | T34 | T35 | T36 | T37 | T38 | T39 | T40 | T41 | T42 | T43 | T44 | T45 | T46 | T47 | T48 | T49 | T50 | T51 | T52 | T53 | T54 | T55 | T56 | T57 | T58 | T59 | T60 | T61 | T62 | T63 | T64 | T65 | T66 | T67 | T68 | T69 | T70 | T71 | T72 | T73 | T74 | T75 | T76 | T77 | T78 | T79 | T80 | T81 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
+        int alt12=78;
+        int LA12_0 = input.LA(1);
+
+        if ( (LA12_0=='m') ) {
+            alt12 = mTokensHelper001();
+        }
+        else if ( (LA12_0==';') ) {
+            alt12 = mTokensHelper002();
+        }
+        else if ( (LA12_0=='i') ) {
+            alt12 = mTokensHelper003();
+        }
+        else if ( (LA12_0=='a') ) {
+            alt12 = mTokensHelper004();
+        }
+        else if ( (LA12_0=='k') ) {
+            alt12 = mTokensHelper005();
+        }
+        else if ( (LA12_0==':') ) {
+            alt12 = mTokensHelper006();
+        }
+        else if ( (LA12_0==',') ) {
+            alt12 = mTokensHelper007();
+        }
+        else if ( (LA12_0=='{') ) {
+            alt12 = mTokensHelper008();
+        }
+        else if ( (LA12_0=='}') ) {
+            alt12 = mTokensHelper009();
+        }
+        else if ( (LA12_0=='q') ) {
+            alt12 = mTokensHelper010();
+        }
+        else if ( (LA12_0=='e') ) {
+            alt12 = mTokensHelper011();
+        }
+        else if ( (LA12_0=='c') ) {
+            alt12 = mTokensHelper012();
+        }
+        else if ( (LA12_0=='s') ) {
+            alt12 = mTokensHelper013();
+        }
+        else if ( (LA12_0=='p') ) {
+            alt12 = mTokensHelper014();
+        }
+        else if ( (LA12_0=='r') ) {
+            alt12 = mTokensHelper015();
+        }
+        else if ( (LA12_0=='[') ) {
+            alt12 = mTokensHelper016();
+        }
+        else if ( (LA12_0=='.') ) {
+            alt12 = mTokensHelper017();
+        }
+        else if ( (LA12_0==']') ) {
+            alt12 = mTokensHelper018();
+        }
+        else if ( (LA12_0=='-') ) {
+            alt12 = mTokensHelper019();
+        }
+        else if ( (LA12_0=='d') ) {
+            alt12 = mTokensHelper020();
+        }
+        else if ( (LA12_0=='l') ) {
+            alt12 = mTokensHelper021();
+        }
+        else if ( (LA12_0=='f') ) {
+            alt12 = mTokensHelper022();
+        }
+        else if ( (LA12_0=='t') ) {
+            alt12 = mTokensHelper023();
+        }
+        else if ( (LA12_0=='(') ) {
+            alt12 = mTokensHelper024();
+        }
+        else if ( (LA12_0==')') ) {
+            alt12 = mTokensHelper025();
+        }
+        else if ( (LA12_0=='g') ) {
+            alt12 = mTokensHelper026();
+        }
+        else if ( (LA12_0=='o') ) {
+            alt12 = mTokensHelper027();
+        }
+        else if ( (LA12_0=='+') ) {
+            alt12 = mTokensHelper028();
+        }
+        else if ( (LA12_0=='*') ) {
+            alt12 = mTokensHelper029();
+        }
+        else if ( (LA12_0=='/') ) {
+            alt12 = mTokensHelper030();
+        }
+        else if ( (LA12_0=='u') ) {
+            alt12 = mTokensHelper031();
+        }
+        else if ( (LA12_0=='=') ) {
+            alt12 = mTokensHelper032();
+        }
+        else if ( (LA12_0=='N') ) {
+            alt12 = mTokensHelper033();
+        }
+        else if ( (LA12_0=='n') ) {
+            alt12 = mTokensHelper034();
+        }
+        else if ( (LA12_0=='^') ) {
+            alt12 = mTokensHelper035();
+        }
+        else if ( ((LA12_0>='A' && LA12_0<='M')||(LA12_0>='O' && LA12_0<='Z')||LA12_0=='_'||LA12_0=='b'||LA12_0=='h'||LA12_0=='j'||(LA12_0>='v' && LA12_0<='z')) ) {
+            alt12 = mTokensHelper036();
+        }
+        else if ( ((LA12_0>='0' && LA12_0<='9')) ) {
+            alt12 = mTokensHelper037();
+        }
+        else if ( (LA12_0=='\"') ) {
+            alt12 = mTokensHelper038();
+        }
+        else if ( (LA12_0=='\'') ) {
+            alt12 = mTokensHelper039();
+        }
+        else if ( ((LA12_0>='\t' && LA12_0<='\n')||LA12_0=='\r'||LA12_0==' ') ) {
+            alt12 = mTokensHelper040();
+        }
+        else if ( ((LA12_0>='\u0000' && LA12_0<='\b')||(LA12_0>='\u000B' && LA12_0<='\f')||(LA12_0>='\u000E' && LA12_0<='\u001F')||LA12_0=='!'||(LA12_0>='#' && LA12_0<='&')||LA12_0=='<'||(LA12_0>='>' && LA12_0<='@')||LA12_0=='\\'||LA12_0=='`'||LA12_0=='|'||(LA12_0>='~' && LA12_0<='\uFFFE')) ) {
+            alt12 = mTokensHelper041();
+        }
+        else {
+            alt12 = mTokensHelper042();
+        }
+        switch (alt12) {
             case 1 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:10: T13
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:10: T11
+                {
+                mT11(); 
+
+                }
+                break;
+            case 2 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:14: T12
+                {
+                mT12(); 
+
+                }
+                break;
+            case 3 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:18: T13
                 {
                 mT13(); 
 
                 }
                 break;
-            case 2 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:14: T14
+            case 4 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:22: T14
                 {
                 mT14(); 
 
                 }
                 break;
-            case 3 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:18: T15
+            case 5 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:26: T15
                 {
                 mT15(); 
 
                 }
                 break;
-            case 4 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:22: T16
+            case 6 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:30: T16
                 {
                 mT16(); 
 
                 }
                 break;
-            case 5 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:26: T17
+            case 7 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:34: T17
                 {
                 mT17(); 
 
                 }
                 break;
-            case 6 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:30: T18
+            case 8 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:38: T18
                 {
                 mT18(); 
 
                 }
                 break;
-            case 7 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:34: T19
+            case 9 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:42: T19
                 {
                 mT19(); 
 
                 }
                 break;
-            case 8 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:38: T20
+            case 10 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:46: T20
                 {
                 mT20(); 
 
                 }
                 break;
-            case 9 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:42: T21
+            case 11 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:50: T21
                 {
                 mT21(); 
 
                 }
                 break;
-            case 10 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:46: T22
+            case 12 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:54: T22
                 {
                 mT22(); 
 
                 }
                 break;
-            case 11 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:50: T23
+            case 13 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:58: T23
                 {
                 mT23(); 
 
                 }
                 break;
-            case 12 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:54: T24
+            case 14 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:62: T24
                 {
                 mT24(); 
 
                 }
                 break;
-            case 13 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:58: T25
+            case 15 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:66: T25
                 {
                 mT25(); 
 
                 }
                 break;
-            case 14 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:62: T26
+            case 16 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:70: T26
                 {
                 mT26(); 
 
                 }
                 break;
-            case 15 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:66: T27
+            case 17 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:74: T27
                 {
                 mT27(); 
 
                 }
                 break;
-            case 16 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:70: T28
+            case 18 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:78: T28
                 {
                 mT28(); 
 
                 }
                 break;
-            case 17 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:74: T29
+            case 19 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:82: T29
                 {
                 mT29(); 
 
                 }
                 break;
-            case 18 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:78: T30
+            case 20 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:86: T30
                 {
                 mT30(); 
 
                 }
                 break;
-            case 19 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:82: T31
+            case 21 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:90: T31
                 {
                 mT31(); 
 
                 }
                 break;
-            case 20 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:86: T32
+            case 22 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:94: T32
                 {
                 mT32(); 
 
                 }
                 break;
-            case 21 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:90: T33
+            case 23 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:98: T33
                 {
                 mT33(); 
 
                 }
                 break;
-            case 22 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:94: T34
+            case 24 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:102: T34
                 {
                 mT34(); 
 
                 }
                 break;
-            case 23 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:98: T35
+            case 25 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:106: T35
                 {
                 mT35(); 
 
                 }
                 break;
-            case 24 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:102: T36
+            case 26 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:110: T36
                 {
                 mT36(); 
 
                 }
                 break;
-            case 25 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:106: T37
+            case 27 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:114: T37
                 {
                 mT37(); 
 
                 }
                 break;
-            case 26 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:110: T38
+            case 28 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:118: T38
                 {
                 mT38(); 
 
                 }
                 break;
-            case 27 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:114: T39
+            case 29 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:122: T39
                 {
                 mT39(); 
 
                 }
                 break;
-            case 28 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:118: T40
+            case 30 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:126: T40
                 {
                 mT40(); 
 
                 }
                 break;
-            case 29 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:122: T41
+            case 31 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:130: T41
                 {
                 mT41(); 
 
                 }
                 break;
-            case 30 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:126: T42
+            case 32 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:134: T42
                 {
                 mT42(); 
 
                 }
                 break;
-            case 31 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:130: T43
+            case 33 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:138: T43
                 {
                 mT43(); 
 
                 }
                 break;
-            case 32 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:134: T44
+            case 34 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:142: T44
                 {
                 mT44(); 
 
                 }
                 break;
-            case 33 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:138: T45
+            case 35 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:146: T45
                 {
                 mT45(); 
 
                 }
                 break;
-            case 34 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:142: T46
+            case 36 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:150: T46
                 {
                 mT46(); 
 
                 }
                 break;
-            case 35 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:146: T47
+            case 37 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:154: T47
                 {
                 mT47(); 
 
                 }
                 break;
-            case 36 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:150: T48
+            case 38 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:158: T48
                 {
                 mT48(); 
 
                 }
                 break;
-            case 37 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:154: T49
+            case 39 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:162: T49
                 {
                 mT49(); 
 
                 }
                 break;
-            case 38 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:158: T50
+            case 40 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:166: T50
                 {
                 mT50(); 
 
                 }
                 break;
-            case 39 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:162: T51
+            case 41 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:170: T51
                 {
                 mT51(); 
 
                 }
                 break;
-            case 40 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:166: T52
+            case 42 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:174: T52
                 {
                 mT52(); 
 
                 }
                 break;
-            case 41 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:170: T53
+            case 43 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:178: T53
                 {
                 mT53(); 
 
                 }
                 break;
-            case 42 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:174: T54
+            case 44 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:182: T54
                 {
                 mT54(); 
 
                 }
                 break;
-            case 43 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:178: T55
+            case 45 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:186: T55
                 {
                 mT55(); 
 
                 }
                 break;
-            case 44 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:182: T56
+            case 46 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:190: T56
                 {
                 mT56(); 
 
                 }
                 break;
-            case 45 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:186: T57
+            case 47 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:194: T57
                 {
                 mT57(); 
 
                 }
                 break;
-            case 46 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:190: T58
+            case 48 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:198: T58
                 {
                 mT58(); 
 
                 }
                 break;
-            case 47 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:194: T59
+            case 49 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:202: T59
                 {
                 mT59(); 
 
                 }
                 break;
-            case 48 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:198: T60
+            case 50 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:206: T60
                 {
                 mT60(); 
 
                 }
                 break;
-            case 49 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:202: T61
+            case 51 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:210: T61
                 {
                 mT61(); 
 
                 }
                 break;
-            case 50 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:206: T62
+            case 52 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:214: T62
                 {
                 mT62(); 
 
                 }
                 break;
-            case 51 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:210: T63
+            case 53 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:218: T63
                 {
                 mT63(); 
 
                 }
                 break;
-            case 52 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:214: T64
+            case 54 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:222: T64
                 {
                 mT64(); 
 
                 }
                 break;
-            case 53 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:218: T65
+            case 55 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:226: T65
                 {
                 mT65(); 
 
                 }
                 break;
-            case 54 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:222: T66
+            case 56 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:230: T66
                 {
                 mT66(); 
 
                 }
                 break;
-            case 55 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:226: T67
+            case 57 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:234: T67
                 {
                 mT67(); 
 
                 }
                 break;
-            case 56 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:230: T68
+            case 58 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:238: T68
                 {
                 mT68(); 
 
                 }
                 break;
-            case 57 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:234: T69
+            case 59 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:242: T69
                 {
                 mT69(); 
 
                 }
                 break;
-            case 58 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:238: T70
+            case 60 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:246: T70
                 {
                 mT70(); 
 
                 }
                 break;
-            case 59 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:242: T71
+            case 61 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:250: T71
                 {
                 mT71(); 
 
                 }
                 break;
-            case 60 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:246: T72
+            case 62 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:254: T72
                 {
                 mT72(); 
 
                 }
                 break;
-            case 61 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:250: T73
+            case 63 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:258: T73
                 {
                 mT73(); 
 
                 }
                 break;
-            case 62 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:254: T74
+            case 64 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:262: T74
                 {
                 mT74(); 
 
                 }
                 break;
-            case 63 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:258: T75
+            case 65 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:266: T75
                 {
                 mT75(); 
 
                 }
                 break;
-            case 64 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:262: T76
+            case 66 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:270: T76
                 {
                 mT76(); 
 
                 }
                 break;
-            case 65 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:266: T77
+            case 67 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:274: T77
                 {
                 mT77(); 
 
                 }
                 break;
-            case 66 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:270: T78
+            case 68 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:278: T78
                 {
                 mT78(); 
 
                 }
                 break;
-            case 67 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:274: T79
+            case 69 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:282: T79
                 {
                 mT79(); 
 
                 }
                 break;
-            case 68 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:278: T80
+            case 70 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:286: T80
                 {
                 mT80(); 
 
                 }
                 break;
-            case 69 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:282: T81
+            case 71 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:290: T81
                 {
                 mT81(); 
 
                 }
                 break;
-            case 70 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:286: T82
-                {
-                mT82(); 
-
-                }
-                break;
-            case 71 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:290: T83
-                {
-                mT83(); 
-
-                }
-                break;
             case 72 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:294: T84
-                {
-                mT84(); 
-
-                }
-                break;
-            case 73 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:298: T85
-                {
-                mT85(); 
-
-                }
-                break;
-            case 74 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:302: T86
-                {
-                mT86(); 
-
-                }
-                break;
-            case 75 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:306: T87
-                {
-                mT87(); 
-
-                }
-                break;
-            case 76 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:310: T88
-                {
-                mT88(); 
-
-                }
-                break;
-            case 77 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:314: RULE_RWS
-                {
-                mRULE_RWS(); 
-
-                }
-                break;
-            case 78 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:323: RULE_NL
-                {
-                mRULE_NL(); 
-
-                }
-                break;
-            case 79 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:331: RULE_WS
-                {
-                mRULE_WS(); 
-
-                }
-                break;
-            case 80 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:339: RULE_ID
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:294: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
-            case 81 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:347: RULE_INT
+            case 73 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:302: RULE_INT
                 {
                 mRULE_INT(); 
 
                 }
                 break;
-            case 82 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:356: RULE_STRING
+            case 74 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:311: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
-            case 83 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:368: RULE_ML_COMMENT
+            case 75 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:323: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
-            case 84 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:384: RULE_SL_COMMENT
+            case 76 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:339: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
-            case 85 :
-                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:400: RULE_ANY_OTHER
+            case 77 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:355: RULE_WS
+                {
+                mRULE_WS(); 
+
+                }
+                break;
+            case 78 :
+                // ../br.ufes.inf.nemo.ontouml.dsl.xtext/src-gen/br/ufes/inf/nemo/ontouml/dsl/xtext/parser/antlr/internal/InternalOntoDSL.g:1:363: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 
@@ -2757,643 +2623,2480 @@ public class InternalOntoDSLLexer extends Lexer {
         }
 
     }
+    private int mTokensHelper001() throws RecognitionException {
+        switch ( input.LA(2) ) {
+        case 'e':
+            {
+            int LA12_42 = input.LA(3);
 
+            if ( (LA12_42=='d') ) {
+                int LA12_102 = input.LA(4);
 
-    protected DFA14 dfa14 = new DFA14(this);
-    static final String DFA14_eotS =
-        "\1\uffff\2\64\2\uffff\2\64\3\uffff\6\64\2\uffff\4\64\2\uffff\2\64"+
-        "\5\uffff\1\144\2\64\1\uffff\1\64\1\152\3\64\1\156\1\161\1\57\2\uffff"+
-        "\2\57\1\uffff\4\64\1\uffff\1\64\2\uffff\5\64\3\uffff\16\64\2\uffff"+
-        "\10\64\2\uffff\2\64\1\u009b\10\uffff\2\64\1\uffff\1\64\2\uffff\3"+
-        "\64\1\uffff\1\156\2\uffff\1\161\2\uffff\7\64\1\u00a9\4\64\1\u00ae"+
-        "\31\64\1\uffff\6\64\1\u00d1\6\64\1\uffff\1\64\1\u00d9\2\64\1\uffff"+
-        "\16\64\1\u00ed\4\64\1\u00f2\2\64\1\u00f5\1\u00f6\6\64\1\u00fd\1"+
-        "\u00fe\1\u00ff\2\uffff\1\64\1\u0101\5\64\1\uffff\16\64\1\u0115\2"+
-        "\64\1\uffff\1\64\1\uffff\4\64\1\uffff\1\64\1\u011f\2\uffff\3\64"+
-        "\1\u0123\2\64\3\uffff\1\64\1\uffff\2\64\1\u012a\14\64\1\u0137\2"+
-        "\64\1\u013a\1\uffff\11\64\1\uffff\3\64\1\uffff\1\u0147\5\64\1\uffff"+
-        "\11\64\1\uffff\1\64\1\u0158\1\uffff\2\64\1\uffff\1\u015c\4\64\1"+
-        "\u0162\4\64\1\u0167\1\64\1\uffff\2\64\1\u016b\3\64\1\u0170\1\64"+
-        "\1\u0172\2\64\1\u0175\1\64\1\u0177\2\64\1\uffff\2\64\2\uffff\2\64"+
-        "\1\u017e\1\u017f\2\uffff\4\64\1\uffff\1\64\1\u0185\2\uffff\1\u0186"+
-        "\1\uffff\1\64\1\u0188\1\uffff\1\64\1\uffff\1\64\1\u018b\1\uffff"+
-        "\1\64\1\uffff\4\64\1\u0191\1\u0192\2\uffff\1\64\1\uffff\3\64\2\uffff"+
-        "\1\64\1\uffff\2\64\1\uffff\1\u019a\4\64\2\uffff\1\u019f\4\64\1\u01a4"+
-        "\1\u01a5\1\uffff\4\64\1\uffff\4\64\2\uffff\13\64\1\u01ba\1\u01bb"+
-        "\1\u01bc\5\64\4\uffff\11\64\1\u01cb\2\64\1\u01ce\1\64\1\uffff\1"+
-        "\u01d0\1\u01d1\1\uffff\1\64\2\uffff\1\u01d3\1\uffff";
-    static final String DFA14_eofS =
-        "\u01d4\uffff";
-    static final String DFA14_minS =
-        "\1\0\1\141\1\151\2\uffff\1\142\1\151\3\uffff\1\165\1\156\1\141\2"+
-        "\150\1\145\2\uffff\1\141\1\145\1\141\1\162\2\uffff\1\145\1\160\5"+
-        "\uffff\1\52\1\160\1\145\1\uffff\1\156\1\76\1\156\1\125\1\157\2\11"+
-        "\1\101\2\uffff\2\0\1\uffff\2\144\1\170\1\164\1\uffff\1\145\2\uffff"+
-        "\1\164\1\163\1\144\1\147\1\156\3\uffff\1\141\1\164\1\144\1\154\1"+
-        "\164\1\141\1\142\1\141\1\145\1\155\3\141\1\154\2\uffff\1\163\1\164"+
-        "\1\146\1\141\1\162\1\154\1\160\1\165\2\uffff\1\156\1\144\1\60\10"+
-        "\uffff\1\141\1\147\1\uffff\1\151\2\uffff\1\163\1\114\1\156\1\uffff"+
-        "\1\11\2\uffff\1\11\2\uffff\1\145\2\151\1\145\1\167\1\151\1\164\1"+
-        "\60\1\162\1\144\1\156\1\145\1\60\1\160\1\154\1\145\1\162\1\113\1"+
-        "\164\1\143\1\160\1\162\1\163\1\141\1\145\1\144\1\145\1\152\1\141"+
-        "\1\151\1\141\1\146\1\155\1\163\4\145\1\uffff\1\161\1\151\1\161\1"+
-        "\164\1\114\1\145\1\60\1\141\1\156\1\162\1\160\1\166\1\162\1\uffff"+
-        "\1\145\1\60\1\164\1\156\1\uffff\1\154\1\145\1\147\1\141\1\145\3"+
-        "\151\1\154\2\145\1\164\1\146\1\55\1\60\1\157\1\164\1\166\1\165\1"+
-        "\60\1\141\1\145\2\60\2\162\1\165\1\156\1\165\1\141\3\60\2\uffff"+
-        "\1\164\1\60\1\151\1\157\1\145\1\141\1\147\1\uffff\1\151\2\163\1"+
-        "\145\1\143\1\157\1\143\1\164\1\151\1\156\1\143\1\146\1\145\1\144"+
-        "\1\60\1\157\1\151\1\uffff\1\151\1\uffff\1\151\1\171\1\141\1\154"+
-        "\1\uffff\1\154\1\60\2\uffff\1\141\2\145\1\60\1\145\1\156\3\uffff"+
-        "\1\145\1\uffff\1\141\1\151\1\60\1\143\1\141\1\164\2\151\2\164\1"+
-        "\162\1\164\1\40\1\164\1\144\1\60\1\151\1\122\1\60\1\uffff\1\162"+
-        "\1\156\1\170\1\156\1\160\1\144\2\164\1\101\1\uffff\1\154\1\144\1"+
-        "\105\1\uffff\1\60\1\143\1\144\1\157\1\154\1\156\1\uffff\2\164\1"+
-        "\171\1\157\1\164\1\145\1\151\1\171\1\145\1\uffff\1\165\1\60\1\uffff"+
-        "\1\143\1\145\1\uffff\1\60\1\145\1\151\1\164\1\145\1\55\1\151\2\163"+
-        "\1\151\1\60\1\170\1\uffff\1\145\1\72\1\60\1\156\1\72\1\164\1\60"+
-        "\1\151\1\60\1\156\1\145\1\60\1\166\1\60\1\162\1\164\1\uffff\1\141"+
-        "\1\154\2\uffff\1\163\1\156\2\60\2\uffff\1\157\1\40\1\163\1\172\1"+
-        "\uffff\1\160\1\60\2\uffff\1\60\1\uffff\1\163\1\60\1\uffff\1\157"+
-        "\1\uffff\1\141\1\60\1\uffff\1\145\1\uffff\1\151\1\141\1\164\1\141"+
-        "\2\60\2\uffff\1\156\1\uffff\1\157\1\141\1\162\2\uffff\1\163\1\uffff"+
-        "\1\156\1\154\1\uffff\1\60\1\172\1\142\1\151\1\164\2\uffff\1\60\1"+
-        "\143\1\164\1\145\1\157\2\60\1\uffff\1\141\1\154\2\157\1\uffff\2"+
-        "\151\1\163\1\143\2\uffff\1\164\1\144\1\145\1\156\1\162\1\141\1\157"+
-        "\1\163\2\151\1\72\3\60\1\164\1\156\1\151\1\141\1\157\4\uffff\1\151"+
-        "\1\123\1\157\1\164\1\156\1\157\1\145\1\156\1\151\1\60\1\156\1\164"+
-        "\1\60\1\157\1\uffff\2\60\1\uffff\1\156\2\uffff\1\60\1\uffff";
-    static final String DFA14_maxS =
-        "\1\ufffe\1\157\1\151\2\uffff\1\156\1\151\3\uffff\1\165\1\170\1\157"+
-        "\1\165\1\150\1\157\2\uffff\1\151\1\145\1\157\1\171\2\uffff\1\145"+
-        "\1\162\5\uffff\1\57\1\160\1\145\1\uffff\1\156\1\76\1\156\1\125\1"+
-        "\157\2\40\1\172\2\uffff\2\ufffe\1\uffff\2\144\1\170\1\164\1\uffff"+
-        "\1\145\2\uffff\1\164\1\163\1\144\1\147\1\156\3\uffff\1\141\1\164"+
-        "\1\144\1\155\1\164\1\141\1\142\1\141\1\145\1\155\2\141\2\154\2\uffff"+
-        "\1\163\1\164\1\162\1\141\1\162\1\154\1\160\1\165\2\uffff\1\156\1"+
-        "\144\1\172\10\uffff\1\141\1\147\1\uffff\1\151\2\uffff\1\163\1\114"+
-        "\1\156\1\uffff\1\40\2\uffff\1\40\2\uffff\1\145\2\151\1\145\1\167"+
-        "\1\151\1\164\1\172\1\162\1\144\1\156\1\145\1\172\1\160\1\154\1\145"+
-        "\1\162\1\163\1\164\1\143\1\160\1\162\1\163\1\141\1\145\1\144\1\145"+
-        "\1\152\1\141\1\151\1\141\1\146\1\155\1\163\4\145\1\uffff\1\161\1"+
-        "\151\1\161\1\164\1\114\1\145\1\172\1\141\1\156\1\162\1\160\1\166"+
-        "\1\162\1\uffff\1\145\1\172\1\164\1\156\1\uffff\1\157\1\145\1\147"+
-        "\1\141\1\164\3\151\1\154\2\145\1\164\1\146\1\55\1\172\1\157\1\164"+
-        "\1\166\1\165\1\172\1\141\1\145\2\172\2\162\1\165\1\156\1\165\1\141"+
-        "\3\172\2\uffff\1\164\1\172\1\151\1\157\1\145\1\141\1\147\1\uffff"+
-        "\1\151\2\163\1\145\1\143\1\157\1\143\1\164\1\151\1\156\1\143\1\146"+
-        "\1\145\1\144\1\172\1\157\1\151\1\uffff\1\151\1\uffff\1\151\1\171"+
-        "\1\145\1\154\1\uffff\1\154\1\172\2\uffff\1\141\2\145\1\172\1\145"+
-        "\1\156\3\uffff\1\151\1\uffff\1\141\1\151\1\172\1\143\1\141\1\164"+
-        "\2\151\2\164\1\162\1\164\1\40\1\164\1\144\1\172\1\151\1\122\1\172"+
-        "\1\uffff\1\162\1\156\1\170\1\156\1\160\1\144\2\164\1\101\1\uffff"+
-        "\1\154\1\144\1\105\1\uffff\1\172\1\143\1\163\1\157\1\154\1\156\1"+
-        "\uffff\2\164\1\171\1\157\1\164\1\145\1\151\1\171\1\145\1\uffff\1"+
-        "\165\1\172\1\uffff\1\143\1\145\1\uffff\1\172\1\145\1\151\1\164\1"+
-        "\145\1\172\1\151\2\163\1\151\1\172\1\170\1\uffff\1\145\1\72\1\172"+
-        "\1\156\1\101\1\164\1\172\1\151\1\172\1\156\1\145\1\172\1\166\1\172"+
-        "\1\162\1\164\1\uffff\1\141\1\154\2\uffff\1\163\1\156\2\172\2\uffff"+
-        "\1\157\1\40\1\163\1\172\1\uffff\1\160\1\172\2\uffff\1\172\1\uffff"+
-        "\1\163\1\172\1\uffff\1\157\1\uffff\1\141\1\172\1\uffff\1\145\1\uffff"+
-        "\1\151\1\141\1\164\1\141\2\172\2\uffff\1\156\1\uffff\1\157\1\141"+
-        "\1\162\2\uffff\1\163\1\uffff\1\156\1\154\1\uffff\2\172\1\142\1\151"+
-        "\1\164\2\uffff\1\172\1\143\1\164\1\145\1\157\2\172\1\uffff\1\145"+
-        "\1\154\2\157\1\uffff\2\151\1\163\1\143\2\uffff\1\164\1\144\1\145"+
-        "\1\156\1\162\1\141\1\157\1\163\2\151\1\72\3\172\1\164\1\156\1\151"+
-        "\1\141\1\157\4\uffff\1\151\1\123\1\157\1\164\1\156\1\157\1\145\1"+
-        "\156\1\151\1\172\1\156\1\164\1\172\1\157\1\uffff\2\172\1\uffff\1"+
-        "\156\2\uffff\1\172\1\uffff";
-    static final String DFA14_acceptS =
-        "\3\uffff\1\3\1\4\2\uffff\1\10\1\11\1\12\6\uffff\1\31\1\32\4\uffff"+
-        "\1\52\1\53\2\uffff\1\60\1\61\1\62\1\63\1\64\3\uffff\1\70\10\uffff"+
-        "\1\120\1\121\2\uffff\1\125\4\uffff\1\120\1\uffff\1\3\1\4\5\uffff"+
-        "\1\10\1\11\1\12\16\uffff\1\31\1\32\10\uffff\1\52\1\53\3\uffff\1"+
-        "\60\1\61\1\62\1\63\1\64\1\123\1\124\1\65\2\uffff\1\70\1\uffff\1"+
-        "\106\1\103\3\uffff\1\115\1\uffff\1\117\1\116\1\uffff\1\121\1\122"+
-        "\46\uffff\1\57\15\uffff\1\30\4\uffff\1\71\41\uffff\1\34\1\24\7\uffff"+
-        "\1\7\21\uffff\1\75\1\uffff\1\21\4\uffff\1\44\2\uffff\1\50\1\107"+
-        "\6\uffff\1\111\1\112\1\1\1\uffff\1\22\23\uffff\1\20\11\uffff\1\110"+
-        "\3\uffff\1\67\6\uffff\1\5\11\uffff\1\101\2\uffff\1\72\2\uffff\1"+
-        "\113\14\uffff\1\74\20\uffff\1\16\2\uffff\1\37\1\25\4\uffff\1\76"+
-        "\1\43\4\uffff\1\73\2\uffff\1\40\1\27\1\uffff\1\42\2\uffff\1\6\1"+
-        "\uffff\1\13\2\uffff\1\54\1\uffff\1\17\6\uffff\1\55\1\47\1\uffff"+
-        "\1\77\3\uffff\1\104\1\36\1\uffff\1\2\2\uffff\1\114\5\uffff\1\102"+
-        "\1\23\7\uffff\1\15\4\uffff\1\41\4\uffff\1\100\1\14\23\uffff\1\35"+
-        "\1\51\1\105\1\26\16\uffff\1\33\2\uffff\1\66\1\uffff\1\46\1\56\1"+
-        "\uffff\1\45";
-    static final String DFA14_specialS =
-        "\u01d4\uffff}>";
-    static final String[] DFA14_transitionS = {
-            "\11\57\1\50\1\51\2\57\1\51\22\57\1\50\1\57\1\55\1\42\3\57\1"+
-            "\56\1\26\1\27\1\36\1\34\1\10\1\35\1\57\1\37\12\54\1\7\1\11\1"+
-            "\20\1\44\1\21\2\57\15\53\1\46\1\40\13\53\1\32\1\57\1\33\1\52"+
-            "\1\53\1\57\1\5\1\41\1\14\1\22\1\13\1\24\1\30\1\53\1\45\1\53"+
-            "\1\6\1\23\1\1\1\47\1\31\1\16\1\12\1\17\1\15\1\25\1\43\1\2\4"+
-            "\53\1\3\1\57\1\4\uff81\57",
-            "\1\63\3\uffff\1\61\3\uffff\1\62\5\uffff\1\60",
-            "\1\65",
-            "",
-            "",
-            "\1\71\1\70\3\uffff\1\73\6\uffff\1\72",
-            "\1\74",
-            "",
-            "",
-            "",
-            "\1\100",
-            "\1\102\11\uffff\1\101",
-            "\1\104\6\uffff\1\105\6\uffff\1\103",
-            "\1\112\1\111\6\uffff\1\110\3\uffff\1\107\1\106",
-            "\1\113",
-            "\1\114\11\uffff\1\115",
-            "",
-            "",
-            "\1\121\3\uffff\1\122\3\uffff\1\120",
-            "\1\123",
-            "\1\125\15\uffff\1\124",
-            "\1\127\6\uffff\1\126",
-            "",
-            "",
-            "\1\132",
-            "\1\134\1\uffff\1\133",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "\1\142\4\uffff\1\143",
-            "\1\145",
-            "\1\146",
-            "",
-            "\1\150",
-            "\1\151",
-            "\1\153",
-            "\1\154",
-            "\1\155",
-            "\1\157\1\160\2\uffff\1\160\22\uffff\1\157",
-            "\1\160\1\162\2\uffff\1\162\22\uffff\1\160",
-            "\32\64\4\uffff\1\64\1\uffff\32\64",
-            "",
-            "",
-            "\uffff\164",
-            "\uffff\164",
-            "",
-            "\1\165",
-            "\1\166",
-            "\1\167",
-            "\1\170",
-            "",
-            "\1\171",
-            "",
-            "",
-            "\1\172",
-            "\1\173",
-            "\1\174",
-            "\1\175",
-            "\1\176",
-            "",
-            "",
-            "",
-            "\1\177",
-            "\1\u0080",
-            "\1\u0081",
-            "\1\u0083\1\u0082",
-            "\1\u0084",
-            "\1\u0085",
-            "\1\u0086",
-            "\1\u0087",
-            "\1\u0088",
-            "\1\u0089",
-            "\1\u008a",
-            "\1\u008b",
-            "\1\u008e\2\uffff\1\u008d\7\uffff\1\u008c",
-            "\1\u008f",
-            "",
-            "",
-            "\1\u0090",
-            "\1\u0091",
-            "\1\u0093\13\uffff\1\u0092",
-            "\1\u0094",
-            "\1\u0095",
-            "\1\u0096",
-            "\1\u0097",
-            "\1\u0098",
-            "",
-            "",
-            "\1\u0099",
-            "\1\u009a",
-            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "\1\u009c",
-            "\1\u009d",
-            "",
-            "\1\u009e",
-            "",
-            "",
-            "\1\u009f",
-            "\1\u00a0",
-            "\1\u00a1",
-            "",
-            "\1\157\1\160\2\uffff\1\160\22\uffff\1\157",
-            "",
-            "",
-            "\1\160\1\162\2\uffff\1\162\22\uffff\1\160",
-            "",
-            "",
-            "\1\u00a2",
-            "\1\u00a3",
-            "\1\u00a4",
-            "\1\u00a5",
-            "\1\u00a6",
-            "\1\u00a7",
-            "\1\u00a8",
-            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
-            "\1\u00aa",
-            "\1\u00ab",
-            "\1\u00ac",
-            "\1\u00ad",
-            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
-            "\1\u00af",
-            "\1\u00b0",
-            "\1\u00b1",
-            "\1\u00b2",
-            "\1\u00b4\47\uffff\1\u00b3",
-            "\1\u00b5",
-            "\1\u00b6",
-            "\1\u00b7",
-            "\1\u00b8",
-            "\1\u00b9",
-            "\1\u00ba",
-            "\1\u00bb",
-            "\1\u00bc",
-            "\1\u00bd",
-            "\1\u00be",
-            "\1\u00bf",
-            "\1\u00c0",
-            "\1\u00c1",
-            "\1\u00c2",
-            "\1\u00c3",
-            "\1\u00c4",
-            "\1\u00c5",
-            "\1\u00c6",
-            "\1\u00c7",
-            "\1\u00c8",
-            "",
-            "\1\u00c9",
-            "\1\u00ca",
-            "\1\u00cb",
-            "\1\u00cc",
-            "\1\u00cd",
-            "\1\u00ce",
-            "\12\64\1\u00d0\6\uffff\32\64\4\uffff\1\64\1\uffff\13\64\1\u00cf"+
-            "\16\64",
-            "\1\u00d2",
-            "\1\u00d3",
-            "\1\u00d4",
-            "\1\u00d5",
-            "\1\u00d6",
-            "\1\u00d7",
-            "",
-            "\1\u00d8",
-            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
-            "\1\u00da",
-            "\1\u00db",
-            "",
-            "\1\u00dd\2\uffff\1\u00dc",
-            "\1\u00de",
-            "\1\u00df",
-            "\1\u00e0",
-            "\1\u00e1\16\uffff\1\u00e2",
-            "\1\u00e3",
-            "\1\u00e4",
-            "\1\u00e5",
-            "\1\u00e6",
-            "\1\u00e7",
-            "\1\u00e8",
-            "\1\u00e9",
-            "\1\u00ea",
-            "\1\u00eb",
-            "\12\64\7\uffff\14\64\1\u00ec\15\64\4\uffff\1\64\1\uffff\32\64",
-            "\1\u00ee",
-            "\1\u00ef",
-            "\1\u00f0",
-            "\1\u00f1",
-            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
-            "\1\u00f3",
-            "\1\u00f4",
-            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
-            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
-            "\1\u00f7",
-            "\1\u00f8",
-            "\1\u00f9",
-            "\1\u00fa",
-            "\1\u00fb",
-            "\1\u00fc",
-            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
-            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
-            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
-            "",
-            "",
-            "\1\u0100",
-            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
-            "\1\u0102",
-            "\1\u0103",
-            "\1\u0104",
-            "\1\u0105",
-            "\1\u0106",
-            "",
-            "\1\u0107",
-            "\1\u0108",
-            "\1\u0109",
-            "\1\u010a",
-            "\1\u010b",
-            "\1\u010c",
-            "\1\u010d",
-            "\1\u010e",
-            "\1\u010f",
-            "\1\u0110",
-            "\1\u0111",
-            "\1\u0112",
-            "\1\u0113",
-            "\1\u0114",
-            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
-            "\1\u0116",
-            "\1\u0117",
-            "",
-            "\1\u0118",
-            "",
-            "\1\u0119",
-            "\1\u011a",
-            "\1\u011c\3\uffff\1\u011b",
-            "\1\u011d",
-            "",
-            "\1\u011e",
-            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
-            "",
-            "",
-            "\1\u0120",
-            "\1\u0121",
-            "\1\u0122",
-            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
-            "\1\u0124",
-            "\1\u0125",
-            "",
-            "",
-            "",
-            "\1\u0126\3\uffff\1\u0127",
-            "",
-            "\1\u0128",
-            "\1\u0129",
-            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
-            "\1\u012b",
-            "\1\u012c",
-            "\1\u012d",
-            "\1\u012e",
-            "\1\u012f",
-            "\1\u0130",
-            "\1\u0131",
-            "\1\u0132",
-            "\1\u0133",
-            "\1\u0134",
-            "\1\u0135",
-            "\1\u0136",
-            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
-            "\1\u0138",
-            "\1\u0139",
-            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
-            "",
-            "\1\u013b",
-            "\1\u013c",
-            "\1\u013d",
-            "\1\u013e",
-            "\1\u013f",
-            "\1\u0140",
-            "\1\u0141",
-            "\1\u0142",
-            "\1\u0143",
-            "",
-            "\1\u0144",
-            "\1\u0145",
-            "\1\u0146",
-            "",
-            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
-            "\1\u0148",
-            "\1\u0149\16\uffff\1\u014a",
-            "\1\u014b",
-            "\1\u014c",
-            "\1\u014d",
-            "",
-            "\1\u014e",
-            "\1\u014f",
-            "\1\u0150",
-            "\1\u0151",
-            "\1\u0152",
-            "\1\u0153",
-            "\1\u0154",
-            "\1\u0155",
-            "\1\u0156",
-            "",
-            "\1\u0157",
-            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
-            "",
-            "\1\u0159",
-            "\1\u015a",
-            "",
-            "\12\64\1\u015b\6\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
-            "\1\u015d",
-            "\1\u015e",
-            "\1\u015f",
-            "\1\u0160",
-            "\1\u0161\2\uffff\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32"+
-            "\64",
-            "\1\u0163",
-            "\1\u0164",
-            "\1\u0165",
-            "\1\u0166",
-            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
-            "\1\u0168",
-            "",
-            "\1\u0169",
-            "\1\u016a",
-            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
-            "\1\u016c",
-            "\1\u016d\6\uffff\1\u016e",
-            "\1\u016f",
-            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
-            "\1\u0171",
-            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
-            "\1\u0173",
-            "\1\u0174",
-            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
-            "\1\u0176",
-            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
-            "\1\u0178",
-            "\1\u0179",
-            "",
-            "\1\u017a",
-            "\1\u017b",
-            "",
-            "",
-            "\1\u017c",
-            "\1\u017d",
-            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
-            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
-            "",
-            "",
-            "\1\u0180",
-            "\1\u0181",
-            "\1\u0182",
-            "\1\u0183",
-            "",
-            "\1\u0184",
-            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
-            "",
-            "",
-            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
-            "",
-            "\1\u0187",
-            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
-            "",
-            "\1\u0189",
-            "",
-            "\1\u018a",
-            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
-            "",
-            "\1\u018c",
-            "",
-            "\1\u018d",
-            "\1\u018e",
-            "\1\u018f",
-            "\1\u0190",
-            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
-            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
-            "",
-            "",
-            "\1\u0193",
-            "",
-            "\1\u0194",
-            "\1\u0195",
-            "\1\u0196",
-            "",
-            "",
-            "\1\u0197",
-            "",
-            "\1\u0198",
-            "\1\u0199",
-            "",
-            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
-            "\1\u019b",
-            "\1\u019c",
-            "\1\u019d",
-            "\1\u019e",
-            "",
-            "",
-            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
-            "\1\u01a0",
-            "\1\u01a1",
-            "\1\u01a2",
-            "\1\u01a3",
-            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
-            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
-            "",
-            "\1\u01a6\3\uffff\1\u01a7",
-            "\1\u01a8",
-            "\1\u01a9",
-            "\1\u01aa",
-            "",
-            "\1\u01ab",
-            "\1\u01ac",
-            "\1\u01ad",
-            "\1\u01ae",
-            "",
-            "",
-            "\1\u01af",
-            "\1\u01b0",
-            "\1\u01b1",
-            "\1\u01b2",
-            "\1\u01b3",
-            "\1\u01b4",
-            "\1\u01b5",
-            "\1\u01b6",
-            "\1\u01b7",
-            "\1\u01b8",
-            "\1\u01b9",
-            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
-            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
-            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
-            "\1\u01bd",
-            "\1\u01be",
-            "\1\u01bf",
-            "\1\u01c0",
-            "\1\u01c1",
-            "",
-            "",
-            "",
-            "",
-            "\1\u01c2",
-            "\1\u01c3",
-            "\1\u01c4",
-            "\1\u01c5",
-            "\1\u01c6",
-            "\1\u01c7",
-            "\1\u01c8",
-            "\1\u01c9",
-            "\1\u01ca",
-            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
-            "\1\u01cc",
-            "\1\u01cd",
-            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
-            "\1\u01cf",
-            "",
-            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
-            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
-            "",
-            "\1\u01d2",
-            "",
-            "",
-            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
-            ""
-    };
+                if ( (LA12_102=='i') ) {
+                    int LA12_143 = input.LA(5);
 
-    static final short[] DFA14_eot = DFA.unpackEncodedString(DFA14_eotS);
-    static final short[] DFA14_eof = DFA.unpackEncodedString(DFA14_eofS);
-    static final char[] DFA14_min = DFA.unpackEncodedStringToUnsignedChars(DFA14_minS);
-    static final char[] DFA14_max = DFA.unpackEncodedStringToUnsignedChars(DFA14_maxS);
-    static final short[] DFA14_accept = DFA.unpackEncodedString(DFA14_acceptS);
-    static final short[] DFA14_special = DFA.unpackEncodedString(DFA14_specialS);
-    static final short[][] DFA14_transition;
+                    if ( (LA12_143=='a') ) {
+                        int LA12_183 = input.LA(6);
 
-    static {
-        int numStates = DFA14_transitionS.length;
-        DFA14_transition = new short[numStates][];
-        for (int i=0; i<numStates; i++) {
-            DFA14_transition[i] = DFA.unpackEncodedString(DFA14_transitionS[i]);
-        }
+                        if ( (LA12_183=='t') ) {
+                            switch ( input.LA(7) ) {
+                            case 'i':
+                                {
+                                int LA12_263 = input.LA(8);
+
+                                if ( (LA12_263=='o') ) {
+                                    int LA12_295 = input.LA(9);
+
+                                    if ( (LA12_295=='n') ) {
+                                        int LA12_324 = input.LA(10);
+
+                                        if ( ((LA12_324>='0' && LA12_324<='9')||(LA12_324>='A' && LA12_324<='Z')||LA12_324=='_'||(LA12_324>='a' && LA12_324<='z')) ) {
+                                            return 72;
+                                        }
+                                        else {
+                                            return 31;}
+                                    }
+                                    else {
+                                        return 72;}
+                                }
+                                else {
+                                    return 72;}
+                                }
+                            case 'e':
+                                {
+                                switch ( input.LA(8) ) {
+                                case 'd':
+                                    {
+                                    int LA12_296 = input.LA(9);
+
+                                    if ( (LA12_296==':') ) {
+                                        return 33;
+                                    }
+                                    else {
+                                        return 72;}
+                                    }
+                                case 's':
+                                    {
+                                    int LA12_297 = input.LA(9);
+
+                                    if ( ((LA12_297>='0' && LA12_297<='9')||(LA12_297>='A' && LA12_297<='Z')||LA12_297=='_'||(LA12_297>='a' && LA12_297<='z')) ) {
+                                        return 72;
+                                    }
+                                    else {
+                                        return 22;}
+                                    }
+                                default:
+                                    return 72;}
+
+                                }
+                            default:
+                                return 72;}
+
+                        }
+                        else {
+                            return 72;}
+                    }
+                    else {
+                        return 72;}
+                }
+                else {
+                    return 72;}
+            }
+            else {
+                return 72;}
+            }
+        case 'i':
+            {
+            int LA12_43 = input.LA(3);
+
+            if ( (LA12_43=='x') ) {
+                int LA12_103 = input.LA(4);
+
+                if ( (LA12_103=='i') ) {
+                    int LA12_144 = input.LA(5);
+
+                    if ( (LA12_144=='n') ) {
+                        int LA12_184 = input.LA(6);
+
+                        if ( ((LA12_184>='0' && LA12_184<='9')||(LA12_184>='A' && LA12_184<='Z')||LA12_184=='_'||(LA12_184>='a' && LA12_184<='z')) ) {
+                            return 72;
+                        }
+                        else {
+                            return 18;}
+                    }
+                    else {
+                        return 72;}
+                }
+                else {
+                    return 72;}
+            }
+            else {
+                return 72;}
+            }
+        case 'o':
+            {
+            int LA12_44 = input.LA(3);
+
+            if ( (LA12_44=='d') ) {
+                int LA12_104 = input.LA(4);
+
+                if ( (LA12_104=='e') ) {
+                    switch ( input.LA(5) ) {
+                    case ':':
+                        {
+                        return 29;
+                        }
+                    case 'l':
+                        {
+                        int LA12_186 = input.LA(6);
+
+                        if ( ((LA12_186>='0' && LA12_186<='9')||(LA12_186>='A' && LA12_186<='Z')||LA12_186=='_'||(LA12_186>='a' && LA12_186<='z')) ) {
+                            return 72;
+                        }
+                        else {
+                            return 1;}
+                        }
+                    case '0':
+                    case '1':
+                    case '2':
+                    case '3':
+                    case '4':
+                    case '5':
+                    case '6':
+                    case '7':
+                    case '8':
+                    case '9':
+                    case 'A':
+                    case 'B':
+                    case 'C':
+                    case 'D':
+                    case 'E':
+                    case 'F':
+                    case 'G':
+                    case 'H':
+                    case 'I':
+                    case 'J':
+                    case 'K':
+                    case 'L':
+                    case 'M':
+                    case 'N':
+                    case 'O':
+                    case 'P':
+                    case 'Q':
+                    case 'R':
+                    case 'S':
+                    case 'T':
+                    case 'U':
+                    case 'V':
+                    case 'W':
+                    case 'X':
+                    case 'Y':
+                    case 'Z':
+                    case '_':
+                    case 'a':
+                    case 'b':
+                    case 'c':
+                    case 'd':
+                    case 'e':
+                    case 'f':
+                    case 'g':
+                    case 'h':
+                    case 'i':
+                    case 'j':
+                    case 'k':
+                    case 'm':
+                    case 'n':
+                    case 'o':
+                    case 'p':
+                    case 'q':
+                    case 'r':
+                    case 's':
+                    case 't':
+                    case 'u':
+                    case 'v':
+                    case 'w':
+                    case 'x':
+                    case 'y':
+                    case 'z':
+                        {
+                        return 72;
+                        }
+                    default:
+                        return 20;}
+
+                }
+                else {
+                    return 72;}
+            }
+            else {
+                return 72;}
+            }
+        case 'a':
+            {
+            int LA12_45 = input.LA(3);
+
+            if ( (LA12_45=='t') ) {
+                int LA12_105 = input.LA(4);
+
+                if ( (LA12_105=='e') ) {
+                    int LA12_146 = input.LA(5);
+
+                    if ( (LA12_146=='r') ) {
+                        int LA12_188 = input.LA(6);
+
+                        if ( (LA12_188=='i') ) {
+                            int LA12_231 = input.LA(7);
+
+                            if ( (LA12_231=='a') ) {
+                                int LA12_265 = input.LA(8);
+
+                                if ( (LA12_265=='l') ) {
+                                    switch ( input.LA(9) ) {
+                                    case 'A':
+                                        {
+                                        int LA12_327 = input.LA(10);
+
+                                        if ( (LA12_327=='s') ) {
+                                            int LA12_349 = input.LA(11);
+
+                                            if ( (LA12_349=='s') ) {
+                                                int LA12_361 = input.LA(12);
+
+                                                if ( (LA12_361=='o') ) {
+                                                    int LA12_370 = input.LA(13);
+
+                                                    if ( (LA12_370=='c') ) {
+                                                        int LA12_378 = input.LA(14);
+
+                                                        if ( (LA12_378=='i') ) {
+                                                            int LA12_384 = input.LA(15);
+
+                                                            if ( (LA12_384=='a') ) {
+                                                                int LA12_390 = input.LA(16);
+
+                                                                if ( (LA12_390=='t') ) {
+                                                                    int LA12_394 = input.LA(17);
+
+                                                                    if ( (LA12_394=='i') ) {
+                                                                        int LA12_398 = input.LA(18);
+
+                                                                        if ( (LA12_398=='o') ) {
+                                                                            int LA12_402 = input.LA(19);
+
+                                                                            if ( (LA12_402=='n') ) {
+                                                                                int LA12_405 = input.LA(20);
+
+                                                                                if ( ((LA12_405>='0' && LA12_405<='9')||(LA12_405>='A' && LA12_405<='Z')||LA12_405=='_'||(LA12_405>='a' && LA12_405<='z')) ) {
+                                                                                    return 72;
+                                                                                }
+                                                                                else {
+                                                                                    return 38;}
+                                                                            }
+                                                                            else {
+                                                                                return 72;}
+                                                                        }
+                                                                        else {
+                                                                            return 72;}
+                                                                    }
+                                                                    else {
+                                                                        return 72;}
+                                                                }
+                                                                else {
+                                                                    return 72;}
+                                                            }
+                                                            else {
+                                                                return 72;}
+                                                        }
+                                                        else {
+                                                            return 72;}
+                                                    }
+                                                    else {
+                                                        return 72;}
+                                                }
+                                                else {
+                                                    return 72;}
+                                            }
+                                            else {
+                                                return 72;}
+                                        }
+                                        else {
+                                            return 72;}
+                                        }
+                                    case ':':
+                                        {
+                                        return 35;
+                                        }
+                                    default:
+                                        return 72;}
+
+                                }
+                                else {
+                                    return 72;}
+                            }
+                            else {
+                                return 72;}
+                        }
+                        else {
+                            return 72;}
+                    }
+                    else {
+                        return 72;}
+                }
+                else {
+                    return 72;}
+            }
+            else {
+                return 72;}
+            }
+        default:
+            return 72;}
+
     }
 
-    class DFA14 extends DFA {
-
-        public DFA14(BaseRecognizer recognizer) {
-            this.recognizer = recognizer;
-            this.decisionNumber = 14;
-            this.eot = DFA14_eot;
-            this.eof = DFA14_eof;
-            this.min = DFA14_min;
-            this.max = DFA14_max;
-            this.accept = DFA14_accept;
-            this.special = DFA14_special;
-            this.transition = DFA14_transition;
-        }
-        public String getDescription() {
-            return "1:1: Tokens : ( T13 | T14 | T15 | T16 | T17 | T18 | T19 | T20 | T21 | T22 | T23 | T24 | T25 | T26 | T27 | T28 | T29 | T30 | T31 | T32 | T33 | T34 | T35 | T36 | T37 | T38 | T39 | T40 | T41 | T42 | T43 | T44 | T45 | T46 | T47 | T48 | T49 | T50 | T51 | T52 | T53 | T54 | T55 | T56 | T57 | T58 | T59 | T60 | T61 | T62 | T63 | T64 | T65 | T66 | T67 | T68 | T69 | T70 | T71 | T72 | T73 | T74 | T75 | T76 | T77 | T78 | T79 | T80 | T81 | T82 | T83 | T84 | T85 | T86 | T87 | T88 | RULE_RWS | RULE_NL | RULE_WS | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_ANY_OTHER );";
-        }
+    private int mTokensHelper002() throws RecognitionException {
+        return 2;
     }
+
+    private int mTokensHelper003() throws RecognitionException {
+        int LA12_3 = input.LA(2);
+
+        if ( (LA12_3=='m') ) {
+            int LA12_48 = input.LA(3);
+
+            if ( (LA12_48=='p') ) {
+                int LA12_106 = input.LA(4);
+
+                if ( (LA12_106=='o') ) {
+                    int LA12_147 = input.LA(5);
+
+                    if ( (LA12_147=='r') ) {
+                        int LA12_189 = input.LA(6);
+
+                        if ( (LA12_189=='t') ) {
+                            int LA12_232 = input.LA(7);
+
+                            if ( ((LA12_232>='0' && LA12_232<='9')||(LA12_232>='A' && LA12_232<='Z')||LA12_232=='_'||(LA12_232>='a' && LA12_232<='z')) ) {
+                                return 72;
+                            }
+                            else {
+                                return 3;}
+                        }
+                        else {
+                            return 72;}
+                    }
+                    else {
+                        return 72;}
+                }
+                else {
+                    return 72;}
+            }
+            else {
+                return 72;}
+        }
+        else {
+            return 72;}
+    }
+
+    private int mTokensHelper004() throws RecognitionException {
+        switch ( input.LA(2) ) {
+        case 'c':
+            {
+            int LA12_49 = input.LA(3);
+
+            if ( (LA12_49=='t') ) {
+                int LA12_107 = input.LA(4);
+
+                if ( (LA12_107=='i') ) {
+                    int LA12_148 = input.LA(5);
+
+                    if ( (LA12_148=='v') ) {
+                        int LA12_190 = input.LA(6);
+
+                        if ( (LA12_190=='e') ) {
+                            int LA12_233 = input.LA(7);
+
+                            if ( ((LA12_233>='0' && LA12_233<='9')||(LA12_233>='A' && LA12_233<='Z')||LA12_233=='_'||(LA12_233>='a' && LA12_233<='z')) ) {
+                                return 72;
+                            }
+                            else {
+                                return 4;}
+                        }
+                        else {
+                            return 72;}
+                    }
+                    else {
+                        return 72;}
+                }
+                else {
+                    return 72;}
+            }
+            else {
+                return 72;}
+            }
+        case 'b':
+            {
+            int LA12_50 = input.LA(3);
+
+            if ( (LA12_50=='s') ) {
+                int LA12_108 = input.LA(4);
+
+                if ( (LA12_108=='t') ) {
+                    int LA12_149 = input.LA(5);
+
+                    if ( (LA12_149=='r') ) {
+                        int LA12_191 = input.LA(6);
+
+                        if ( (LA12_191=='a') ) {
+                            int LA12_234 = input.LA(7);
+
+                            if ( (LA12_234=='c') ) {
+                                int LA12_268 = input.LA(8);
+
+                                if ( (LA12_268=='t') ) {
+                                    int LA12_299 = input.LA(9);
+
+                                    if ( ((LA12_299>='0' && LA12_299<='9')||(LA12_299>='A' && LA12_299<='Z')||LA12_299=='_'||(LA12_299>='a' && LA12_299<='z')) ) {
+                                        return 72;
+                                    }
+                                    else {
+                                        return 5;}
+                                }
+                                else {
+                                    return 72;}
+                            }
+                            else {
+                                return 72;}
+                        }
+                        else {
+                            return 72;}
+                    }
+                    else {
+                        return 72;}
+                }
+                else {
+                    return 72;}
+            }
+            else {
+                return 72;}
+            }
+        case 's':
+            {
+            int LA12_51 = input.LA(3);
+
+            if ( ((LA12_51>='0' && LA12_51<='9')||(LA12_51>='A' && LA12_51<='Z')||LA12_51=='_'||(LA12_51>='a' && LA12_51<='z')) ) {
+                return 72;
+            }
+            else {
+                return 26;}
+            }
+        case 'g':
+            {
+            int LA12_52 = input.LA(3);
+
+            if ( (LA12_52=='g') ) {
+                int LA12_110 = input.LA(4);
+
+                if ( (LA12_110=='r') ) {
+                    int LA12_150 = input.LA(5);
+
+                    if ( (LA12_150=='e') ) {
+                        int LA12_192 = input.LA(6);
+
+                        if ( (LA12_192=='g') ) {
+                            int LA12_235 = input.LA(7);
+
+                            if ( (LA12_235=='a') ) {
+                                int LA12_269 = input.LA(8);
+
+                                if ( (LA12_269=='t') ) {
+                                    int LA12_300 = input.LA(9);
+
+                                    if ( (LA12_300=='i') ) {
+                                        int LA12_330 = input.LA(10);
+
+                                        if ( (LA12_330=='o') ) {
+                                            int LA12_350 = input.LA(11);
+
+                                            if ( (LA12_350=='n') ) {
+                                                int LA12_362 = input.LA(12);
+
+                                                if ( ((LA12_362>='0' && LA12_362<='9')||(LA12_362>='A' && LA12_362<='Z')||LA12_362=='_'||(LA12_362>='a' && LA12_362<='z')) ) {
+                                                    return 72;
+                                                }
+                                                else {
+                                                    return 59;}
+                                            }
+                                            else {
+                                                return 72;}
+                                        }
+                                        else {
+                                            return 72;}
+                                    }
+                                    else {
+                                        return 72;}
+                                }
+                                else {
+                                    return 72;}
+                            }
+                            else {
+                                return 72;}
+                        }
+                        else {
+                            return 72;}
+                    }
+                    else {
+                        return 72;}
+                }
+                else {
+                    return 72;}
+            }
+            else {
+                return 72;}
+            }
+        default:
+            return 72;}
+
+    }
+
+    private int mTokensHelper005() throws RecognitionException {
+        int LA12_5 = input.LA(2);
+
+        if ( (LA12_5=='i') ) {
+            int LA12_53 = input.LA(3);
+
+            if ( (LA12_53=='n') ) {
+                int LA12_111 = input.LA(4);
+
+                if ( (LA12_111=='d') ) {
+                    int LA12_151 = input.LA(5);
+
+                    if ( ((LA12_151>='0' && LA12_151<='9')||(LA12_151>='A' && LA12_151<='Z')||LA12_151=='_'||(LA12_151>='a' && LA12_151<='z')) ) {
+                        return 72;
+                    }
+                    else {
+                        return 6;}
+                }
+                else {
+                    return 72;}
+            }
+            else {
+                return 72;}
+        }
+        else {
+            return 72;}
+    }
+
+    private int mTokensHelper006() throws RecognitionException {
+        return 7;
+    }
+
+    private int mTokensHelper007() throws RecognitionException {
+        return 8;
+    }
+
+    private int mTokensHelper008() throws RecognitionException {
+        return 9;
+    }
+
+    private int mTokensHelper009() throws RecognitionException {
+        return 10;
+    }
+
+    private int mTokensHelper010() throws RecognitionException {
+        int LA12_10 = input.LA(2);
+
+        if ( (LA12_10=='u') ) {
+            int LA12_58 = input.LA(3);
+
+            if ( (LA12_58=='a') ) {
+                int LA12_112 = input.LA(4);
+
+                if ( (LA12_112=='n') ) {
+                    int LA12_152 = input.LA(5);
+
+                    if ( (LA12_152=='t') ) {
+                        int LA12_194 = input.LA(6);
+
+                        if ( (LA12_194=='i') ) {
+                            int LA12_236 = input.LA(7);
+
+                            if ( (LA12_236=='t') ) {
+                                int LA12_270 = input.LA(8);
+
+                                if ( (LA12_270=='y') ) {
+                                    int LA12_301 = input.LA(9);
+
+                                    if ( ((LA12_301>='0' && LA12_301<='9')||(LA12_301>='A' && LA12_301<='Z')||LA12_301=='_'||(LA12_301>='a' && LA12_301<='z')) ) {
+                                        return 72;
+                                    }
+                                    else {
+                                        return 11;}
+                                }
+                                else {
+                                    return 72;}
+                            }
+                            else {
+                                return 72;}
+                        }
+                        else {
+                            return 72;}
+                    }
+                    else {
+                        return 72;}
+                }
+                else {
+                    return 72;}
+            }
+            else {
+                return 72;}
+        }
+        else {
+            return 72;}
+    }
+
+    private int mTokensHelper011() throws RecognitionException {
+        switch ( input.LA(2) ) {
+        case 'x':
+            {
+            int LA12_59 = input.LA(3);
+
+            if ( (LA12_59=='t') ) {
+                int LA12_113 = input.LA(4);
+
+                if ( (LA12_113=='e') ) {
+                    int LA12_153 = input.LA(5);
+
+                    if ( (LA12_153=='n') ) {
+                        int LA12_195 = input.LA(6);
+
+                        if ( (LA12_195=='s') ) {
+                            int LA12_237 = input.LA(7);
+
+                            if ( (LA12_237=='i') ) {
+                                int LA12_271 = input.LA(8);
+
+                                if ( (LA12_271=='o') ) {
+                                    int LA12_302 = input.LA(9);
+
+                                    if ( (LA12_302=='n') ) {
+                                        int LA12_332 = input.LA(10);
+
+                                        if ( (LA12_332=='a') ) {
+                                            int LA12_351 = input.LA(11);
+
+                                            if ( (LA12_351=='l') ) {
+                                                int LA12_363 = input.LA(12);
+
+                                                if ( ((LA12_363>='0' && LA12_363<='9')||(LA12_363>='A' && LA12_363<='Z')||LA12_363=='_'||(LA12_363>='a' && LA12_363<='z')) ) {
+                                                    return 72;
+                                                }
+                                                else {
+                                                    return 12;}
+                                            }
+                                            else {
+                                                return 72;}
+                                        }
+                                        else {
+                                            return 72;}
+                                    }
+                                    else {
+                                        return 72;}
+                                }
+                                else {
+                                    return 72;}
+                            }
+                            else {
+                                return 72;}
+                        }
+                        else {
+                            return 72;}
+                    }
+                    else {
+                        return 72;}
+                }
+                else {
+                    return 72;}
+            }
+            else {
+                return 72;}
+            }
+        case 'n':
+            {
+            int LA12_60 = input.LA(3);
+
+            if ( (LA12_60=='u') ) {
+                int LA12_114 = input.LA(4);
+
+                if ( (LA12_114=='m') ) {
+                    int LA12_154 = input.LA(5);
+
+                    if ( ((LA12_154>='0' && LA12_154<='9')||(LA12_154>='A' && LA12_154<='Z')||LA12_154=='_'||(LA12_154>='a' && LA12_154<='z')) ) {
+                        return 72;
+                    }
+                    else {
+                        return 63;}
+                }
+                else {
+                    return 72;}
+            }
+            else {
+                return 72;}
+            }
+        default:
+            return 72;}
+
+    }
+
+    private int mTokensHelper012() throws RecognitionException {
+        switch ( input.LA(2) ) {
+        case 'o':
+            {
+            switch ( input.LA(3) ) {
+            case 'l':
+                {
+                int LA12_115 = input.LA(4);
+
+                if ( (LA12_115=='l') ) {
+                    int LA12_155 = input.LA(5);
+
+                    if ( (LA12_155=='e') ) {
+                        int LA12_197 = input.LA(6);
+
+                        if ( (LA12_197=='c') ) {
+                            int LA12_238 = input.LA(7);
+
+                            if ( (LA12_238=='t') ) {
+                                int LA12_272 = input.LA(8);
+
+                                if ( (LA12_272=='i') ) {
+                                    int LA12_303 = input.LA(9);
+
+                                    if ( (LA12_303=='v') ) {
+                                        int LA12_333 = input.LA(10);
+
+                                        if ( (LA12_333=='e') ) {
+                                            int LA12_352 = input.LA(11);
+
+                                            if ( ((LA12_352>='0' && LA12_352<='9')||(LA12_352>='A' && LA12_352<='Z')||LA12_352=='_'||(LA12_352>='a' && LA12_352<='z')) ) {
+                                                return 72;
+                                            }
+                                            else {
+                                                return 13;}
+                                        }
+                                        else {
+                                            return 72;}
+                                    }
+                                    else {
+                                        return 72;}
+                                }
+                                else {
+                                    return 72;}
+                            }
+                            else {
+                                return 72;}
+                        }
+                        else {
+                            return 72;}
+                    }
+                    else {
+                        return 72;}
+                }
+                else {
+                    return 72;}
+                }
+            case 'm':
+                {
+                int LA12_116 = input.LA(4);
+
+                if ( (LA12_116=='p') ) {
+                    switch ( input.LA(5) ) {
+                    case 'l':
+                        {
+                        int LA12_198 = input.LA(6);
+
+                        if ( (LA12_198=='e') ) {
+                            int LA12_239 = input.LA(7);
+
+                            if ( (LA12_239=='t') ) {
+                                int LA12_273 = input.LA(8);
+
+                                if ( (LA12_273=='e') ) {
+                                    int LA12_304 = input.LA(9);
+
+                                    if ( ((LA12_304>='0' && LA12_304<='9')||(LA12_304>='A' && LA12_304<='Z')||LA12_304=='_'||(LA12_304>='a' && LA12_304<='z')) ) {
+                                        return 72;
+                                    }
+                                    else {
+                                        return 45;}
+                                }
+                                else {
+                                    return 72;}
+                            }
+                            else {
+                                return 72;}
+                        }
+                        else {
+                            return 72;}
+                        }
+                    case 'o':
+                        {
+                        int LA12_199 = input.LA(6);
+
+                        if ( (LA12_199=='s') ) {
+                            int LA12_240 = input.LA(7);
+
+                            if ( (LA12_240=='i') ) {
+                                int LA12_274 = input.LA(8);
+
+                                if ( (LA12_274=='t') ) {
+                                    int LA12_305 = input.LA(9);
+
+                                    if ( (LA12_305=='e') ) {
+                                        int LA12_335 = input.LA(10);
+
+                                        if ( ((LA12_335>='0' && LA12_335<='9')||(LA12_335>='A' && LA12_335<='Z')||LA12_335=='_'||(LA12_335>='a' && LA12_335<='z')) ) {
+                                            return 72;
+                                        }
+                                        else {
+                                            return 71;}
+                                    }
+                                    else {
+                                        return 72;}
+                                }
+                                else {
+                                    return 72;}
+                            }
+                            else {
+                                return 72;}
+                        }
+                        else {
+                            return 72;}
+                        }
+                    default:
+                        return 72;}
+
+                }
+                else {
+                    return 72;}
+                }
+            default:
+                return 72;}
+
+            }
+        case 'a':
+            {
+            int LA12_62 = input.LA(3);
+
+            if ( (LA12_62=='t') ) {
+                int LA12_117 = input.LA(4);
+
+                if ( (LA12_117=='e') ) {
+                    int LA12_157 = input.LA(5);
+
+                    if ( (LA12_157=='g') ) {
+                        int LA12_200 = input.LA(6);
+
+                        if ( (LA12_200=='o') ) {
+                            int LA12_241 = input.LA(7);
+
+                            if ( (LA12_241=='r') ) {
+                                int LA12_275 = input.LA(8);
+
+                                if ( (LA12_275=='y') ) {
+                                    int LA12_306 = input.LA(9);
+
+                                    if ( ((LA12_306>='0' && LA12_306<='9')||(LA12_306>='A' && LA12_306<='Z')||LA12_306=='_'||(LA12_306>='a' && LA12_306<='z')) ) {
+                                        return 72;
+                                    }
+                                    else {
+                                        return 15;}
+                                }
+                                else {
+                                    return 72;}
+                            }
+                            else {
+                                return 72;}
+                        }
+                        else {
+                            return 72;}
+                    }
+                    else {
+                        return 72;}
+                }
+                else {
+                    return 72;}
+            }
+            else {
+                return 72;}
+            }
+        case 'h':
+            {
+            int LA12_63 = input.LA(3);
+
+            if ( (LA12_63=='a') ) {
+                int LA12_118 = input.LA(4);
+
+                if ( (LA12_118=='r') ) {
+                    int LA12_158 = input.LA(5);
+
+                    if ( (LA12_158=='a') ) {
+                        int LA12_201 = input.LA(6);
+
+                        if ( (LA12_201=='c') ) {
+                            int LA12_242 = input.LA(7);
+
+                            if ( (LA12_242=='t') ) {
+                                int LA12_276 = input.LA(8);
+
+                                if ( (LA12_276=='e') ) {
+                                    int LA12_307 = input.LA(9);
+
+                                    if ( (LA12_307=='r') ) {
+                                        int LA12_337 = input.LA(10);
+
+                                        if ( (LA12_337=='i') ) {
+                                            int LA12_354 = input.LA(11);
+
+                                            if ( (LA12_354=='z') ) {
+                                                switch ( input.LA(12) ) {
+                                                case 'a':
+                                                    {
+                                                    int LA12_373 = input.LA(13);
+
+                                                    if ( (LA12_373=='t') ) {
+                                                        int LA12_379 = input.LA(14);
+
+                                                        if ( (LA12_379=='i') ) {
+                                                            int LA12_385 = input.LA(15);
+
+                                                            if ( (LA12_385=='o') ) {
+                                                                int LA12_391 = input.LA(16);
+
+                                                                if ( (LA12_391=='n') ) {
+                                                                    int LA12_395 = input.LA(17);
+
+                                                                    if ( ((LA12_395>='0' && LA12_395<='9')||(LA12_395>='A' && LA12_395<='Z')||LA12_395=='_'||(LA12_395>='a' && LA12_395<='z')) ) {
+                                                                        return 72;
+                                                                    }
+                                                                    else {
+                                                                        return 28;}
+                                                                }
+                                                                else {
+                                                                    return 72;}
+                                                            }
+                                                            else {
+                                                                return 72;}
+                                                        }
+                                                        else {
+                                                            return 72;}
+                                                    }
+                                                    else {
+                                                        return 72;}
+                                                    }
+                                                case 'e':
+                                                    {
+                                                    int LA12_374 = input.LA(13);
+
+                                                    if ( (LA12_374=='d') ) {
+                                                        int LA12_380 = input.LA(14);
+
+                                                        if ( (LA12_380==':') ) {
+                                                            return 30;
+                                                        }
+                                                        else {
+                                                            return 72;}
+                                                    }
+                                                    else {
+                                                        return 72;}
+                                                    }
+                                                default:
+                                                    return 72;}
+
+                                            }
+                                            else {
+                                                return 72;}
+                                        }
+                                        else {
+                                            return 72;}
+                                    }
+                                    else {
+                                        return 72;}
+                                }
+                                else {
+                                    return 72;}
+                            }
+                            else {
+                                return 72;}
+                        }
+                        else {
+                            return 72;}
+                    }
+                    else {
+                        return 72;}
+                }
+                else {
+                    return 72;}
+            }
+            else {
+                return 72;}
+            }
+        default:
+            return 72;}
+
+    }
+
+    private int mTokensHelper013() throws RecognitionException {
+        switch ( input.LA(2) ) {
+        case 'u':
+            {
+            int LA12_64 = input.LA(3);
+
+            if ( (LA12_64=='b') ) {
+                switch ( input.LA(4) ) {
+                case 's':
+                    {
+                    switch ( input.LA(5) ) {
+                    case 'e':
+                        {
+                        int LA12_202 = input.LA(6);
+
+                        if ( (LA12_202=='t') ) {
+                            int LA12_243 = input.LA(7);
+
+                            if ( (LA12_243==' ') ) {
+                                return 60;
+                            }
+                            else {
+                                return 72;}
+                        }
+                        else {
+                            return 72;}
+                        }
+                    case 't':
+                        {
+                        int LA12_203 = input.LA(6);
+
+                        if ( (LA12_203=='i') ) {
+                            int LA12_244 = input.LA(7);
+
+                            if ( (LA12_244=='t') ) {
+                                int LA12_278 = input.LA(8);
+
+                                if ( (LA12_278=='u') ) {
+                                    int LA12_308 = input.LA(9);
+
+                                    if ( (LA12_308=='t') ) {
+                                        int LA12_338 = input.LA(10);
+
+                                        if ( (LA12_338=='a') ) {
+                                            int LA12_355 = input.LA(11);
+
+                                            if ( (LA12_355=='b') ) {
+                                                int LA12_366 = input.LA(12);
+
+                                                if ( (LA12_366=='l') ) {
+                                                    int LA12_375 = input.LA(13);
+
+                                                    if ( (LA12_375=='e') ) {
+                                                        int LA12_381 = input.LA(14);
+
+                                                        if ( ((LA12_381>='0' && LA12_381<='9')||(LA12_381>='A' && LA12_381<='Z')||LA12_381=='_'||(LA12_381>='a' && LA12_381<='z')) ) {
+                                                            return 72;
+                                                        }
+                                                        else {
+                                                            return 42;}
+                                                    }
+                                                    else {
+                                                        return 72;}
+                                                }
+                                                else {
+                                                    return 72;}
+                                            }
+                                            else {
+                                                return 72;}
+                                        }
+                                        else {
+                                            return 72;}
+                                    }
+                                    else {
+                                        return 72;}
+                                }
+                                else {
+                                    return 72;}
+                            }
+                            else {
+                                return 72;}
+                        }
+                        else {
+                            return 72;}
+                        }
+                    default:
+                        return 72;}
+
+                    }
+                case 'K':
+                    {
+                    int LA12_160 = input.LA(5);
+
+                    if ( (LA12_160=='i') ) {
+                        int LA12_204 = input.LA(6);
+
+                        if ( (LA12_204=='n') ) {
+                            int LA12_245 = input.LA(7);
+
+                            if ( (LA12_245=='d') ) {
+                                int LA12_279 = input.LA(8);
+
+                                if ( ((LA12_279>='0' && LA12_279<='9')||(LA12_279>='A' && LA12_279<='Z')||LA12_279=='_'||(LA12_279>='a' && LA12_279<='z')) ) {
+                                    return 72;
+                                }
+                                else {
+                                    return 14;}
+                            }
+                            else {
+                                return 72;}
+                        }
+                        else {
+                            return 72;}
+                    }
+                    else {
+                        return 72;}
+                    }
+                default:
+                    return 72;}
+
+            }
+            else {
+                return 72;}
+            }
+        case 't':
+            {
+            int LA12_65 = input.LA(3);
+
+            if ( (LA12_65=='a') ) {
+                int LA12_120 = input.LA(4);
+
+                if ( (LA12_120=='t') ) {
+                    int LA12_161 = input.LA(5);
+
+                    if ( (LA12_161=='i') ) {
+                        int LA12_205 = input.LA(6);
+
+                        if ( (LA12_205=='c') ) {
+                            int LA12_246 = input.LA(7);
+
+                            if ( ((LA12_246>='0' && LA12_246<='9')||(LA12_246>='A' && LA12_246<='Z')||LA12_246=='_'||(LA12_246>='a' && LA12_246<='z')) ) {
+                                return 72;
+                            }
+                            else {
+                                return 53;}
+                        }
+                        else {
+                            return 72;}
+                    }
+                    else {
+                        return 72;}
+                }
+                else {
+                    return 72;}
+            }
+            else {
+                return 72;}
+            }
+        case 'h':
+            {
+            int LA12_66 = input.LA(3);
+
+            if ( (LA12_66=='a') ) {
+                int LA12_121 = input.LA(4);
+
+                if ( (LA12_121=='r') ) {
+                    int LA12_162 = input.LA(5);
+
+                    if ( (LA12_162=='e') ) {
+                        int LA12_206 = input.LA(6);
+
+                        if ( (LA12_206=='d') ) {
+                            int LA12_247 = input.LA(7);
+
+                            if ( ((LA12_247>='0' && LA12_247<='9')||(LA12_247>='A' && LA12_247<='Z')||LA12_247=='_'||(LA12_247>='a' && LA12_247<='z')) ) {
+                                return 72;
+                            }
+                            else {
+                                return 70;}
+                        }
+                        else {
+                            return 72;}
+                    }
+                    else {
+                        return 72;}
+                }
+                else {
+                    return 72;}
+            }
+            else {
+                return 72;}
+            }
+        default:
+            return 72;}
+
+    }
+
+    private int mTokensHelper014() throws RecognitionException {
+        switch ( input.LA(2) ) {
+        case 'h':
+            {
+            int LA12_67 = input.LA(3);
+
+            if ( (LA12_67=='a') ) {
+                int LA12_122 = input.LA(4);
+
+                if ( (LA12_122=='s') ) {
+                    int LA12_163 = input.LA(5);
+
+                    if ( (LA12_163=='e') ) {
+                        int LA12_207 = input.LA(6);
+
+                        if ( ((LA12_207>='0' && LA12_207<='9')||(LA12_207>='A' && LA12_207<='Z')||LA12_207=='_'||(LA12_207>='a' && LA12_207<='z')) ) {
+                            return 72;
+                        }
+                        else {
+                            return 16;}
+                    }
+                    else {
+                        return 72;}
+                }
+                else {
+                    return 72;}
+            }
+            else {
+                return 72;}
+            }
+        case 'r':
+            {
+            int LA12_68 = input.LA(3);
+
+            if ( (LA12_68=='o') ) {
+                int LA12_123 = input.LA(4);
+
+                if ( (LA12_123=='p') ) {
+                    int LA12_164 = input.LA(5);
+
+                    if ( (LA12_164=='e') ) {
+                        int LA12_208 = input.LA(6);
+
+                        if ( (LA12_208=='r') ) {
+                            int LA12_249 = input.LA(7);
+
+                            if ( (LA12_249=='t') ) {
+                                int LA12_282 = input.LA(8);
+
+                                if ( (LA12_282=='y') ) {
+                                    int LA12_310 = input.LA(9);
+
+                                    if ( ((LA12_310>='0' && LA12_310<='9')||(LA12_310>='A' && LA12_310<='Z')||LA12_310=='_'||(LA12_310>='a' && LA12_310<='z')) ) {
+                                        return 72;
+                                    }
+                                    else {
+                                        return 62;}
+                                }
+                                else {
+                                    return 72;}
+                            }
+                            else {
+                                return 72;}
+                        }
+                        else {
+                            return 72;}
+                    }
+                    else {
+                        return 72;}
+                }
+                else {
+                    return 72;}
+            }
+            else {
+                return 72;}
+            }
+        default:
+            return 72;}
+
+    }
+
+    private int mTokensHelper015() throws RecognitionException {
+        switch ( input.LA(2) ) {
+        case 'e':
+            {
+            switch ( input.LA(3) ) {
+            case 'a':
+                {
+                int LA12_124 = input.LA(4);
+
+                if ( (LA12_124=='d') ) {
+                    int LA12_165 = input.LA(5);
+
+                    if ( (LA12_165=='-') ) {
+                        return 56;
+                    }
+                    else {
+                        return 72;}
+                }
+                else {
+                    return 72;}
+                }
+            case 'l':
+                {
+                int LA12_125 = input.LA(4);
+
+                if ( (LA12_125=='a') ) {
+                    int LA12_166 = input.LA(5);
+
+                    if ( (LA12_166=='t') ) {
+                        int LA12_210 = input.LA(6);
+
+                        if ( (LA12_210=='o') ) {
+                            int LA12_250 = input.LA(7);
+
+                            if ( (LA12_250=='r') ) {
+                                switch ( input.LA(8) ) {
+                                case ':':
+                                    {
+                                    return 32;
+                                    }
+                                case '0':
+                                case '1':
+                                case '2':
+                                case '3':
+                                case '4':
+                                case '5':
+                                case '6':
+                                case '7':
+                                case '8':
+                                case '9':
+                                case 'A':
+                                case 'B':
+                                case 'C':
+                                case 'D':
+                                case 'E':
+                                case 'F':
+                                case 'G':
+                                case 'H':
+                                case 'I':
+                                case 'J':
+                                case 'K':
+                                case 'L':
+                                case 'M':
+                                case 'N':
+                                case 'O':
+                                case 'P':
+                                case 'Q':
+                                case 'R':
+                                case 'S':
+                                case 'T':
+                                case 'U':
+                                case 'V':
+                                case 'W':
+                                case 'X':
+                                case 'Y':
+                                case 'Z':
+                                case '_':
+                                case 'a':
+                                case 'b':
+                                case 'c':
+                                case 'd':
+                                case 'e':
+                                case 'f':
+                                case 'g':
+                                case 'h':
+                                case 'i':
+                                case 'j':
+                                case 'k':
+                                case 'l':
+                                case 'm':
+                                case 'n':
+                                case 'o':
+                                case 'p':
+                                case 'q':
+                                case 'r':
+                                case 's':
+                                case 't':
+                                case 'u':
+                                case 'v':
+                                case 'w':
+                                case 'x':
+                                case 'y':
+                                case 'z':
+                                    {
+                                    return 72;
+                                    }
+                                default:
+                                    return 21;}
+
+                            }
+                            else {
+                                return 72;}
+                        }
+                        else {
+                            return 72;}
+                    }
+                    else {
+                        return 72;}
+                }
+                else {
+                    return 72;}
+                }
+            case 'd':
+                {
+                int LA12_126 = input.LA(4);
+
+                if ( (LA12_126=='e') ) {
+                    int LA12_167 = input.LA(5);
+
+                    if ( (LA12_167=='f') ) {
+                        int LA12_211 = input.LA(6);
+
+                        if ( (LA12_211=='i') ) {
+                            int LA12_251 = input.LA(7);
+
+                            if ( (LA12_251=='n') ) {
+                                int LA12_284 = input.LA(8);
+
+                                if ( (LA12_284=='e') ) {
+                                    int LA12_313 = input.LA(9);
+
+                                    if ( (LA12_313=='s') ) {
+                                        int LA12_340 = input.LA(10);
+
+                                        if ( ((LA12_340>='0' && LA12_340<='9')||(LA12_340>='A' && LA12_340<='Z')||LA12_340=='_'||(LA12_340>='a' && LA12_340<='z')) ) {
+                                            return 72;
+                                        }
+                                        else {
+                                            return 61;}
+                                    }
+                                    else {
+                                        return 72;}
+                                }
+                                else {
+                                    return 72;}
+                            }
+                            else {
+                                return 72;}
+                        }
+                        else {
+                            return 72;}
+                    }
+                    else {
+                        return 72;}
+                }
+                else {
+                    return 72;}
+                }
+            default:
+                return 72;}
+
+            }
+        case 'o':
+            {
+            int LA12_70 = input.LA(3);
+
+            if ( (LA12_70=='l') ) {
+                int LA12_127 = input.LA(4);
+
+                if ( (LA12_127=='e') ) {
+                    switch ( input.LA(5) ) {
+                    case 'M':
+                        {
+                        int LA12_212 = input.LA(6);
+
+                        if ( (LA12_212=='i') ) {
+                            int LA12_252 = input.LA(7);
+
+                            if ( (LA12_252=='x') ) {
+                                int LA12_285 = input.LA(8);
+
+                                if ( (LA12_285=='i') ) {
+                                    int LA12_314 = input.LA(9);
+
+                                    if ( (LA12_314=='n') ) {
+                                        int LA12_341 = input.LA(10);
+
+                                        if ( ((LA12_341>='0' && LA12_341<='9')||(LA12_341>='A' && LA12_341<='Z')||LA12_341=='_'||(LA12_341>='a' && LA12_341<='z')) ) {
+                                            return 72;
+                                        }
+                                        else {
+                                            return 19;}
+                                    }
+                                    else {
+                                        return 72;}
+                                }
+                                else {
+                                    return 72;}
+                            }
+                            else {
+                                return 72;}
+                        }
+                        else {
+                            return 72;}
+                        }
+                    case '0':
+                    case '1':
+                    case '2':
+                    case '3':
+                    case '4':
+                    case '5':
+                    case '6':
+                    case '7':
+                    case '8':
+                    case '9':
+                    case 'A':
+                    case 'B':
+                    case 'C':
+                    case 'D':
+                    case 'E':
+                    case 'F':
+                    case 'G':
+                    case 'H':
+                    case 'I':
+                    case 'J':
+                    case 'K':
+                    case 'L':
+                    case 'N':
+                    case 'O':
+                    case 'P':
+                    case 'Q':
+                    case 'R':
+                    case 'S':
+                    case 'T':
+                    case 'U':
+                    case 'V':
+                    case 'W':
+                    case 'X':
+                    case 'Y':
+                    case 'Z':
+                    case '_':
+                    case 'a':
+                    case 'b':
+                    case 'c':
+                    case 'd':
+                    case 'e':
+                    case 'f':
+                    case 'g':
+                    case 'h':
+                    case 'i':
+                    case 'j':
+                    case 'k':
+                    case 'l':
+                    case 'm':
+                    case 'n':
+                    case 'o':
+                    case 'p':
+                    case 'q':
+                    case 'r':
+                    case 's':
+                    case 't':
+                    case 'u':
+                    case 'v':
+                    case 'w':
+                    case 'x':
+                    case 'y':
+                    case 'z':
+                        {
+                        return 72;
+                        }
+                    default:
+                        return 17;}
+
+                }
+                else {
+                    return 72;}
+            }
+            else {
+                return 72;}
+            }
+        default:
+            return 72;}
+
+    }
+
+    private int mTokensHelper016() throws RecognitionException {
+        return 23;
+    }
+
+    private int mTokensHelper017() throws RecognitionException {
+        int LA12_17 = input.LA(2);
+
+        if ( (LA12_17=='.') ) {
+            return 24;
+        }
+        else {
+            return 78;}
+    }
+
+    private int mTokensHelper018() throws RecognitionException {
+        return 25;
+    }
+
+    private int mTokensHelper019() throws RecognitionException {
+        int LA12_19 = input.LA(2);
+
+        if ( (LA12_19=='>') ) {
+            return 27;
+        }
+        else {
+            return 50;}
+    }
+
+    private int mTokensHelper020() throws RecognitionException {
+        switch ( input.LA(2) ) {
+        case 'e':
+            {
+            switch ( input.LA(3) ) {
+            case 'r':
+                {
+                int LA12_128 = input.LA(4);
+
+                if ( (LA12_128=='i') ) {
+                    int LA12_169 = input.LA(5);
+
+                    if ( (LA12_169=='v') ) {
+                        switch ( input.LA(6) ) {
+                        case 'e':
+                            {
+                            int LA12_253 = input.LA(7);
+
+                            if ( (LA12_253=='d') ) {
+                                switch ( input.LA(8) ) {
+                                case '-':
+                                    {
+                                    return 57;
+                                    }
+                                case '0':
+                                case '1':
+                                case '2':
+                                case '3':
+                                case '4':
+                                case '5':
+                                case '6':
+                                case '7':
+                                case '8':
+                                case '9':
+                                case 'A':
+                                case 'B':
+                                case 'C':
+                                case 'D':
+                                case 'E':
+                                case 'F':
+                                case 'G':
+                                case 'H':
+                                case 'I':
+                                case 'J':
+                                case 'K':
+                                case 'L':
+                                case 'M':
+                                case 'N':
+                                case 'O':
+                                case 'P':
+                                case 'Q':
+                                case 'R':
+                                case 'S':
+                                case 'T':
+                                case 'U':
+                                case 'V':
+                                case 'W':
+                                case 'X':
+                                case 'Y':
+                                case 'Z':
+                                case '_':
+                                case 'a':
+                                case 'b':
+                                case 'c':
+                                case 'd':
+                                case 'e':
+                                case 'f':
+                                case 'g':
+                                case 'h':
+                                case 'i':
+                                case 'j':
+                                case 'k':
+                                case 'l':
+                                case 'm':
+                                case 'n':
+                                case 'o':
+                                case 'p':
+                                case 'q':
+                                case 'r':
+                                case 's':
+                                case 't':
+                                case 'u':
+                                case 'v':
+                                case 'w':
+                                case 'x':
+                                case 'y':
+                                case 'z':
+                                    {
+                                    return 72;
+                                    }
+                                default:
+                                    return 36;}
+
+                            }
+                            else {
+                                return 72;}
+                            }
+                        case 'a':
+                            {
+                            int LA12_254 = input.LA(7);
+
+                            if ( (LA12_254=='t') ) {
+                                int LA12_287 = input.LA(8);
+
+                                if ( (LA12_287=='i') ) {
+                                    int LA12_317 = input.LA(9);
+
+                                    if ( (LA12_317=='o') ) {
+                                        int LA12_342 = input.LA(10);
+
+                                        if ( (LA12_342=='n') ) {
+                                            int LA12_358 = input.LA(11);
+
+                                            if ( ((LA12_358>='0' && LA12_358<='9')||(LA12_358>='A' && LA12_358<='Z')||LA12_358=='_'||(LA12_358>='a' && LA12_358<='z')) ) {
+                                                return 72;
+                                            }
+                                            else {
+                                                return 34;}
+                                        }
+                                        else {
+                                            return 72;}
+                                    }
+                                    else {
+                                        return 72;}
+                                }
+                                else {
+                                    return 72;}
+                            }
+                            else {
+                                return 72;}
+                            }
+                        default:
+                            return 72;}
+
+                    }
+                    else {
+                        return 72;}
+                }
+                else {
+                    return 72;}
+                }
+            case 'f':
+                {
+                int LA12_129 = input.LA(4);
+
+                if ( (LA12_129=='a') ) {
+                    int LA12_170 = input.LA(5);
+
+                    if ( (LA12_170=='u') ) {
+                        int LA12_215 = input.LA(6);
+
+                        if ( (LA12_215=='l') ) {
+                            int LA12_255 = input.LA(7);
+
+                            if ( (LA12_255=='t') ) {
+                                int LA12_288 = input.LA(8);
+
+                                if ( (LA12_288=='s') ) {
+                                    int LA12_318 = input.LA(9);
+
+                                    if ( (LA12_318==' ') ) {
+                                        return 58;
+                                    }
+                                    else {
+                                        return 72;}
+                                }
+                                else {
+                                    return 72;}
+                            }
+                            else {
+                                return 72;}
+                        }
+                        else {
+                            return 72;}
+                    }
+                    else {
+                        return 72;}
+                }
+                else {
+                    return 72;}
+                }
+            default:
+                return 72;}
+
+            }
+        case 'i':
+            {
+            int LA12_77 = input.LA(3);
+
+            if ( (LA12_77=='s') ) {
+                int LA12_130 = input.LA(4);
+
+                if ( (LA12_130=='j') ) {
+                    int LA12_171 = input.LA(5);
+
+                    if ( (LA12_171=='o') ) {
+                        int LA12_216 = input.LA(6);
+
+                        if ( (LA12_216=='i') ) {
+                            int LA12_256 = input.LA(7);
+
+                            if ( (LA12_256=='n') ) {
+                                int LA12_289 = input.LA(8);
+
+                                if ( (LA12_289=='t') ) {
+                                    int LA12_319 = input.LA(9);
+
+                                    if ( ((LA12_319>='0' && LA12_319<='9')||(LA12_319>='A' && LA12_319<='Z')||LA12_319=='_'||(LA12_319>='a' && LA12_319<='z')) ) {
+                                        return 72;
+                                    }
+                                    else {
+                                        return 46;}
+                                }
+                                else {
+                                    return 72;}
+                            }
+                            else {
+                                return 72;}
+                        }
+                        else {
+                            return 72;}
+                    }
+                    else {
+                        return 72;}
+                }
+                else {
+                    return 72;}
+            }
+            else {
+                return 72;}
+            }
+        case 'a':
+            {
+            int LA12_78 = input.LA(3);
+
+            if ( (LA12_78=='t') ) {
+                int LA12_131 = input.LA(4);
+
+                if ( (LA12_131=='a') ) {
+                    int LA12_172 = input.LA(5);
+
+                    if ( (LA12_172=='t') ) {
+                        int LA12_217 = input.LA(6);
+
+                        if ( (LA12_217=='y') ) {
+                            int LA12_257 = input.LA(7);
+
+                            if ( (LA12_257=='p') ) {
+                                int LA12_290 = input.LA(8);
+
+                                if ( (LA12_290=='e') ) {
+                                    int LA12_320 = input.LA(9);
+
+                                    if ( ((LA12_320>='0' && LA12_320<='9')||(LA12_320>='A' && LA12_320<='Z')||LA12_320=='_'||(LA12_320>='a' && LA12_320<='z')) ) {
+                                        return 72;
+                                    }
+                                    else {
+                                        return 40;}
+                                }
+                                else {
+                                    return 72;}
+                            }
+                            else {
+                                return 72;}
+                        }
+                        else {
+                            return 72;}
+                    }
+                    else {
+                        return 72;}
+                }
+                else {
+                    return 72;}
+            }
+            else {
+                return 72;}
+            }
+        default:
+            return 72;}
+
+    }
+
+    private int mTokensHelper021() throws RecognitionException {
+        int LA12_21 = input.LA(2);
+
+        if ( (LA12_21=='e') ) {
+            int LA12_79 = input.LA(3);
+
+            if ( (LA12_79=='a') ) {
+                int LA12_132 = input.LA(4);
+
+                if ( (LA12_132=='f') ) {
+                    int LA12_173 = input.LA(5);
+
+                    if ( ((LA12_173>='0' && LA12_173<='9')||(LA12_173>='A' && LA12_173<='Z')||LA12_173=='_'||(LA12_173>='a' && LA12_173<='z')) ) {
+                        return 72;
+                    }
+                    else {
+                        return 37;}
+                }
+                else {
+                    return 72;}
+            }
+            else {
+                return 72;}
+        }
+        else {
+            return 72;}
+    }
+
+    private int mTokensHelper022() throws RecognitionException {
+        switch ( input.LA(2) ) {
+        case 'a':
+            {
+            int LA12_80 = input.LA(3);
+
+            if ( (LA12_80=='l') ) {
+                int LA12_133 = input.LA(4);
+
+                if ( (LA12_133=='s') ) {
+                    int LA12_174 = input.LA(5);
+
+                    if ( (LA12_174=='e') ) {
+                        int LA12_219 = input.LA(6);
+
+                        if ( ((LA12_219>='0' && LA12_219<='9')||(LA12_219>='A' && LA12_219<='Z')||LA12_219=='_'||(LA12_219>='a' && LA12_219<='z')) ) {
+                            return 72;
+                        }
+                        else {
+                            return 67;}
+                    }
+                    else {
+                        return 72;}
+                }
+                else {
+                    return 72;}
+            }
+            else {
+                return 72;}
+            }
+        case 'o':
+            {
+            int LA12_81 = input.LA(3);
+
+            if ( (LA12_81=='r') ) {
+                int LA12_134 = input.LA(4);
+
+                if ( (LA12_134=='m') ) {
+                    int LA12_175 = input.LA(5);
+
+                    if ( (LA12_175=='a') ) {
+                        int LA12_220 = input.LA(6);
+
+                        if ( (LA12_220=='l') ) {
+                            int LA12_259 = input.LA(7);
+
+                            if ( (LA12_259=='A') ) {
+                                int LA12_291 = input.LA(8);
+
+                                if ( (LA12_291=='s') ) {
+                                    int LA12_321 = input.LA(9);
+
+                                    if ( (LA12_321=='s') ) {
+                                        int LA12_346 = input.LA(10);
+
+                                        if ( (LA12_346=='o') ) {
+                                            int LA12_359 = input.LA(11);
+
+                                            if ( (LA12_359=='c') ) {
+                                                int LA12_368 = input.LA(12);
+
+                                                if ( (LA12_368=='i') ) {
+                                                    int LA12_376 = input.LA(13);
+
+                                                    if ( (LA12_376=='a') ) {
+                                                        int LA12_382 = input.LA(14);
+
+                                                        if ( (LA12_382=='t') ) {
+                                                            int LA12_388 = input.LA(15);
+
+                                                            if ( (LA12_388=='i') ) {
+                                                                int LA12_392 = input.LA(16);
+
+                                                                if ( (LA12_392=='o') ) {
+                                                                    int LA12_396 = input.LA(17);
+
+                                                                    if ( (LA12_396=='n') ) {
+                                                                        int LA12_400 = input.LA(18);
+
+                                                                        if ( ((LA12_400>='0' && LA12_400<='9')||(LA12_400>='A' && LA12_400<='Z')||LA12_400=='_'||(LA12_400>='a' && LA12_400<='z')) ) {
+                                                                            return 72;
+                                                                        }
+                                                                        else {
+                                                                            return 39;}
+                                                                    }
+                                                                    else {
+                                                                        return 72;}
+                                                                }
+                                                                else {
+                                                                    return 72;}
+                                                            }
+                                                            else {
+                                                                return 72;}
+                                                        }
+                                                        else {
+                                                            return 72;}
+                                                    }
+                                                    else {
+                                                        return 72;}
+                                                }
+                                                else {
+                                                    return 72;}
+                                            }
+                                            else {
+                                                return 72;}
+                                        }
+                                        else {
+                                            return 72;}
+                                    }
+                                    else {
+                                        return 72;}
+                                }
+                                else {
+                                    return 72;}
+                            }
+                            else {
+                                return 72;}
+                        }
+                        else {
+                            return 72;}
+                    }
+                    else {
+                        return 72;}
+                }
+                else {
+                    return 72;}
+            }
+            else {
+                return 72;}
+            }
+        default:
+            return 72;}
+
+    }
+
+    private int mTokensHelper023() throws RecognitionException {
+        switch ( input.LA(2) ) {
+        case 'r':
+            {
+            int LA12_82 = input.LA(3);
+
+            if ( (LA12_82=='u') ) {
+                int LA12_135 = input.LA(4);
+
+                if ( (LA12_135=='e') ) {
+                    int LA12_176 = input.LA(5);
+
+                    if ( ((LA12_176>='0' && LA12_176<='9')||(LA12_176>='A' && LA12_176<='Z')||LA12_176=='_'||(LA12_176>='a' && LA12_176<='z')) ) {
+                        return 72;
+                    }
+                    else {
+                        return 66;}
+                }
+                else {
+                    return 72;}
+            }
+            else {
+                return 72;}
+            }
+        case 'y':
+            {
+            int LA12_83 = input.LA(3);
+
+            if ( (LA12_83=='p') ) {
+                int LA12_136 = input.LA(4);
+
+                if ( (LA12_136=='e') ) {
+                    int LA12_177 = input.LA(5);
+
+                    if ( ((LA12_177>='0' && LA12_177<='9')||(LA12_177>='A' && LA12_177<='Z')||LA12_177=='_'||(LA12_177>='a' && LA12_177<='z')) ) {
+                        return 72;
+                    }
+                    else {
+                        return 41;}
+                }
+                else {
+                    return 72;}
+            }
+            else {
+                return 72;}
+            }
+        default:
+            return 72;}
+
+    }
+
+    private int mTokensHelper024() throws RecognitionException {
+        return 43;
+    }
+
+    private int mTokensHelper025() throws RecognitionException {
+        return 44;
+    }
+
+    private int mTokensHelper026() throws RecognitionException {
+        int LA12_26 = input.LA(2);
+
+        if ( (LA12_26=='e') ) {
+            int LA12_86 = input.LA(3);
+
+            if ( (LA12_86=='n') ) {
+                int LA12_137 = input.LA(4);
+
+                if ( (LA12_137=='e') ) {
+                    int LA12_178 = input.LA(5);
+
+                    if ( (LA12_178=='r') ) {
+                        int LA12_223 = input.LA(6);
+
+                        if ( (LA12_223=='a') ) {
+                            int LA12_260 = input.LA(7);
+
+                            if ( (LA12_260=='l') ) {
+                                int LA12_292 = input.LA(8);
+
+                                if ( (LA12_292=='i') ) {
+                                    int LA12_322 = input.LA(9);
+
+                                    if ( (LA12_322=='z') ) {
+                                        int LA12_347 = input.LA(10);
+
+                                        if ( (LA12_347=='a') ) {
+                                            int LA12_360 = input.LA(11);
+
+                                            if ( (LA12_360=='t') ) {
+                                                int LA12_369 = input.LA(12);
+
+                                                if ( (LA12_369=='i') ) {
+                                                    int LA12_377 = input.LA(13);
+
+                                                    if ( (LA12_377=='o') ) {
+                                                        int LA12_383 = input.LA(14);
+
+                                                        if ( (LA12_383=='n') ) {
+                                                            int LA12_389 = input.LA(15);
+
+                                                            if ( (LA12_389=='S') ) {
+                                                                int LA12_393 = input.LA(16);
+
+                                                                if ( (LA12_393=='e') ) {
+                                                                    int LA12_397 = input.LA(17);
+
+                                                                    if ( (LA12_397=='t') ) {
+                                                                        int LA12_401 = input.LA(18);
+
+                                                                        if ( ((LA12_401>='0' && LA12_401<='9')||(LA12_401>='A' && LA12_401<='Z')||LA12_401=='_'||(LA12_401>='a' && LA12_401<='z')) ) {
+                                                                            return 72;
+                                                                        }
+                                                                        else {
+                                                                            return 47;}
+                                                                    }
+                                                                    else {
+                                                                        return 72;}
+                                                                }
+                                                                else {
+                                                                    return 72;}
+                                                            }
+                                                            else {
+                                                                return 72;}
+                                                        }
+                                                        else {
+                                                            return 72;}
+                                                    }
+                                                    else {
+                                                        return 72;}
+                                                }
+                                                else {
+                                                    return 72;}
+                                            }
+                                            else {
+                                                return 72;}
+                                        }
+                                        else {
+                                            return 72;}
+                                    }
+                                    else {
+                                        return 72;}
+                                }
+                                else {
+                                    return 72;}
+                            }
+                            else {
+                                return 72;}
+                        }
+                        else {
+                            return 72;}
+                    }
+                    else {
+                        return 72;}
+                }
+                else {
+                    return 72;}
+            }
+            else {
+                return 72;}
+        }
+        else {
+            return 72;}
+    }
+
+    private int mTokensHelper027() throws RecognitionException {
+        switch ( input.LA(2) ) {
+        case 'r':
+            {
+            int LA12_87 = input.LA(3);
+
+            if ( (LA12_87=='d') ) {
+                int LA12_138 = input.LA(4);
+
+                if ( (LA12_138=='e') ) {
+                    int LA12_179 = input.LA(5);
+
+                    if ( (LA12_179=='r') ) {
+                        int LA12_224 = input.LA(6);
+
+                        if ( (LA12_224=='e') ) {
+                            int LA12_261 = input.LA(7);
+
+                            if ( (LA12_261=='d') ) {
+                                int LA12_293 = input.LA(8);
+
+                                if ( ((LA12_293>='0' && LA12_293<='9')||(LA12_293>='A' && LA12_293<='Z')||LA12_293=='_'||(LA12_293>='a' && LA12_293<='z')) ) {
+                                    return 72;
+                                }
+                                else {
+                                    return 54;}
+                            }
+                            else {
+                                return 72;}
+                        }
+                        else {
+                            return 72;}
+                    }
+                    else {
+                        return 72;}
+                }
+                else {
+                    return 72;}
+            }
+            else {
+                return 72;}
+            }
+        case 'p':
+            {
+            int LA12_88 = input.LA(3);
+
+            if ( ((LA12_88>='0' && LA12_88<='9')||(LA12_88>='A' && LA12_88<='Z')||LA12_88=='_'||(LA12_88>='a' && LA12_88<='z')) ) {
+                return 72;
+            }
+            else {
+                return 48;}
+            }
+        default:
+            return 72;}
+
+    }
+
+    private int mTokensHelper028() throws RecognitionException {
+        return 49;
+    }
+
+    private int mTokensHelper029() throws RecognitionException {
+        return 51;
+    }
+
+    private int mTokensHelper030() throws RecognitionException {
+        switch ( input.LA(2) ) {
+        case '/':
+            {
+            return 76;
+            }
+        case '*':
+            {
+            return 75;
+            }
+        default:
+            return 52;}
+
+    }
+
+    private int mTokensHelper031() throws RecognitionException {
+        int LA12_31 = input.LA(2);
+
+        if ( (LA12_31=='n') ) {
+            int LA12_94 = input.LA(3);
+
+            if ( (LA12_94=='i') ) {
+                int LA12_140 = input.LA(4);
+
+                if ( (LA12_140=='q') ) {
+                    int LA12_180 = input.LA(5);
+
+                    if ( (LA12_180=='u') ) {
+                        int LA12_225 = input.LA(6);
+
+                        if ( (LA12_225=='e') ) {
+                            int LA12_262 = input.LA(7);
+
+                            if ( ((LA12_262>='0' && LA12_262<='9')||(LA12_262>='A' && LA12_262<='Z')||LA12_262=='_'||(LA12_262>='a' && LA12_262<='z')) ) {
+                                return 72;
+                            }
+                            else {
+                                return 55;}
+                        }
+                        else {
+                            return 72;}
+                    }
+                    else {
+                        return 72;}
+                }
+                else {
+                    return 72;}
+            }
+            else {
+                return 72;}
+        }
+        else {
+            return 72;}
+    }
+
+    private int mTokensHelper032() throws RecognitionException {
+        int LA12_32 = input.LA(2);
+
+        if ( (LA12_32=='>') ) {
+            return 65;
+        }
+        else {
+            return 64;}
+    }
+
+    private int mTokensHelper033() throws RecognitionException {
+        int LA12_33 = input.LA(2);
+
+        if ( (LA12_33=='U') ) {
+            int LA12_97 = input.LA(3);
+
+            if ( (LA12_97=='L') ) {
+                int LA12_141 = input.LA(4);
+
+                if ( (LA12_141=='L') ) {
+                    int LA12_181 = input.LA(5);
+
+                    if ( ((LA12_181>='0' && LA12_181<='9')||(LA12_181>='A' && LA12_181<='Z')||LA12_181=='_'||(LA12_181>='a' && LA12_181<='z')) ) {
+                        return 72;
+                    }
+                    else {
+                        return 68;}
+                }
+                else {
+                    return 72;}
+            }
+            else {
+                return 72;}
+        }
+        else {
+            return 72;}
+    }
+
+    private int mTokensHelper034() throws RecognitionException {
+        int LA12_34 = input.LA(2);
+
+        if ( (LA12_34=='o') ) {
+            int LA12_98 = input.LA(3);
+
+            if ( (LA12_98=='n') ) {
+                int LA12_142 = input.LA(4);
+
+                if ( (LA12_142=='e') ) {
+                    int LA12_182 = input.LA(5);
+
+                    if ( ((LA12_182>='0' && LA12_182<='9')||(LA12_182>='A' && LA12_182<='Z')||LA12_182=='_'||(LA12_182>='a' && LA12_182<='z')) ) {
+                        return 72;
+                    }
+                    else {
+                        return 69;}
+                }
+                else {
+                    return 72;}
+            }
+            else {
+                return 72;}
+        }
+        else {
+            return 72;}
+    }
+
+    private int mTokensHelper035() throws RecognitionException {
+        int LA12_35 = input.LA(2);
+
+        if ( ((LA12_35>='A' && LA12_35<='Z')||LA12_35=='_'||(LA12_35>='a' && LA12_35<='z')) ) {
+            return 72;
+        }
+        else {
+            return 78;}
+    }
+
+    private int mTokensHelper036() throws RecognitionException {
+        return 72;
+    }
+
+    private int mTokensHelper037() throws RecognitionException {
+        return 73;
+    }
+
+    private int mTokensHelper038() throws RecognitionException {
+        int LA12_38 = input.LA(2);
+
+        if ( ((LA12_38>='\u0000' && LA12_38<='\uFFFE')) ) {
+            return 74;
+        }
+        else {
+            return 78;}
+    }
+
+    private int mTokensHelper039() throws RecognitionException {
+        int LA12_39 = input.LA(2);
+
+        if ( ((LA12_39>='\u0000' && LA12_39<='\uFFFE')) ) {
+            return 74;
+        }
+        else {
+            return 78;}
+    }
+
+    private int mTokensHelper040() throws RecognitionException {
+        return 77;
+    }
+
+    private int mTokensHelper041() throws RecognitionException {
+        return 78;
+    }
+
+    private int mTokensHelper042() throws RecognitionException {
+        NoViableAltException nvae =
+            new NoViableAltException("1:1: Tokens : ( T11 | T12 | T13 | T14 | T15 | T16 | T17 | T18 | T19 | T20 | T21 | T22 | T23 | T24 | T25 | T26 | T27 | T28 | T29 | T30 | T31 | T32 | T33 | T34 | T35 | T36 | T37 | T38 | T39 | T40 | T41 | T42 | T43 | T44 | T45 | T46 | T47 | T48 | T49 | T50 | T51 | T52 | T53 | T54 | T55 | T56 | T57 | T58 | T59 | T60 | T61 | T62 | T63 | T64 | T65 | T66 | T67 | T68 | T69 | T70 | T71 | T72 | T73 | T74 | T75 | T76 | T77 | T78 | T79 | T80 | T81 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );", 12, 0, input);
+
+        throw nvae;
+    }
+
+
+
  
 
 }
