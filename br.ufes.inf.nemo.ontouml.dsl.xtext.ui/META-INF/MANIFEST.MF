@@ -14,6 +14,6 @@ Require-Bundle: br.ufes.inf.nemo.ontouml.dsl.xtext;visibility:=reexport,
  org.antlr.runtime,
  org.eclipse.xtext.builder
 Import-Package: org.apache.log4j
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: br.ufes.inf.nemo.ontouml.dsl.xtext.ui.contentassist.antlr
 Bundle-Activator: br.ufes.inf.nemo.ontouml.dsl.xtext.ui.internal.OntoDSLActivator
