@@ -18,21 +18,28 @@
    </license>
 
    <plugin
-         id="br.ufes.inf.nemo.ontouml.dsl"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="br.ufes.inf.nemo.ontouml.dsl.ui"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
          id="br.ufes.inf.nemo.ontouml.refontouml"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="br.ufes.inf.nemo.ontouml.dsl.ecore"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="br.ufes.inf.nemo.ontouml.dsl.xtext"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="br.ufes.inf.nemo.ontouml.dsl.xtext.ui"
          download-size="0"
          install-size="0"
          version="0.0.0"
